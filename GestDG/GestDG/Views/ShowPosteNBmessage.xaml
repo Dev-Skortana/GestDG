@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="{Binding title}" BackgroundColor="Azure" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestDG.Views.ShowPosteNBmessage" xmlns:viewsmodels="clr-namespace:GestDG.ViewsModels;assembly=GestDG"  xmlns:controls_carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions" xmlns:controls_imagecircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <controls_carousel:CarouselViewControl PositionSelected="CarouselViewControl_PositionSelected" ItemsSource="{Binding liste_membres}" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ArrowsBackgroundColor="Green">
+                    <controls_carousel:CarouselViewControl.ItemTemplate>
+                        <DataTemplate>
+                            <ScrollView Orientation="Both">
+                                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                        <controls_imagecircle:CircleImage HeightRequest="80" WidthRequest="80" Source="{Binding url_avatar }" Aspect="AspectFill"/>
+                                        <Label Text="{Binding pseudo }"  HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
+                                        <Label HorizontalTextAlignment="Center">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <!--Afficher la dernier date de connexion du membre-->
+                                                <Span Text="{Binding dernier_dateconnexion_message.Date_connexion, StringFormat='Ce membre à cette date le {0}'}"/>
+                                                    <!--Afficher le nombre total de message du membre-->
+                                                <Span Text="{Binding dernier_dateconnexion_message.Nbmessage, StringFormat='a au total {0} message(s)'}"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
+                                        <Label Text="Historique des messages (statistique) du membre" TextDecorations="Underline" HorizontalTextAlignment="Center"/>
+                                        <ListView HasUnevenRows="False" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="50" ItemsSource="{Binding liste_messagesnb}">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <ViewCell>
+                                                        <StackLayout BackgroundColor="Green" VerticalOptions="Center" HorizontalOptions="Center" Orientation="Vertical">
+                                                            <Label VerticalOptions="Center" HorizontalOptions="Center" Text="{Binding nb_message,StringFormat=' {0} messages envoyer'}" HorizontalTextAlignment="Center"/>
+                                                        </StackLayout>
+                                                    </ViewCell>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ScrollView>
+                        </DataTemplate>
+                    </controls_carousel:CarouselViewControl.ItemTemplate>
+                </controls_carousel:CarouselViewControl>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

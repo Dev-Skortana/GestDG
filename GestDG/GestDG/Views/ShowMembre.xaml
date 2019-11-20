@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="{Binding title}" xmlns="http://xamarin.com/schemas/2014/forms" Padding="5" BackgroundColor="LightBlue"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestDG.Views.ShowMembre" xmlns:behavior="clr-namespace:GestDG.Behaviors_Controls" xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"  xmlns:viewsmodels="clr-namespace:GestDG.ViewsModels;assembly=GestDG"  xmlns:controls_carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions" xmlns:controls_imagecircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Transparent" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+                <Entry Placeholder="Saisissez votre recherche ici" PlaceholderColor="Green" TextColor="Green" HorizontalOptions="CenterAndExpand">
+                    <Entry.Behaviors>
+                        <behavior:Behavior_EntryTextChanged Command="{Binding Cmd}" />
+                    </Entry.Behaviors>
+                </Entry>
+            </StackLayout>
+            <controls_carousel:CarouselViewControl Orientation="Horizontal" ItemsSource="{Binding Liste_membres}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <controls_carousel:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <ScrollView Orientation="Both">
+                            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <StackLayout  Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                    <controls_imagecircle:CircleImage HeightRequest="80" WidthRequest="80" Source="{Binding url_avatar}" Aspect="AspectFill"/>
+                                    <Label Text="{Binding pseudo}" TextColor="Gold"/>
+                                </StackLayout>
+                                <StackLayout  HorizontalOptions="CenterAndExpand" Spacing="2" Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                                    <Label Text="{Binding  date_naissance ,StringFormat='Née le : {0}'}" />
+                                    <Label Text="{Binding  age,StringFormat='Age : {0}'}"/>
+                                    <Label Text="{Binding  date_inscription, StringFormat='Inscrit depuis le {0}'}"/>
+                                    <Label Text="{Binding  url_site,StringFormat='Lien de sont site : {0}'}"/>
+                                    <Label Text="{Binding  sexe,StringFormat='Sexe : {0}'}"/>
+                                    <Label Text="{Binding  localisation ,StringFormat='Localisation : {0}'}"/>
+                                    <Label Text="{Binding  statut ,StringFormat='Est : {0}'}"/>
+                                    <Label Text="{Binding  rang_nom ,StringFormat='Rang : {0}'}"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                    </DataTemplate>
+                </controls_carousel:CarouselViewControl.ItemTemplate>
+            </controls_carousel:CarouselViewControl>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

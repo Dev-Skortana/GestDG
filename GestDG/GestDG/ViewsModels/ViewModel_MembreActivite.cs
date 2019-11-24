@@ -54,7 +54,7 @@ namespace GestDG.ViewsModels
 
         private async Task load(String pseudo="",String libelle_activite="")
         {
-            membres =(List<Membre>)await service_membre.GetList(pseudo);
+            //membres =(List<Membre>)await service_membre.GetList(pseudo);
             foreach (var item in membres)
             {
                 item.liste_activites =(from el in  (List<Activite>)await service_activite.GetList(libelle_activite) where el.membre_pseudo==item.pseudo select el).ToList();

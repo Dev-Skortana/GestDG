@@ -1,11 +1,10 @@
-GestDG
-System.Runtime
 CarouselView.FormsPlugin.Abstractions
 CarouselView.FormsPlugin.Android
 Com.Android.DeskClock
 Com.ViewPagerIndicator
 DryIoc
 FormsViewGroup
+GestDG
 HtmlAgilityPack
 ImageCircle.Forms.Plugin
 Newtonsoft.Json
@@ -21,6 +20,7 @@ SQLitePCLRaw.core
 SQLitePCLRaw.lib.e_sqlite3
 SQLitePCLRaw.provider.e_sqlite3
 System.Runtime.CompilerServices.Unsafe
+System.Runtime
 Unity.Abstractions
 Unity.Container
 Xamarin.Android.Arch.Core.Common
@@ -48,5 +48,6 @@ Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
 netstandard
+Recherche_donnees_GESTDG
 System.Reflection.Extensions
 System.Resources.ResourceManager

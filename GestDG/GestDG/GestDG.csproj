@@ -27,6 +27,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Recherche_donnees_GESTDG\Recherche_donnees_GESTDG.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Views\Page_Menu.xaml.cs">
       <DependentUpon>Page_Menu.xaml</DependentUpon>
     </Compile>

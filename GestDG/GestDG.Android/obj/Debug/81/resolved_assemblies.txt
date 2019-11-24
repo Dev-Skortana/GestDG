@@ -67,6 +67,7 @@ C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestD
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG.Android\obj\Debug\81\android\assets\System.Web.Services.dll
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG.Android\obj\Debug\81\android\assets\System.Reflection.Emit.Lightweight.dll
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG.Android\obj\Debug\81\android\assets\System.Reflection.Emit.ILGeneration.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG.Android\obj\Debug\81\android\assets\Recherche_donnees_GESTDG.dll
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG.Android\obj\Debug\81\android\assets\System.Runtime.dll
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG.Android\obj\Debug\81\android\assets\System.IO.dll
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG.Android\obj\Debug\81\android\assets\System.Threading.Tasks.dll

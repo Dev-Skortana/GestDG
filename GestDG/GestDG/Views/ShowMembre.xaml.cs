@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using GestDG.ViewsModels;
 
 namespace GestDG.Views
 {
@@ -15,5 +16,10 @@ namespace GestDG.Views
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void Picker_SelectedIndexChanged(object sender, EventArgs e)
+        {        
+            ((sender as Picker).BindingContext as ViewModel_Membre).testcmd.Execute((sender as Picker).SelectedItem);
+        }
+    }
 }

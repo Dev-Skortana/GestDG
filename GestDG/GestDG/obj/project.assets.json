@@ -1347,6 +1347,16 @@
           "build/Xamarin.Forms.props": {},
           "build/Xamarin.Forms.targets": {}
         }
+      },
+      "Recherche_donnees_GESTDG/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
+        }
       }
     }
   },
@@ -5265,6 +5275,11 @@
         "xamarin.forms.4.2.0.848062.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "Recherche_donnees_GESTDG/1.0.0": {
+      "type": "project",
+      "path": "../../Recherche_donnees_GESTDG/Recherche_donnees_GESTDG.csproj",
+      "msbuildProject": "../../Recherche_donnees_GESTDG/Recherche_donnees_GESTDG.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5276,6 +5291,7 @@
       "Prism.DryIoc.Forms >= 7.2.0.1367",
       "Prism.Forms >= 7.2.0.1367",
       "Prism.Unity.Forms >= 7.2.0.1367",
+      "Recherche_donnees_GESTDG >= 1.0.0",
       "SQLiteNetExtensions >= 2.1.0",
       "Xam.Plugins.Forms.ImageCircle >= 3.0.0.5",
       "Xamarin.Forms >= 4.2.0.848062",
@@ -5311,7 +5327,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\spart\\OneDrive\\Documents\\Visual Studio 2017\\Projets\\GestDG\\Recherche_donnees_GESTDG\\Recherche_donnees_GESTDG.csproj": {
+              "projectPath": "C:\\Users\\spart\\OneDrive\\Documents\\Visual Studio 2017\\Projets\\GestDG\\Recherche_donnees_GESTDG\\Recherche_donnees_GESTDG.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

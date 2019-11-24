@@ -1427,6 +1427,7 @@
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
           "Prism.Unity.Forms": "7.2.0.1367",
+          "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
           "Xamarin.Forms": "4.2.0.848062",
@@ -1437,6 +1438,16 @@
         },
         "runtime": {
           "bin/placeholder/GestDG.dll": {}
+        }
+      },
+      "Recherche_donnees_GESTDG/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
         }
       }
     },
@@ -3180,6 +3191,7 @@
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
           "Prism.Unity.Forms": "7.2.0.1367",
+          "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
           "Xamarin.Forms": "4.2.0.848062",
@@ -3190,6 +3202,16 @@
         },
         "runtime": {
           "bin/placeholder/GestDG.dll": {}
+        }
+      },
+      "Recherche_donnees_GESTDG/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
         }
       }
     },
@@ -5032,6 +5054,7 @@
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
           "Prism.Unity.Forms": "7.2.0.1367",
+          "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
           "Xamarin.Forms": "4.2.0.848062",
@@ -5042,6 +5065,16 @@
         },
         "runtime": {
           "bin/placeholder/GestDG.dll": {}
+        }
+      },
+      "Recherche_donnees_GESTDG/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
         }
       }
     },
@@ -6604,6 +6637,7 @@
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
           "Prism.Unity.Forms": "7.2.0.1367",
+          "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
           "Xamarin.Forms": "4.2.0.848062",
@@ -6614,6 +6648,16 @@
         },
         "runtime": {
           "bin/placeholder/GestDG.dll": {}
+        }
+      },
+      "Recherche_donnees_GESTDG/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
         }
       }
     },
@@ -8357,6 +8401,7 @@
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
           "Prism.Unity.Forms": "7.2.0.1367",
+          "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
           "Xamarin.Forms": "4.2.0.848062",
@@ -8367,6 +8412,16 @@
         },
         "runtime": {
           "bin/placeholder/GestDG.dll": {}
+        }
+      },
+      "Recherche_donnees_GESTDG/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
         }
       }
     },
@@ -10209,6 +10264,7 @@
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
           "Prism.Unity.Forms": "7.2.0.1367",
+          "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
           "Xamarin.Forms": "4.2.0.848062",
@@ -10219,6 +10275,16 @@
         },
         "runtime": {
           "bin/placeholder/GestDG.dll": {}
+        }
+      },
+      "Recherche_donnees_GESTDG/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
         }
       }
     },
@@ -11962,6 +12028,7 @@
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
           "Prism.Unity.Forms": "7.2.0.1367",
+          "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
           "Xamarin.Forms": "4.2.0.848062",
@@ -11972,6 +12039,16 @@
         },
         "runtime": {
           "bin/placeholder/GestDG.dll": {}
+        }
+      },
+      "Recherche_donnees_GESTDG/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
         }
       }
     },
@@ -13814,6 +13891,7 @@
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
           "Prism.Unity.Forms": "7.2.0.1367",
+          "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
           "Xamarin.Forms": "4.2.0.848062",
@@ -13824,6 +13902,16 @@
         },
         "runtime": {
           "bin/placeholder/GestDG.dll": {}
+        }
+      },
+      "Recherche_donnees_GESTDG/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Recherche_donnees_GESTDG.dll": {}
         }
       }
     }
@@ -21698,6 +21786,11 @@
       "type": "project",
       "path": "../GestDG/GestDG.csproj",
       "msbuildProject": "../GestDG/GestDG.csproj"
+    },
+    "Recherche_donnees_GESTDG/1.0.0": {
+      "type": "project",
+      "path": "../../Recherche_donnees_GESTDG/Recherche_donnees_GESTDG.csproj",
+      "msbuildProject": "../../Recherche_donnees_GESTDG/Recherche_donnees_GESTDG.csproj"
     }
   },
   "projectFileDependencyGroups": {

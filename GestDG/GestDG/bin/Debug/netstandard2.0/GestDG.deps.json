@@ -16,6 +16,7 @@
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
           "Prism.Unity.Forms": "7.2.0.1367",
+          "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
           "Xamarin.Forms": "4.2.0.848062",
@@ -1001,6 +1002,11 @@
             "fileVersion": "4.2.0.122"
           }
         }
+      },
+      "Recherche_donnees_GESTDG/1.0.0": {
+        "runtime": {
+          "Recherche_donnees_GESTDG.dll": {}
+        }
       }
     }
   },
@@ -1611,6 +1617,11 @@
       "sha512": "sha512-/JIC5p3M9h0MdSg+uH3Hy260YIWkXrQA8m4yO/3TQhSSIe+FNwyPi0SkIomvikunWXu6rEJh/aDbFYEyks0mbw==",
       "path": "xamarin.forms/4.2.0.848062",
       "hashPath": "xamarin.forms.4.2.0.848062.nupkg.sha512"
+    },
+    "Recherche_donnees_GESTDG/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

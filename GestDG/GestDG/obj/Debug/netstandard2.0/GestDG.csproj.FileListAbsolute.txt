@@ -21,3 +21,6 @@ C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestD
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG\obj\Debug\netstandard2.0\GestDG.pdb
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG\obj\Debug\netstandard2.0\Views\BaseNaviguationPage.xaml.g.cs
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG\obj\Debug\netstandard2.0\Views\MasterPageView.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG\bin\Debug\netstandard2.0\Recherche_donnees_GESTDG.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG\bin\Debug\netstandard2.0\Recherche_donnees_GESTDG.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG\obj\Debug\netstandard2.0\GestDG.csproj.CopyComplete

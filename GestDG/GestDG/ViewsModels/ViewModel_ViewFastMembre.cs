@@ -56,7 +56,7 @@ namespace GestDG.ViewsModels
 
         private async Task load(String pseudo="")
         {
-            Liste_membres = (List<Membre>)await service_membre.GetList(pseudo);
+            //Liste_membres = (List<Membre>)await service_membre.GetList(pseudo);
         }
  
         public async void OnNavigatedFrom(INavigationParameters parameters)

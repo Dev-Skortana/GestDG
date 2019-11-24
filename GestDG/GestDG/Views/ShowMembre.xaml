@@ -15,7 +15,7 @@
                         </Entry>
                     </StackLayout>
                     <StackLayout Orientation="Vertical" HorizontalOptions="End">
-                        <Picker ItemsSource="{Binding Liste_methodesrecherches}" SelectedItem="{Binding methoderecherche_selected}" Title="Méthode de recherche" TextColor="Green"/>
+                        <Picker ItemsSource="{Binding Liste_methodesrecherches}" SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding methoderecherche_selected}" Title="Méthode de recherche" TextColor="Green"/>
                         <Picker ItemsSource="{Binding Liste_typesrecherches}" SelectedItem="{Binding type_selected}" Title="Type de recherche" TextColor="Green"/>
                     </StackLayout>
                 </StackLayout>

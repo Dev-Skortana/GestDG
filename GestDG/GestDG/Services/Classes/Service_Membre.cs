@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using GestDG.Models;
 using GestDG.Services.Interfaces;
 using GestDG.Database_Initialize;
+using Recherche_donnees_GESTDG;
+using Recherche_donnees_GESTDG.enumeration;
 
 namespace GestDG.Services.Classes
 {
@@ -24,10 +26,10 @@ namespace GestDG.Services.Classes
             return membres.Count!=0 ? membres[0] : null;
         }
 
-        public async Task<IEnumerable<Membre>> GetList(String pseudo)
+        public async Task<IEnumerable<Membre>> GetList(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.type_recherche recherche_type)
         {
             var connection = await Database_configuration.Database_Initialize();
-            var liste_membres = await connection.QueryAsync<Membre>($"select * from  membre where pseudo like '%{pseudo}%'");
+            var liste_membres = await connection.QueryAsync<Membre>($"select * from  membre {Creation_recherche_sql.creationclause_conditionrequete(dictionnaire_donnees,methodes_recherches,recherche_type)}");
             return liste_membres;
         }
 

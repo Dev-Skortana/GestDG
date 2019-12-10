@@ -1,15 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage  Title="{Binding title}" BackgroundColor="White" xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:convertisseure="clr-namespace:GestDG.Convertisseurs"
              x:Class="GestDG.Views.ShowMembreRang" xmlns:behavior="clr-namespace:GestDG.Behaviors_Controls" xmlns:viewsmodels="clr-namespace:GestDG.ViewsModels;assembly=GestDG"  xmlns:controls_carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions" xmlns:controls_imagecircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <convertisseure:ReturnNegationBoolean x:Key="negation_booleen" />
+        </ResourceDictionary>
+        <ResourceDictionary>
+            <convertisseure:Return_booleen_value_vide x:Key="return_booleen" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
-                <Entry Placeholder="Saisissez votre recherche ici" PlaceholderColor="Green" TextColor="Green" HorizontalOptions="CenterAndExpand">
-                    <Entry.Behaviors>
-                        <behavior:Behavior_EntryTextChanged Command="{Binding cmd}"/>
-                    </Entry.Behaviors>
-                </Entry>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                    <Picker x:Name="piker_champs" ItemsSource="{Binding Liste_champs}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding champ_selected}" Title="champ (libelle)" TextColor="Green"/>
+                    <Entry IsEnabled="False" x:Name="zone_saisi_text" Placeholder="Recherche ici" PlaceholderColor="Green" TextColor="Green" IsVisible="False">
+                        <Entry.Behaviors>
+                            <behavior:Behavior_EntryTextChanged Command="{Binding Command_search}" />
+                        </Entry.Behaviors>
+                        <Entry.Triggers>
+                            <DataTrigger TargetType="Entry" Binding="{Binding Path=IsVisible,Source={Reference zone_saisi_date},Converter={StaticResource negation_booleen}}" Value="True">
+                                <Setter Property="IsVisible" Value="True" />
+                            </DataTrigger>
+
+                            <DataTrigger TargetType="Entry" Binding="{Binding Path=SelectedItem,Source={Reference piker_champs},Converter={StaticResource Return_booleen_value_vide}}" Value="True">
+                                <Setter Property="IsEnabled" Value="False" />
+                            </DataTrigger>
+                            <DataTrigger TargetType="Entry" Binding="{Binding Path=SelectedItem,Source={Reference piker_methodesrecherches},Converter={StaticResource Return_booleen_value_vide}}" Value="True">
+                                <Setter Property="IsEnabled" Value="False" />
+                            </DataTrigger>
+                            <DataTrigger TargetType="Entry" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource Return_booleen_value_vide}}" Value="True">
+                                <Setter Property="IsEnabled" Value="False" />
+                            </DataTrigger>
+
+                        </Entry.Triggers>
+                    </Entry>
+                    <DatePicker x:Name="zone_saisi_date" IsVisible="False">
+                        <DatePicker.Behaviors>
+                            <behavior:Behavior_Datepiker Command="{Binding Command_search}"/>
+                        </DatePicker.Behaviors>
+                        <DatePicker.Triggers>
+                            <DataTrigger TargetType="DatePicker" Binding="{Binding Path=IsVisible,Source={Reference zone_saisi_text},Converter={StaticResource negation_booleen}}" Value="True">
+                                <Setter Property="IsVisible" Value="True"/>
+                            </DataTrigger>
+                        </DatePicker.Triggers>
+                    </DatePicker>
+                </StackLayout>
+                <StackLayout Orientation="Vertical" HorizontalOptions="End">
+                    <Picker x:Name="piker_methodesrecherches" ItemsSource="{Binding Liste_methodesrecherches}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding methoderecherche_selected}" Title="Méthode de recherche" TextColor="Green"/>
+                    <Picker x:Name="piker_typesrecherches" ItemsSource="{Binding Liste_typesrecherches}" SelectedItem="{Binding type_selected}" Title="Type de recherche" TextColor="Green"/>
+                </StackLayout>
             </StackLayout>
             <controls_carousel:CarouselViewControl ItemsSource="{Binding liste_rangs}" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <controls_carousel:CarouselViewControl.ItemTemplate>
@@ -23,7 +65,6 @@
                                     <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                                         <Label Text="Liste des membres fesant partie du rang :" VerticalOptions="CenterAndExpand" FontSize="Default" FontAttributes="Bold" TextDecorations="Underline" HorizontalTextAlignment="Center"/>
                                     <ScrollView>
-                                                                                <!--Résoudre le problème d'affichage des membres.-->
                                         <ListView HasUnevenRows="True" ItemsSource="{Binding liste_membres}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                                             <ListView.ItemTemplate>
                                                 <DataTemplate>

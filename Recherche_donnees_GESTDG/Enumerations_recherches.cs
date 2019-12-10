@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Recherche_donnees_GESTDG.enumeration
@@ -15,10 +16,19 @@ namespace Recherche_donnees_GESTDG.enumeration
             Superieure,
             inferieure,
         }
-        public enum type_recherche
+        public enum types_recherches
         {
             Simple,
             Multiples
+        }
+
+        public static List<String> get_liste_methodesrecherches()
+        {
+            return Enum.GetNames(typeof(Enumerations_recherches.methodes_recherches)).Cast<String>().ToList();
+        }
+        public static List<String> get_liste_typesrecherches()
+        {
+            return Enum.GetNames(typeof(Enumerations_recherches.types_recherches)).Cast<String>().ToList();
         }
     }
 }

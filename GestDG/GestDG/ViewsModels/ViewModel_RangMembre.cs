@@ -11,34 +11,70 @@ using GestDG.Models;
 using GestDG.Services.Interfaces;
 using System.Threading.Tasks;
 using System.Linq;
+using Recherche_donnees_GESTDG.enumeration;
+using System.Windows.Input;
 
 namespace GestDG.ViewsModels
 {
     class ViewModel_RangMembre:BindableBase,INavigationAware
     {
-        public string title { get; set; } = "Page rangs des membres";
+        #region Interfaces_services
         private INavigationService service_navigation;
         private IService_Rang service_rang;
         private IService_Membre service_membre;
+        #endregion
 
-        public ViewModel_RangMembre(INavigationService _service_navigation, IService_Rang _service_rang,IService_Membre _service_membre)
+        #region constructeure
+        public ViewModel_RangMembre(INavigationService _service_navigation, IService_Rang _service_rang, IService_Membre _service_membre)
         {
             this.service_rang = _service_rang;
             this.service_membre = _service_membre;
             this.service_navigation = _service_navigation;
         }
+        #endregion
 
-        public Command cmd
+        #region Commandes_MVVM
+        public ICommand Command_gestion_dictionnaire_champsmethodesrecherches
         {
-
             get
             {
-                return new Command<String>(async(nom_rang)=>
+                return new Command(() =>
                 {
-                    await load(nom_rang);
+                    if (champ_selected != null)
+                    {
+                        if (dictionnaire_champs_methodesrecherche != null && dictionnaire_champs_methodesrecherche.ContainsKey(champ_selected))
+                        {
+                            dictionnaire_champs_methodesrecherche[champ_selected] = methoderecherche_selected;
+                        }
+                        else
+                        {
+                            dictionnaire_champs_methodesrecherche.Add(champ_selected, methoderecherche_selected);
+                        }
+                    }
                 });
-            } 
+            }
         }
+
+        public ICommand Command_search
+        {
+            get
+            {
+                return new Command<Object>(async (donnees) => {
+                    await load(new Dictionary<string, Object>() { { champ_selected, donnees } }, dictionnaire_champs_methodesrecherche, type_selected);
+                });
+            }
+        }
+        #endregion
+
+        #region Variables
+        public string title { get; set; } = "Page rangs des membres";
+        private Dictionary<String, String> dictionnaire_champs_methodesrecherche = new Dictionary<string, string>();
+        public List<String> Liste_methodesrecherches { get { return Enumerations_recherches.get_liste_methodesrecherches(); } }
+        public String methoderecherche_selected { get; set; }
+        public List<string> Liste_typesrecherches { get { return Enumerations_recherches.get_liste_typesrecherches();} }
+        public String type_selected { get; set; }
+        public List<String> Liste_champs { get { return new List<string>() { "nom_rang", "url_rang" }; } }
+        public String champ_selected { get; set; }
 
         private List<Rang> _liste_rangs;
         public List<Rang> liste_rangs
@@ -49,17 +85,22 @@ namespace GestDG.ViewsModels
             }
             set
             {
-                SetProperty(ref _liste_rangs,value);
+                SetProperty(ref _liste_rangs, value);
             }
         }
 
-        private async Task load(String nom_rang="")
-        {
-            //liste_rangs = new List<Rang>() { new Rang() { nom_rang = "DT", url_rang = "https://i.servimg.com/u/f56/11/26/28/25/dirige10.png", liste_membres = new List<Membre>() { new Membre() { pseudo = "SharQaaL", url_avatar = "https://7img.net/users/2917/59/36/04/avatars/1-72.png" }, new Membre() { pseudo = "DG dada", url_avatar = "https://imgfast.net/users/2917/59/36/04/avatars/112-43.jpg" } } }, new Rang() { nom_rang = "MS", url_rang = "https://i.servimg.com/u/f56/11/26/28/25/manage10.png", liste_membres = new List<Membre>() { new Membre() { pseudo = "kanibal kombai", url_avatar = "https://imgfast.net/users/2917/59/36/04/avatars/4-91.jpg" }, new Membre() { pseudo = "Kratos", url_avatar = "https://imgfast.net/users/2917/59/36/04/avatars/6-76.jpg" } } } } ;
-            liste_rangs = (List<Rang>)await new Services.Classes.Service_Rang().GetList(nom_rang);
-            //liste_rangs.ForEach(async (item) =>item.liste_membres= (from el in (List<Membre>)await new Services.Classes.Service_Membre().GetList("") where el.rang_nom==item.nom_rang orderby el.pseudo select el).ToList());
-        }
+        #endregion
 
+        #region Methodes priver ou interne
+        private async Task load(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, String recherche_type)
+        {
+            Enumerations_recherches.types_recherches type = (Enumerations_recherches.types_recherches)Enum.Parse(typeof(Enumerations_recherches.types_recherches), recherche_type);
+            liste_rangs = (List<Rang>)await new Services.Classes.Service_Rang().GetList(dictionnaire_donnees,methodes_recherches,type);
+            liste_rangs.ForEach(async (item) =>item.liste_membres= (from el in (List<Membre>)await new Services.Classes.Service_Membre().GetList(new Dictionary<string, Object>() { { "pseudo", "" } }, new Dictionary<string, string>() { { "pseudo", "Contient" } },type) where el.rang_nom==item.nom_rang orderby el.pseudo select el).ToList());
+        }
+        #endregion
+
+        #region Methode_navigation_PRISM
         public void OnNavigatedFrom(INavigationParameters parameters)
         {
             throw new NotImplementedException();
@@ -67,7 +108,8 @@ namespace GestDG.ViewsModels
 
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
-            await load();
+            await load(new Dictionary<string, Object>() { { "nom_rang", "" } }, new Dictionary<string, string>() { { "nom_rang", "Contient" } }, "Simple");
         }
+        #endregion
     }
 }

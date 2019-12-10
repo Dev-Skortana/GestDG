@@ -17,9 +17,14 @@ namespace GestDG.Views
 			InitializeComponent();
 		}
 
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            zone_saisi_text.IsVisible = !zone_saisi_text.IsVisible;
+        }
+
         private void Picker_SelectedIndexChanged(object sender, EventArgs e)
-        {        
-            ((sender as Picker).BindingContext as ViewModel_Membre).testcmd.Execute((sender as Picker).SelectedItem);
+        {
+            ((sender as BindableObject).BindingContext as ViewModel_Membre).Command_gestion_dictionnaire_champsmethodesrecherches.Execute(null);
         }
     }
 }

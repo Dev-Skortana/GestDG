@@ -19,17 +19,17 @@ namespace GestDG.Services.Classes
             return(nombres_records>=1);
         }
 
-        public async Task<Membre> Get(String pseudo)
+        public async Task<Membre> Get(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
         {
             var connection=await Database_configuration.Database_Initialize();
-            var membres = await connection.QueryAsync<Membre>($"Select * from membres where {(await connection.GetMappingAsync<Membre>()).TableName}.{(await connection.GetMappingAsync<Membre>()).Columns[0].Name} like '%{pseudo}%'");
+            var membres = await connection.QueryAsync<Membre>($"Select * from membre {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees, methodes_recherches, recherche_type)}");
             return membres.Count!=0 ? membres[0] : null;
         }
 
         public async Task<IEnumerable<Membre>> GetList(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
         {
             var connection = await Database_configuration.Database_Initialize();
-            var liste_membres = await connection.QueryAsync<Membre>($"select * from  membre {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees,methodes_recherches,recherche_type)}");           
+            var liste_membres = await connection.QueryAsync<Membre>($"select * from  membre {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees,methodes_recherches,recherche_type)}");
             return liste_membres;
         }
 

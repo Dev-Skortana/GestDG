@@ -4,15 +4,18 @@ using System.Text;
 using Prism.Navigation;
 using Prism.Commands;
 using GestDG.Views;
+using GestDG.Services.Classes;
 
-namespace GestDG.ViewsModels
+namespace GestDG.ViewModels
 {
     class MasterPageViewModel:INavigationAware
     {
         private INavigationService service_navigation;
-        public MasterPageViewModel(INavigationService nav)
-        {
+        RestService service_login;
+        public MasterPageViewModel(INavigationService nav, RestService service_login)
+        { 
             this.service_navigation = nav;
+            this.service_login = service_login;
         }
 
 
@@ -20,7 +23,16 @@ namespace GestDG.ViewsModels
         {
             get
             {
-                return new DelegateCommand(async () => { await service_navigation.NavigateAsync("Page_Menu/BaseNaviguationPage/RegisterMembre"); });
+                Action methode;
+                if (service_login.cookie_connexion!=null)
+                {
+                    methode = async () => await service_navigation.NavigateAsync("Page_Menu/BaseNavigationPage/RegisterMembre");
+                }else
+                {
+                    methode = async () => await service_navigation.NavigateAsync("Page_Menu/BaseNavigationPage/LoginPage");
+                }
+
+                return new DelegateCommand(methode);
             }
         }
 
@@ -28,7 +40,7 @@ namespace GestDG.ViewsModels
         {
             get
             {
-                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("ShowMembre"); });
+                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("Page_Menu/BaseNavigationPage/Membre"); });
             }
         }
 
@@ -37,7 +49,7 @@ namespace GestDG.ViewsModels
         {
             get
             {
-                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("Page_Menu/BaseNaviguationPage/ShowMembreActivite"); });
+                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("Page_Menu/BaseNavigationPage/MembreVisite"); });
             }
         }
 
@@ -45,28 +57,28 @@ namespace GestDG.ViewsModels
         {
             get
             {
-                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("Page_Menu/BaseNaviguationPage/ShowMembreActivite"); });
+                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("Page_Menu/BaseNavigationPage/MembreActivite"); });
             }
         }
         public DelegateCommand getpage_showmembrerang
         {
             get
             {
-                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("Page_Menu/BaseNaviguationPage/ShowMembreRang"); });
+                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("Page_Menu/BaseNavigationPage/RangMembre"); });
             }
         }
         public DelegateCommand getpage_postenbmessage
         {
             get
             {
-                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("Page_Menu/BaseNaviguationPage/ShowPosteNBmessage"); });
+                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("Page_Menu/BaseNavigationPage/PosteNBmessage"); });
             }
         }
         public DelegateCommand getpage_showviewfastmembre
         {
             get
             {
-                return new DelegateCommand(async () => { await service_navigation.NavigateAsync("BaseNaviguationPage/ShowViewFastMembre"); });
+                return new DelegateCommand(async () => { await service_navigation.NavigateAsync("Page_Menu/BaseNavigationPage/FastMembre"); });
             }
         }
         

@@ -12,8 +12,8 @@ namespace Recherche_donnees_GESTDG.Formats.Classes
         {
             String resultat = "";
             DateTime donnees_datetime=DateTime.Parse(valeur.ToString());
-            resultat += $"strftime('%Y-%m-%d',date(CAST({champ} as text)))";
-            resultat += methode_recherche == Enumerations_recherches.methodes_recherches.Egale_a ? $"=strftime('%Y-%m-%d','{donnees_datetime.Date.ToString()}')" : (methode_recherche == Enumerations_recherches.methodes_recherches.Superieure ? $">='{donnees_datetime.Date.ToString("yyyy-MM-dd")}'" : $"<='{donnees_datetime.Date.ToString("yyyy-MM-dd")}'");
+            resultat += $"julianday({champ})";
+            resultat += methode_recherche == Enumerations_recherches.methodes_recherches.Egale_a ? $"=julianday('1996-10-31')" : (methode_recherche == Enumerations_recherches.methodes_recherches.Superieure ? $">=CAST(strftime('%s', '{donnees_datetime.Date}')  AS  integer)" : $"<=CAST(strftime('%s', '{donnees_datetime.Date}')  AS  integer)");
             return resultat;
         }
 

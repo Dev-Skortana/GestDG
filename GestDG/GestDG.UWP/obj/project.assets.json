@@ -263,13 +263,13 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/9.0.1": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Prism.Core/7.2.0.1367": {
@@ -503,10 +503,10 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
-      "sqlite-net-pcl/1.5.231": {
+      "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "1.1.11"
+          "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
           "lib/netstandard1.1/SQLite-net.dll": {}
@@ -528,12 +528,12 @@
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/1.1.11": {
+      "SQLitePCLRaw.bundle_green/1.1.5": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "1.1.11",
-          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.11",
-          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.5",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
@@ -544,7 +544,7 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/1.1.11": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0"
@@ -556,10 +556,10 @@
           "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.11": {
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
         "type": "package",
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         },
         "runtimeTargets": {
           "runtimes/win10-arm/native/e_sqlite3.dll": {
@@ -576,11 +576,11 @@
           }
         }
       },
-      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.11": {
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0",
-          "SQLitePCLRaw.core": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
@@ -1423,6 +1423,7 @@
         "dependencies": {
           "CarouselView.FormsPlugin": "5.2.0",
           "HtmlAgilityPack": "1.11.0",
+          "Newtonsoft.Json": "12.0.3",
           "Prism.Core": "7.2.0.1367",
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
@@ -1430,8 +1431,7 @@
           "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
-          "Xamarin.Forms": "4.2.0.848062",
-          "sqlite-net-pcl": "1.5.231"
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/GestDG.dll": {}
@@ -1726,13 +1726,13 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/9.0.1": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Prism.Core/7.2.0.1367": {
@@ -2303,10 +2303,10 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net-pcl/1.5.231": {
+      "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "1.1.11"
+          "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
           "lib/netstandard1.1/SQLite-net.dll": {}
@@ -2328,12 +2328,12 @@
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/1.1.11": {
+      "SQLitePCLRaw.bundle_green/1.1.5": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "1.1.11",
-          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.11",
-          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.5",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
@@ -2344,7 +2344,7 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/1.1.11": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0"
@@ -2356,20 +2356,20 @@
           "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.11": {
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
         "type": "package",
         "native": {
           "runtimes/win10-arm/native/e_sqlite3.dll": {}
         },
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         }
       },
-      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.11": {
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0",
-          "SQLitePCLRaw.core": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
@@ -3187,6 +3187,7 @@
         "dependencies": {
           "CarouselView.FormsPlugin": "5.2.0",
           "HtmlAgilityPack": "1.11.0",
+          "Newtonsoft.Json": "12.0.3",
           "Prism.Core": "7.2.0.1367",
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
@@ -3194,8 +3195,7 @@
           "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
-          "Xamarin.Forms": "4.2.0.848062",
-          "sqlite-net-pcl": "1.5.231"
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/GestDG.dll": {}
@@ -3490,13 +3490,13 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/9.0.1": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Prism.Core/7.2.0.1367": {
@@ -4119,10 +4119,10 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net-pcl/1.5.231": {
+      "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "1.1.11"
+          "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
           "lib/netstandard1.1/SQLite-net.dll": {}
@@ -4144,12 +4144,12 @@
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/1.1.11": {
+      "SQLitePCLRaw.bundle_green/1.1.5": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "1.1.11",
-          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.11",
-          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.5",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
@@ -4160,7 +4160,7 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/1.1.11": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0"
@@ -4172,20 +4172,20 @@
           "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.11": {
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
         "type": "package",
         "native": {
           "runtimes/win10-arm/native/e_sqlite3.dll": {}
         },
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         }
       },
-      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.11": {
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0",
-          "SQLitePCLRaw.core": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
@@ -5050,6 +5050,7 @@
         "dependencies": {
           "CarouselView.FormsPlugin": "5.2.0",
           "HtmlAgilityPack": "1.11.0",
+          "Newtonsoft.Json": "12.0.3",
           "Prism.Core": "7.2.0.1367",
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
@@ -5057,8 +5058,7 @@
           "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
-          "Xamarin.Forms": "4.2.0.848062",
-          "sqlite-net-pcl": "1.5.231"
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/GestDG.dll": {}
@@ -5352,13 +5352,13 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/9.0.1": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Prism.Core/7.2.0.1367": {
@@ -5755,10 +5755,10 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net-pcl/1.5.231": {
+      "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "1.1.11"
+          "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
           "lib/netstandard1.1/SQLite-net.dll": {}
@@ -5780,12 +5780,12 @@
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/1.1.11": {
+      "SQLitePCLRaw.bundle_green/1.1.5": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "1.1.11",
-          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.11",
-          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.5",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
@@ -5796,7 +5796,7 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/1.1.11": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0"
@@ -5808,17 +5808,17 @@
           "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.11": {
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
         "type": "package",
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         }
       },
-      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.11": {
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0",
-          "SQLitePCLRaw.core": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
@@ -6633,6 +6633,7 @@
         "dependencies": {
           "CarouselView.FormsPlugin": "5.2.0",
           "HtmlAgilityPack": "1.11.0",
+          "Newtonsoft.Json": "12.0.3",
           "Prism.Core": "7.2.0.1367",
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
@@ -6640,8 +6641,7 @@
           "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
-          "Xamarin.Forms": "4.2.0.848062",
-          "sqlite-net-pcl": "1.5.231"
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/GestDG.dll": {}
@@ -6936,13 +6936,13 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/9.0.1": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Prism.Core/7.2.0.1367": {
@@ -7513,10 +7513,10 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net-pcl/1.5.231": {
+      "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "1.1.11"
+          "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
           "lib/netstandard1.1/SQLite-net.dll": {}
@@ -7538,12 +7538,12 @@
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/1.1.11": {
+      "SQLitePCLRaw.bundle_green/1.1.5": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "1.1.11",
-          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.11",
-          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.5",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
@@ -7554,7 +7554,7 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/1.1.11": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0"
@@ -7566,20 +7566,20 @@
           "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.11": {
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
         "type": "package",
         "native": {
           "runtimes/win10-x64/native/e_sqlite3.dll": {}
         },
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         }
       },
-      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.11": {
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0",
-          "SQLitePCLRaw.core": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
@@ -8397,6 +8397,7 @@
         "dependencies": {
           "CarouselView.FormsPlugin": "5.2.0",
           "HtmlAgilityPack": "1.11.0",
+          "Newtonsoft.Json": "12.0.3",
           "Prism.Core": "7.2.0.1367",
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
@@ -8404,8 +8405,7 @@
           "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
-          "Xamarin.Forms": "4.2.0.848062",
-          "sqlite-net-pcl": "1.5.231"
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/GestDG.dll": {}
@@ -8700,13 +8700,13 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/9.0.1": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Prism.Core/7.2.0.1367": {
@@ -9329,10 +9329,10 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net-pcl/1.5.231": {
+      "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "1.1.11"
+          "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
           "lib/netstandard1.1/SQLite-net.dll": {}
@@ -9354,12 +9354,12 @@
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/1.1.11": {
+      "SQLitePCLRaw.bundle_green/1.1.5": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "1.1.11",
-          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.11",
-          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.5",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
@@ -9370,7 +9370,7 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/1.1.11": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0"
@@ -9382,20 +9382,20 @@
           "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.11": {
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
         "type": "package",
         "native": {
           "runtimes/win10-x64/native/e_sqlite3.dll": {}
         },
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         }
       },
-      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.11": {
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0",
-          "SQLitePCLRaw.core": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
@@ -10260,6 +10260,7 @@
         "dependencies": {
           "CarouselView.FormsPlugin": "5.2.0",
           "HtmlAgilityPack": "1.11.0",
+          "Newtonsoft.Json": "12.0.3",
           "Prism.Core": "7.2.0.1367",
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
@@ -10267,8 +10268,7 @@
           "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
-          "Xamarin.Forms": "4.2.0.848062",
-          "sqlite-net-pcl": "1.5.231"
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/GestDG.dll": {}
@@ -10563,13 +10563,13 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/9.0.1": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Prism.Core/7.2.0.1367": {
@@ -11140,10 +11140,10 @@
           "runtimes/win/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net-pcl/1.5.231": {
+      "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "1.1.11"
+          "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
           "lib/netstandard1.1/SQLite-net.dll": {}
@@ -11165,12 +11165,12 @@
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/1.1.11": {
+      "SQLitePCLRaw.bundle_green/1.1.5": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "1.1.11",
-          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.11",
-          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.5",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
@@ -11181,7 +11181,7 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/1.1.11": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0"
@@ -11193,20 +11193,20 @@
           "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.11": {
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
         "type": "package",
         "native": {
           "runtimes/win10-x86/native/e_sqlite3.dll": {}
         },
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         }
       },
-      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.11": {
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0",
-          "SQLitePCLRaw.core": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
@@ -12024,6 +12024,7 @@
         "dependencies": {
           "CarouselView.FormsPlugin": "5.2.0",
           "HtmlAgilityPack": "1.11.0",
+          "Newtonsoft.Json": "12.0.3",
           "Prism.Core": "7.2.0.1367",
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
@@ -12031,8 +12032,7 @@
           "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
-          "Xamarin.Forms": "4.2.0.848062",
-          "sqlite-net-pcl": "1.5.231"
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/GestDG.dll": {}
@@ -12327,13 +12327,13 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/9.0.1": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Prism.Core/7.2.0.1367": {
@@ -12956,10 +12956,10 @@
           "runtimes/aot/lib/netcore50/System.Private.Uri.dll": {}
         }
       },
-      "sqlite-net-pcl/1.5.231": {
+      "sqlite-net-pcl/1.4.118": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.bundle_green": "1.1.11"
+          "SQLitePCLRaw.bundle_green": "1.1.5"
         },
         "compile": {
           "lib/netstandard1.1/SQLite-net.dll": {}
@@ -12981,12 +12981,12 @@
           "lib/netstandard1.1/SQLiteNetExtensions.dll": {}
         }
       },
-      "SQLitePCLRaw.bundle_green/1.1.11": {
+      "SQLitePCLRaw.bundle_green/1.1.5": {
         "type": "package",
         "dependencies": {
-          "SQLitePCLRaw.core": "1.1.11",
-          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.11",
-          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5",
+          "SQLitePCLRaw.lib.e_sqlite3.v140": "1.1.5",
+          "SQLitePCLRaw.provider.e_sqlite3.uwp10": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.batteries_green.dll": {},
@@ -12997,7 +12997,7 @@
           "lib/uap10.0/SQLitePCLRaw.batteries_v2.dll": {}
         }
       },
-      "SQLitePCLRaw.core/1.1.11": {
+      "SQLitePCLRaw.core/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0"
@@ -13009,20 +13009,20 @@
           "lib/uap10.0/SQLitePCLRaw.core.dll": {}
         }
       },
-      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.11": {
+      "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
         "type": "package",
         "native": {
           "runtimes/win10-x86/native/e_sqlite3.dll": {}
         },
         "build": {
-          "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets": {}
+          "build/_._": {}
         }
       },
-      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.11": {
+      "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.0",
-          "SQLitePCLRaw.core": "1.1.11"
+          "SQLitePCLRaw.core": "1.1.5"
         },
         "compile": {
           "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll": {}
@@ -13887,6 +13887,7 @@
         "dependencies": {
           "CarouselView.FormsPlugin": "5.2.0",
           "HtmlAgilityPack": "1.11.0",
+          "Newtonsoft.Json": "12.0.3",
           "Prism.Core": "7.2.0.1367",
           "Prism.DryIoc.Forms": "7.2.0.1367",
           "Prism.Forms": "7.2.0.1367",
@@ -13894,8 +13895,7 @@
           "Recherche_donnees_GESTDG": "1.0.0",
           "SQLiteNetExtensions": "2.1.0",
           "Xam.Plugins.Forms.ImageCircle": "3.0.0.5",
-          "Xamarin.Forms": "4.2.0.848062",
-          "sqlite-net-pcl": "1.5.231"
+          "Xamarin.Forms": "4.2.0.848062"
         },
         "compile": {
           "bin/placeholder/GestDG.dll": {}
@@ -14576,13 +14576,14 @@
         "lib/netstandard1.0/_._"
       ]
     },
-    "Newtonsoft.Json/9.0.1": {
-      "sha512": "U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/9.0.1",
-      "hasTools": true,
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -14593,13 +14594,17 @@
         "lib/net45/Newtonsoft.Json.xml",
         "lib/netstandard1.0/Newtonsoft.Json.dll",
         "lib/netstandard1.0/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.9.0.1.nupkg.sha512",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
-        "tools/install.ps1"
+        "packageIcon.png"
       ]
     },
     "Prism.Core/7.2.0.1367": {
@@ -18737,19 +18742,21 @@
         "runtimes/win/lib/netstandard1.0/System.Private.Uri.dll"
       ]
     },
-    "sqlite-net-pcl/1.5.231": {
-      "sha512": "B9jScvqkishSMkpa9Mc4Q85LTHxRTzcUXZx9EQqgrvdz7MFEDHfpiPcKdjy1qXHdmHttEXfY4h6gu4FlgWP2Sw==",
+    "sqlite-net-pcl/1.4.118": {
+      "sha512": "66wl2z26PpA/m+hY2UJudsHF3GpbbC8Scx9WvXC0MomQxrbclkb2jiavYsXH3AEXHsTAjKIWavmwKoRIPWsdAg==",
       "type": "package",
-      "path": "sqlite-net-pcl/1.5.231",
+      "path": "sqlite-net-pcl/1.4.118",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard1.1/SQLite-net.deps.json",
         "lib/netstandard1.1/SQLite-net.dll",
+        "lib/netstandard1.1/SQLite-net.pdb",
         "lib/netstandard1.1/SQLite-net.xml",
-        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.dll",
-        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.xml",
-        "sqlite-net-pcl.1.5.231.nupkg.sha512",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.pdb",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.xml",
+        "sqlite-net-pcl.1.4.118.nupkg.sha512",
         "sqlite-net-pcl.nuspec"
       ]
     },
@@ -18782,10 +18789,10 @@
         "src/SQLiteNetExtensions/Properties/AssemblyInfo.cs"
       ]
     },
-    "SQLitePCLRaw.bundle_green/1.1.11": {
-      "sha512": "Hqp8IF/RLjbypkLm+t+1RqAX8EKuWEkj7wkLXplfENQoPnE127cvTmaDvaQKtt7a5QsD/HNjFDr1z5f9q2wdPg==",
+    "SQLitePCLRaw.bundle_green/1.1.5": {
+      "sha512": "rz+SPgp57CAWkEfCJmWqHXMd+fSqhgYmzOdjkSbCQ3OEG0I3+vUlycElvy5zTi0GAYg5pVrmRqbquotS0985CQ==",
       "type": "package",
-      "path": "sqlitepclraw.bundle_green/1.1.11",
+      "path": "sqlitepclraw.bundle_green/1.1.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -18825,14 +18832,14 @@
         "lib/wp8/_._",
         "lib/wpa81/SQLitePCLRaw.batteries_green.dll",
         "lib/wpa81/SQLitePCLRaw.batteries_v2.dll",
-        "sqlitepclraw.bundle_green.1.1.11.nupkg.sha512",
+        "sqlitepclraw.bundle_green.1.1.5.nupkg.sha512",
         "sqlitepclraw.bundle_green.nuspec"
       ]
     },
-    "SQLitePCLRaw.core/1.1.11": {
-      "sha512": "QT17CyQAQIbTCu6pW5+uVA8BXqRzquiDI1tr5Un6c1YZcQydPmGPuYYng9xMs2UHUDYHbTu+JDkp55WR+qo9bQ==",
+    "SQLitePCLRaw.core/1.1.5": {
+      "sha512": "NViT1KDYnPAQo7yoYmkAMWzT15ZjqbLTSZp9iTVwZDz7fBC5fQ9TYebOFUIxYxrD/RvBpYB8m9PtcL8x/QbKNg==",
       "type": "package",
-      "path": "sqlitepclraw.core/1.1.11",
+      "path": "sqlitepclraw.core/1.1.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -18851,14 +18858,14 @@
         "lib/win8/SQLitePCLRaw.core.dll",
         "lib/win81/SQLitePCLRaw.core.dll",
         "lib/wpa81/SQLitePCLRaw.core.dll",
-        "sqlitepclraw.core.1.1.11.nupkg.sha512",
+        "sqlitepclraw.core.1.1.5.nupkg.sha512",
         "sqlitepclraw.core.nuspec"
       ]
     },
-    "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.11": {
-      "sha512": "EfPI+qRoUcUW4/GvRPBnXmt+YQrgHzCxTqMbW+glYZs+OEH8xgJrvRI6e3hq0+MnsK1ICtyrAgrgcMkbKrhspQ==",
+    "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.5": {
+      "sha512": "FchuM2weo1w2FWQgy1ZSoAQNGaUzM7EKuvZDT9XpoUuyBdAhns7pzRHN3KBmx9abaHbKjjpitT6luC0VgWatMw==",
       "type": "package",
-      "path": "sqlitepclraw.lib.e_sqlite3.v140/1.1.11",
+      "path": "sqlitepclraw.lib.e_sqlite3.v140/1.1.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -18866,19 +18873,19 @@
         "runtimes/win10-arm/native/e_sqlite3.dll",
         "runtimes/win10-x64/native/e_sqlite3.dll",
         "runtimes/win10-x86/native/e_sqlite3.dll",
-        "sqlitepclraw.lib.e_sqlite3.v140.1.1.11.nupkg.sha512",
+        "sqlitepclraw.lib.e_sqlite3.v140.1.1.5.nupkg.sha512",
         "sqlitepclraw.lib.e_sqlite3.v140.nuspec"
       ]
     },
-    "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.11": {
-      "sha512": "oIuOVbS4vhZHbW98ENcxKf39i0YDfumFdWqPSN9pS2KjzX+gXhe/+7+C2g/ewwVAfT02I7JdrWGLv8eLMvp+JA==",
+    "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.5": {
+      "sha512": "2QAQ2ujc51ZTo7W9THPkjo+12FkhAwTCJJ9LwPRmH7BERO+2PL2OEc2kzQjG0s2QQdbRBfFPUxMwbyOQ1u42jA==",
       "type": "package",
-      "path": "sqlitepclraw.provider.e_sqlite3.uwp10/1.1.11",
+      "path": "sqlitepclraw.provider.e_sqlite3.uwp10/1.1.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll",
-        "sqlitepclraw.provider.e_sqlite3.uwp10.1.1.11.nupkg.sha512",
+        "sqlitepclraw.provider.e_sqlite3.uwp10.1.1.5.nupkg.sha512",
         "sqlitepclraw.provider.e_sqlite3.uwp10.nuspec"
       ]
     },
@@ -21800,8 +21807,7 @@
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.1.5",
       "Prism.DryIoc.Forms >= 7.2.0.1367",
       "Xam.Plugins.Forms.ImageCircle >= 3.0.0.5",
-      "Xamarin.Forms >= 4.2.0.848062",
-      "sqlite-net-pcl >= 1.5.231"
+      "Xamarin.Forms >= 4.2.0.848062"
     ]
   },
   "packageFolders": {
@@ -21864,10 +21870,6 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[4.2.0.848062, )"
-          },
-          "sqlite-net-pcl": {
-            "target": "Package",
-            "version": "[1.5.231, )"
           }
         },
         "imports": [

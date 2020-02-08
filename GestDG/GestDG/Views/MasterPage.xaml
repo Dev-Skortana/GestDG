@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestDG.Views.MasterPage"
+             xmlns:prism="http://prismlibrary.com"  
+              prism:ViewModelLocator.AutowireViewModel="True"
+             >
+  <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout BackgroundColor="WhiteSmoke" Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Spacing="5" >
+                    <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Enregistrer les membres du site." Command="{Binding getpage_registermembre}"/>
+                    <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Voir les membres." Command="{Binding getpage_showmembre}"/>
+                    <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Voir les visites des membres." Command="{Binding getpage_showmembrevisite}"/>
+                    <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Voir les activités des membres." Command="{Binding getpage_showmembreactivite}"/>
+                    <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Voir les rangs des membres." Command="{Binding getpage_showmembrerang}"/>
+                    <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Nombres messages des membres aux dates de connexions." Command="{Binding getpage_postenbmessage}"/>
+                    <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Vu rapide des membres." Command="{Binding getpage_showviewfastmembre}"/>
+                </StackLayout>
+                <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Margin="5">
+                    <Button BackgroundColor="Gold" TextColor="BlueViolet" Text="Quitter l'application."/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

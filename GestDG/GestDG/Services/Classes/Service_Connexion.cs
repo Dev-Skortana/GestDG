@@ -20,14 +20,14 @@ namespace GestDG.Services.Classes
         public async Task<Connexion> Get(DateTime date_connexion)
         {
             var connexion = await Database_configuration.Database_Initialize();
-            var resultat = await connexion.QueryAsync<Connexion>($"select * from Connexions where Date_connexion='{date_connexion.ToString("yyyy-MM-dd hh:mm")}'");
+            var resultat = await connexion.QueryAsync<Connexion>($"select * from Connexion where Date_connexion='{date_connexion.ToString("yyyy-MM-dd hh:mm")}'");
             return resultat[0];
         }
 
         public async Task<IEnumerable<Connexion>> GetList()
         {
             var connexion = await Database_configuration.Database_Initialize();
-            var resultat = await connexion.QueryAsync<Connexion>($"select * from Connexions");
+            var resultat = await connexion.QueryAsync<Connexion>($"select * from Connexion");
             return resultat;
         }
 

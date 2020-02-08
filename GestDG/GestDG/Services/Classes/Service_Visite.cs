@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using GestDG.Models;
 using GestDG.Services.Interfaces;
 using GestDG.Database_Initialize;
+using Recherche_donnees_GESTDG;
+using Recherche_donnees_GESTDG.enumeration;
+
 namespace GestDG.Services.Classes
 {
     class Service_Visite : IService_Visite
@@ -16,24 +19,24 @@ namespace GestDG.Services.Classes
             return (resultat >= 1);
         }
 
-        public async Task<Visite> Get(string pseudo, DateTime date_connexion)
+        public async Task<Visite> Get(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
         {
             var connexion = await Database_configuration.Database_Initialize();
-            var visites = await connexion.QueryAsync<Visite>($"select * from visites where visites.membre_pseudo='{pseudo}' and visites.connexion_date='{date_connexion.ToString("yyyy-MM-dd hh:mm")}'");
+            var visites = await connexion.QueryAsync<Visite>($"select * from visite {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees,methodes_recherches,recherche_type)}");
             return visites[0];
         }
 
-        public async Task<IEnumerable<Visite>> GetList()
+        public async Task<IEnumerable<Visite>> GetList(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
         {
             var connexion = await Database_configuration.Database_Initialize();
-            var visites = await connexion.QueryAsync<Visite>($"select * from visites");
+            var visites = await connexion.QueryAsync<Visite>($"select * from visite {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees, methodes_recherches, recherche_type)}");
             return visites;
         }
 
         public async Task<bool> insert(Visite visite)
         {
             var connexion = await Database_configuration.Database_Initialize();
-            var resultat = await connexion.InsertAsync(connexion);
+            var resultat = await connexion.InsertAsync(visite);
             return (resultat >= 1);
         }
 

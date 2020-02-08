@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using GestDG.Models;
 using System.Threading.Tasks;
+using Recherche_donnees_GESTDG.enumeration;
 
 namespace GestDG.Services.Interfaces
 {
     interface IService_Membre_Connexion_Message
     {
-        Task<IEnumerable<Membre_Connexion_Message>> GetList();
-        Task<Membre_Connexion_Message> Get(String membre_pseudo,DateTime connexion_date,int message_state);
+        Task<IEnumerable<Membre_Connexion_Message>> GetList(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type);
+        Task<Membre_Connexion_Message> Get(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type);
         Task<Boolean> insert(Membre_Connexion_Message membre_Connexion_Message);
         Task<Boolean> update(Membre_Connexion_Message membre_Connexion_Message);
         Task<Boolean> delete(Membre_Connexion_Message membre_Connexion_Message);

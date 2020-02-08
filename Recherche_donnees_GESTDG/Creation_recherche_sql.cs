@@ -18,12 +18,12 @@ namespace Recherche_donnees_GESTDG
 
         public String creationclause_conditionrequete(Dictionary<String,Object> dictionnaire_donnees,Dictionary<String,String> methodes_recherches,Enumerations_recherches.types_recherches recherche_type)
         {
-            String resultat = "";                                                                          /* Gerer les conditions dont la valeur de la condition est un format inconnu */
-            List<String> liste_keys = dictionnaire_donnees.Keys.ToList();
-            List<Object> liste_values = dictionnaire_donnees.Values.ToList();
+            String resultat = "";                                                                          /* Gerer les conditions dont la valeur de la condition est un format inconnu */ 
                                                                                      /* Verifier la deuxieme condition (rendre cette derniere plus compréhensible ) */
-            if ((dictionnaire_donnees.Count > 0) && !(liste_values.TrueForAll((itemvalue)=>!liste_format_condition.Exists((itemcondition)=>itemcondition.get_format(itemvalue)))))
+            if ((dictionnaire_donnees!=null) && (dictionnaire_donnees.Count > 0) && !(dictionnaire_donnees.Values.ToList().TrueForAll((itemvalue)=>!liste_format_condition.Exists((itemcondition)=>itemcondition.get_format(itemvalue)))))
             {
+                List<String> liste_keys = dictionnaire_donnees.Keys.ToList();
+                List<Object> liste_values = dictionnaire_donnees.Values.ToList();
                 resultat = "where ";
                 for (var i = 0; i < dictionnaire_donnees.Count; i++)
                 {     

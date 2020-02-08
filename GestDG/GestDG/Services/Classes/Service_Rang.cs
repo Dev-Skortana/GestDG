@@ -23,7 +23,7 @@ namespace GestDG.Services.Classes
         public async Task<Rang> Get(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
         {
             var connection = await Database_configuration.Database_Initialize();
-            var rangs = await connection.QueryAsync<Rang>($"select * from rang where {new Recherche_donnees_GESTDG.Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees, methodes_recherches, recherche_type)}");
+            var rangs = await connection.QueryAsync<Rang>($"select * from rang {new Recherche_donnees_GESTDG.Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees, methodes_recherches, recherche_type)}");
             return rangs.Count!=0 ? rangs[0] :null;
         }
 

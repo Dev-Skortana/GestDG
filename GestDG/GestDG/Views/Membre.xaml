@@ -62,9 +62,9 @@
                                     <Label Text="{Binding pseudo}" TextColor="Gold"/>
                                 </StackLayout>
                                 <StackLayout  HorizontalOptions="CenterAndExpand" Spacing="2" Orientation="Vertical" VerticalOptions="CenterAndExpand">
-                                    <Label Text="{Binding  date_naissance ,StringFormat='Née le : {0}'}" />
+                                    <Label Text="{Binding  date_naissance ,StringFormat='Née le : {0:dd/MM/yyyy}'}" />
                                     <Label Text="{Binding  age,StringFormat='Age : {0}'}"/>
-                                    <Label Text="{Binding  date_inscription, StringFormat='Inscrit depuis le {0}'}"/>
+                                    <Label Text="{Binding  date_inscription, StringFormat='Inscrit depuis le {0:dd/MM/yyyy}'}"/>
                                     <Label Text="{Binding  url_site,StringFormat='Lien de sont site : {0}'}"/>
                                     <Label Text="{Binding  statut ,StringFormat='Est : {0}'}"/>
                                     <Label Text="{Binding  sexe,StringFormat='Sexe : {0}'}"/>

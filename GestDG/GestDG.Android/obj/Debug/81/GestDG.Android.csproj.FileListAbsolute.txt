@@ -134,5 +134,7 @@ C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestD
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG.Android\obj\Debug\81\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG.Android\obj\Debug\81\android\assets\Xamarin.Forms.Platform.Android.pdb
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG.Android\obj\Debug\81\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG\bin\Debug\netstandard2.0\GestDG.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG.Android\bin\Debug\GestDG.dll.mdb
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG.Android\obj\Debug\81\linksrc\GestDG.dll.mdb
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\GestDG\GestDG.Android\obj\Debug\81\linksrc\Prism.dll.mdb

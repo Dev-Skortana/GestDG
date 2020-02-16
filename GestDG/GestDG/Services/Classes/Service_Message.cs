@@ -11,9 +11,6 @@ namespace GestDG.Services.Classes
     class Service_Message : IService_Message
     {
                                                                          /* CRUD  basique ,ne pas faire d'ajout */
-
-
-
         public async Task<bool> delete(Message message)
         {
             var connection = await Database_configuration.Database_Initialize();

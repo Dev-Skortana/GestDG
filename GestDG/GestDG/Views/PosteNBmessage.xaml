@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage Title="{Binding title}"
+             x:Name="test"
              BackgroundColor="Azure" 
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GestDG.Views.PosteNBmessage" 
-             xmlns:viewsmodels="clr-namespace:GestDG.ViewsModels;assembly=GestDG" 
+             xmlns:viewsmodels="clr-namespace:GestDG.ViewModels;assembly=GestDG" 
              xmlns:controls_carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
              xmlns:controls_imagecircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:behavior="clr-namespace:GestDG.Behaviors_Controls"
@@ -24,6 +25,7 @@
             <ScrollView Orientation="Both">
                 <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
+                        <Picker ItemsSource="{Binding Liste_noms_tables}" SelectedIndexChanged="Picker_switchsource_SelectedIndexChanged"  SelectedItem="{Binding nom_table_selected}" Title="Source :" TextColor="LightGreen"/>
                         <Picker x:Name="piker_champs" ItemsSource="{Binding Liste_champs}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding champ_selected}" Title="champ (libelle)" TextColor="Green"/>
                         <Entry x:Name="zone_saisi_text" Placeholder="Recherche ici" PlaceholderColor="Green" TextColor="Green" IsVisible="False">
                             <Entry.Behaviors>
@@ -52,26 +54,26 @@
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
-            <controls_carousel:CarouselViewControl PositionSelected="CarouselViewControl_PositionSelected" ItemsSource="{Binding liste_membres}" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ArrowsBackgroundColor="Green">
+            <controls_carousel:CarouselViewControl PositionSelected="CarouselViewControl_PositionSelected"  ItemsSource="{Binding Dictionnaire_membres_messages}" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ArrowsBackgroundColor="Green">
                     <controls_carousel:CarouselViewControl.ItemTemplate>
                         <DataTemplate>
                             <ScrollView Orientation="Both">
                                 <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                                     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                                        <controls_imagecircle:CircleImage HeightRequest="80" WidthRequest="80" Source="{Binding url_avatar }" Aspect="AspectFill"/>
-                                        <Label Text="{Binding pseudo }"  HorizontalTextAlignment="Center"/>
+                                        <controls_imagecircle:CircleImage HeightRequest="80" WidthRequest="80" Source="{Binding Key.url_avatar }" Aspect="AspectFill"/>
+                                        <Label Text="{Binding Key.pseudo }"  HorizontalTextAlignment="Center"/>
                                     </StackLayout>
-                                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
-                                        <Label HorizontalTextAlignment="Center">
-                                            <Label.FormattedText>
+                                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                    <Label BindingContext="{Binding Path=BindingContext,Source={x:Reference test}}" HorizontalTextAlignment="Center">
+                                        <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="{Binding dernier_dateconnexion_message.Date_connexion, StringFormat='Ce membre à cette date le {0}'}"/>
-                                                <Span Text="{Binding dernier_dateconnexion_message.Nbmessage, StringFormat='a au total {0} message(s)'}"/>
-                                                </FormattedString>
-                                            </Label.FormattedText>
-                                        </Label>
-                                        <Label Text="Historique des messages (statistique) du membre" TextDecorations="Underline" HorizontalTextAlignment="Center"/>
-                                    <ListView HasUnevenRows="False" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="50" ItemsSource="{Binding liste_dateconnexion_message}">
+                                                <Span Text="{Binding Dernier_dateconnexion_message.Date_connexion,StringFormat='Ce membre à cette date le {0:dd/MM/yyyy à hh:mm}'}"/>
+                                                <Span Text="{Binding Dernier_dateconnexion_message.Nbmessage, StringFormat=' a au total {0} message(s)'}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label Text="Historique des messages (statistique) du membre" TextDecorations="Underline" HorizontalTextAlignment="Center"/>
+                                    <ListView HasUnevenRows="False" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="50" ItemsSource="{Binding Value}">
                                             <ListView.ItemTemplate>
                                                 <DataTemplate>
                                                     <ViewCell>
@@ -79,7 +81,7 @@
                                                         <Label HorizontalTextAlignment="Center">
                                                         <Label.FormattedText>
                                                             <FormattedString>
-                                                                <Span Text="{Binding Date_connexion, StringFormat=' {0} =>'}"/>
+                                                                <Span Text="{Binding Date_connexion, StringFormat=' {0:dd/MM/yyyy hh:mm} =>'}"/>
                                                                 <Span Text="{Binding Nbmessage, StringFormat=' {0}'}"/>
                                                             </FormattedString>
                                                         </Label.FormattedText>

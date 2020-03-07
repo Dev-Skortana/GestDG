@@ -27,5 +27,13 @@ namespace GestDG.Views
         {
             ((sender as BindableObject).BindingContext as MembreActiviteViewModel).Command_gestion_dictionnaire_champsmethodesrecherches.Execute(null);
         }
+
+        private void Picker_switchsource_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (BindingContext as MembreActiviteViewModel != null)
+            {
+                ((sender as BindableObject).BindingContext as MembreActiviteViewModel).Command_switch_source.Execute(null);
+            }
+        }
     }
 }

@@ -24,7 +24,9 @@ namespace GestDG.ViewModels
 {
     class RegisterMembreViewModel : BindableBase,INavigationAware
     {
-        public String title { get; set; } = "Page registre";
+        private const String url_racine= @"https://dynamixgaming.forumgaming.fr/";
+        public String title { get; set; } = "Page enregistrement";
+        
         private RestService rest;
         private INavigationService service_navigation;
         private IFilePicture_Access service_access_picture;
@@ -244,20 +246,19 @@ namespace GestDG.ViewModels
 
         private async Task mtask()
         {
-            /* Aide mémoire sur xpath : + [combinaison noeuds(balises) conditionnel OU] -> EX : //bookstore/book/title | //bookstore/city/zipcode/title */
             /* Risque d'obtention d'informations non Syncroniser */
             HtmlDocument document_dynamixgaming_page_memberlist = new HtmlDocument();
-            document_dynamixgaming_page_memberlist.Load(await rest.getresponse(@"https://dynamixgaming.forumgaming.fr/memberlist"),Encoding.UTF8);
+            document_dynamixgaming_page_memberlist.Load(await rest.getresponse($"{url_racine}memberlist"),Encoding.UTF8);
 
             HtmlNode table_members;
             Regex pattern = new Regex("<.+class=\"page-sep\">.+</span>\n*(<a href=\"(?<page>[^\"]+)\">[0-9]+</a>)+");
             MatchCollection collection_page = pattern.Matches(document_dynamixgaming_page_memberlist.ParsedText);
             List<String> liste_pages = new List<string>();
             String premier_page = collection_page[0].Groups["page"].Value;
-            liste_pages.Add(collection_page.Count != 0 ? @"https://dynamixgaming.forumgaming.fr" + Regex.Replace(premier_page, "start=[0-9]+", "start=0") : @"https://dynamixgaming.forumgaming.fr/memberlist?mode=lastvisit&order=DESC&start=0&username");
+            liste_pages.Add(collection_page.Count != 0 ? $@"{url_racine}" + Regex.Replace(premier_page, "start=[0-9]+", "start=0") : $@"{url_racine}memberlist?mode=lastvisit&order=DESC&start=0&username");
             foreach (Match match in collection_page)
             {
-                liste_pages.Add(@"http://dynamixgaming.forumactif.com" + match.Groups["page"].Value);
+                liste_pages.Add($@"{url_racine}" + match.Groups["page"].Value);
             }
             foreach (String lien in liste_pages)
             {
@@ -276,7 +277,7 @@ namespace GestDG.ViewModels
                     Boolean reponse_insert_activite = true;
                     Boolean reponse_insert_rang = true;
                     HtmlDocument document_dynamixgaming_page_member_profile = new HtmlDocument();
-                    document_dynamixgaming_page_member_profile.Load(await rest.getresponse(@"https://dynamixgaming.forumgaming.fr" + member_iteration.Descendants("td").ToList()[1].Descendants("a").ToList()[0].Attributes[0].Value),Encoding.UTF8);
+                    document_dynamixgaming_page_member_profile.Load(await rest.getresponse($@"{url_racine}" + member_iteration.Descendants("td").ToList()[1].Descendants("a").ToList()[0].Attributes[0].Value),Encoding.UTF8);
                     Membre = new Models.Membre() { pseudo = document_dynamixgaming_page_member_profile.GetElementbyId("main-content")?.SelectSingleNode("//div/h1[@class='page-title']/span/strong | //div/h1[@class='page-title']").InnerText.Split(':')[1].Trim(), date_naissance = DateTime.TryParseExact(document_dynamixgaming_page_member_profile.GetElementbyId("field_id-12")?.SelectSingleNode("dd/div[@class='field_uneditable']").InnerText, "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime test_date_naissance) ? DateTime.ParseExact(document_dynamixgaming_page_member_profile.GetElementbyId("field_id-12")?.SelectSingleNode("dd/div[@class='field_uneditable']").InnerText, "dd/MM/yyyy", null) : new Nullable<DateTime>(), age = int.TryParse(document_dynamixgaming_page_member_profile.GetElementbyId("field_id-5")?.SelectSingleNode("dd/div[@class='field_uneditable']").InnerText, out int test_age) ? int.Parse(document_dynamixgaming_page_member_profile.GetElementbyId("field_id-5")?.SelectSingleNode("dd/div[@class='field_uneditable']").InnerText) : new Nullable<int>(), date_inscription = DateTime.ParseExact(document_dynamixgaming_page_member_profile.GetElementbyId("field_id-4")?.SelectSingleNode("dd/div[@class='field_uneditable']").InnerText, "dd/MM/yyyy", null), url_site = document_dynamixgaming_page_member_profile.GetElementbyId("field_id-10")?.SelectSingleNode("//div[@class='field_uneditable']/a").Attributes["href"].Value, url_avatar = document_dynamixgaming_page_member_profile.GetElementbyId("main-content")?.SelectSingleNode("//div[@class='column1']").SelectSingleNode("dl/dd").SelectSingleNode("img").Attributes["src"].Value, sexe =document_dynamixgaming_page_member_profile.GetElementbyId("field_id-7")?.SelectSingleNode("dd/div[@class='field_uneditable']/img").Attributes["title"].Value[0].ToString(), localisation = document_dynamixgaming_page_member_profile.GetElementbyId("field_id-11")?.SelectSingleNode("dd/div[@class='field_uneditable']").InnerText, statut = document_dynamixgaming_page_member_profile.GetElementbyId("main-content")?.SelectSingleNode("div[@class='panel bg1']//div[@class='column1']").SelectNodes("dl[@class='left-box details']")[1].SelectNodes("dd")[1].SelectSingleNode("strong").InnerText };
                     Pseudo = Membre.pseudo;        
                     var folder_avatar = await service_access_picture.save_picture(element_commun.type_image_membre.Avatar);
@@ -291,7 +292,7 @@ namespace GestDG.ViewModels
                     }
                     else
                     {
-                        Connexion = new Connexion() { date_connexion = Datefull.getdate_visite_full(Datefull.liste_partie_dates, Datefull.liste_partie_dates.Find((el) => Datefull.index_relation[Datefull.index] == el.Indexe)) };
+                        Connexion = new Connexion() { date_connexion = Datefull.getdate_visite_full(Datefull.liste_partie_dates, Datefull.liste_partie_dates.Find((el) => Datefull.index_relation[Datefull.index] == el.Indexe))};
                         Datefull.incremente_index();
                         Visite = new Visite() { membre = Membre, connexion = Connexion, membre_pseudo = Membre.pseudo, connexion_date = Connexion.date_connexion };
                         Message = new Message() { nb_message = int.Parse(document_dynamixgaming_page_member_profile.GetElementbyId("field_id-6")?.SelectSingleNode("dd/div[@class='field_uneditable']").InnerText) };
@@ -340,35 +341,42 @@ namespace GestDG.ViewModels
                     }
 
 
-                    if (reponse_insert_rang && await check_doublon_insert<IService_Rang>(new Service_Rang(), Rang) == false)
+                    if (reponse_insert_rang && await check_doublon_insert<IService_Rang>(new Service_Rang(), this.Rang) == false)
                     {
                         service_rang = new Service_Rang();
                         await service_rang.insert(this.Rang);
                     }
-                    service_membre = new Service_Membre();
-                    if (await check_doublon_insert<IService_Membre>(service_membre, Membre) == false)
+
+                    if (await check_doublon_insert<IService_Membre>(service_membre, this.Membre) == false)
                     {
+                        service_membre = new Service_Membre();
                         await service_membre.insert(this.Membre);
                     }
 
-
-                    if (reponse_insert_activite)
+                    if (reponse_insert_activite && await check_doublon_insert<IService_Activite>(new Service_Activite(), this.Activite) == false)
                     {
                         service_activite = new Service_Activite();
                         await service_activite.insert(this.Activite);
                     }
                     if (reponse_insert_dateconnexion)
                     {
-                        service_connexion = new Service_Connexion();
-                        await service_connexion.insert(this.Connexion);
-                        service_visite = new Service_Visite();
-                        await service_visite.insert(this.Visite);
-                        service_message = new Service_Message();
-                        await service_message.insert(this.Message);
-
+                        if (await check_doublon_insert<IService_Connexion>(new Service_Connexion(), this.Connexion) == false) {
+                            service_connexion = new Service_Connexion();
+                            await service_connexion.insert(this.Connexion);
+                        }
+                        if (await check_doublon_insert<IService_Visite>(new Service_Visite(), this.Visite) == false){
+                            service_visite = new Service_Visite();
+                            await service_visite.insert(this.Visite);
+                        }
+                        if (await check_doublon_insert<IService_Message>(new Service_Message(),this.Message)==false) {
+                            service_message = new Service_Message();
+                            await service_message.insert(this.Message);
+                        }
+                    if (await check_doublon_insert<IService_Membre_Connexion_Message>(new Service_Membre_Connexion_Message(),this.Membreconnexionmessage)==false) {
                         service_membre_connexion_message = new Service_Membre_Connexion_Message();
                         await service_membre_connexion_message.insert(this.Membreconnexionmessage);
                     }
+                }
 
                     this.Membre = null;
                     this.Connexion = null;

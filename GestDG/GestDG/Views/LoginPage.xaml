@@ -1,8 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentPage 
+             Title="{Binding title}"
+             xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GestDG.Views.LoginPage" BackgroundColor="CadetBlue" xmlns:prism="http://prismlibrary.com"  
-             prism:ViewModelLocator.AutowireViewModel="True">
+             x:Class="GestDG.Views.LoginPage" 
+             BackgroundColor="CadetBlue" 
+             xmlns:prism="http://prismlibrary.com"  
+             prism:ViewModelLocator.AutowireViewModel="True"
+             >
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">

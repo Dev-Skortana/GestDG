@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GestDG.Views.MasterPage"
              xmlns:prism="http://prismlibrary.com"  
-              prism:ViewModelLocator.AutowireViewModel="True"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding title}"
              >
   <ContentPage.Content>
         <ScrollView Orientation="Vertical">
@@ -16,9 +17,6 @@
                     <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Voir les rangs des membres." Command="{Binding getpage_showmembrerang}"/>
                     <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Nombres messages des membres aux dates de connexions." Command="{Binding getpage_postenbmessage}"/>
                     <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Vu rapide des membres." Command="{Binding getpage_showviewfastmembre}"/>
-                </StackLayout>
-                <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Margin="5">
-                    <Button BackgroundColor="Gold" TextColor="BlueViolet" Text="Quitter l'application."/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

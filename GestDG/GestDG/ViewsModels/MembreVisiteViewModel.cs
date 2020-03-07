@@ -36,7 +36,7 @@ namespace GestDG.ViewModels
             this.dictionnaire_champs_methodesrecherche = this.dictionnaire_champs_methodesrecherche_membres;
             this.nom_table_selected = "Membre";
 
-            this.champ_selected = Liste_champs[0];
+            this.Champ_selected = Liste_champs[0];
             this.methoderecherche_selected = Liste_methodesrecherches[0];
             this.type_selected = Liste_typesrecherches[0];
         }
@@ -62,7 +62,14 @@ namespace GestDG.ViewModels
         public List<String> Liste_champs_visite { get { return new List<string>() { "connexion_date" , "date_enregistrement" }; } }
         public List<String> Liste_champs_membres { get { return new List<string>() { "pseudo", "date_naissance", "age", "date_inscription", "url_site", "url_avatar", "sexe", "localisation", "statut" }; } }
 
-        public String champ_selected { get; set; }
+        private String _champ_selected;
+
+        public String Champ_selected
+        {
+            get { return _champ_selected; }
+            set { SetProperty(ref _champ_selected, value); }
+        }
+
 
         private Dictionary<Membre, List<visite_custom>> _dictionnaire_membre_visite = new Dictionary<Membre,List<visite_custom>>();
         public Dictionary<Membre, List<visite_custom>> Dictionnaire_membre_visite
@@ -120,7 +127,7 @@ namespace GestDG.ViewModels
                         Liste_champs = Liste_champs_visite;
                         dictionnaire_champs_methodesrecherche = dictionnaire_champs_methodesrecherche_visites;
                     }
-                    champ_selected = Liste_champs[0];
+                    this.Champ_selected = Liste_champs[0];
                 });
             }
         }
@@ -131,15 +138,15 @@ namespace GestDG.ViewModels
             {
                 return new Command(() =>
                 {
-                    if (champ_selected != null)
+                    if (this.Champ_selected != null)
                     {
-                        if (dictionnaire_champs_methodesrecherche != null && dictionnaire_champs_methodesrecherche.ContainsKey(champ_selected))
+                        if (dictionnaire_champs_methodesrecherche != null && dictionnaire_champs_methodesrecherche.ContainsKey(this.Champ_selected))
                         {
-                            dictionnaire_champs_methodesrecherche[champ_selected] = methoderecherche_selected;
+                            dictionnaire_champs_methodesrecherche[this.Champ_selected] = methoderecherche_selected;
                         }
                         else
                         {
-                            dictionnaire_champs_methodesrecherche.Add(champ_selected, methoderecherche_selected);
+                            dictionnaire_champs_methodesrecherche.Add(this.Champ_selected, methoderecherche_selected);
                         }
                     }
                 });
@@ -151,7 +158,7 @@ namespace GestDG.ViewModels
             get
             {
                 return new Command<Object>(async (donnees) => {
-                    await load(new Dictionary<string, Object>() { { champ_selected, donnees } }, dictionnaire_champs_methodesrecherche, type_selected);
+                    await load(new Dictionary<string, Object>() { { this.Champ_selected, donnees } }, dictionnaire_champs_methodesrecherche, type_selected);
 
                 });
             }

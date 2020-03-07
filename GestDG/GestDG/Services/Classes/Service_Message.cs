@@ -22,7 +22,7 @@ namespace GestDG.Services.Classes
         {
             var connection = await Database_configuration.Database_Initialize();
             var messages = await connection.QueryAsync<Message>($"Select * from message where message.nb_message={nb_message}");
-            return messages[0];
+            return messages.Count!=0 ? messages[0] : null;
         }
 
         public async Task<IEnumerable<Message>> GetList()

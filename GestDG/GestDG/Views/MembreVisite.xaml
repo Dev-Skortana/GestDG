@@ -24,7 +24,7 @@
                 <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
                         <Picker ItemsSource="{Binding Liste_noms_tables}" SelectedIndexChanged="Picker_switchsource_SelectedIndexChanged" SelectedItem="{Binding nom_table_selected}" Title="Source :" TextColor="LightGreen"/>
-                        <Picker x:Name="piker_champs" ItemsSource="{Binding Liste_champs}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding champ_selected}" Title="champ (libelle)" TextColor="LightGreen"/>
+                        <Picker x:Name="piker_champs" ItemsSource="{Binding Liste_champs}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding Champ_selected}" Title="champ (libelle)" TextColor="LightGreen"/>
                         <Entry x:Name="zone_saisi_text" Placeholder="Recherche ici" PlaceholderColor="Green" TextColor="Green" IsVisible="False">
                             <Entry.Behaviors>
                                 <behavior:Behavior_EntryTextChanged Command="{Binding Command_search}" />
@@ -68,8 +68,8 @@
                                             <DataTemplate>
                                                 <ViewCell>
                                                     <StackLayout Orientation="Vertical" Margin="5">
-                                                        <Label Text="{Binding connexion_date, StringFormat='à été ou est connecté le {0:dd/MM/yyyy hh:mm}'}" TextColor="White"/>
-                                                        <Label Text="{Binding date_enregistrement,StringFormat='Enregistrer au {0:dd/MM/yyyy hh:mm}'}" TextColor="White"/>
+                                                        <Label Text="{Binding connexion_date, StringFormat='à été ou est connecté le {0:dd/MM/yyyy HH:mm}'}" TextColor="White"/>
+                                                        <Label Text="{Binding date_enregistrement,StringFormat='Enregistrer au {0:dd/MM/yyyy HH:mm}'}" TextColor="White"/>
                                                     </StackLayout>
                                                 </ViewCell>
                                             </DataTemplate>

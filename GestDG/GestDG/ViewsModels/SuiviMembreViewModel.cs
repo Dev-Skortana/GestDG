@@ -19,7 +19,6 @@ namespace GestDG.ViewModels
 {
     class SuiviMembreViewModel : BindableBase,INavigationAware
     {
-        
 
         #region Interfaces_services
         private INavigationService service_navigation;
@@ -35,12 +34,36 @@ namespace GestDG.ViewModels
         #region Variables
         public string title { get; set; } = "Page suivi du membre";
         private Dictionary<String, String> dictionnaire_champs_methodesrecherche = new Dictionary<string, string>();
+        private Dictionary<String, String> dictionnaire_champs_methodesrecherche_visites = new Dictionary<string, string>();
+        private Dictionary<String, String> dictionnaire_champs_methodesrecherche_activites = new Dictionary<string, string>();
+        private Dictionary<String, String> dictionnaire_champs_methodesrecherche_messages = new Dictionary<string, string>();
+
         public List<String> Liste_methodesrecherches { get { return Enumerations_recherches.get_liste_methodesrecherches(); } }
         public String methoderecherche_selected { get; set; }
+
         public List<string> Liste_typesrecherches { get { return Enumerations_recherches.get_liste_typesrecherches(); } }
         public String type_selected { get; set; }
-        public List<String> Liste_champs { get { return new List<string>() { "libelle_activite","connexion_date","message_nb"}; } }
-        public String champ_selected { get; set; }
+
+        public List<String> Liste_noms_tables_recherche { get { return new List<string>() { "Activite", "Visite", "Membre_connexion_message" }; } }
+        public String nom_table_selected { get; set; }
+
+
+
+        public List<String> Liste_champs_activites { get { return new List<string>() { "libelle_activite" }; } }
+        public List<String> Liste_champs_visite { get { return new List<string>() { "connexion_date", "date_enregistrement" }; } }
+        public List<String> Liste_champs_message { get { return new List<string>() { "message_nb" }; } }
+
+        public List<String> liste_champs;
+        public List<String> Liste_champs { get { return liste_champs; } set { SetProperty(ref liste_champs, value); } }
+
+        private String _champ_selected;
+
+        public String Champ_selected
+        {
+            get { return _champ_selected; }
+            set { SetProperty(ref _champ_selected, value); }
+        }
+
         private Membre _membre;
 
         public Membre Membre
@@ -107,21 +130,46 @@ namespace GestDG.ViewModels
         #endregion
 
         #region Command_MVVM
+
+        public ICommand Command_switch_source
+        {
+            get
+            {
+                return new Command(() => {
+                    if (nom_table_selected == "Activite")
+                    {
+                        Liste_champs = Liste_champs_activites;
+                        dictionnaire_champs_methodesrecherche = dictionnaire_champs_methodesrecherche_activites;
+                    }
+                    else if (nom_table_selected == "Visite")
+                    {
+                        Liste_champs = Liste_champs_visite;
+                        dictionnaire_champs_methodesrecherche = dictionnaire_champs_methodesrecherche_visites;
+                    }else if (nom_table_selected == "Membre_connexion_message")
+                    {
+                        Liste_champs = Liste_champs_message;
+                        dictionnaire_champs_methodesrecherche = dictionnaire_champs_methodesrecherche_messages;
+                    }
+                    this.Champ_selected = Liste_champs[0];
+                });
+            }
+        }
+
         public ICommand Command_gestion_dictionnaire_champsmethodesrecherches
         {
             get
             {
                 return new Command(() =>
                 {
-                    if (champ_selected != null)
+                    if (Champ_selected != null)
                     {
-                        if (dictionnaire_champs_methodesrecherche != null && dictionnaire_champs_methodesrecherche.ContainsKey(champ_selected))
+                        if (dictionnaire_champs_methodesrecherche != null && dictionnaire_champs_methodesrecherche.ContainsKey(Champ_selected))
                         {
-                            dictionnaire_champs_methodesrecherche[champ_selected] = methoderecherche_selected;
+                            dictionnaire_champs_methodesrecherche[Champ_selected] = methoderecherche_selected;
                         }
                         else
                         {
-                            dictionnaire_champs_methodesrecherche.Add(champ_selected, methoderecherche_selected);
+                            dictionnaire_champs_methodesrecherche.Add(Champ_selected, methoderecherche_selected);
                         }
                     }
                 });
@@ -133,7 +181,7 @@ namespace GestDG.ViewModels
             get
             {
                 return new Command<Object>(async (donnees) => {
-                    await load(new Dictionary<string, Object>() { { champ_selected, donnees } }, dictionnaire_champs_methodesrecherche, type_selected);
+                    await load(new Dictionary<string, Object>() { { Champ_selected, donnees } }, dictionnaire_champs_methodesrecherche, type_selected);
 
                 });
             }
@@ -151,7 +199,13 @@ namespace GestDG.ViewModels
             this.service_rang = _service_rang;
             this.service_membre_connexion_message = _service_membre_connexion_message;
             this.service_navigation = _service_navigation;
-            this.champ_selected = Liste_champs[0];
+
+            this.Liste_champs = this.Liste_champs_activites;
+            this.dictionnaire_champs_methodesrecherche = this.dictionnaire_champs_methodesrecherche_activites;
+            this.nom_table_selected = "Activite";
+
+                    
+            this.Champ_selected = Liste_champs[0];
             this.methoderecherche_selected = Liste_methodesrecherches[0];
             this.type_selected = Liste_typesrecherches[0];
         }
@@ -161,12 +215,21 @@ namespace GestDG.ViewModels
         private async Task load(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, String recherche_type)
         {
             Enumerations_recherches.types_recherches type = (Enumerations_recherches.types_recherches)Enum.Parse(typeof(Enumerations_recherches.types_recherches), recherche_type);
-            /* Retrouver les informations des differents ensembles(entité) en liaison avec ce membre. */
-            Rang = (from item in await service_rang.GetList(null, null, Enumerations_recherches.types_recherches.Simple) where item.nom_rang.ToUpper() == Membre.rang_nom.ToUpper() select item).Single();
-            Activites = (from item in (List<Activite>)await service_activite.GetList(null,null,Enumerations_recherches.types_recherches.Simple) where item.membre_pseudo.ToUpper()==Membre.pseudo.ToUpper() select item).ToList();
-            Visites =(from item in (List<Visite>)await service_visite.GetList(null,null,Enumerations_recherches.types_recherches.Simple) where item.membre_pseudo.ToUpper()==Membre.pseudo.ToUpper() select item).ToList();
 
-            Groupement_nombremessage = (from item in (List<Membre_Connexion_Message>)await service_membre_connexion_message.GetList(null, null, Enumerations_recherches.types_recherches.Simple) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() orderby item.connexion_date descending select new Groupement_nombremessage() {Date_connexion=item.connexion_date,Nbmessage=item.message_nb}).ToList();
+            Rang = new Rang();
+            Rang=(from item in await service_rang.GetList(null, null, Enumerations_recherches.types_recherches.Simple) where item.nom_rang.ToUpper() == Membre.rang_nom?.ToUpper() select item).FirstOrDefault();
+
+            Activites = new List<Activite>();
+            Activites= (from item in (List<Activite>)await service_activite.GetList(nom_table_selected == "Activite" ? dictionnaire_donnees : null, nom_table_selected == "Activite" ? methodes_recherches : null, type) where item.membre_pseudo.ToUpper()==Membre.pseudo.ToUpper() select item).ToList();
+
+            Visites = new List<Visite>();
+            Visites=(from item in (List<Visite>)await service_visite.GetList(nom_table_selected == "Visite" ? dictionnaire_donnees : null, nom_table_selected == "Visite" ? methodes_recherches : null, type) where item.membre_pseudo.ToUpper()==Membre.pseudo.ToUpper() select item).ToList();
+
+            Groupement_nombremessage = new List<Groupement_nombremessage>();
+            Groupement_nombremessage= (from item in (List<Membre_Connexion_Message>)await service_membre_connexion_message.GetList(nom_table_selected == "Membre_connexion_message" ? dictionnaire_donnees : null, nom_table_selected == "Membre_connexion_message" ? methodes_recherches : null, type) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() orderby item.connexion_date descending select new Groupement_nombremessage() {Date_connexion=item.connexion_date,Nbmessage=item.message_nb}).ToList();
+
+           
+
         }
         #endregion
 

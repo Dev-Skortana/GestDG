@@ -22,8 +22,8 @@ namespace GestDG.Services.Classes
         public async Task<Membre_Connexion_Message> Get(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
         {
             var connexion = await Database_configuration.Database_Initialize();
-            var membre_connexion_message = await connexion.QueryAsync<Membre_Connexion_Message>($"select * from membres_connexions_message {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees,methodes_recherches,recherche_type)}");
-            return membre_connexion_message[0];
+            var membre_connexion_message = await connexion.QueryAsync<Membre_Connexion_Message>($"select * from membre_connexion_message {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees,methodes_recherches,recherche_type)}");
+            return membre_connexion_message.Count!=0 ? membre_connexion_message[0] :null;
         }
 
         public async Task<IEnumerable<Membre_Connexion_Message>> GetList(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)

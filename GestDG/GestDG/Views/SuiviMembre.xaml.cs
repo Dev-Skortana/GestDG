@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,6 +25,14 @@ namespace GestDG.Views
         private void Picker_SelectedIndexChanged(object sender, EventArgs e)
         {
             ((sender as BindableObject).BindingContext as SuiviMembreViewModel).Command_gestion_dictionnaire_champsmethodesrecherches.Execute(null);
+        }
+
+        private void Picker_switchsource_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (BindingContext as SuiviMembreViewModel != null)
+            {
+                ((sender as BindableObject).BindingContext as SuiviMembreViewModel).Command_switch_source.Execute(null);
+            }
         }
     }
 }

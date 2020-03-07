@@ -65,7 +65,7 @@
             <ScrollView Orientation="Horizontal">
                 <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
                     <Button HorizontalOptions="FillAndExpand"  Text="Changer de zone de saisie" BackgroundColor="Green" TextColor="DarkGreen" Clicked="Button_Clicked"/>
-                    <Button HorizontalOptions="FillAndExpand" Text="Aller au suivi de ce membre" BackgroundColor="Gold" TextColor="White" Command="{Binding getpage_membre}"/>
+                    <Button BindingContext="{Binding Path=BindingContext,Source={x:Reference MainPage}" HorizontalOptions="FillAndExpand" Text="Aller au suivi de ce membre" BackgroundColor="Gold" TextColor="White" Command="{Binding getpage_membre}"/>
                 </StackLayout>
         </ScrollView>
         </StackLayout>

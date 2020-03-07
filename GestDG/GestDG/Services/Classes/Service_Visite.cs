@@ -23,7 +23,7 @@ namespace GestDG.Services.Classes
         {
             var connexion = await Database_configuration.Database_Initialize();
             var visites = await connexion.QueryAsync<Visite>($"select * from visite {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees,methodes_recherches,recherche_type)}");
-            return visites[0];
+            return visites.Count!=0 ? visites[0]: null;
         }
 
         public async Task<IEnumerable<Visite>> GetList(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)

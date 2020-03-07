@@ -38,7 +38,7 @@ namespace GestDG.ViewModels
         public String methoderecherche_selected { get; set; }
         public List<string> Liste_typesrecherches { get { return Enumerations_recherches.get_liste_typesrecherches(); } }
         public String type_selected { get; set; }
-        public List<String> Liste_champs { get { return new List<string>() { "pseudo", "date_naissance", "age", "date_inscription", "url_site", "url_avatar", "sexe", "localisation", "statut", "rang_nom" }; } }
+        public List<String> Liste_champs { get { return new  List<string>() { "pseudo", "date_naissance", "age", "date_inscription", "url_site", "url_avatar", "sexe", "localisation", "statut", "rang_nom" }; } }
         public String champ_selected { get; set; }
 
         private List<Membre> _liste_membres;
@@ -92,7 +92,7 @@ namespace GestDG.ViewModels
         private async Task load(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, String  recherche_type)
         {
             Enumerations_recherches.types_recherches type= (Enumerations_recherches.types_recherches)Enum.Parse(typeof(Enumerations_recherches.types_recherches), recherche_type);
-            Liste_membres = (from item in (List<Membre>)await service_membre.GetList(dictionnaire_donnees,methodes_recherches,type) orderby item.pseudo select item).ToList();
+            Liste_membres = (from membre in (List<Membre>)await service_membre.GetList(dictionnaire_donnees,methodes_recherches,type) orderby membre.pseudo select membre).ToList();
         }
         #endregion
 

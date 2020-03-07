@@ -23,13 +23,13 @@ namespace GestDG.Database_Initialize
             //await connection.DropTableAsync<Membre_Connexion_Message>();
             //await connection.DropTableAsync<Activite>();
 
-            //await connection.CreateTableAsync<Rang>();
-            //await connection.CreateTableAsync<Membre>();
-            //await connection.CreateTableAsync<Connexion>();
-            //await connection.CreateTableAsync<Message>();
-            //await connection.CreateTableAsync<Visite>();
-            //await connection.CreateTableAsync<Membre_Connexion_Message>();
-            //await connection.CreateTableAsync<Activite>();
+            await connection.CreateTableAsync<Rang>();
+            await connection.CreateTableAsync<Membre>();
+            await connection.CreateTableAsync<Connexion>();
+            await connection.CreateTableAsync<Message>();
+            await connection.CreateTableAsync<Visite>();
+            await connection.CreateTableAsync<Membre_Connexion_Message>();
+            await connection.CreateTableAsync<Activite>();
             return connection;
         }
     }

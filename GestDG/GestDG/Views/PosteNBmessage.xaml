@@ -26,7 +26,7 @@
                 <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
                         <Picker ItemsSource="{Binding Liste_noms_tables}" SelectedIndexChanged="Picker_switchsource_SelectedIndexChanged"  SelectedItem="{Binding nom_table_selected}" Title="Source :" TextColor="LightGreen"/>
-                        <Picker x:Name="piker_champs" ItemsSource="{Binding Liste_champs}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding champ_selected}" Title="champ (libelle)" TextColor="Green"/>
+                        <Picker x:Name="piker_champs" ItemsSource="{Binding Liste_champs}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding Champ_selected}" Title="champ (libelle)" TextColor="Green"/>
                         <Entry x:Name="zone_saisi_text" Placeholder="Recherche ici" PlaceholderColor="Green" TextColor="Green" IsVisible="False">
                             <Entry.Behaviors>
                                 <behavior:Behavior_EntryTextChanged Command="{Binding Command_search}" />
@@ -67,7 +67,7 @@
                                     <Label BindingContext="{Binding Path=BindingContext,Source={x:Reference test}}" HorizontalTextAlignment="Center">
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="{Binding Dernier_dateconnexion_message.Date_connexion,StringFormat='Ce membre à cette date le {0:dd/MM/yyyy à hh:mm}'}"/>
+                                                <Span Text="{Binding Dernier_dateconnexion_message.Date_connexion,StringFormat='Ce membre à cette date le {0:dd/MM/yyyy à HH:mm}'}"/>
                                                 <Span Text="{Binding Dernier_dateconnexion_message.Nbmessage, StringFormat=' a au total {0} message(s)'}"/>
                                             </FormattedString>
                                         </Label.FormattedText>
@@ -77,11 +77,11 @@
                                             <ListView.ItemTemplate>
                                                 <DataTemplate>
                                                     <ViewCell>
-                                                        <StackLayout BackgroundColor="Cyan" VerticalOptions="Center" HorizontalOptions="Center" Orientation="Vertical">
+                                                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Orientation="Vertical">
                                                         <Label HorizontalTextAlignment="Center">
                                                         <Label.FormattedText>
                                                             <FormattedString>
-                                                                <Span Text="{Binding Date_connexion, StringFormat=' {0:dd/MM/yyyy hh:mm} =>'}"/>
+                                                                <Span Text="{Binding Date_connexion, StringFormat=' {0:dd/MM/yyyy HH:mm} =>'}"/>
                                                                 <Span Text="{Binding Nbmessage, StringFormat=' {0}'}"/>
                                                             </FormattedString>
                                                         </Label.FormattedText>

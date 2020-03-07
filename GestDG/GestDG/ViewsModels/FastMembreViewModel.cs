@@ -42,7 +42,7 @@ namespace GestDG.ViewModels
         public String champ_selected { get; set; }
         
  
-        private List<Membre> _liste_membres;
+        private List<Membre> _liste_membres=new List<Membre>();
         public List<Membre> Liste_membres {
             get
             {
@@ -89,16 +89,16 @@ namespace GestDG.ViewModels
         }
 
 
-        /* Permettre la naviguation vers la page suivi du membre avec la transmission de l'objet membre en respectant le pattern MVVM(Model View ViewModel) */
-
         public ICommand save_membre_selected
         {
             get
             {
                 return new Command<int>((position) => {
-                    if (Liste_membres!=null) {
+
+                    if (Liste_membres.Count>0)
+                    {
                         membre_selected = Liste_membres?[position];
-                    }
+                    }                 
                 });
             }
         }
@@ -111,7 +111,7 @@ namespace GestDG.ViewModels
                 return new Command(async()=> {
                     NavigationParameters parametre = new NavigationParameters();
                     parametre.Add("Membre",membre_selected);
-                    await service_naviguation.NavigateAsync("Page_Menu/BaseNaviguationPage/SuiviMembre", parametre);
+                    await service_naviguation.NavigateAsync("SuiviMembre", parametre);
                 });
             }
         } 
@@ -121,7 +121,7 @@ namespace GestDG.ViewModels
         private async Task load(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, String recherche_type)
         {
             Enumerations_recherches.types_recherches type = (Enumerations_recherches.types_recherches)Enum.Parse(typeof(Enumerations_recherches.types_recherches), recherche_type);
-            Liste_membres = (from item in (List<Membre>)await service_membre.GetList(dictionnaire_donnees, methodes_recherches, type) orderby item.pseudo select item).ToList();
+            Liste_membres = (from membre in (List<Membre>)await service_membre.GetList(dictionnaire_donnees, methodes_recherches, type) orderby membre.pseudo select membre).ToList();
         }
         #endregion
 

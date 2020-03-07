@@ -28,7 +28,6 @@ namespace GestDG
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
             containerRegistry.RegisterInstance(typeof(RestService),new RestService());
             containerRegistry.Register<IService_Membre, Service_Membre>();
             containerRegistry.Register<IService_Connexion, Service_Connexion>();

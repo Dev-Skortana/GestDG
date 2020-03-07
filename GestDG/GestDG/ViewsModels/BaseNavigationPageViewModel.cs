@@ -7,11 +7,15 @@ namespace GestDG.ViewModels
 {
     class BaseNavigationPageViewModel
     {
+        #region Interfaces_services
         INavigationService service_navigation;
+        #endregion
 
-        public BaseNavigationPageViewModel(INavigationService navigation)
+        #region Constructeure
+        public BaseNavigationPageViewModel(INavigationService _navigation)
         {
-            this.service_navigation = navigation;
+            this.service_navigation = _navigation;
         }
+        #endregion
     }
 }

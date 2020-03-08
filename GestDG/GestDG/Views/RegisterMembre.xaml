@@ -19,9 +19,10 @@
             </StackLayout>
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <ActivityIndicator IsRunning="{Binding isbusy}" Color="Green" />
+                <Label IsVisible="{Binding isfinish_load}" Text="{Binding message_redirect}" TextColor="DarkGreen" FontSize="Large"/>
             </StackLayout>
             <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
-                <Button IsVisible="{Binding isbusy, Converter={StaticResource convert}}" Text="Lancer le chargement" TextColor="Green" BackgroundColor="WhiteSmoke" Command="{Binding chargement}"/>
+                <Button IsVisible="{Binding isbusy, Converter={StaticResource convert}}" IsEnabled="{Binding isfinish_load,Converter={StaticResource convert}}" Text="Lancer le chargement" TextColor="Green" BackgroundColor="WhiteSmoke" Command="{Binding chargement}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

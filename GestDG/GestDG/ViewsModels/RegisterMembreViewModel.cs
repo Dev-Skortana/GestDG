@@ -24,9 +24,11 @@ namespace GestDG.ViewModels
 {
     class RegisterMembreViewModel : BindableBase,INavigationAware
     {
+        #region Constante
         private const String url_racine= @"https://dynamixgaming.forumgaming.fr/";
-        public String title { get; set; } = "Page enregistrement";
-        
+        #endregion
+
+        #region Services
         private RestService rest;
         private INavigationService service_navigation;
         private IFilePicture_Access service_access_picture;
@@ -37,8 +39,9 @@ namespace GestDG.ViewModels
         private IService_Activite service_activite;
         private IService_Message service_message;
         private IService_Membre_Connexion_Message service_membre_connexion_message;
+        #endregion
 
-
+        #region Constructeure
         public RegisterMembreViewModel(INavigationService _service_navigation,IService_Membre _service_membre, IService_Connexion _service_connexion, IService_Visite _service_visite, IService_Rang _service_rang, IService_Activite _service_activite, IService_Message _service_message, IService_Membre_Connexion_Message _service_membre_connexion_message,RestService rest)
         {
             this.service_navigation = _service_navigation;
@@ -51,10 +54,16 @@ namespace GestDG.ViewModels
             this.service_message = _service_message;
             this.service_membre_connexion_message = _service_membre_connexion_message;
             this.rest = rest;
-            isbusy = false;
-        }
-        private String _pseudo;
 
+            this.isfinish_load = false;
+            this.isbusy = false;
+        }
+        #endregion
+
+        #region Variables
+        public String title { get; set; } = "Page enregistrement";
+
+        private String _pseudo;
         public String Pseudo
         {
             get
@@ -67,8 +76,8 @@ namespace GestDG.ViewModels
             }
         }
 
-        private String _image;
 
+        private String _image;
         public String Image
         {
             get
@@ -79,6 +88,13 @@ namespace GestDG.ViewModels
             {
                 SetProperty(ref _image,value);
             }
+        }
+
+        private String _message_redirect;
+        public String message_redirect
+        {
+            get { return _message_redirect; }
+            set { SetProperty(ref _message_redirect,value); }
         }
 
 
@@ -94,6 +110,7 @@ namespace GestDG.ViewModels
                 SetProperty(ref _membre,value);
             }
         }
+
         private Connexion _connexion;
         public Connexion Connexion
         {
@@ -107,6 +124,7 @@ namespace GestDG.ViewModels
             }
 
         }
+
         private Message _message;
         public Message Message
         {
@@ -119,6 +137,7 @@ namespace GestDG.ViewModels
                 SetProperty(ref _message,value);
             }
         }
+
         private Activite _activite;
         public Activite Activite
         {
@@ -131,6 +150,7 @@ namespace GestDG.ViewModels
                 SetProperty(ref _activite,value);
             }
         }
+
         private Rang _rang;
         public Rang Rang
         {
@@ -143,6 +163,7 @@ namespace GestDG.ViewModels
                 SetProperty(ref _rang,value);
             }
         }
+
         private Visite _visite;
         public Visite Visite
         {
@@ -155,6 +176,7 @@ namespace GestDG.ViewModels
                 SetProperty(ref _visite,value);
             }
         }
+
         private Membre_Connexion_Message _membreconnexionmessage;
         public Membre_Connexion_Message Membreconnexionmessage
         {
@@ -167,9 +189,21 @@ namespace GestDG.ViewModels
                 SetProperty(ref _membreconnexionmessage,value);
             }
         }
- 
-        private Boolean _isbusy;
 
+        private Boolean _isfinish_load;
+        public Boolean isfinish_load
+        {
+            get
+            {
+                return _isfinish_load;
+            }
+            set
+            {
+                SetProperty(ref _isfinish_load,value);
+            }
+        }
+
+        private Boolean _isbusy;
         public Boolean isbusy
         {
             get
@@ -181,6 +215,9 @@ namespace GestDG.ViewModels
                 SetProperty(ref _isbusy,value);
             }
         }
+        #endregion
+
+        #region Methode_priver
         /* Méthode temporaire elle remplace les triggers d'interdiction de doublon*/
         private async Task<Boolean> check_doublon_insert<service_table>(service_table service, Object donnees)
         {
@@ -389,7 +426,18 @@ namespace GestDG.ViewModels
                 }
             }
           }
+            
+        private async Task redirection_compte_rebour(int temps_seconde)
+        {
+            for (var iteration=temps_seconde;iteration>0;iteration--)
+            {
+                this.message_redirect = $"Redirection dans {iteration}";
+                await Task.Delay(1000);
+            }
+        }
+        #endregion
 
+        #region Commande_MVVM
         public Command chargement
         {
             get
@@ -399,11 +447,16 @@ namespace GestDG.ViewModels
                     this.isbusy = true;
                     await mtask();
                     this.isbusy = false;
-                    await Task.Delay(1000);
+                    this.isfinish_load = true;
+                    await Application.Current.MainPage.DisplayAlert("Fin de chargement !","En appuyant sur OK vous allez étre rediriger dans quelques secondes","OK");
+                    await this.redirection_compte_rebour(3);
+                    await this.service_navigation.NavigateAsync("/BaseNavigationPage/MasterPage");
                 });
             }
         }
+        #endregion
 
+        #region Methode_navigation_PRISM
         public void OnNavigatedFrom(INavigationParameters parameters)
         {
 
@@ -412,5 +465,6 @@ namespace GestDG.ViewModels
         public void OnNavigatedTo(INavigationParameters parameters)
         {
         }
+        #endregion
     }
 }

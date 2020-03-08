@@ -52,7 +52,7 @@ namespace GestDG.ViewModels
         {
             get
             {
-                return new Command(()=>{ Log();});
+                return new Command(()=>{ this.Loging_account();});
             }
         }
         #endregion
@@ -70,7 +70,7 @@ namespace GestDG.ViewModels
             return (!String.IsNullOrEmpty(Username) && !String.IsNullOrEmpty(Password));
         }
 
-        private async void Log()
+        private async void Loging_account()
         {
             if (this.Check_user_infos())
             {
@@ -82,9 +82,13 @@ namespace GestDG.ViewModels
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Connexion", "Veuillez saisir une seconde fois vos informations", null, "Ok");
+                    await Application.Current.MainPage.DisplayAlert("Erreur identifiants", "Les informations saisie ne sont pas valide","OK");
                     this.reset_user_infos();
                 }
+            }
+            else
+            {
+                await Application.Current.MainPage.DisplayAlert("Erreur saisie", "Le nom d'utilisateur ou le mot de passe na pas été saisie", "OK");
             }
         } 
         #endregion

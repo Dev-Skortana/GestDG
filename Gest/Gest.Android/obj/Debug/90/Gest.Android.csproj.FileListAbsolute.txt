@@ -1,0 +1,1336 @@
+C:\Gest\Gest\Gest.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+C:\Gest\Gest\Gest.Android\obj\Debug\90\Gest.Android.csprojAssemblyReference.cache
+C:\Gest\Gest\Gest.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res.flag
+C:\Gest\Gest\Gest.Android\obj\Debug\90\Gest.Android.csproj.CoreCompileInputs.cache
+C:\Gest\Gest\Gest.Android\bin\Debug\GestDG.Android.dll
+C:\Gest\Gest\Gest.Android\bin\Debug\GestDG.Android.pdb
+C:\Gest\Gest\Gest.Android\bin\Debug\com.companyname.Gest.apk
+C:\Gest\Gest\Gest.Android\bin\Debug\com.companyname.Gest-Signed.apk
+C:\Gest\Gest\Gest.Android\bin\Debug\Gest.dll
+C:\Gest\Gest\Gest.Android\bin\Debug\Recherche_donnees_GESTDG.dll
+C:\Gest\Gest\Gest.Android\bin\Debug\Gest.pdb
+C:\Gest\Gest\Gest.Android\bin\Debug\Recherche_donnees_GESTDG.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\XamlC.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\Gest.Android.csproj.CopyComplete
+C:\Gest\Gest\Gest.Android\obj\Debug\90\GestDG.Android.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\GestDG.Android.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\com.companyname.Gest.apk
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\drawable-hdpi\appicon.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\drawable-xhdpi\appicon.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\drawable-xxhdpi\appicon.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\drawable-xxxhdpi\appicon.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\drawable\splash.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-hdpi\icon.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-hdpi\launcher_foreground.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-mdpi\icon.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-mdpi\launcher_foreground.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-xhdpi\icon.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-xhdpi\launcher_foreground.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-xxhdpi\icon.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-xxhdpi\launcher_foreground.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-xxxhdpi\icon.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\values\colors.xml
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\values\styles.xml
+C:\Gest\Gest\Gest.Android\obj\Debug\90\R.cs.flag
+C:\Gest\Gest\Gest.Android\obj\Debug\90\R.txt
+C:\Gest\Gest\Gest.Android\obj\Debug\90\uploadflags.txt
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\layout\tabbar.xml
+C:\Gest\Gest\Gest.Android\obj\Debug\90\res\layout\toolbar.xml
+C:\Gest\Gest\Gest.Android\bin\Debug\Gest.dll.mdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Gest.dll.mdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.dll.mdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Rg.Plugins.Popup.Droid.dll.mdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\FormsViewGroup.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\GestDG.Android.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\HtmlAgilityPack.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Mono.Android.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Mono.Security.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\mscorlib.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.DryIoc.Forms.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.Forms.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.Plugin.Popups.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.Unity.Forms.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Recherche_donnees_GESTDG.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Rg.Plugins.Popup.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLite-net.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLiteNetExtensions.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Core.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Data.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.IO.Compression.FileSystem.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.IO.Compression.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Net.Http.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Numerics.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Runtime.Serialization.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.ServiceModel.Internals.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Transactions.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Web.Services.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Xml.Linq.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Xml.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Unity.Abstractions.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Unity.Container.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Essentials.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Core.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Platform.Android.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Gest\Gest\Gest.Android\bin\Debug\com.companyname.Gest.aab
+C:\Gest\Gest\Gest.Android\bin\Debug\com.companyname.Gest-Signed.aab
+C:\Gest\Gest\Gest.Android\obj\Debug\90\build.props
+C:\Gest\Gest\Gest.Android\obj\Debug\90\adb.props
+C:\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\9DE43E5B55DCDF43.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\51288F006BDCF80B.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\156CE0C97EDCE533.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\7473EE770B74252B.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\303781BE1E743813.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\20263C9B49744CF3.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\A8AEE20962747683.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\C096B5A592562BD4.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\9B36E5933870EEDF.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\3C9A23989631D115.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\78DE4C518331CC2D.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\B412FD0ABD31EB65.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\2C8B9EBDC131A5F5.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\772BCE8B6B1760FE.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\986EC56F5813AB0A.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\9DE43E5B55DCDF43.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\51288F006BDCF80B.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\156CE0C97EDCE533.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\7473EE770B74252B.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\303781BE1E743813.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\20263C9B49744CF3.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\A8AEE20962747683.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\C096B5A592562BD4.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\9B36E5933870EEDF.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\3C9A23989631D115.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\78DE4C518331CC2D.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\B412FD0ABD31EB65.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\2C8B9EBDC131A5F5.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\772BCE8B6B1760FE.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\986EC56F5813AB0A.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\flata\compiled.flata
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\base.zip
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\com.companyname.Gest.aab
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\com.companyname.Gest.apks
+C:\Gest\Gest\Gest.Android\obj\Debug\90\resolvedassemblies.hash
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\CarouselView.FormsPlugin.Abstractions.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\CarouselView.FormsPlugin.Android.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Com.Android.DeskClock.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Com.ViewPagerIndicator.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\DryIoc.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Gest.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\GestDG.Android.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\HtmlAgilityPack.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\ImageCircle.Forms.Plugin.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Java.Interop.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\machine.config
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Mono.Android.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Mono.Security.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\mscorlib.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\netstandard.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.DryIoc.Forms.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.Forms.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.Plugin.Popups.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.Unity.Forms.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Recherche_donnees_GESTDG.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Rg.Plugins.Popup.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Rg.Plugins.Popup.Droid.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLite-net.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLiteNetExtensions.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLitePCLRaw.batteries_green.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLitePCLRaw.batteries_v2.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLitePCLRaw.core.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLitePCLRaw.lib.e_sqlite3.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Collections.Concurrent.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Collections.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Core.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Data.DataSetExtensions.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Data.DataSetExtensions.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Data.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Diagnostics.Debug.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Drawing.Common.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Drawing.Common.pdb
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Globalization.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.IO.Compression.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.IO.Compression.FileSystem.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Linq.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Linq.Expressions.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Net.Http.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Numerics.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.ObjectModel.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Reflection.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Reflection.Emit.ILGeneration.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Reflection.Emit.Lightweight.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Reflection.Extensions.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Resources.ResourceManager.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Runtime.CompilerServices.Unsafe.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Runtime.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Runtime.Extensions.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Runtime.Serialization.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.ServiceModel.Internals.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Threading.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Threading.Tasks.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Threading.Tasks.Extensions.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Transactions.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Web.Services.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Xml.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Xml.Linq.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Unity.Abstractions.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Unity.Container.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Core.Common.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Core.Runtime.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Lifecycle.Common.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Lifecycle.LiveData.Core.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Lifecycle.LiveData.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Lifecycle.Runtime.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Lifecycle.ViewModel.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Annotations.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.AsyncLayoutInflater.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Collections.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Compat.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.CoordinaterLayout.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Core.UI.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Core.Utils.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.CursorAdapter.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.CustomTabs.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.CustomView.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Design.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.DocumentFile.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.DrawerLayout.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Fragment.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Interpolator.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Loader.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.LocalBroadcastManager.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Media.Compat.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Print.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.SlidingPaneLayout.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.SwipeRefreshLayout.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Transition.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.v4.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.v7.CardView.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.v7.MediaRouter.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.v7.Palette.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.v7.RecyclerView.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Vector.Drawable.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.VersionedParcelable.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.ViewPager.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Essentials.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Core.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Platform.Android.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Platform.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Xaml.dll
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.arm64-v8a.s
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.armeabi-v7a.s
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.x86.s
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.x86_64.s
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.arm64-v8a.s
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.armeabi-v7a.s
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.x86.s
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.x86_64.s
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\AndroidManifest.xml
+C:\Gest\Gest\Gest.Android\obj\Debug\90\__environment__.txt
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\MonoRuntimeProvider.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\mono.android.jar
+C:\Gest\Gest\Gest.Android\obj\Debug\90\static.flag
+C:\Gest\Gest\Gest.Android\obj\Debug\90\buildid.txt
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.arm64-v8a.s
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.armeabi-v7a.s
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.x86.s
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.x86_64.s
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\arch\core\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\arch\lifecycle\livedata\core\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\arch\lifecycle\livedata\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\arch\lifecycle\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\arch\lifecycle\viewmodel\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\compat\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\coordinatorlayout\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\customtabs\CustomTabsClient_CustomTabsCallbackImpl.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\customtabs\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\design\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\design\widget\Snackbar_SnackbarActionClickImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\mediacompat\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\transition\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\appcompat\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\app\AlertDialog_IDialogInterfaceOnCancelListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\app\AlertDialog_IDialogInterfaceOnClickListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\app\AlertDialog_IDialogInterfaceOnMultiChoiceClickListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\cardview\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\mediarouter\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\recyclerview\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\widget\Toolbar_NavigationOnClickEventDispatcher.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\com\companyname\gest\R.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6414252951f3f66c67\RecyclerViewScrollListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6436929b8ad3b40f6f\ImageCircleRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ActionSheetRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ActivityIndicatorRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\AHorizontalScrollView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\AndroidActivity.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\BaseCellView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\BorderDrawable.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\BoxRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ButtonRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ButtonRenderer_ButtonClickListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ButtonRenderer_ButtonTouchListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselPageAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselPageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CellAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CellRenderer_RendererHolder.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CenterSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CheckBoxDesignerRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CheckBoxRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CheckBoxRendererBase.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CircularProgress.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CollectionViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ColorChangeRevealDrawable.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ConditionalFocusLayout.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ContainerView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CustomFrameLayout.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DataChangeObserver.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DatePickerRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DatePickerRendererBase_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EdgeSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EditorEditText.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EditorRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EditorRendererBase_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EmptyViewAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EndSingleSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EndSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EntryAccessibilityDelegate.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EntryCellEditText.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EntryCellView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EntryEditText.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EntryRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EntryRendererBase_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormattedStringExtensions_FontSpan.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormattedStringExtensions_LineHeightSpan.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormattedStringExtensions_TextDecorationSpan.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsAppCompatActivity.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsApplicationActivity.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsEditText.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsEditTextBase.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsImageView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsSeekBar.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsTextView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsWebChromeClient.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsWebViewClient.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FrameRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FrameRenderer_FrameDrawable.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericAnimatorListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericMenuClickListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GestureManager_TapAndPanGestureDetector.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GridLayoutSpanSizeLookup.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GroupedListViewAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ImageButtonRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ImageCache_CacheEntry.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ImageCache_FormsLruCache.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ImageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\InnerGestureListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\InnerScaleListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ItemContentView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ItemsViewAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ItemsViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\LabelRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ListViewAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ListViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ListViewRenderer_Container.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\LocalizedDigitsKeyListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\MasterDetailContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\MasterDetailRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\NativeViewWrapperRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\NavigationRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\NongreedySnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ObjectJavaBox_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\OpenGLViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\OpenGLViewRenderer_Renderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PageContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PageExtensions_EmbeddedFragment.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PageExtensions_EmbeddedSupportFragment.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PickerEditText.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PickerManager_PickerListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PickerRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PlatformRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\Platform_DefaultRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PositionalSmoothScroller.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PowerSaveModeBroadcastReceiver.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ProgressBarRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollViewContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SearchBarRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SelectableItemsViewAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SelectableItemsViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SelectableViewHolder.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellContentFragment.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutRecyclerAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutRecyclerAdapter_ElementViewHolder.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutRecyclerAdapter_LinearLayoutWithFocus.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutTemplatedContentRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutTemplatedContentRenderer_HeaderContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFragmentPagerAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellItemRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellItemRendererBase.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellPageContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellRenderer_SplitDrawable.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellSearchView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellSearchViewAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellSearchViewAdapter_CustomFilter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellSearchViewAdapter_ObjectWrapper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellSearchView_ClipDrawableWrapper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellSectionRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellToolbarTracker.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellToolbarTracker_FlyoutIconDrawerDrawable.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SimpleViewHolder.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SingleSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SizedItemContentView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SliderRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SpacingItemDecoration.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StartSingleSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StartSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StepperRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StepperRendererManager_StepperListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SwitchCellView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SwitchRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TabbedRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TableViewModelRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TableViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TemplatedItemViewHolder.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TextCellRenderer_TextCellView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TextViewHolder.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TimePickerRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TimePickerRendererBase_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer_LongPressGestureListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewRenderer_2.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\VisualElementRenderer_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\VisualElementTracker_AttachTracker.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\WebViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\WebViewRenderer_JavascriptResult.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6443725871784b4041\CarouselViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6443725871784b4041\CarouselViewRenderer_PageAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6443725871784b4041\GlobalLayoutListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6443725871784b4041\HorizontalViewPager.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6443725871784b4041\Tag.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6443725871784b4041\VerticalViewPager.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6460d2b0234674b457\PopupPageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc646c47a7af3a53b8ab\CirclePageIndicator.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\ButtonRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\CarouselPageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\FormsFragmentPagerAdapter_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\FormsViewPager.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\FragmentContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\FrameRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\MasterDetailContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\MasterDetailPageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\NavigationPageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\NavigationPageRenderer_ClickListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\NavigationPageRenderer_Container.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\NavigationPageRenderer_DrawerMultiplexedListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\PickerRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\PickerRendererBase_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\Platform_ModalContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\ShellFragmentContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\SwitchRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\TabbedPageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\ViewRenderer_2.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc647a155f775cb6802f\RgGestureDetectorListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\AccelerometerListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\ActivityLifecycleContextListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\BarometerListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\BatteryBroadcastReceiver.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\ClipboardChangeListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\ConnectivityBroadcastReceiver.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\EnergySaverBroadcastReceiver.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\GyroscopeListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\Listener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\MagnetometerListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\OrientationSensorListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\SensorListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\SingleLocationListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\TextToSpeechImplementation.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\WebAuthenticatorCallbackActivity.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a98abb514ffad9f1\CustomTabsServiceConnectionImpl.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a98abb514ffad9f1\KeepAliveService.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64e18a7d9a87d4f5ff\VerticalViewPager.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64e18a7d9a87d4f5ff\VerticalViewPager_VerticalPageTransformer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64ee486da937c010f4\ButtonRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64ee486da937c010f4\FrameRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64ee486da937c010f4\ImageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64ee486da937c010f4\LabelRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64ee520a32138633b6\MainActivity.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64ee520a32138633b6\SplashActivity.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md507f625f62cafec6e81efe0279defe3bb\CarouselViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md507f625f62cafec6e81efe0279defe3bb\CarouselViewRenderer_PageAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md507f625f62cafec6e81efe0279defe3bb\GlobalLayoutListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md507f625f62cafec6e81efe0279defe3bb\HorizontalViewPager.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md507f625f62cafec6e81efe0279defe3bb\Tag.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md507f625f62cafec6e81efe0279defe3bb\VerticalViewPager.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ActionSheetRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ActivityIndicatorRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\AHorizontalScrollView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\AndroidActivity.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\BaseCellView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\BorderDrawable.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\BoxRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ButtonRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ButtonRenderer_ButtonClickListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ButtonRenderer_ButtonTouchListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\CarouselPageAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\CarouselPageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\CarouselViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\CellAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\CellRenderer_RendererHolder.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\CenterSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\CheckBoxDesignerRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\CheckBoxRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\CheckBoxRendererBase.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\CircularProgress.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\CollectionViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ColorChangeRevealDrawable.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ConditionalFocusLayout.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ContainerView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\CustomFrameLayout.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\DataChangeObserver.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\DatePickerRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\DatePickerRendererBase_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\EdgeSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\EditorEditText.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\EditorRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\EditorRendererBase_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\EmptyViewAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\EndSingleSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\EndSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\EntryAccessibilityDelegate.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\EntryCellEditText.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\EntryCellView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\EntryEditText.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\EntryRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\EntryRendererBase_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FormattedStringExtensions_FontSpan.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FormattedStringExtensions_LineHeightSpan.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FormattedStringExtensions_TextDecorationSpan.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FormsAppCompatActivity.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FormsApplicationActivity.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FormsEditText.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FormsEditTextBase.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FormsImageView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FormsSeekBar.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FormsTextView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FormsWebChromeClient.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FormsWebViewClient.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FrameRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\FrameRenderer_FrameDrawable.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\GenericAnimatorListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\GenericMenuClickListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\GestureManager_TapAndPanGestureDetector.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\GridLayoutSpanSizeLookup.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\GroupedListViewAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ImageButtonRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ImageCache_CacheEntry.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ImageCache_FormsLruCache.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ImageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\InnerGestureListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\InnerScaleListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ItemContentView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ItemsViewAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ItemsViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\LabelRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ListViewAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ListViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ListViewRenderer_Container.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\LocalizedDigitsKeyListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\MasterDetailContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\MasterDetailRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\NativeViewWrapperRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\NavigationRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\NongreedySnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ObjectJavaBox_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\OpenGLViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\OpenGLViewRenderer_Renderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\PageContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\PageExtensions_EmbeddedFragment.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\PageExtensions_EmbeddedSupportFragment.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\PageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\PickerEditText.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\PickerManager_PickerListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\PickerRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\PlatformRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\Platform_DefaultRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\PositionalSmoothScroller.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\PowerSaveModeBroadcastReceiver.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ProgressBarRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ScrollHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ScrollViewContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ScrollViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\SearchBarRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\SelectableItemsViewAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\SelectableItemsViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\SelectableViewHolder.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellContentFragment.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellFlyoutRecyclerAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellFlyoutRecyclerAdapter_ElementViewHolder.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellFlyoutRecyclerAdapter_LinearLayoutWithFocus.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellFlyoutRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellFlyoutTemplatedContentRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellFlyoutTemplatedContentRenderer_HeaderContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellFragmentPagerAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellItemRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellItemRendererBase.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellPageContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellRenderer_SplitDrawable.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellSearchView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellSearchViewAdapter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellSearchViewAdapter_CustomFilter.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellSearchViewAdapter_ObjectWrapper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellSearchView_ClipDrawableWrapper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellSectionRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellToolbarTracker.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ShellToolbarTracker_FlyoutIconDrawerDrawable.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\SimpleViewHolder.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\SingleSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\SizedItemContentView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\SliderRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\SpacingItemDecoration.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\StartSingleSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\StartSnapHelper.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\StepperRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\StepperRendererManager_StepperListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\SwitchCellView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\SwitchRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\TabbedRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\TableViewModelRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\TableViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\TemplatedItemViewHolder.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\TextCellRenderer_TextCellView.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\TextViewHolder.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\TimePickerRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\TimePickerRendererBase_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ViewCellRenderer_ViewCellContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ViewCellRenderer_ViewCellContainer_LongPressGestureListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\ViewRenderer_2.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\VisualElementRenderer_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\VisualElementTracker_AttachTracker.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\WebViewRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md51558244f76c53b6aeda52c8a337f2c37\WebViewRenderer_JavascriptResult.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5423e3a95c357eb7d6aad61b4f54abbd4\RecyclerViewScrollListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md54c2b093f5c3df46aefa5ba5513ac1fa4\RgGestureDetectorListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\ButtonRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\CarouselPageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\FormsFragmentPagerAdapter_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\FormsViewPager.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\FragmentContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\FrameRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\MasterDetailContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\MasterDetailPageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\NavigationPageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\NavigationPageRenderer_ClickListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\NavigationPageRenderer_Container.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\NavigationPageRenderer_DrawerMultiplexedListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\PickerRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\PickerRendererBase_1.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\Platform_ModalContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\ShellFragmentContainer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\SwitchRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\TabbedPageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md58432a647068b097f9637064b8985a5e0\ViewRenderer_2.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5ad349817c76b03b9d7836cf3a79439ae\ImageCircleRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5b5cbf9a5f989abac95309328170a059b\PopupPageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5cb1a4bab49bfe17ad6c0290694c1d310\CirclePageIndicator.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\AccelerometerListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\ActivityLifecycleContextListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\BarometerListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\BatteryBroadcastReceiver.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\ClipboardChangeListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\ConnectivityBroadcastReceiver.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\EnergySaverBroadcastReceiver.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\GyroscopeListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\Listener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\MagnetometerListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\OrientationSensorListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\SensorListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\SingleLocationListener.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\TextToSpeechImplementation.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5d630c3d3bfb5f5558520331566132d97\WebAuthenticatorCallbackActivity.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5dcb6eccdc824e0677ffae8ccdde42930\CustomTabsServiceConnectionImpl.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5dcb6eccdc824e0677ffae8ccdde42930\KeepAliveService.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5e5a70b7f5f68bfcf7dd2d99e7c54a881\MainActivity.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5e5a70b7f5f68bfcf7dd2d99e7c54a881\SplashActivity.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5f92e0daf340890c9667469657ee2ece8\ButtonRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5f92e0daf340890c9667469657ee2ece8\FrameRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5f92e0daf340890c9667469657ee2ece8\ImageRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5f92e0daf340890c9667469657ee2ece8\LabelRenderer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5fe65febf89776778e11eb956fbef4609\VerticalViewPager.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\md5fe65febf89776778e11eb956fbef4609\VerticalViewPager_VerticalPageTransformer.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\app\ApplicationRegistration.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\chip\ChipGroup_OnCheckedChangeListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\widget\AppBarLayout_OnOffsetChangedListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\widget\BottomNavigationView_OnNavigationItemReselectedListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\widget\BottomNavigationView_OnNavigationItemSelectedListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\widget\NavigationView_OnNavigationItemSelectedListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\widget\SwipeDismissBehavior_OnDismissListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\widget\TabLayout_BaseOnTabSelectedListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\transition\Transition_TransitionListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v13\view\DragStartHelper_OnDragStartListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v13\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\app\FragmentManager_OnBackStackChangedListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\app\SharedElementCallback_OnSharedElementsReadyListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\content\Loader_OnLoadCanceledListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\content\Loader_OnLoadCompleteListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\media\session\MediaSessionCompat_OnActiveChangeListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\os\CancellationSignal_OnCancelListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\accessibility\AccessibilityManagerCompat_AccessibilityStateChangeListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\accessibility\AccessibilityManagerCompat_TouchExplorationStateChangeListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\ActionProvider_SubUiVisibilityListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\ActionProvider_VisibilityListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\AsyncLayoutInflater_OnInflateFinishedListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\MenuItemCompat_OnActionExpandListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\OnApplyWindowInsetsListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\ViewPager_OnAdapterChangeListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\ViewPager_OnPageChangeListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\ViewPropertyAnimatorListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\ViewPropertyAnimatorUpdateListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\widget\DrawerLayout_DrawerListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\widget\NestedScrollView_OnScrollChangeListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\widget\SlidingPaneLayout_PanelSlideListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\widget\SwipeRefreshLayout_OnRefreshListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\app\ActionBar_OnMenuVisibilityListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\app\ActionBar_OnNavigationListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\app\ActionBar_TabListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\graphics\Palette_PaletteAsyncListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\media\RemotePlaybackClient_OnMessageReceivedListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\ActionMenuView_OnMenuItemClickListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\ContentFrameLayout_OnAttachListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\FitWindowsViewGroup_OnFitSystemWindowsListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\MenuItemHoverListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\PopupMenu_OnDismissListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\PopupMenu_OnMenuItemClickListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\RecyclerView_ItemAnimator_ItemAnimatorFinishedListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\RecyclerView_OnChildAttachStateChangeListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\RecyclerView_OnItemTouchListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\RecyclerView_RecyclerListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\SearchView_OnCloseListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\SearchView_OnQueryTextListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\SearchView_OnSuggestionListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\Toolbar_OnMenuItemClickListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\ViewStubCompat_OnInflateListenerImplementor.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\MonoPackageManager_Resources.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\src\xamarin\essentials\fileProvider.java
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\packaged_resources
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.arm64-v8a.o
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.arm64-v8a.o
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.armeabi-v7a.o
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.armeabi-v7a.o
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.x86.o
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.x86.o
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.x86_64.o
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.x86_64.o
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.arm64-v8a.o
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.armeabi-v7a.o
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.x86.o
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.x86_64.o
+C:\Gest\Gest\Gest.Android\obj\Debug\90\app_shared_libraries\arm64-v8a\libxamarin-app.so
+C:\Gest\Gest\Gest.Android\obj\Debug\90\app_shared_libraries\armeabi-v7a\libxamarin-app.so
+C:\Gest\Gest\Gest.Android\obj\Debug\90\app_shared_libraries\x86\libxamarin-app.so
+C:\Gest\Gest\Gest.Android\obj\Debug\90\app_shared_libraries\x86_64\libxamarin-app.so
+C:\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\classes.dex
+C:\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_CleanIntermediateIfNuGetsChange.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_CompileToDalvik.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_ConvertCustomView.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_ConvertLibraryResourcesCases.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_ConvertResourcesCases.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
+C:\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\GestDG.Android.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\GestDG.Android.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\com.companyname.Gest.apk
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\com.companyname.Gest.aab
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\com.companyname.Gest-Signed.aab
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\com.companyname.Gest-Signed.apk
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\Gest.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\Recherche_donnees_GESTDG.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\Gest.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\Gest.dll.mdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\Recherche_donnees_GESTDG.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\build.props
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\adb.props
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\Gest.Android.csprojAssemblyReference.cache
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res.flag
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\8DCF7F8FEA1F05C2.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\C98B1046FF1F18FA.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\0547A11DC11F3FB2.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\701252F0D500B4AC.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\34563D39C000A994.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\6FF66D0F6A266C9F.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\80B366EB5922A76B.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\8F46E431B1040BB8.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\30B067770FCEE67F.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\A82904C073CEA8EF.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\EC6D6B0966CEB5D7.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\20A1DA5258CE929F.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\F38954F6D9E86DE4.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\94448180C1EC9C60.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\D000EE49D4EC8158.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\8DCF7F8FEA1F05C2.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\C98B1046FF1F18FA.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\0547A11DC11F3FB2.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\701252F0D500B4AC.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\34563D39C000A994.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\6FF66D0F6A266C9F.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\80B366EB5922A76B.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\8F46E431B1040BB8.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\30B067770FCEE67F.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\A82904C073CEA8EF.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\EC6D6B0966CEB5D7.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\20A1DA5258CE929F.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\F38954F6D9E86DE4.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\94448180C1EC9C60.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\D000EE49D4EC8158.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\flata\compiled.flata
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\R.txt
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\R.cs.flag
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\Gest.Android.csproj.CoreCompileInputs.cache
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\XamlC.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\Gest.Android.csproj.CopyComplete
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\GestDG.Android.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\GestDG.Android.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\com.companyname.Gest.apk
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\base.zip
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\com.companyname.Gest.aab
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\com.companyname.Gest.apks
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\drawable-hdpi\appicon.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\drawable-xhdpi\appicon.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\drawable-xxhdpi\appicon.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\drawable-xxxhdpi\appicon.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\drawable\splash.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-hdpi\icon.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-hdpi\launcher_foreground.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-mdpi\icon.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-mdpi\launcher_foreground.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-xhdpi\icon.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-xhdpi\launcher_foreground.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-xxhdpi\icon.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-xxhdpi\launcher_foreground.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-xxxhdpi\icon.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\mipmap-xxxhdpi\launcher_foreground.png
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\values\colors.xml
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\values\styles.xml
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\layout\tabbar.xml
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\res\layout\toolbar.xml
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\uploadflags.txt
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\resolvedassemblies.hash
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\CarouselView.FormsPlugin.Abstractions.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\CarouselView.FormsPlugin.Android.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Com.Android.DeskClock.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Com.ViewPagerIndicator.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\DryIoc.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\FormsViewGroup.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\FormsViewGroup.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Gest.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Gest.dll.mdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\GestDG.Android.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\GestDG.Android.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\HtmlAgilityPack.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\HtmlAgilityPack.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\ImageCircle.Forms.Plugin.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Java.Interop.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Mono.Android.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Mono.Android.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Mono.Security.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Mono.Security.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\mscorlib.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\mscorlib.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\netstandard.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.dll.mdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.DryIoc.Forms.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.DryIoc.Forms.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.Forms.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.Forms.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.Plugin.Popups.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.Plugin.Popups.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.Unity.Forms.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Prism.Unity.Forms.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Recherche_donnees_GESTDG.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Recherche_donnees_GESTDG.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Rg.Plugins.Popup.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Rg.Plugins.Popup.Droid.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Rg.Plugins.Popup.Droid.dll.mdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Rg.Plugins.Popup.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLite-net.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLite-net.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLiteNetExtensions.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLiteNetExtensions.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLitePCLRaw.batteries_green.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLitePCLRaw.batteries_v2.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLitePCLRaw.core.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLitePCLRaw.lib.e_sqlite3.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Collections.Concurrent.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Collections.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Core.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Core.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Data.DataSetExtensions.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Data.DataSetExtensions.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Data.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Data.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Diagnostics.Debug.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Drawing.Common.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Drawing.Common.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Globalization.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.IO.Compression.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.IO.Compression.FileSystem.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.IO.Compression.FileSystem.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.IO.Compression.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Linq.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Linq.Expressions.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Net.Http.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Net.Http.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Numerics.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Numerics.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.ObjectModel.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Reflection.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Reflection.Emit.ILGeneration.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Reflection.Emit.Lightweight.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Reflection.Extensions.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Resources.ResourceManager.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Runtime.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Runtime.Extensions.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Runtime.Serialization.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Runtime.Serialization.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.ServiceModel.Internals.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.ServiceModel.Internals.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Threading.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Threading.Tasks.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Threading.Tasks.Extensions.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Transactions.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Transactions.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Web.Services.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Web.Services.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Xml.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Xml.Linq.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Xml.Linq.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\System.Xml.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Unity.Abstractions.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Unity.Abstractions.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Unity.Container.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Unity.Container.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Core.Common.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Core.Runtime.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Lifecycle.Common.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Lifecycle.LiveData.Core.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Lifecycle.LiveData.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Lifecycle.Runtime.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Arch.Lifecycle.ViewModel.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Annotations.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.AsyncLayoutInflater.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Collections.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Compat.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.CoordinaterLayout.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Core.UI.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Core.Utils.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.CursorAdapter.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.CustomTabs.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.CustomView.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Design.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.DocumentFile.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.DrawerLayout.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Fragment.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Interpolator.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Loader.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.LocalBroadcastManager.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Media.Compat.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Print.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.SlidingPaneLayout.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.SwipeRefreshLayout.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Transition.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.v4.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.v7.AppCompat.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.v7.CardView.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.v7.MediaRouter.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.v7.Palette.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.v7.RecyclerView.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.Vector.Drawable.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.VersionedParcelable.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Android.Support.ViewPager.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Essentials.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Essentials.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Core.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Core.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Platform.Android.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Platform.Android.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Platform.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Xaml.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\Xamarin.Forms.Xaml.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.arm64-v8a.s
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.armeabi-v7a.s
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.x86.s
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.x86_64.s
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.arm64-v8a.s
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.armeabi-v7a.s
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.x86.s
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.x86_64.s
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\AndroidManifest.xml
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\__environment__.txt
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\MonoRuntimeProvider.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\assets\machine.config
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\mono.android.jar
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\static.flag
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\buildid.txt
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.arm64-v8a.s
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.armeabi-v7a.s
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.x86.s
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.x86_64.s
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\compat\R.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\coordinatorlayout\R.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\customtabs\CustomTabsClient_CustomTabsCallbackImpl.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\customtabs\R.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\design\R.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\design\widget\Snackbar_SnackbarActionClickImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\mediacompat\R.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\transition\R.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\appcompat\R.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\app\AlertDialog_IDialogInterfaceOnCancelListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\app\AlertDialog_IDialogInterfaceOnClickListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\app\AlertDialog_IDialogInterfaceOnMultiChoiceClickListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\cardview\R.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\mediarouter\R.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\recyclerview\R.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\android\support\v7\widget\Toolbar_NavigationOnClickEventDispatcher.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6436929b8ad3b40f6f\ImageCircleRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ActionSheetRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ActivityIndicatorRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\AHorizontalScrollView.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\AndroidActivity.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\BaseCellView.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\BorderDrawable.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\BoxRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ButtonRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ButtonRenderer_ButtonClickListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ButtonRenderer_ButtonTouchListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselPageAdapter.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselPageRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselViewRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CellAdapter.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CellRenderer_RendererHolder.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CenterSnapHelper.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CheckBoxDesignerRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CheckBoxRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CheckBoxRendererBase.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CircularProgress.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CollectionViewRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ColorChangeRevealDrawable.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ConditionalFocusLayout.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ContainerView.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CustomFrameLayout.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DataChangeObserver.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DatePickerRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DatePickerRendererBase_1.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EdgeSnapHelper.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EditorEditText.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EditorRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EditorRendererBase_1.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EmptyViewAdapter.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EndSingleSnapHelper.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EndSnapHelper.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EntryAccessibilityDelegate.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EntryCellEditText.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EntryCellView.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EntryEditText.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EntryRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EntryRendererBase_1.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormattedStringExtensions_FontSpan.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormattedStringExtensions_LineHeightSpan.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormattedStringExtensions_TextDecorationSpan.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsAppCompatActivity.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsApplicationActivity.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsEditText.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsEditTextBase.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsImageView.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsSeekBar.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsTextView.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsWebChromeClient.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsWebViewClient.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FrameRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FrameRenderer_FrameDrawable.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericAnimatorListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericMenuClickListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GestureManager_TapAndPanGestureDetector.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GridLayoutSpanSizeLookup.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GroupedListViewAdapter.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ImageButtonRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ImageCache_CacheEntry.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ImageCache_FormsLruCache.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ImageRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\InnerGestureListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\InnerScaleListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ItemContentView.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\LabelRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ListViewAdapter.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ListViewRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ListViewRenderer_Container.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\LocalizedDigitsKeyListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\MasterDetailContainer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\MasterDetailRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\NativeViewWrapperRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\NavigationRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\NongreedySnapHelper.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ObjectJavaBox_1.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\OpenGLViewRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\OpenGLViewRenderer_Renderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PageContainer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PageExtensions_EmbeddedFragment.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PageExtensions_EmbeddedSupportFragment.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PageRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PickerEditText.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PickerManager_PickerListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PickerRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PlatformRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\Platform_DefaultRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PositionalSmoothScroller.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PowerSaveModeBroadcastReceiver.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ProgressBarRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollHelper.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollViewContainer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollViewRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SearchBarRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SelectableViewHolder.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellContentFragment.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutRecyclerAdapter.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutRecyclerAdapter_ElementViewHolder.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutRecyclerAdapter_LinearLayoutWithFocus.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutTemplatedContentRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutTemplatedContentRenderer_HeaderContainer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFragmentPagerAdapter.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellItemRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellItemRendererBase.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellPageContainer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellRenderer_SplitDrawable.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellSearchView.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellSearchViewAdapter.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellSearchViewAdapter_CustomFilter.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellSearchViewAdapter_ObjectWrapper.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellSearchView_ClipDrawableWrapper.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellSectionRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellToolbarTracker.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellToolbarTracker_FlyoutIconDrawerDrawable.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SimpleViewHolder.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SingleSnapHelper.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SizedItemContentView.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SliderRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SpacingItemDecoration.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StartSingleSnapHelper.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StartSnapHelper.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StepperRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StepperRendererManager_StepperListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SwitchCellView.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SwitchRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TabbedRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TableViewModelRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TableViewRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TemplatedItemViewHolder.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TextCellRenderer_TextCellView.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TextViewHolder.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TimePickerRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TimePickerRendererBase_1.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer_LongPressGestureListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewRenderer_2.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\VisualElementRenderer_1.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\VisualElementTracker_AttachTracker.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\WebViewRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\WebViewRenderer_JavascriptResult.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6443725871784b4041\CarouselViewRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6443725871784b4041\CarouselViewRenderer_PageAdapter.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6443725871784b4041\GlobalLayoutListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6443725871784b4041\HorizontalViewPager.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6443725871784b4041\Tag.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6443725871784b4041\VerticalViewPager.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6460d2b0234674b457\PopupPageRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc646c47a7af3a53b8ab\CirclePageIndicator.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\ButtonRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\CarouselPageRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\FormsFragmentPagerAdapter_1.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\FormsViewPager.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\FragmentContainer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\FrameRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\MasterDetailContainer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\MasterDetailPageRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\NavigationPageRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\NavigationPageRenderer_ClickListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\NavigationPageRenderer_Container.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\NavigationPageRenderer_DrawerMultiplexedListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\PickerRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\PickerRendererBase_1.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\Platform_ModalContainer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\ShellFragmentContainer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\SwitchRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\TabbedPageRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64720bb2db43a66fe9\ViewRenderer_2.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc647a155f775cb6802f\RgGestureDetectorListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\AccelerometerListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\ActivityLifecycleContextListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\BarometerListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\BatteryBroadcastReceiver.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\ClipboardChangeListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\ConnectivityBroadcastReceiver.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\EnergySaverBroadcastReceiver.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\GyroscopeListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\Listener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\MagnetometerListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\OrientationSensorListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\SensorListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\SingleLocationListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\TextToSpeechImplementation.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a0e0a82d0db9a07d\WebAuthenticatorCallbackActivity.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a98abb514ffad9f1\CustomTabsServiceConnectionImpl.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64a98abb514ffad9f1\KeepAliveService.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64e18a7d9a87d4f5ff\VerticalViewPager.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64e18a7d9a87d4f5ff\VerticalViewPager_VerticalPageTransformer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64ee486da937c010f4\ButtonRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64ee486da937c010f4\FrameRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64ee486da937c010f4\ImageRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64ee486da937c010f4\LabelRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64ee520a32138633b6\MainActivity.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc64ee520a32138633b6\SplashActivity.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\app\ApplicationRegistration.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\chip\ChipGroup_OnCheckedChangeListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\widget\AppBarLayout_OnOffsetChangedListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\widget\BottomNavigationView_OnNavigationItemReselectedListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\widget\BottomNavigationView_OnNavigationItemSelectedListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\widget\NavigationView_OnNavigationItemSelectedListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\widget\SwipeDismissBehavior_OnDismissListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\design\widget\TabLayout_BaseOnTabSelectedListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\transition\Transition_TransitionListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v13\view\DragStartHelper_OnDragStartListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v13\view\inputmethod\InputConnectionCompat_OnCommitContentListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\app\FragmentManager_OnBackStackChangedListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\app\SharedElementCallback_OnSharedElementsReadyListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\content\Loader_OnLoadCanceledListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\content\Loader_OnLoadCompleteListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\media\session\MediaSessionCompat_OnActiveChangeListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\os\CancellationSignal_OnCancelListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\accessibility\AccessibilityManagerCompat_AccessibilityStateChangeListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\accessibility\AccessibilityManagerCompat_TouchExplorationStateChangeListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\ActionProvider_SubUiVisibilityListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\ActionProvider_VisibilityListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\AsyncLayoutInflater_OnInflateFinishedListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\MenuItemCompat_OnActionExpandListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\OnApplyWindowInsetsListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\ViewPager_OnAdapterChangeListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\ViewPager_OnPageChangeListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\ViewPropertyAnimatorListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\view\ViewPropertyAnimatorUpdateListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\widget\DrawerLayout_DrawerListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\widget\NestedScrollView_OnScrollChangeListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\widget\SlidingPaneLayout_PanelSlideListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v4\widget\SwipeRefreshLayout_OnRefreshListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\app\ActionBar_OnMenuVisibilityListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\app\ActionBar_OnNavigationListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\app\ActionBar_TabListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\graphics\Palette_PaletteAsyncListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\media\RemotePlaybackClient_OnMessageReceivedListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\ActionMenuView_OnMenuItemClickListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\ContentFrameLayout_OnAttachListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\FitWindowsViewGroup_OnFitSystemWindowsListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\MenuItemHoverListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\PopupMenu_OnDismissListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\PopupMenu_OnMenuItemClickListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\RecyclerView_ItemAnimator_ItemAnimatorFinishedListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\RecyclerView_OnChildAttachStateChangeListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\RecyclerView_OnItemTouchListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\RecyclerView_RecyclerListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\SearchView_OnCloseListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\SearchView_OnQueryTextListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\SearchView_OnSuggestionListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\ShareActionProvider_OnShareTargetSelectedListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\Toolbar_OnMenuItemClickListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\android\support\v7\widget\ViewStubCompat_OnInflateListenerImplementor.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\mono\MonoPackageManager_Resources.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\xamarin\essentials\fileProvider.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\packaged_resources
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\com\companyname\gest\R.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.arm64-v8a.o
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.arm64-v8a.o
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.armeabi-v7a.o
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.armeabi-v7a.o
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.x86.o
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.x86.o
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.jm.x86_64.o
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\typemap.mj.x86_64.o
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.arm64-v8a.o
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.armeabi-v7a.o
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.x86.o
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\environment.x86_64.o
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\app_shared_libraries\arm64-v8a\libxamarin-app.so
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\app_shared_libraries\armeabi-v7a\libxamarin-app.so
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\app_shared_libraries\x86\libxamarin-app.so
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\app_shared_libraries\x86_64\libxamarin-app.so
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\bin\classes.dex
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_CleanIntermediateIfNuGetsChange.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_CompileToDalvik.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_ConvertCustomView.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_ConvertLibraryResourcesCases.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_ConvertResourcesCases.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc6414252951f3f66c67\RecyclerViewScrollListener_2.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselSpacingItemDecoration.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselViewRenderer_CarouselViewOnScrollListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\CarouselViewRenderer_CarouselViewwOnGlobalLayoutListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsAnimationDrawable.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\FormsVideoView.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericGlobalLayoutListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GroupableItemsViewAdapter_2.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GroupableItemsViewRenderer_3.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\IndicatorViewRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ItemsViewAdapter_2.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ItemsViewRenderer_3.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ListViewRenderer_ListViewScrollDetector.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\MediaElementRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\NongreedySnapHelper_InitialScrollListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\RadioButtonRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\RefreshViewRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollLayoutManager.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SelectableItemsViewAdapter_2.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SelectableItemsViewRenderer_3.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StructuredItemsViewAdapter_2.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StructuredItemsViewRenderer_3.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SwipeViewRenderer.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer_TapGestureListener.java

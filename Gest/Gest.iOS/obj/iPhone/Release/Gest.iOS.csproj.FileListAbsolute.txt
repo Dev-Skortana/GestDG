@@ -1,0 +1,8 @@
+C:\Gest\Gest\Gest.iOS\obj\iPhone\Release\ibtool\_BundleResourceWithLogicalName.items
+C:\Gest\Gest\Gest.iOS\obj\iPhone\Release\actool\_PartialAppManifest.items
+C:\Gest\Gest\Gest.iOS\obj\iPhone\Release\actool\_BundleResourceWithLogicalName.items
+C:\Gest\Gest\Gest.iOS\obj\iPhone\Release\coremlc\_PartialAppManifest.items
+C:\Gest\Gest\Gest.iOS\obj\iPhone\Release\coremlc\_BundleResourceWithLogicalName.items
+C:\Gest\Gest\Gest.iOS\obj\iPhone\Release\optimized\
+C:\Gest\Gest\Gest.iOS\obj\iPhone\Release\Gest.iOS.csprojAssemblyReference.cache
+C:\Gest\Gest\Gest.iOS\obj\iPhone\Release\Gest.iOS.csproj.CoreCompileInputs.cache

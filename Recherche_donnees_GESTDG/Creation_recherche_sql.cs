@@ -31,7 +31,7 @@ namespace Recherche_donnees_GESTDG
                     Boolean format_connu = liste_format_condition.Exists((item) => item.get_format(liste_values[i]));
                     if ((i != 0) && (format_connu))
                     {
-                        resultat += "and ";
+                        resultat += " and ";
                     }
                     resultat += format_connu ? liste_format_condition.Find((item) => item.get_format(liste_values[i])).Create_condition(liste_keys[i],liste_values[i],methode_recherche) :String.Empty;
                     

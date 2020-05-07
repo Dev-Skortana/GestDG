@@ -1,0 +1,9 @@
+C:\Gest\Recherche_donnees_GESTDG\bin\Release\netstandard2.0\Recherche_donnees_GESTDG.deps.json
+C:\Gest\Recherche_donnees_GESTDG\bin\Release\netstandard2.0\Recherche_donnees_GESTDG.dll
+C:\Gest\Recherche_donnees_GESTDG\bin\Release\netstandard2.0\Recherche_donnees_GESTDG.pdb
+C:\Gest\Recherche_donnees_GESTDG\obj\Release\netstandard2.0\Recherche_donnees_GESTDG.csproj.CoreCompileInputs.cache
+C:\Gest\Recherche_donnees_GESTDG\obj\Release\netstandard2.0\Recherche_donnees_GESTDG.AssemblyInfoInputs.cache
+C:\Gest\Recherche_donnees_GESTDG\obj\Release\netstandard2.0\Recherche_donnees_GESTDG.AssemblyInfo.cs
+C:\Gest\Recherche_donnees_GESTDG\obj\Release\netstandard2.0\XamlC.stamp
+C:\Gest\Recherche_donnees_GESTDG\obj\Release\netstandard2.0\Recherche_donnees_GESTDG.dll
+C:\Gest\Recherche_donnees_GESTDG\obj\Release\netstandard2.0\Recherche_donnees_GESTDG.pdb

@@ -6,3 +6,31 @@ C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\Recherche_do
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.AssemblyInfo.cs
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.dll
 C:\Users\spart\OneDrive\Documents\Visual Studio 2017\Projets\GestDG\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.pdb
+C:\Users\spart\OneDrive\Bureau\GestDG\Recherche_donnees_GESTDG\bin\Debug\netstandard2.0\Recherche_donnees_GESTDG.deps.json
+C:\Users\spart\OneDrive\Bureau\GestDG\Recherche_donnees_GESTDG\bin\Debug\netstandard2.0\Recherche_donnees_GESTDG.dll
+C:\Users\spart\OneDrive\Bureau\GestDG\Recherche_donnees_GESTDG\bin\Debug\netstandard2.0\Recherche_donnees_GESTDG.pdb
+C:\Users\spart\OneDrive\Bureau\GestDG\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.csproj.CoreCompileInputs.cache
+C:\Users\spart\OneDrive\Bureau\GestDG\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.AssemblyInfoInputs.cache
+C:\Users\spart\OneDrive\Bureau\GestDG\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.AssemblyInfo.cs
+C:\Users\spart\OneDrive\Bureau\GestDG\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.dll
+C:\Users\spart\OneDrive\Bureau\GestDG\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.pdb
+C:\Gest\Recherche_donnees_GESTDG\bin\Debug\netstandard2.0\Recherche_donnees_GESTDG.deps.json
+C:\Gest\Recherche_donnees_GESTDG\bin\Debug\netstandard2.0\Recherche_donnees_GESTDG.dll
+C:\Gest\Recherche_donnees_GESTDG\bin\Debug\netstandard2.0\Recherche_donnees_GESTDG.pdb
+C:\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.csproj.CoreCompileInputs.cache
+C:\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.AssemblyInfoInputs.cache
+C:\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.AssemblyInfo.cs
+C:\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.dll
+C:\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.pdb
+C:\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.csprojAssemblyReference.cache
+C:\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Recherche_donnees_GESTDG\bin\Debug\netstandard2.0\Recherche_donnees_GESTDG.deps.json
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Recherche_donnees_GESTDG\bin\Debug\netstandard2.0\Recherche_donnees_GESTDG.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Recherche_donnees_GESTDG\bin\Debug\netstandard2.0\Recherche_donnees_GESTDG.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.csprojAssemblyReference.cache
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.csproj.CoreCompileInputs.cache
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.AssemblyInfoInputs.cache
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.AssemblyInfo.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Recherche_donnees_GESTDG\obj\Debug\netstandard2.0\Recherche_donnees_GESTDG.pdb

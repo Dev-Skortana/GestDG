@@ -1,0 +1,4 @@
+C:\Gest\Gest\Gest.Android\obj\Release\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
+C:\Gest\Gest\Gest.Android\obj\Release\90\Gest.Android.nuget.stamp
+C:\Gest\Gest\Gest.Android\obj\Release\90\Gest.Android.csprojAssemblyReference.cache
+C:\Gest\Gest\Gest.Android\obj\Release\90\_VerifyXamarinAndroidSupportVersions.stamp

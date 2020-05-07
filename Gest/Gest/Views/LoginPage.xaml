@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+             Title="{Binding title}"
+             xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gest.Views.LoginPage" 
+             BackgroundColor="CadetBlue" 
+             xmlns:convertisseure="clr-namespace:Gest.Convertisseurs"
+             xmlns:prism="http://prismlibrary.com"  
+             prism:ViewModelLocator.AutowireViewModel="True"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <convertisseure:ReturnNegationBoolean x:Key="negation_boolean"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+                <Label Text="Connecter-vous pour pouvoir continuer" TextColor="Blue" TextDecorations="Underline"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                <Entry Text="{Binding Username}" TextColor="Blue" Placeholder="Votre nom d'utilisateur" PlaceholderColor="Blue" />
+                <Entry Text="{Binding Password}" TextColor="Blue" Placeholder="Votre mot de passe" PlaceholderColor="Blue" IsPassword="True"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+                <Button IsEnabled="{Binding Is_connected_tointernet}" Text="Se connecter" TextColor="Green" Clicked="Button_Clicked"/>
+            </StackLayout>
+            <StackLayout IsVisible="{Binding Is_connected_tointernet,Converter={StaticResource negation_boolean}}" HorizontalOptions="FillAndExpand" BackgroundColor="AliceBlue">
+                <Label Text="Vous n'etes pas connecter à internet" HorizontalTextAlignment="Center" TextColor="ForestGreen"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

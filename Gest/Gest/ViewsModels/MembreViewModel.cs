@@ -11,6 +11,8 @@ using System.Linq;
 using Recherche_donnees_GESTDG.enumeration;
 using Gest.Interface_SQLiteAccess;
 using Xamarin.Forms;
+using Recherche_donnees_GESTDG;
+using System.Linq.Expressions;
 
 namespace Gest.ViewModels
 {
@@ -83,6 +85,7 @@ namespace Gest.ViewModels
                 return new Command(() =>
                 {
                     if (champ_selected!=null) {
+                        List<Parametre_recherche_sql> tt = new List<Parametre_recherche_sql>();
                         if (dictionnaire_champs_methodesrecherche != null && dictionnaire_champs_methodesrecherche.ContainsKey(champ_selected))
                         {
                             dictionnaire_champs_methodesrecherche[champ_selected] = methoderecherche_selected;

@@ -770,7 +770,6 @@ C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.And
 C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\Gest.dll
 C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\Recherche_donnees_GESTDG.dll
 C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\Gest.pdb
-C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\Gest.dll.mdb
 C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\Recherche_donnees_GESTDG.pdb
 C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\build.props
@@ -1334,3 +1333,4 @@ C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.And
 C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\StructuredItemsViewRenderer_3.java
 C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SwipeViewRenderer.java
 C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer_TapGestureListener.java
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\bin\Debug\Gest.dll.mdb

@@ -281,7 +281,7 @@ namespace Gest.ViewModels
             return await Task.FromResult(reponse);
         }
 
-        private async Task mtask()
+        private async Task register()
         {
             /* Risque d'obtention d'informations non Syncroniser */
             HtmlDocument document_dynamixgaming_page_memberlist = new HtmlDocument();
@@ -446,7 +446,7 @@ namespace Gest.ViewModels
                 {
 
                     this.isbusy = true;
-                    await mtask();
+                    await register();
                     this.isbusy = false;
                     this.isfinish_load = true;
                     await Application.Current.MainPage.DisplayAlert("Fin de chargement !","En appuyant sur OK vous allez étre rediriger dans quelques secondes","OK");

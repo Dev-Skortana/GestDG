@@ -104,7 +104,6 @@
     <Compile Include="SQLiteAccess_Android\SQLiteAccess_Android.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Gest.db" />
     <AndroidResource Include="Resources\drawable-hdpi\AppIcon.png">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
@@ -182,6 +181,7 @@
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
     </AndroidResource>
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidAsset Include="Assets\Gest.db" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>

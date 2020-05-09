@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Gest.Helpers
 {
-    class Date_Part
+    public class Date_Part
     {
         public Date_Part() { }
         public Date_Part(int mois, int jour,int heure,int minute, int index)

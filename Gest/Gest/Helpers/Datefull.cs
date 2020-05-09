@@ -7,12 +7,15 @@ using HtmlAgilityPack;
 using Xamarin.Forms;
 namespace Gest.Helpers
 {
-    static class Datefull
+    public static class Datefull
     {
         static private Boolean premier = true;
         static public List<int> index_relation = new List<int>();
         static public Dictionary<string, int> dico_mois_visite = new Dictionary<string, int>() { { "Jan", 1 }, { "Fév", 2 }, { "Mar", 3 }, { "Avr", 4 }, { "Mai", 5 }, { "Juin", 6 }, { "Juil", 7 }, { "Aoû", 8 }, { "Sep", 9 }, { "Oct", 10 }, { "Nov", 11 }, { "Déc", 12 } };
         static public List<Date_Part> liste_partie_dates = new List<Date_Part>();
+                                /* Le code ci-dessous (aprés ce bloc de commentaire) est expression regulier qui permet de recuperer la date de connexion ,qui pourrait étre de l'un ces exemples ci-dessous
+                                                    [EX 1 > Aujourd'hui à 23:20 , EX 2 > Hier à 11:10 , EX 3 > Ven 3 Nov - 7:59]
+                                 */
         static public Regex patter = new Regex("((?<aujour>Aujourd'hui)[^à]+à|(?<hier>Hier)[^à]+à|[a-zA-Z]+[^0-9]+(?<jours>[0-9]+)[^a-zA-Z]+(?<mois>[a-zA-Zéû]+))[^0-9]+(?<heures>[0-9]+):(?<minutes>[0-9]+)");
         
        static public int _index = 0;
@@ -43,9 +46,9 @@ namespace Gest.Helpers
                 if (result.Success)
                 {
                     Date_Part date_part;
-                    DateTime date;
                     if (result.Groups["aujour"].Value == "Aujourd'hui" || result.Groups["hier"].Value == "Hier")
                     {
+                        DateTime date;
                         if (result.Groups["aujour"].Value == "Aujourd'hui") {
                             date = DateTime.Today.Date;
                         }
@@ -90,7 +93,6 @@ namespace Gest.Helpers
                     int mois_from_date_max = liste_mois[0];
                     if (mois_from_date_max - nbmois_total_after > 0)
                     { 
-                        
                         annees = annees;
                     }
                     else
@@ -98,7 +100,7 @@ namespace Gest.Helpers
                         annees = DateTime.Today.Year - 1;
                     }
                 }
-              return new DateTime(month: Convert.ToInt32(date_part_cible.Mois), day: date_part_cible.Jour, year: annees, hour: date_part_cible.Heure, minute: date_part_cible.Minute, second: 0);
+              return new DateTime(month: Convert.ToInt32(date_part_cible.Mois), day: date_part_cible.Jour, year: annees, hour: date_part_cible.Heure, minute: date_part_cible.Minute, second:0);
             
         }
 

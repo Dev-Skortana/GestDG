@@ -17,16 +17,15 @@ namespace Recherche_donnees_GESTDG
         }
 
         public String creationclause_conditionrequete(Dictionary<String,Object> dictionnaire_donnees,Dictionary<String,String> methodes_recherches,Enumerations_recherches.types_recherches recherche_type)
-        {
-            String resultat = "";                                                                          /* Gerer les conditions dont la valeur de la condition est un format inconnu */ 
-                                                                                     /* Verifier la deuxieme condition (rendre cette derniere plus compréhensible ) */
+        {   
+            String resultat = "";                                                                          /* Gerer les conditions dont la valeur de la condition est un format inconnu */                                                                /* Verifier la troisieme condition (rendre cette derniere plus compréhensible ) */
             if ((dictionnaire_donnees!=null) && (dictionnaire_donnees.Count > 0) && !(dictionnaire_donnees.Values.ToList().TrueForAll((itemvalue)=>!liste_format_condition.Exists((itemcondition)=>itemcondition.get_format(itemvalue)))))
             {
                 List<String> liste_keys = dictionnaire_donnees.Keys.ToList();
                 List<Object> liste_values = dictionnaire_donnees.Values.ToList();
                 resultat = "where ";
                 for (var i = 0; i < dictionnaire_donnees.Count; i++)
-                {     
+                {
                     Enumerations_recherches.methodes_recherches methode_recherche=(Enumerations_recherches.methodes_recherches)Enum.Parse(typeof(Enumerations_recherches.methodes_recherches), methodes_recherches[liste_keys[i]]);
                     Boolean format_connu = liste_format_condition.Exists((item) => item.get_format(liste_values[i]));
                     if ((i != 0) && (format_connu))

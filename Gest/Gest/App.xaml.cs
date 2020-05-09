@@ -14,6 +14,8 @@ using Rg.Plugins.Popup.Services;
 using Prism.Navigation;
 using Xamarin.Forms;
 
+using Gest.Helpers;
+
 namespace Gest
 {
    [AutoRegisterForNavigation]
@@ -22,11 +24,11 @@ namespace Gest
 
         public App() : this(null)
         {
-
+            
         }
         public App(IPlatformInitializer initializer=null):base(initializer)
         {
-            
+
         }
 
         protected async override  void OnInitialized()

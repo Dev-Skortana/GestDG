@@ -9,3 +9,14 @@ C:\Gest\Gest\Gest.UWP\obj\x86\Debug\MainPage.xaml
 C:\Gest\Gest\Gest.UWP\obj\x86\Debug\App.xbf
 C:\Gest\Gest\Gest.UWP\obj\x86\Debug\MainPage.xbf
 C:\Gest\Gest\Gest.UWP\obj\x86\Debug\XamlSaveStateFile.xml
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.UWP\obj\x86\Debug\Gest.UWP.csprojAssemblyReference.cache
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.UWP\obj\x86\Debug\App.g.i.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.UWP\obj\x86\Debug\App.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.UWP\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.UWP\obj\x86\Debug\MainPage.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.UWP\obj\x86\Debug\XamlTypeInfo.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.UWP\obj\x86\Debug\App.xaml
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.UWP\obj\x86\Debug\MainPage.xaml
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.UWP\obj\x86\Debug\App.xbf
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.UWP\obj\x86\Debug\MainPage.xbf
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.UWP\obj\x86\Debug\XamlSaveStateFile.xml

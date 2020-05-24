@@ -19,17 +19,17 @@ namespace Gest.Services.Classes
             return (resultat >= 1);
         }
 
-        public async Task<Membre_Connexion_Message> Get(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
+        public async Task<Membre_Connexion_Message> Get(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
             var connexion = await Database_configuration.Database_Initialize();
-            var membre_connexion_message = await connexion.QueryAsync<Membre_Connexion_Message>($"select * from membres_connexions_messages {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees,methodes_recherches,recherche_type)}");
+            var membre_connexion_message = await connexion.QueryAsync<Membre_Connexion_Message>($"select * from membres_connexions_messages {new Creation_recherche_sql().creationclause_conditionrequete(parametres_recherches_sql)}");
             return membre_connexion_message.Count!=0 ? membre_connexion_message[0] :null;
         }
 
-        public async Task<IEnumerable<Membre_Connexion_Message>> GetList(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
+        public async Task<IEnumerable<Membre_Connexion_Message>> GetList(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
             var connexion = await Database_configuration.Database_Initialize();
-            var membre_connexion_message = await connexion.QueryAsync<Membre_Connexion_Message>($"select * from membres_connexions_messages {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees, methodes_recherches, recherche_type)}");
+            var membre_connexion_message = await connexion.QueryAsync<Membre_Connexion_Message>($"select * from membres_connexions_messages {new Creation_recherche_sql().creationclause_conditionrequete(parametres_recherches_sql)}");
             return membre_connexion_message;
         }
 

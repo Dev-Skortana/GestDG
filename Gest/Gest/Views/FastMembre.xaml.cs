@@ -29,6 +29,14 @@ namespace Gest.Views
             ((sender as BindableObject).BindingContext as FastMembreViewModel).Command_gestion_dictionnaire_champsmethodesrecherches.Execute(null);
         }
 
+        private void Picker_switchsource_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (BindingContext as FastMembreViewModel != null)
+            {
+                ((sender as BindableObject).BindingContext as FastMembreViewModel).Command_switch_source.Execute(null);
+            }
+        }
+
         private void CarouselViewControl_PositionSelected(object sender, CarouselView.FormsPlugin.Abstractions.PositionSelectedEventArgs e)
         {
             if ((sender as BindableObject).BindingContext != null)

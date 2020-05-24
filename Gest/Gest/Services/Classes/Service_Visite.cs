@@ -19,17 +19,17 @@ namespace Gest.Services.Classes
             return (resultat >= 1);
         }
 
-        public async Task<Visite> Get(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
+        public async Task<Visite> Get(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
             var connexion = await Database_configuration.Database_Initialize();
-            var visites = await connexion.QueryAsync<Visite>($"select * from visites {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees,methodes_recherches,recherche_type)}");
+            var visites = await connexion.QueryAsync<Visite>($"select * from visites {new Creation_recherche_sql().creationclause_conditionrequete(parametres_recherches_sql)}");
             return visites.Count!=0 ? visites[0]: null;
         }
 
-        public async Task<IEnumerable<Visite>> GetList(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
+        public async Task<IEnumerable<Visite>> GetList(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
             var connexion = await Database_configuration.Database_Initialize();
-            var visites = await connexion.QueryAsync<Visite>($"select * from visites {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees, methodes_recherches, recherche_type)}");
+            var visites = await connexion.QueryAsync<Visite>($"select * from visites {new Creation_recherche_sql().creationclause_conditionrequete(parametres_recherches_sql)}");
             return visites;
         }
 

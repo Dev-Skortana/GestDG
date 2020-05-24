@@ -19,17 +19,17 @@ namespace Gest.Services.Classes
             return (resultat>=1);
         }
 
-        public async Task<Activite> Get(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
+        public async Task<Activite> Get(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
             var connection = await Database_configuration.Database_Initialize();
-            var activites = await connection.QueryAsync<Activite>($"Select * from activites {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees,methodes_recherches,recherche_type)}");
+            var activites = await connection.QueryAsync<Activite>($"Select * from activites {new Creation_recherche_sql().creationclause_conditionrequete(parametres_recherches_sql)}");
             return activites.Count!=0 ? activites[0] :null;
         }
 
-        public async Task<IEnumerable<Activite>> GetList(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
+        public async Task<IEnumerable<Activite>> GetList(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
             var connection = await Database_configuration.Database_Initialize();
-            var activites = await connection.QueryAsync<Activite>($"Select * from activites {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees, methodes_recherches, recherche_type)}");
+            var activites = await connection.QueryAsync<Activite>($"Select * from activites {new Creation_recherche_sql().creationclause_conditionrequete(parametres_recherches_sql)}");
             return activites;
         }
 

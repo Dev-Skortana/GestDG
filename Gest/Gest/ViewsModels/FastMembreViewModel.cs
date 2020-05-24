@@ -9,10 +9,11 @@ using Gest.Services.Interfaces;
 using System.Threading.Tasks;
 using Recherche_donnees_GESTDG.enumeration;
 using System.Linq;
+using Recherche_donnees_GESTDG;
 
 namespace Gest.ViewModels
 {
-    class FastMembreViewModel: BindableBase,INavigationAware
+    class FastMembreViewModel: BindableBase,INavigationAware,INavigation_Goback_Popup_searchbetweendates
     {
         #region Interfaces_services
         private IService_Membre service_membre;
@@ -24,7 +25,11 @@ namespace Gest.ViewModels
         {
             this.service_membre = _service_membre;
             this.service_naviguation = _service_navigation;
-            this.champ_selected = Liste_champs[0];
+
+            this.Liste_champs = this.Liste_champs_membres;
+            this.nom_table_selected = "Membre";
+
+            this.Champ_selected = Liste_champs[0];
             this.methoderecherche_selected = Liste_methodesrecherches[0];
             this.type_selected = Liste_typesrecherches[0];
         }
@@ -39,15 +44,30 @@ namespace Gest.ViewModels
             set { SetProperty(ref _isloading, value); }
         }
         public Membre membre_selected=new Membre();
-        private Dictionary<String, String> dictionnaire_champs_methodesrecherche = new Dictionary<string, string>();
+        private List<Parametre_recherche_sql> liste_parametres_recherches_sql = new List<Parametre_recherche_sql>();
+
+        public List<String> Liste_noms_tables { get { return new List<string>() { "Membre" }; } }
+        public String nom_table_selected { get; set; }
+
         public List<String> Liste_methodesrecherches { get { return Enumerations_recherches.get_liste_methodesrecherches(); } }
         public String methoderecherche_selected { get; set; }
         public List<string> Liste_typesrecherches { get { return Enumerations_recherches.get_liste_typesrecherches(); } }
         public String type_selected { get; set; }
-        public List<String> Liste_champs { get { return new List<string>() { "pseudo","url_avatar" }; } }
-        public String champ_selected { get; set; }
-        
- 
+
+        public List<String> Liste_champs_membres { get { return new List<string>() { "pseudo", "url_avatar" }; } }
+
+        public List<String> liste_champs;
+        public List<String> Liste_champs { get { return liste_champs; } set { SetProperty(ref liste_champs, value); } }
+
+        private String _Champ_selected;
+
+        public String Champ_selected
+        {
+            get { return _Champ_selected; }
+            set { SetProperty(ref _Champ_selected, value); }
+        }
+
+
         private List<Membre> _liste_membres=new List<Membre>();
         public List<Membre> Liste_membres {
             get
@@ -63,22 +83,46 @@ namespace Gest.ViewModels
 
         #region Commandes_MVVM
 
+        public ICommand Command_switch_source
+        {
+            get
+            {
+                return new Command(() => {
+                    if (nom_table_selected == "Membre")
+                    {
+                        Liste_champs = Liste_champs_membres;
+                    }
+                    Champ_selected = Liste_champs[0];
+                });
+            }
+        }
+
+        public ICommand Command_navigation_to_popup_searchbetweendates
+        {
+            get
+            {
+                return new Command(() => {
+                    NavigationParameters parametre = new NavigationParameters();
+                    parametre.Add("champ", Champ_selected);
+                    parametre.Add("navigation_goback", this);
+                    service_naviguation.NavigateAsync("Popup_search_betweendates", parametre);
+                });
+            }
+        }
+
         public ICommand Command_gestion_dictionnaire_champsmethodesrecherches
         {
             get
             {
                 return new Command(() =>
                 {
-                    if (champ_selected != null)
+                    if (Champ_selected != null)
                     {
-                        if (dictionnaire_champs_methodesrecherche != null && dictionnaire_champs_methodesrecherche.ContainsKey(champ_selected))
+                        if (liste_parametres_recherches_sql.Exists((parametre) => parametre.Nom_table==nom_table_selected && parametre.Champ == Champ_selected && parametre.Methode_recherche == methoderecherche_selected) == false)
                         {
-                            dictionnaire_champs_methodesrecherche[champ_selected] = methoderecherche_selected;
+                            liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() {Nom_table=nom_table_selected, Champ=Champ_selected,Methode_recherche=methoderecherche_selected});   
                         }
-                        else
-                        {
-                            dictionnaire_champs_methodesrecherche.Add(champ_selected, methoderecherche_selected);
-                        }
+                        
                     }
                 });
             }
@@ -89,7 +133,27 @@ namespace Gest.ViewModels
             get
             {
                 return new Command<Object>(async (donnees) => {
-                    await load(new Dictionary<string, Object>() { { champ_selected, donnees } }, dictionnaire_champs_methodesrecherche, type_selected);
+                    if (type_selected == Enumerations_recherches.types_recherches.Simple.ToString())
+                    {
+                        liste_parametres_recherches_sql.ForEach((parametre) =>
+                        {
+                            if ((parametre.Nom_table==nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected))
+                            {
+                                parametre.Valeur = donnees;
+                            }
+                        });
+                        await Task.Run(()=> {
+                            int index_parametre = liste_parametres_recherches_sql.FindIndex((parametre) =>(parametre.Nom_table==nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected) && (parametre.Valeur == donnees));
+                            for (var i=0;i<liste_parametres_recherches_sql.Count;i++)
+                            {
+                                if (i!=index_parametre)
+                                {
+                                    liste_parametres_recherches_sql.RemoveAt(i);
+                                }
+                            }
+                        });
+                    }
+                    await load(liste_parametres_recherches_sql);
                 });
             }
         }
@@ -124,23 +188,28 @@ namespace Gest.ViewModels
         #endregion
 
         #region Methode_priver
-        private async Task load(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, String recherche_type)
-        {
+        private async Task load(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql) 
+        { 
             this.Isloading = true;
-            Enumerations_recherches.types_recherches type = (Enumerations_recherches.types_recherches)Enum.Parse(typeof(Enumerations_recherches.types_recherches), recherche_type);
-            Liste_membres = (from membre in (List<Membre>)await service_membre.GetList(dictionnaire_donnees, methodes_recherches, type) orderby membre.pseudo select membre).ToList();
+            Liste_membres = (from membre in (List<Membre>)await service_membre.GetList(parametres_recherches_sql) orderby membre.pseudo select membre).ToList();
             this.Isloading = false;
+        }
+
+        public async Task navigation_Goback_Popup_searchbetweendates(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
+        {
+            await load(parametres_recherches_sql);
         }
         #endregion
 
         #region Methodes_naviguations_PRISM
         public async void OnNavigatedFrom(INavigationParameters parameters)
         {
+
         }
 
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
-            await load(new Dictionary<string, Object>() { { "pseudo", "" } }, new Dictionary<string, string>() { { "pseudo", "Contient" } }, "Simple");
+            await load(null);
         }
         #endregion
     }

@@ -15,12 +15,20 @@ namespace Gest.Views
 		public Membre ()
 		{
 			InitializeComponent();
-
+            
 		}
 
         private void Button_Clicked(object sender, EventArgs e)
         {
             zone_saisi_text.IsVisible = !zone_saisi_text.IsVisible;
+        }
+
+        private void Picker_switchsource_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (BindingContext as MembreViewModel != null)
+            {
+                ((sender as BindableObject).BindingContext as MembreViewModel).Command_switch_source.Execute(null);
+            }
         }
 
         private void Picker_SelectedIndexChanged(object sender, EventArgs e)

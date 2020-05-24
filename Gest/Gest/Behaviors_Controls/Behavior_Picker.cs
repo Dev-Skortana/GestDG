@@ -21,7 +21,7 @@ namespace Gest.Behaviors_Controls
 
         public void OnSelectedIndexChanged(Object sender, EventArgs e)
         {
-            var objet_control = sender as Picker;
+            
             Command.Execute(null);
         }
 

@@ -1,4 +1,5 @@
 ﻿using Gest.ViewModels;
+using Recherche_donnees_GESTDG.enumeration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,8 @@ namespace Gest.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+
+
             zone_saisi_text.IsVisible = !zone_saisi_text.IsVisible;
         }
 
@@ -34,6 +37,12 @@ namespace Gest.Views
             {
                 ((sender as BindableObject).BindingContext as MembreActiviteViewModel).Command_switch_source.Execute(null);
             }
+        }
+
+        private void piker_typesrecherches_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+            
         }
     }
 }

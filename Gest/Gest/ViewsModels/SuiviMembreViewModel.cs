@@ -15,10 +15,11 @@ using System.Linq;
 using Recherche_donnees_GESTDG.enumeration;
 using System.Windows.Input;
 using Gest.Interface_SQLiteAccess;
+using Recherche_donnees_GESTDG;
 
 namespace Gest.ViewModels
 {
-    class SuiviMembreViewModel : BindableBase,INavigationAware
+    class SuiviMembreViewModel : BindableBase,INavigationAware,INavigation_Goback_Popup_searchbetweendates
     {
 
         #region Interfaces_services
@@ -43,10 +44,7 @@ namespace Gest.ViewModels
         }
 
         public string title { get; set; } = "Page suivi du membre";
-        private Dictionary<String, String> dictionnaire_champs_methodesrecherche = new Dictionary<string, string>();
-        private Dictionary<String, String> dictionnaire_champs_methodesrecherche_visites = new Dictionary<string, string>();
-        private Dictionary<String, String> dictionnaire_champs_methodesrecherche_activites = new Dictionary<string, string>();
-        private Dictionary<String, String> dictionnaire_champs_methodesrecherche_messages = new Dictionary<string, string>();
+        private List<Parametre_recherche_sql> liste_parametres_recherches_sql = new List<Parametre_recherche_sql>();
 
         public List<String> Liste_methodesrecherches { get { return Enumerations_recherches.get_liste_methodesrecherches(); } }
         public String methoderecherche_selected { get; set; }
@@ -141,6 +139,18 @@ namespace Gest.ViewModels
 
         #region Command_MVVM
 
+        public ICommand Command_navigation_to_popup_searchbetweendates
+        {
+            get
+            {
+                return new Command(() => {
+                    NavigationParameters parametre = new NavigationParameters();
+                    parametre.Add("champ", Champ_selected);
+                    parametre.Add("navigation_goback", this);
+                    service_navigation.NavigateAsync("Popup_search_betweendates", parametre);
+                });
+            }
+        }
         public ICommand Command_update_dateandtime
         {
             get
@@ -169,16 +179,13 @@ namespace Gest.ViewModels
                     if (nom_table_selected == "Activite")
                     {
                         Liste_champs = Liste_champs_activites;
-                        dictionnaire_champs_methodesrecherche = dictionnaire_champs_methodesrecherche_activites;
                     }
                     else if (nom_table_selected == "Visite")
                     {
                         Liste_champs = Liste_champs_visite;
-                        dictionnaire_champs_methodesrecherche = dictionnaire_champs_methodesrecherche_visites;
                     }else if (nom_table_selected == "Message")
                     {
                         Liste_champs = Liste_champs_membre_connexion_message;
-                        dictionnaire_champs_methodesrecherche = dictionnaire_champs_methodesrecherche_messages;
                     }
                     this.Champ_selected = Liste_champs[0];
                 });
@@ -193,13 +200,9 @@ namespace Gest.ViewModels
                 {
                     if (Champ_selected != null)
                     {
-                        if (dictionnaire_champs_methodesrecherche != null && dictionnaire_champs_methodesrecherche.ContainsKey(Champ_selected))
+                        if (liste_parametres_recherches_sql.Exists((parametre) => parametre.Nom_table == nom_table_selected && parametre.Champ == Champ_selected && parametre.Methode_recherche == methoderecherche_selected) == false)
                         {
-                            dictionnaire_champs_methodesrecherche[Champ_selected] = methoderecherche_selected;
-                        }
-                        else
-                        {
-                            dictionnaire_champs_methodesrecherche.Add(Champ_selected, methoderecherche_selected);
+                            liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() {Nom_table=nom_table_selected, Champ = Champ_selected, Methode_recherche = methoderecherche_selected });
                         }
                     }
                 });
@@ -211,7 +214,27 @@ namespace Gest.ViewModels
             get
             {
                 return new Command<Object>(async (donnees) => {
-                    await load(new Dictionary<string, Object>() { { Champ_selected, donnees } }, dictionnaire_champs_methodesrecherche, type_selected);
+                    if (type_selected == Enumerations_recherches.types_recherches.Simple.ToString())
+                    {
+                        liste_parametres_recherches_sql.ForEach((parametre) =>
+                        {
+                            if ((parametre.Nom_table == nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected))
+                            {
+                                parametre.Valeur = donnees;
+                            }
+                        });
+                        await Task.Run(() => {
+                            int index_parametre = liste_parametres_recherches_sql.FindIndex((parametre) =>(parametre.Nom_table == nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected) && (parametre.Valeur == donnees));
+                            for (var i = 0; i < liste_parametres_recherches_sql.Count; i++)
+                            {
+                                if (i != index_parametre)
+                                {
+                                    liste_parametres_recherches_sql.RemoveAt(i);
+                                }
+                            }
+                        });
+                    }
+                    await load(liste_parametres_recherches_sql);
 
                 });
             }
@@ -231,7 +254,6 @@ namespace Gest.ViewModels
             this.service_navigation = _service_navigation;
 
             this.Liste_champs = this.Liste_champs_activites;
-            this.dictionnaire_champs_methodesrecherche = this.dictionnaire_champs_methodesrecherche_activites;
             this.nom_table_selected = "Activite";
 
                     
@@ -242,38 +264,42 @@ namespace Gest.ViewModels
         #endregion
 
         #region Methode_priver
-        private async Task load(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, String recherche_type)
+        private async Task load(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
-            Enumerations_recherches.types_recherches type = (Enumerations_recherches.types_recherches)Enum.Parse(typeof(Enumerations_recherches.types_recherches), recherche_type);
-
             Rang = new Rang();
-            Rang=(from item in await service_rang.GetList(null, null, Enumerations_recherches.types_recherches.Simple) where item.nom_rang.ToUpper() == Membre.rang_nom?.ToUpper() select item).FirstOrDefault();
+            Rang=(from item in await service_rang.GetList(null) where item.nom_rang.ToUpper() == Membre.rang_nom?.ToUpper() select item).FirstOrDefault();
 
             Activites = new List<Activite>();
-            Activites= (from item in (List<Activite>)await service_activite.GetList(nom_table_selected == "Activite" ? dictionnaire_donnees : null, nom_table_selected == "Activite" ? methodes_recherches : null, type) where item.membre_pseudo.ToUpper()==Membre.pseudo.ToUpper() select item).ToList();
+            Activites= (from item in (List<Activite>)await service_activite.GetList(nom_table_selected == "Activite" ? parametres_recherches_sql : null) where item.membre_pseudo.ToUpper()==Membre.pseudo.ToUpper() select item).ToList();
 
             Visites = new List<Visite>();
-            Visites=(from item in (List<Visite>)await service_visite.GetList(nom_table_selected == "Visite" ? dictionnaire_donnees : null, nom_table_selected == "Visite" ? methodes_recherches : null, type) where item.membre_pseudo.ToUpper()==Membre.pseudo.ToUpper() select item).ToList();
+            Visites=(from item in (List<Visite>)await service_visite.GetList(nom_table_selected == "Visite" ? parametres_recherches_sql : null) where item.membre_pseudo.ToUpper()==Membre.pseudo.ToUpper() select item).ToList();
 
             Groupement_nombremessage = new List<Groupement_nombremessage>();
-            Groupement_nombremessage= (from item in (List<Membre_Connexion_Message>)await service_membre_connexion_message.GetList(nom_table_selected == "Message" ? dictionnaire_donnees : null, nom_table_selected == "Message" ? methodes_recherches : null, type) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() orderby item.connexion_date descending select new Groupement_nombremessage() {Date_connexion=item.connexion_date,Nbmessage=item.message_nb}).ToList();
+            Groupement_nombremessage= (from item in (List<Membre_Connexion_Message>)await service_membre_connexion_message.GetList(nom_table_selected == "Message" ? parametres_recherches_sql : null) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() orderby item.connexion_date descending select new Groupement_nombremessage() {Date_connexion=item.connexion_date,Nbmessage=item.message_nb}).ToList();
 
            
 
         }
+
+     
         #endregion
 
         #region Methode_naviguation_PRISM
         public void OnNavigatedFrom(INavigationParameters parameters)
         {
-            throw new NotImplementedException();
+
         }
 
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
-            /* Récuperer le membre */
             Membre = parameters["Membre"] as Membre;
-            await load(null,null,"Simple");
+            await load(null);
+        }
+
+        public async Task navigation_Goback_Popup_searchbetweendates(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
+        {
+            await load(parametres_recherches_sql);
         }
         #endregion
     }

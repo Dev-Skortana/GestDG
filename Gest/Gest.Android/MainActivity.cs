@@ -26,5 +26,14 @@ namespace Gest.Droid
             ImageCircleRenderer.Init();
             LoadApplication(new App());
         }
+
+        public override void OnBackPressed()
+        {
+            if (Rg.Plugins.Popup.Popup.SendBackPressed(base.OnBackPressed))
+            {
+
+
+            }
+        }
     }
 }

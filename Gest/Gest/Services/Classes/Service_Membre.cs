@@ -19,29 +19,27 @@ namespace Gest.Services.Classes
             return(nombres_records>=1);
         }
 
-        public async Task<Membre> Get(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
+        public async Task<Membre> Get(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
             var connection=await Database_configuration.Database_Initialize();
-            var membres = await connection.QueryAsync<Membre>($"Select * from membres {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees, methodes_recherches, recherche_type)}");
+            var membres = await connection.QueryAsync<Membre>($"Select * from membres {new Creation_recherche_sql().creationclause_conditionrequete(parametres_recherches_sql)}");
             return membres.Count!=0 ? membres[0] : null;
         }
 
-        public async Task<IEnumerable<Membre>> GetList(Dictionary<String, Object> dictionnaire_donnees, Dictionary<String, String> methodes_recherches, Enumerations_recherches.types_recherches recherche_type)
+        public async Task<IEnumerable<Membre>> GetList(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
             var connection = await Database_configuration.Database_Initialize();
-            var liste_membres = await connection.QueryAsync<Membre>($"select pseudo,date_naissance, age, date_inscription, url_site, url_avatar,sexe, localisation, statut, rang_nom from  membres {new Creation_recherche_sql().creationclause_conditionrequete(dictionnaire_donnees,methodes_recherches,recherche_type)}");
+            var liste_membres = await connection.QueryAsync<Membre>($"select pseudo,date_naissance, age, date_inscription, url_site, url_avatar,sexe, localisation, statut, rang_nom from  membres {new Creation_recherche_sql().creationclause_conditionrequete(parametres_recherches_sql)}");
             return liste_membres;
         }
 
         public async Task<bool> insert(Membre membre)
         {
             var connection = await Database_configuration.Database_Initialize();
-            //var date_naissance = membre.date_naissance.HasValue ? membre.date_naissance.Value.ToString("yyyy-MM-dd"):"  ";
-            //var age = membre.age.HasValue ? membre.age.Value.ToString() : " ";
             int nombres_records=0;
             try
             {
-                nombres_records = await connection.InsertAsync(membre);  /*connection.ExecuteAsync($"insert into Membres(pseudo,date_naissance,age,date_inscription,url_site,url_avatar,sexe,localisation,statut,rang_nom) values('{membre.pseudo}','{date_naissance}',{age},'{membre.date_inscription.Value.ToString("yyyy-MM-dd")}','{membre.url_site}','{membre.url_avatar}','{membre.sexe}','{membre.localisation}','{membre.statut}','{membre.rang_nom}')");*/
+                nombres_records = await connection.InsertAsync(membre); 
             }
             catch (InvalidOperationException exception_object_nullable)
             {

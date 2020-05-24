@@ -16,23 +16,24 @@ namespace Recherche_donnees_GESTDG
             liste_format_condition= new List<ICreate_with_format>() { new Create_with_format_string(), new Create_with_format_datetime(), new Create_with_format_int() };
         }
 
-        public String creationclause_conditionrequete(Dictionary<String,Object> dictionnaire_donnees,Dictionary<String,String> methodes_recherches,Enumerations_recherches.types_recherches recherche_type)
-        {   
+        public String creationclause_conditionrequete(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
+        {
+            List<Parametre_recherche_sql> liste_parametres_recherches_sql = parametres_recherches_sql!=null ? parametres_recherches_sql.ToList():null;
             String resultat = "";                                                                          /* Gerer les conditions dont la valeur de la condition est un format inconnu */                                                                /* Verifier la troisieme condition (rendre cette derniere plus compréhensible ) */
-            if ((dictionnaire_donnees!=null) && (dictionnaire_donnees.Count > 0) && !(dictionnaire_donnees.Values.ToList().TrueForAll((itemvalue)=>!liste_format_condition.Exists((itemcondition)=>itemcondition.get_format(itemvalue)))))
+            if ((liste_parametres_recherches_sql!=null) && (liste_parametres_recherches_sql.Count>0) && !(liste_parametres_recherches_sql.TrueForAll((parametre)=>!liste_format_condition.Exists((itemcondition)=>itemcondition.get_format(parametre.Valeur)))))
             {
-                List<String> liste_keys = dictionnaire_donnees.Keys.ToList();
-                List<Object> liste_values = dictionnaire_donnees.Values.ToList();
                 resultat = "where ";
-                for (var i = 0; i < dictionnaire_donnees.Count; i++)
+                for (var i = 0; i < liste_parametres_recherches_sql.Count; i++)
                 {
-                    Enumerations_recherches.methodes_recherches methode_recherche=(Enumerations_recherches.methodes_recherches)Enum.Parse(typeof(Enumerations_recherches.methodes_recherches), methodes_recherches[liste_keys[i]]);
-                    Boolean format_connu = liste_format_condition.Exists((item) => item.get_format(liste_values[i]));
+                    String champ = liste_parametres_recherches_sql[i].Champ; ;
+                    Object valeur = liste_parametres_recherches_sql[i].Valeur; ;
+                    Enumerations_recherches.methodes_recherches methode_recherche=(Enumerations_recherches.methodes_recherches)Enum.Parse(typeof(Enumerations_recherches.methodes_recherches), liste_parametres_recherches_sql[i].Methode_recherche);
+                    Boolean format_connu = liste_format_condition.Exists((item) => item.get_format(liste_parametres_recherches_sql[i].Valeur));
                     if ((i != 0) && (format_connu))
                     {
                         resultat += " and ";
                     }
-                    resultat += format_connu ? liste_format_condition.Find((item) => item.get_format(liste_values[i])).Create_condition(liste_keys[i],liste_values[i],methode_recherche) :String.Empty;
+                    resultat += format_connu ? liste_format_condition.Find((item) => item.get_format(valeur)).Create_condition(champ,valeur,methode_recherche) :String.Empty;
                     
                 }
             }

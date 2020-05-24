@@ -20,6 +20,8 @@ using Prism.Navigation;
 using Gest.Views;
 using Gest.Interface_File_Image_Access;
 using Recherche_donnees_GESTDG.enumeration;
+using Recherche_donnees_GESTDG;
+
 namespace Gest.ViewModels
 {
     class RegisterMembreViewModel : BindableBase,INavigationAware
@@ -224,7 +226,7 @@ namespace Gest.ViewModels
             Boolean reponse = false;
             if (service is IService_Membre)
             {
-                Models.Membre membre = await (service as IService_Membre).Get(new Dictionary<string, object>() { {"pseudo", (donnees as Models.Membre).pseudo } },new Dictionary<string, string>() { {"pseudo", "Egale_a" } },Enumerations_recherches.types_recherches.Simple);
+                Models.Membre membre = await (service as IService_Membre).Get(new List<Parametre_recherche_sql>() { new Parametre_recherche_sql() { Champ= "pseudo", Valeur= (donnees as Models.Membre).pseudo, Methode_recherche= "Egale_a" } });
                 if (membre != null)
                 {
                     reponse = true;
@@ -232,7 +234,7 @@ namespace Gest.ViewModels
             }
             else if (service is IService_Activite)
             {
-                Activite activite = await (service as IService_Activite).Get(new Dictionary<string, object>() { { "membre_pseudo", (donnees as Models.Activite).membre_pseudo },{ "libelle_activite", (donnees as Activite).libelle_activite } }, new Dictionary<string, string>() { { "membre_pseudo", "Egale_a" },{ "libelle_activite","Egale_a" } }, Enumerations_recherches.types_recherches.Simple);
+                Activite activite = await (service as IService_Activite).Get(new List<Parametre_recherche_sql>() { new Parametre_recherche_sql() { Champ = "membre_pseudo", Valeur = (donnees as Models.Activite).membre_pseudo, Methode_recherche = "Egale_a" }, new Parametre_recherche_sql() { Champ = "libelle_activite", Valeur = (donnees as Activite).libelle_activite, Methode_recherche = "Egale_a" } }); ;
                 if (activite != null)
                 {
                     reponse = true;
@@ -256,7 +258,7 @@ namespace Gest.ViewModels
             }
             else if (service is IService_Membre_Connexion_Message)
             {
-                Membre_Connexion_Message membre_connexion_message = await (service as IService_Membre_Connexion_Message).Get(new Dictionary<string, object>() { { "membre_pseudo", (donnees as Models.Membre_Connexion_Message).membre_pseudo }, { "connexion_date", (donnees as Membre_Connexion_Message).connexion_date },{ "message_nb",(donnees as Membre_Connexion_Message).message_nb } }, new Dictionary<string, string>() { { "membre_pseudo", "Egale_a" }, { "connexion_date", "Egale_a" },{ "message_nb","Egale_a" } }, Enumerations_recherches.types_recherches.Simple);
+                Membre_Connexion_Message membre_connexion_message = await (service as IService_Membre_Connexion_Message).Get(new List<Parametre_recherche_sql>() { new Parametre_recherche_sql() { Champ = "membre_pseudo", Valeur = (donnees as Models.Membre_Connexion_Message).membre_pseudo, Methode_recherche = "Egale_a" },new Parametre_recherche_sql() { Champ= "connexion_date", Valeur= (donnees as Membre_Connexion_Message).connexion_date, Methode_recherche="Egale_a" },new Parametre_recherche_sql() {Champ= "message_nb", Valeur= (donnees as Membre_Connexion_Message).message_nb, Methode_recherche= "Egale_a" } });
                 if (membre_connexion_message != null)
                 {
                     reponse = true;
@@ -264,7 +266,7 @@ namespace Gest.ViewModels
             }
             else if (service is IService_Visite)
             {
-                Visite visite = await (service as IService_Visite).Get(new Dictionary<string, object>() { { "membre_pseudo", (donnees as Models.Visite).membre_pseudo },{ "connexion_date",(donnees as Models.Visite).connexion_date } }, new Dictionary<string, string>() { { "membre_pseudo", "Egale_a" },{ "connexion_date","Egale_a" } }, Enumerations_recherches.types_recherches.Simple);
+                Visite visite = await (service as IService_Visite).Get(new List<Parametre_recherche_sql>() { new Parametre_recherche_sql() { Champ= "membre_pseudo" ,Valeur= (donnees as Models.Visite).membre_pseudo ,Methode_recherche= "Egale_a" },new Parametre_recherche_sql() { Champ= "connexion_date", Valeur= (donnees as Models.Visite).connexion_date, Methode_recherche= "Egale_a" } });
                 if (visite != null)
                 {
                     reponse = true;
@@ -272,7 +274,7 @@ namespace Gest.ViewModels
             }
             else if (service is IService_Rang)
             {
-                Rang rang = await (service as IService_Rang).Get(new Dictionary<string, object>() { { "nom_rang", (donnees as Models.Rang).nom_rang } }, new Dictionary<string, string>() { { "nom_rang", "Egale_a" } }, Enumerations_recherches.types_recherches.Simple);
+                Rang rang = await (service as IService_Rang).Get(new List<Parametre_recherche_sql>() { new Parametre_recherche_sql() { Champ="nom_rang",Valeur= (donnees as Models.Rang).nom_rang,Methode_recherche= "Egale_a" } });
                 if (rang != null)
                 {
                     reponse = true;

@@ -20,6 +20,12 @@
             <convertisseure:Return_booleen_value_vide x:Key="return_booleen" />
         </ResourceDictionary>
     </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Faire une recherche entre deux date"
+                 Order="Secondary"
+                 Priority="0"
+                 Command="{Binding Command_navigation_to_popup_searchbetweendates}"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <ScrollView Orientation="Both">

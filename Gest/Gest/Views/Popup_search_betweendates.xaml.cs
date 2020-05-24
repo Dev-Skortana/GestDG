@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Rg.Plugins.Popup.Pages;
+using Gest.ViewModels;
+
 namespace Gest.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -27,6 +29,5 @@ namespace Gest.Views
             saisie_heurefin.IsVisible = (sender as CheckBox).IsChecked ? true : false;
         }
 
-        
     }
 }

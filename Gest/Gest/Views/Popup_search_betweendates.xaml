@@ -4,16 +4,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Gest.Views.Popup_search_betweendates"
              xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-             xmlns:convertisseur="clr-namespace:Gest.Convertisseurs">
-    <popup:PopupPage.Resources>
-        <ResourceDictionary>
-            <convertisseur:Converter_return_boolean x:Key="converter_boolean"/>
-        </ResourceDictionary>
-    </popup:PopupPage.Resources>
+             xmlns:convertisseur="clr-namespace:Gest.Convertisseurs"
+             xmlns:behaviors="clr-namespace:Gest.Behaviors_Controls" prism:ViewModelLocator.AutowireViewModel="True">
     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
-          
-        </StackLayout>
         <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
             <Grid >
                 <Grid.ColumnDefinitions>
@@ -28,19 +21,35 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Label Text="Début" Grid.Row="0" Grid.Column="0"/>
-                <DatePicker Format="yyyy/MM/dd" Grid.Row="0" Grid.Column="1"  HorizontalOptions="FillAndExpand" />
-                <TimePicker x:Name="saisie_heuredebut"  IsVisible="False" Grid.Row="0" Grid.Column="2" Format="HH:mm"/>
+                <Label Text="Début :" Grid.Row="0" Grid.Column="0"/>
+                <DatePicker Format="yyyy/MM/dd" Grid.Row="0" Grid.Column="1"  HorizontalOptions="FillAndExpand" >
+                    <DatePicker.Behaviors>
+                        <behaviors:Behavior_Datepiker Command="{Binding Command_update_dateandtime_debut}"/>
+                    </DatePicker.Behaviors>
+                </DatePicker>
+                <TimePicker x:Name="saisie_heuredebut"  IsVisible="False" Grid.Row="0" Grid.Column="2" Format="HH:mm">
+                    <TimePicker.Behaviors>
+                        <behaviors:Behavior_Pikertime Command="{Binding Command_update_dateandtime_debut}"/>
+                    </TimePicker.Behaviors>
+                </TimePicker>
                 <CheckBox CheckedChanged="CheckBox_heuredebut_CheckedChanged" Grid.Row="0" Grid.Column="3"/>
                 <Label Text="Inclure l'heure" Grid.Row="0" Grid.Column="4"/>
                 
-                <Label Text="Fin" Grid.Row="1" Grid.Column="0"/>
-                <DatePicker Format="yyyy/MM/dd" Grid.Row="1" Grid.Column="1"/>
-                <TimePicker x:Name="saisie_heurefin" IsVisible="False" Grid.Row="1" Grid.Column="2" Format="HH:mm"/>
+                <Label Text="Fin :" Grid.Row="1" Grid.Column="0"/>
+                <DatePicker Format="yyyy/MM/dd" Grid.Row="1" Grid.Column="1">
+                    <DatePicker.Behaviors>
+                        <behaviors:Behavior_Datepiker Command="{Binding Command_update_dateandtime_fin}"/>
+                    </DatePicker.Behaviors>
+                </DatePicker>
+                <TimePicker x:Name="saisie_heurefin" IsVisible="False" Grid.Row="1" Grid.Column="2" Format="HH:mm">
+                    <TimePicker.Behaviors>
+                        <behaviors:Behavior_Pikertime Command="{Binding Command_update_dateandtime_fin}"/>
+                    </TimePicker.Behaviors>
+                </TimePicker>
                 <CheckBox CheckedChanged="CheckBox_heurefin_CheckedChanged" Grid.Row="1" Grid.Column="3" />
                 <Label Text="Inclure l'heure" Grid.Row="1" Grid.Column="4"/>
-                
-                <Button Grid.Row="2" Grid.ColumnSpan="5"  Text="Lancer la recherche" BackgroundColor="Green" TextColor="GreenYellow" Command="{prism:GoBack}"/>
+
+                <Button Grid.Row="2" Grid.ColumnSpan="5"  Text="Lancer la recherche" BackgroundColor="Green" TextColor="GreenYellow" Command="{Binding Navigation_Goback}"/>
             </Grid>
         </StackLayout>
     </StackLayout>

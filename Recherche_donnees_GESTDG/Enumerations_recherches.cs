@@ -14,7 +14,7 @@ namespace Recherche_donnees_GESTDG.enumeration
             Contient,
             Egale_a,
             Superieure,
-            inferieure,
+            Inferieure,
         }
         public enum types_recherches
         {

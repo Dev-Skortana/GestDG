@@ -1,0 +1,2 @@
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\UnitTest_Recherche_donnees\obj\Debug\UnitTest_Recherche_donnees.csprojAssemblyReference.cache
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\UnitTest_Recherche_donnees\obj\Debug\UnitTest_Recherche_donnees.csproj.CoreCompileInputs.cache

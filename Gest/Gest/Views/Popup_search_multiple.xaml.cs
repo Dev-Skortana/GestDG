@@ -158,7 +158,7 @@ namespace Gest.Views
         private void date_selected(object sender, DateChangedEventArgs args)
         {
             Dictionary<String, Object> dictionnaire_valeursource_valeurcible = generer_dictionnaire_valeursource_valeurcible((sender as BindableObject).BindingContext as Parametre_recherche_sql, args.NewDate);
-            ((sender as BindableObject).BindingContext as Popup_search_multipleViewModel).Command_update_dateandtime_debut.Execute(dictionnaire_valeursource_valeurcible);
+            (this.BindingContext as Popup_search_multipleViewModel).Command_update_dateandtime.Execute(dictionnaire_valeursource_valeurcible);
         }
 
        private void time_selected(object sender, PropertyChangedEventArgs args)
@@ -166,7 +166,7 @@ namespace Gest.Views
             if (args.PropertyName == "Time")
             {
                 Dictionary<String, Object> dictionnaire_valeursource_valeurcible = generer_dictionnaire_valeursource_valeurcible((sender as BindableObject).BindingContext as Parametre_recherche_sql,(sender as TimePicker).Time);
-                ((sender as BindableObject).BindingContext as Popup_search_multipleViewModel).Command_update_dateandtime_debut.Execute(dictionnaire_valeursource_valeurcible);
+                (this.BindingContext as Popup_search_multipleViewModel).Command_update_dateandtime.Execute(dictionnaire_valeursource_valeurcible);
             }
         }
 

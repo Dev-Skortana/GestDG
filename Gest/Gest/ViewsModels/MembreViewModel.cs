@@ -108,14 +108,10 @@ namespace Gest.ViewModels
             {
                 return new Command(()=> {
                     NavigationParameters parametre = new NavigationParameters();
+                    parametre.Add("champ", Champ_selected);
                     parametre.Add("navigation_goback", this);
-                    parametre.Add("liste", new List<Parametre_recherche_sql> { new Parametre_recherche_sql("Membre","pseudo", null, null), new Parametre_recherche_sql("Membre","rang_nom", null, null) });
-                    //parametre.Add("champ", Champ_selected);
-                    //parametre.Add("navigation_goback", this);
 
-
-
-                    service_navigation.NavigateAsync("Popup_search_multiple", parametre);
+                    service_navigation.NavigateAsync("Popup_search_betweendates", parametre);
                 });
             }
         }

@@ -16,10 +16,11 @@ using Recherche_donnees_GESTDG.enumeration;
 using System.Windows.Input;
 using Gest.Interface_SQLiteAccess;
 using Recherche_donnees_GESTDG;
+using Xamarin.Forms.Internals;
 
 namespace Gest.ViewModels
 {
-    class SuiviMembreViewModel : BindableBase,INavigationAware,INavigation_Goback_Popup_searchbetweendates
+    class SuiviMembreViewModel : BindableBase,INavigationAware,INavigation_Goback_Popup_searchbetweendates,INavigation_Goback_Popup_searchmultiple
     {
 
         #region Interfaces_services
@@ -138,6 +139,23 @@ namespace Gest.ViewModels
         #endregion
 
         #region Command_MVVM
+
+
+        public ICommand Command_navigation_to_popup_searchmultiple
+        {
+            get
+            {
+                return new Command(() => {
+                    NavigationParameters parametre = new NavigationParameters();
+                    Dictionary<String, IEnumerable<String>> dictionnaire_champs = (Dictionary<String, IEnumerable<String>>)get_dictionnary_champs();
+                    List<Parametre_recherche_sql> liste_all_parametres = (List<Parametre_recherche_sql>)get_list_parametre_recherche_sql(dictionnaire_champs);
+                    parametre.Add("navigation_goback", this);
+                    parametre.Add("liste", liste_all_parametres);
+
+                    service_navigation.NavigateAsync("Popup_search_multiple", parametre);
+                });
+            }
+        }
 
         public ICommand Command_navigation_to_popup_searchbetweendates
         {
@@ -264,22 +282,84 @@ namespace Gest.ViewModels
         #endregion
 
         #region Methode_priver
-        private async Task load(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
+
+        private IDictionary<String, IEnumerable<String>> get_dictionnary_champs()
         {
-            Rang = new Rang();
-            Rang=(from item in await service_rang.GetList(null) where item.nom_rang.ToUpper() == Membre.rang_nom?.ToUpper() select item).FirstOrDefault();
+            return new Dictionary<String, IEnumerable<String>>() { { "Activite", Liste_champs_activites }, { "Visite", Liste_champs_visite }, { "Message",Liste_champs_membre_connexion_message } };
+        }
+        private IEnumerable<Parametre_recherche_sql> get_list_parametre_recherche_sql(Dictionary<String, IEnumerable<String>> dictionnaire_liste_champs)
+        {
+            IEnumerable<Parametre_recherche_sql> resultat = new List<Parametre_recherche_sql>();
+            for (var i = 0; i < dictionnaire_liste_champs.Count; i++)
+            {
+                resultat = resultat.Concat(dictionnaire_liste_champs.Values.ToList()[i].Select((champ) => new Parametre_recherche_sql(dictionnaire_liste_champs.Keys.ToList()[i], champ, null, null))).ToList();
+            }
+            return resultat;
+        }
+
+        private async Task updates_donnees(String type_recherche, IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres)
+        {
+            Dictionary<String, Func<IEnumerable<Parametre_recherche_sql>>> dictionnaire_get_conditions_parametres_recherches_sql = new Dictionary<string, Func<IEnumerable<Parametre_recherche_sql>>>();
+            dictionnaire_get_conditions_parametres_recherches_sql.Add("get_condition_parametres_recherches_sql_activite",()=>null);
+            dictionnaire_get_conditions_parametres_recherches_sql.Add("get_condition_parametres_recherches_sql_visite", () =>null);
+            dictionnaire_get_conditions_parametres_recherches_sql.Add("get_condition_parametres_recherches_sql_message", () =>null);
+            if (type_recherche == "Simple")
+            {            
+                var liste_parametre = (dictionnaire_parametres as Dictionary<String, IEnumerable<Parametre_recherche_sql>>)["Table_selected"].ToList();
+                dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_activite"] =() => nom_table_selected == "Activite" ? liste_parametre : null;
+                dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_visite"]=() => nom_table_selected == "Visite" ? liste_parametre : null;
+                dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_message"]=() => nom_table_selected == "Message" ? liste_parametre : null;
+            }
+            else if (type_recherche == "Multiples")
+            {
+                var liste_parametre_activite = (dictionnaire_parametres as Dictionary<String, IEnumerable<Parametre_recherche_sql>>)["Activite"].ToList();
+                var liste_parametre_visite = (dictionnaire_parametres as Dictionary<String, IEnumerable<Parametre_recherche_sql>>)["Visite"].ToList();
+                var liste_parametre_message = (dictionnaire_parametres as Dictionary<String, IEnumerable<Parametre_recherche_sql>>)["Message"].ToList();
+                dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_activite"]=() => liste_parametre_activite.Count > 0 ? liste_parametre_activite : null;
+                dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_visite"]=() => liste_parametre_visite.Count > 0 ? liste_parametre_visite : null;
+                dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_message"]=() => liste_parametre_message.Count > 0 ? liste_parametre_message : null;             
+            }
 
             Activites = new List<Activite>();
-            Activites= (from item in (List<Activite>)await service_activite.GetList(nom_table_selected == "Activite" ? parametres_recherches_sql : null) where item.membre_pseudo.ToUpper()==Membre.pseudo.ToUpper() select item).ToList();
+            Activites = (from item in (List<Activite>)await service_activite.GetList(dictionnaire_get_conditions_parametres_recherches_sql["Activite"].Invoke()) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() select item).ToList();
 
             Visites = new List<Visite>();
-            Visites=(from item in (List<Visite>)await service_visite.GetList(nom_table_selected == "Visite" ? parametres_recherches_sql : null) where item.membre_pseudo.ToUpper()==Membre.pseudo.ToUpper() select item).ToList();
+            Visites = (from item in (List<Visite>)await service_visite.GetList(dictionnaire_get_conditions_parametres_recherches_sql["Visite"].Invoke()) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() select item).ToList();
 
             Groupement_nombremessage = new List<Groupement_nombremessage>();
-            Groupement_nombremessage= (from item in (List<Membre_Connexion_Message>)await service_membre_connexion_message.GetList(nom_table_selected == "Message" ? parametres_recherches_sql : null) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() orderby item.connexion_date descending select new Groupement_nombremessage() {Date_connexion=item.connexion_date,Nbmessage=item.message_nb}).ToList();
+            Groupement_nombremessage = (from item in (List<Membre_Connexion_Message>)await service_membre_connexion_message.GetList(dictionnaire_get_conditions_parametres_recherches_sql["Message"].Invoke()) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() orderby item.connexion_date descending select new Groupement_nombremessage() { Date_connexion = item.connexion_date, Nbmessage = item.message_nb }).ToList();
+        }
 
-           
+        private Dictionary<String, IEnumerable<Parametre_recherche_sql>> get_dictionnary_parametrerecherchesql_trier(IEnumerable<Parametre_recherche_sql> liste_parametre_general, IDictionary<String, IEnumerable<String>> dictionnaire_nomtable_listeparametres)
+        {
+            Dictionary<String, IEnumerable<Parametre_recherche_sql>> resultat = new Dictionary<string, IEnumerable<Parametre_recherche_sql>>();
+            dictionnaire_nomtable_listeparametres.ForEach((item) => {
+                resultat.Add(item.Key, (liste_parametre_general.Where((parametre) => item.Value.Contains(parametre.Champ) && parametre.Nom_table == item.Key)));
+            });
+            return resultat;
+        }
 
+        public async Task navigation_Goback_Popup_searchbetweendates(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
+        {
+            await load(parametres_recherches_sql);
+        }
+
+        public async Task navigation_Goback_Popup_searchmultiple(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
+        {
+            Dictionary<String, IEnumerable<String>> dictionnaire_nomtable_listechamps = (Dictionary<String, IEnumerable<String>>)get_dictionnary_champs();
+            Dictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres = get_dictionnary_parametrerecherchesql_trier(parametres_recherches_sql, dictionnaire_nomtable_listechamps);
+            await updates_donnees(type_selected, dictionnaire_parametres);
+
+        }
+
+        private async Task get_rang()
+        {
+            Rang = new Rang();
+            Rang = (from item in await service_rang.GetList(null) where item.nom_rang.ToUpper() == Membre.rang_nom?.ToUpper() select item).FirstOrDefault();
+        }
+        private async Task load(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
+        {
+            await updates_donnees(type_selected, new Dictionary<String, IEnumerable<Parametre_recherche_sql>>() { { "Table_selected", parametres_recherches_sql } });
         }
 
      
@@ -294,12 +374,8 @@ namespace Gest.ViewModels
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
             Membre = parameters["Membre"] as Membre;
+            await get_rang();
             await load(null);
-        }
-
-        public async Task navigation_Goback_Popup_searchbetweendates(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
-        {
-            await load(parametres_recherches_sql);
         }
         #endregion
     }

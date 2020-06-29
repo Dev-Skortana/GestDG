@@ -8,7 +8,11 @@
              xmlns:behavior="clr-namespace:Gest.Behaviors_Controls"
              xmlns:prism="http://prismlibrary.com"
              xmlns:convertisseurs="clr-namespace:Gest.Convertisseurs"
-             prism:ViewModelLocator.AutowireViewModel="True">
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:structure="clr-namespace:Gest.Helpers"
+             xmlns:models="clr-namespace:Gest.Models"
+             xmlns:viewmodels="clr-namespace:Gest.ViewModels"
+             x:DataType="viewmodels:SuiviMembreViewModel" >
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Faire une recherche entre deux date"
                  Order="Secondary"
@@ -66,7 +70,7 @@
                             <Label Text="Liste des activités de ce membres :" HorizontalTextAlignment="Center"/>
                             <ListView ItemsSource="{Binding Activites}">
                                 <ListView.ItemTemplate>
-                                    <DataTemplate>
+                                    <DataTemplate x:DataType="models:Activite">
                                         <ViewCell>
                                             <StackLayout Orientation="Vertical">
                                                 <Label Text="{Binding libelle_activite}" />
@@ -80,7 +84,7 @@
                             <Label Text="S'est connecté au site à ces dates :" TextColor="WhiteSmoke" HorizontalTextAlignment="Center"/>
                             <ListView HasUnevenRows="True" ItemsSource="{Binding Visites}">
                                 <ListView.ItemTemplate>
-                                    <DataTemplate>
+                                    <DataTemplate x:DataType="models:Visite">
                                         <ViewCell>
                                             <StackLayout Orientation="Vertical">
                                                 <Label Text="{Binding connexion_date,StringFormat='à été ou est connecté le {0:dd/MM/yyyy HH:mm}'}" TextColor="Red" HorizontalTextAlignment="Center"/>
@@ -94,7 +98,7 @@
                             <Label Text="Nombres de messages posté par date de connexion." TextColor="PapayaWhip" HorizontalTextAlignment="Center"/>
                             <ListView HasUnevenRows="True" ItemsSource="{Binding Groupement_nombremessage}">
                                 <ListView.ItemTemplate>
-                                    <DataTemplate>
+                                    <DataTemplate x:DataType="structure:Groupement_nombremessage">
                                         <ViewCell>
                                             <StackLayout Orientation="Vertical">
                                                 <Label>

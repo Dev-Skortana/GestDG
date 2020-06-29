@@ -14,6 +14,9 @@ using System.Linq;
 using Recherche_donnees_GESTDG.enumeration;
 using System.Windows.Input;
 using Recherche_donnees_GESTDG;
+using System.IO;
+using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
+using Xamarin.Forms.Internals;
 
 namespace Gest.ViewModels
 {
@@ -92,14 +95,31 @@ namespace Gest.ViewModels
 
         #region Commandes_MVVM
 
+        public ICommand Command_navigation_to_popup_search_multiple
+        {
+            get
+            {
+                return new Command(() => {
+                    NavigationParameters parametre = new NavigationParameters();
+                    Dictionary<String, IEnumerable<String>> dictionnaire_champs =(Dictionary<String,IEnumerable<String>>)get_dictionnary_champs();
+                    List<Parametre_recherche_sql> liste_all_champs =(List<Parametre_recherche_sql>)get_list_all_parametres_recherches_sql(dictionnaire_champs);
+                    parametre.Add("navigation_goback", this);
+                    parametre.Add("liste", liste_all_champs);
+
+                    service_navigation.NavigateAsync("Popup_search_multiple", parametre);
+                });
+            }
+        }
+
         public ICommand Command_navigation_to_popup_searchbetweendates
         {
             get
             {
                 return new Command(() => {
                     NavigationParameters parametre = new NavigationParameters();
-                    parametre.Add("champ",Champ_selected);
+                    parametre.Add("champ", Champ_selected);
                     parametre.Add("navigation_goback", this);
+
                     service_navigation.NavigateAsync("Popup_search_betweendates", parametre);
                 });
             }
@@ -173,11 +193,47 @@ namespace Gest.ViewModels
         #endregion
 
         #region Methodes priver ou interne
+                                                                /* Code a rectifier imperativement */
+        private async Task<IEnumerable<Membre>> update_listemembres(String type_recherche,IDictionary<String,IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres)
+        {
+            var liste_membres =new List<Membre>();
+            var liste_activites =new List<Activite>();
+            if (type_recherche== "Simple")
+            {
+                 var liste_parametre = (dictionnaire_parametres as Dictionary<String, IEnumerable<Parametre_recherche_sql>>)["Table_selected"].ToList();
+                 liste_membres = (List<Membre>)await service_membre.GetList(nom_table_selected == "Membre" ? liste_parametre : null);
+                 liste_activites = (List<Activite>)await service_activite.GetList(nom_table_selected == "Activite" ? liste_parametre : null);
+            }
+            else if( type_recherche=="Multiples")
+            {
+                var liste_parametre_membre = (dictionnaire_parametres as Dictionary<String, IEnumerable<Parametre_recherche_sql>>)["Membre"].ToList();
+                var liste_parametre_activite = (dictionnaire_parametres as Dictionary<String, IEnumerable<Parametre_recherche_sql>>)["Activite"].ToList();
+                liste_membres = (List<Membre>)await service_membre.GetList(liste_parametre_membre.Count > 0 ? liste_parametre_membre : null);
+                liste_activites = (List<Activite>)await service_activite.GetList(liste_parametre_activite.Count > 0 ? liste_parametre_activite : null);
+            }
+            liste_membres.ForEach((membre) => membre.liste_activites = (from iteration_membre in liste_activites where iteration_membre.membre_pseudo == membre.pseudo select iteration_membre).ToList());
+            return liste_membres;
+        }
+
+                                                                    /* */
+
+        private IDictionary<String, IEnumerable<String>> get_dictionnary_champs()
+        {
+            return new Dictionary<String, IEnumerable<String>>() { {"Membre",Liste_champs_membres},{ "Activite",Liste_champs_activites} };
+        }
+        private IEnumerable<Parametre_recherche_sql> get_list_all_parametres_recherches_sql(Dictionary<String,IEnumerable<String>> dictionnaire_liste_champs)
+        {
+            IEnumerable<Parametre_recherche_sql> resultat=new List<Parametre_recherche_sql>();
+            for (var i=0; i<dictionnaire_liste_champs.Count;i++)
+            {
+                resultat = resultat.Concat(dictionnaire_liste_champs.Values.ToList()[i].Select((champ) => new Parametre_recherche_sql(dictionnaire_liste_champs.Keys.ToList()[i], champ, null, null))).ToList();
+            }
+            return resultat;
+        }
         private async Task load(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
-            var liste_membres =(List<Membre>)await service_membre.GetList(nom_table_selected == "Membre" ? parametres_recherches_sql : null);
-            var liste_activite = (List<Activite>)await service_activite.GetList(nom_table_selected == "Activite" ? parametres_recherches_sql : null);
-            liste_membres.ForEach((membre)=>membre.liste_activites=(from iteration_membre in liste_activite where iteration_membre.membre_pseudo==membre.pseudo select iteration_membre).ToList());
+            var liste_membres = (await update_listemembres(Type_selected,new Dictionary<String, IEnumerable<Parametre_recherche_sql>>() { {"Table_selected",parametres_recherches_sql}})).ToList();
+                
             if (nom_table_selected=="Activite")
             {
                 liste_membres.RemoveAll((membre)=>membre.liste_activites.Count==0);
@@ -190,18 +246,19 @@ namespace Gest.ViewModels
             await load(parametres_recherches_sql);
         }
 
+
+        private  Dictionary<String, IEnumerable<Parametre_recherche_sql>> get_dictionnary_parametrerecherchesql_trier(IEnumerable<Parametre_recherche_sql> liste_parametre_general,IDictionary<String,IEnumerable<String>> dictionnaire_nomtable_listeparametres) {
+            Dictionary<String, IEnumerable<Parametre_recherche_sql>> resultat = new Dictionary<string, IEnumerable<Parametre_recherche_sql>>();
+            dictionnaire_nomtable_listeparametres.ForEach((item)=> {
+                resultat.Add(item.Key,(liste_parametre_general.Where((parametre)=>item.Value.Contains(parametre.Champ) && parametre.Nom_table==item.Key)));
+            });
+            return resultat;
+        }
         public async Task navigation_Goback_Popup_searchmultiple(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
-        {
-            List<Parametre_recherche_sql> liste_parametres_recherches_sql_membre = new List<Parametre_recherche_sql>();
-            liste_parametres_recherches_sql_membre = (from el in parametres_recherches_sql where Liste_champs_membres.Contains(el.Champ) && el.Nom_table== "Membre" select el).ToList();
-            List<Parametre_recherche_sql> liste_parametres_recherches_sql_activite = new List<Parametre_recherche_sql>();
-            liste_parametres_recherches_sql_activite = (from el in parametres_recherches_sql where Liste_champs_activites.Contains(el.Champ) && el.Nom_table == "Activite" select el).ToList();
-
-            var liste_membres = (List<Membre>)await service_membre.GetList(liste_parametres_recherches_sql_membre.Count>0 ? liste_parametres_recherches_sql_membre : null);
-            var liste_activite = (List<Activite>)await service_activite.GetList(liste_parametres_recherches_sql_activite.Count>0 ? liste_parametres_recherches_sql_activite : null);
-            liste_membres.ForEach((membre) => membre.liste_activites = (from iteration_membre in liste_activite where iteration_membre.membre_pseudo == membre.pseudo select iteration_membre).ToList());
-
-            this.membres = liste_membres;
+        {          
+            Dictionary<String, IEnumerable<String>> dictionnaire_nomtable_listechamps =(Dictionary<String, IEnumerable<String>>)get_dictionnary_champs();
+            Dictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres = get_dictionnary_parametrerecherchesql_trier(parametres_recherches_sql,dictionnaire_nomtable_listechamps);
+            this.membres = (await update_listemembres(Type_selected,dictionnaire_parametres)).ToList();
         }
         #endregion
 
@@ -213,7 +270,7 @@ namespace Gest.ViewModels
 
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
-            await load(null);
+            //await load(null);
         }
         #endregion
     }

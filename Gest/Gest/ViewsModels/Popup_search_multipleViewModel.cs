@@ -52,7 +52,7 @@ namespace Gest.ViewModels
             }
         }
 
-        public ICommand Command_update_dateandtime_debut
+        public ICommand Command_update_dateandtime
         {
             get
             {
@@ -60,7 +60,7 @@ namespace Gest.ViewModels
                 {
                     Parametre_recherche_sql parametre_recherche_sql = (Parametre_recherche_sql)(dictionnaire as Dictionary<String, Object>)["objet_source"];
                     Object nouvelle_donnees = (dictionnaire as Dictionary<String, Object>)["nouvelle_donnees"];
-                    parametre_recherche_sql.Valeur = update_dateandtime(nouvelle_donnees, (DateTime)parametre_recherche_sql.Valeur);
+                    parametre_recherche_sql.Valeur = update_dateandtime(nouvelle_donnees,(DateTime?)parametre_recherche_sql.Valeur);
                 });
             }
         }
@@ -72,11 +72,11 @@ namespace Gest.ViewModels
         {
             liste_parametres_recherches_sql.RemoveAll((parametre_recherche_sql)=>parametre_recherche_sql.Valeur==null);
         }
-        private DateTime update_dateandtime(Object donnees, DateTime date_actuel)
+        private DateTime update_dateandtime(Object donnees, DateTime? _date_actuel)
         {
             
             DateTime resultat = new DateTime();
-            if (date_actuel == null)
+            if (_date_actuel == null)
             {
                 resultat = new DateTime(donnees is DateTime ? ((DateTime)donnees).Ticks : ((TimeSpan)donnees).Ticks);
             }
@@ -84,11 +84,15 @@ namespace Gest.ViewModels
             {
                 if (donnees is DateTime)
                 {
-                    resultat = new DateTime(((DateTime)donnees).Year, ((DateTime)donnees).Month, ((DateTime)donnees).Day, date_actuel.TimeOfDay.Hours, date_actuel.TimeOfDay.Minutes, date_actuel.TimeOfDay.Seconds);
+                    DateTime nouvelle_date = (DateTime)donnees;
+                    TimeSpan temps_actuel = _date_actuel.Value.TimeOfDay;
+                    resultat = new DateTime(nouvelle_date.Year, nouvelle_date.Month, nouvelle_date.Day, temps_actuel.Hours, temps_actuel.Minutes, temps_actuel.Seconds);
                 }
                 else if (donnees is TimeSpan)
                 {
-                    resultat = new DateTime(date_actuel.Year, date_actuel.Month, date_actuel.Day, ((TimeSpan)donnees).Hours, ((TimeSpan)donnees).Minutes, ((TimeSpan)donnees).Seconds);
+                    DateTime date_actuel = _date_actuel.Value;
+                    TimeSpan nouveau_temps = (TimeSpan)donnees;
+                    resultat = new DateTime(date_actuel.Year, date_actuel.Month, date_actuel.Day, nouveau_temps.Hours, nouveau_temps.Minutes, nouveau_temps.Seconds);
                 }
             }
             return resultat;

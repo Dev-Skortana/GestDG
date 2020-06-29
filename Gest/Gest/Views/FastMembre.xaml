@@ -60,12 +60,20 @@
             <controls_carousel:CarouselViewControl  PositionSelected="CarouselViewControl_PositionSelected" Orientation="Horizontal" ItemsSource="{Binding Liste_membres}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <controls_carousel:CarouselViewControl.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                                <controls_imagecircle:CircleImage WidthRequest="80" HeightRequest="80" Source="{Binding url_avatar}" Aspect="AspectFill"/>
-                                <Label TextColor="Gold"  Text="{Binding pseudo}" HorizontalTextAlignment="Center"/>
-                            </StackLayout>
-                        </StackLayout>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem >
+                                </MenuItem>
+                            </ViewCell.ContextActions>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                        <controls_imagecircle:CircleImage WidthRequest="80" HeightRequest="80" Source="{Binding url_avatar}" Aspect="AspectFill"/>
+                                        <Label TextColor="Gold"  Text="{Binding pseudo}" HorizontalTextAlignment="Center"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
                     </DataTemplate>
                 </controls_carousel:CarouselViewControl.ItemTemplate>
             </controls_carousel:CarouselViewControl>

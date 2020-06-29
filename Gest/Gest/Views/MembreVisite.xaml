@@ -7,8 +7,14 @@
              xmlns:controls_carousel="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
              xmlns:controls_imagecircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:behavior="clr-namespace:Gest.Behaviors_Controls"
-             xmlns:prism="http://prismlibrary.com" 
-             prism:ViewModelLocator.AutowireViewModel="True">
+             xmlns:prism="http://prismlibrary.com" xmlns:convertisseure="clr-namespace:Gest.Convertisseurs"
+             prism:ViewModelLocator.AutowireViewModel="True"    
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <convertisseure:return_string x:Key="return_string" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Faire une recherche entre deux date"
                  Order="Secondary"
@@ -20,26 +26,66 @@
             <ScrollView Orientation="Both">
                 <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
-                        <Picker ItemsSource="{Binding Liste_noms_tables}" SelectedIndexChanged="Picker_switchsource_SelectedIndexChanged" SelectedItem="{Binding nom_table_selected}" Title="Source :" TextColor="LightGreen"/>
-                        <Picker x:Name="piker_champs" ItemsSource="{Binding Liste_champs}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding Champ_selected}" Title="champ (libelle)" TextColor="LightGreen"/>
+                        <Button IsVisible="False" Text="Acceder au formulaire de la recherche avancer" TextColor="White" BackgroundColor="ForestGreen" Command="{Binding Command_navigation_to_popup_search_multiple}">
+                            <Button.Triggers>
+                                <DataTrigger TargetType="Button" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Multiples">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </DataTrigger>
+                            </Button.Triggers>
+                        </Button>
+                        <Picker IsVisible="False" ItemsSource="{Binding Liste_noms_tables}" SelectedIndexChanged="Picker_switchsource_SelectedIndexChanged" SelectedItem="{Binding nom_table_selected}" Title="Source :" TextColor="LightGreen">
+                            <Picker.Triggers>
+                                <DataTrigger TargetType="Picker" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </DataTrigger>
+                            </Picker.Triggers>
+                        </Picker>
+                        <Picker IsVisible="False" x:Name="piker_champs" ItemsSource="{Binding Liste_champs}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding Champ_selected}" Title="champ (libelle)" TextColor="LightGreen">
+                            <Picker.Triggers>
+                                <DataTrigger TargetType="Picker" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </DataTrigger>
+                            </Picker.Triggers>
+                        </Picker>
                         <Entry x:Name="zone_saisi_text" Placeholder="Recherche ici" PlaceholderColor="Green" TextColor="Green" IsVisible="False">
                             <Entry.Behaviors>
                                 <behavior:Behavior_EntryTextChanged Command="{Binding Command_search}"/>
                             </Entry.Behaviors>
+                            <Entry.Triggers>
+                                <DataTrigger TargetType="Entry" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </DataTrigger>
+                            </Entry.Triggers>
                         </Entry>
                         <DatePicker   x:Name="zone_saisi_date" IsVisible="False" Format="yyyy/MM/dd">
                             <DatePicker.Behaviors>
                                 <behavior:Behavior_Datepiker Command="{Binding Command_search}"/>
                             </DatePicker.Behaviors>
+                            <DatePicker.Triggers>
+                                <DataTrigger TargetType="DatePicker" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </DataTrigger>
+                            </DatePicker.Triggers>
                         </DatePicker>
                         <TimePicker x:Name="zone_saisi_time" IsVisible="False" Format="HH:mm">
                             <TimePicker.Behaviors>
                                 <behavior:Behavior_Pikertime Command="{Binding Command_search}"/>
                             </TimePicker.Behaviors>
+                            <TimePicker.Triggers>
+                                <DataTrigger TargetType="TimePicker" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </DataTrigger>
+                            </TimePicker.Triggers>
                         </TimePicker>
                     </StackLayout>
                     <StackLayout Orientation="Vertical" HorizontalOptions="End">
-                        <Picker x:Name="piker_methodesrecherches" ItemsSource="{Binding Liste_methodesrecherches}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding methoderecherche_selected}" Title="Méthode de recherche" TextColor="LightGreen"/>
+                        <Picker IsVisible="False" x:Name="piker_methodesrecherches" ItemsSource="{Binding Liste_methodesrecherches}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding methoderecherche_selected}" Title="Méthode de recherche" TextColor="LightGreen">
+                            <Picker.Triggers>
+                                <DataTrigger TargetType="Picker" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
+                                    <Setter Property="IsVisible" Value="True" />
+                                </DataTrigger>
+                            </Picker.Triggers>
+                        </Picker>
                         <Picker  x:Name="piker_typesrecherches" ItemsSource="{Binding Liste_typesrecherches}" SelectedItem="{Binding type_selected}" Title="Type de recherche" TextColor="LightGreen"/>
                         <Button x:Name="button_search_datewithtime" IsVisible="False" Text="Rechercher" BackgroundColor="Green" TextColor="White" Command="{Binding Command_search}" CommandParameter="{Binding Dateandtime}"/>
                     </StackLayout>
@@ -76,7 +122,7 @@
             </controls_carousel:CarouselViewControl>
             <StackLayout Orientation="Horizontal" VerticalOptions="End">
                 <Label Text="Choisissez votre controle de saisie :" VerticalOptions="Center"/>
-                <Picker x:Name="picker_controlessaisies" SelectedIndexChanged="Picker_switchcontrole_SelectedIndexChanged" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                <Picker IsVisible="False" x:Name="picker_controlessaisies" SelectedIndexChanged="Picker_switchcontrole_SelectedIndexChanged" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Text</x:String>
@@ -85,6 +131,11 @@
                             <x:String>Date et heure</x:String>
                         </x:Array>
                     </Picker.ItemsSource>
+                    <Picker.Triggers>
+                        <DataTrigger TargetType="Picker" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
+                            <Setter Property="IsVisible" Value="True" />
+                        </DataTrigger>
+                    </Picker.Triggers>
                 </Picker>
             </StackLayout>
         </StackLayout>

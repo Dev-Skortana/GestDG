@@ -11,15 +11,8 @@
              xmlns:behavior="clr-namespace:Gest.Behaviors_Controls"
              xmlns:convertisseure="clr-namespace:Gest.Convertisseurs"
              xmlns:prism="http://prismlibrary.com"  
-             prism:ViewModelLocator.AutowireViewModel="True">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <convertisseure:ReturnNegationBoolean x:Key="negation_booleen" />
-        </ResourceDictionary>
-        <ResourceDictionary>
-            <convertisseure:Return_booleen_value_vide x:Key="return_booleen" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
+             prism:ViewModelLocator.AutowireViewModel="True"
+             >
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Faire une recherche entre deux date"
                  Order="Secondary"

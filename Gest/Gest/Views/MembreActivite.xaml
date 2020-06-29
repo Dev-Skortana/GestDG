@@ -12,17 +12,14 @@
              xmlns:prism="http://prismlibrary.com"
              xmlns:convertisseure="clr-namespace:Gest.Convertisseurs"
              prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:models="clr-namespace:Gest.Models"
+             x:DataType="viewmodels:MembreActiviteViewModel" 
              >
     <ContentPage.Resources>
         <ResourceDictionary>
-            <convertisseure:test x:Key="return_string" />
+            <convertisseure:return_string x:Key="return_string" />
         </ResourceDictionary>
-        <ResourceDictionary>
-            <convertisseure:ReturnNegationBoolean x:Key="negation_booleen" />
-        </ResourceDictionary>
-        <ResourceDictionary>
-            <convertisseure:Return_booleen_value_vide x:Key="return_booleen" />
-        </ResourceDictionary>
+   
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Faire une recherche entre deux date"
@@ -35,7 +32,7 @@
             <ScrollView Orientation="Both">
                 <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand"   HorizontalOptions="CenterAndExpand">
                     <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
-                        <Button IsVisible="False" Text="Acceder au formulaire de la recherche avancer" TextColor="White" BackgroundColor="ForestGreen">
+                        <Button IsVisible="False" Text="Acceder au formulaire de la recherche avancer" TextColor="White" BackgroundColor="ForestGreen" Command="{Binding Command_navigation_to_popup_search_multiple}">
                             <Button.Triggers>
                                 <DataTrigger TargetType="Button" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Multiples">
                                     <Setter Property="IsVisible" Value="True" />
@@ -100,7 +97,7 @@
             </ScrollView>
             <controls_carousel:CarouselViewControl ItemsSource="{Binding membres}" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <controls_carousel:CarouselViewControl.ItemTemplate>
-                    <DataTemplate>
+                    <DataTemplate x:DataType="models:Membre">
                         <ScrollView Orientation="Both">
                             <StackLayout>
                                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
@@ -111,7 +108,7 @@
                                     <Label Text="Liste des activités de ce membres :" HorizontalTextAlignment="Center"/>
                                     <ListView ItemsSource="{Binding liste_activites}">
                                         <ListView.ItemTemplate>
-                                            <DataTemplate>
+                                            <DataTemplate x:DataType="models:Activite">
                                                 <ViewCell>
                                                     <StackLayout Orientation="Vertical">
                                                         <Label Text="{Binding libelle_activite}" />

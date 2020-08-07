@@ -44,10 +44,5 @@ namespace Gest.Views
                 ((sender as BindableObject).BindingContext as FastMembreViewModel).save_membre_selected.Execute(e.NewValue);
             }
         }
-
-        private void MenuItem_Clicked(object sender, EventArgs e)
-        {
-
-        }
     }
 }

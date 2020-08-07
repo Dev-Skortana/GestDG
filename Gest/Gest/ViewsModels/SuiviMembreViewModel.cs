@@ -321,13 +321,13 @@ namespace Gest.ViewModels
             }
 
             Activites = new List<Activite>();
-            Activites = (from item in (List<Activite>)await service_activite.GetList(dictionnaire_get_conditions_parametres_recherches_sql["Activite"].Invoke()) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() select item).ToList();
+            Activites = (from item in (List<Activite>)await service_activite.GetList(dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_activite"].Invoke()) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() select item).ToList();
 
             Visites = new List<Visite>();
-            Visites = (from item in (List<Visite>)await service_visite.GetList(dictionnaire_get_conditions_parametres_recherches_sql["Visite"].Invoke()) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() select item).ToList();
+            Visites = (from item in (List<Visite>)await service_visite.GetList(dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_visite"].Invoke()) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() select item).ToList();
 
             Groupement_nombremessage = new List<Groupement_nombremessage>();
-            Groupement_nombremessage = (from item in (List<Membre_Connexion_Message>)await service_membre_connexion_message.GetList(dictionnaire_get_conditions_parametres_recherches_sql["Message"].Invoke()) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() orderby item.connexion_date descending select new Groupement_nombremessage() { Date_connexion = item.connexion_date, Nbmessage = item.message_nb }).ToList();
+            Groupement_nombremessage = (from item in (List<Membre_Connexion_Message>)await service_membre_connexion_message.GetList(dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_message"].Invoke()) where item.membre_pseudo.ToUpper() == Membre.pseudo.ToUpper() orderby item.connexion_date descending select new Groupement_nombremessage() { Date_connexion = item.connexion_date, Nbmessage = item.message_nb }).ToList();
         }
 
         private Dictionary<String, IEnumerable<Parametre_recherche_sql>> get_dictionnary_parametrerecherchesql_trier(IEnumerable<Parametre_recherche_sql> liste_parametre_general, IDictionary<String, IEnumerable<String>> dictionnaire_nomtable_listeparametres)
@@ -375,7 +375,7 @@ namespace Gest.ViewModels
         {
             Membre = parameters["Membre"] as Membre;
             await get_rang();
-            await load(null);
+            await load(new List<Parametre_recherche_sql>());
         }
         #endregion
     }

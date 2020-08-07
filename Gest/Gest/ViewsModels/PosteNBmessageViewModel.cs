@@ -251,7 +251,7 @@ namespace Gest.ViewModels
         }
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
-            await load(null);
+            await load(new  List<Parametre_recherche_sql>());
         }
         #endregion
     }

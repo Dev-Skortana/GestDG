@@ -24,7 +24,7 @@ namespace Gest
 
         public App() : this(null)
         {
-            
+            Device.SetFlags(new[] { "SwipeView_Experimental" });
         }
         public App(IPlatformInitializer initializer=null):base(initializer)
         {

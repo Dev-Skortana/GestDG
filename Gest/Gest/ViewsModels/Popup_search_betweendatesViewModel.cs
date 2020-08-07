@@ -99,7 +99,11 @@ namespace Gest.ViewModels
                     liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() { Champ = this.nom_champ_date, Valeur = this.Date_fin, Methode_recherche = Enumerations_recherches.methodes_recherches.Inferieure.ToString() });
                     
                     await this.service_navigation_goback_popup.navigation_Goback_Popup_searchbetweendates(liste_parametres_recherches_sql);
-                    await service_navigation.GoBackAsync();
+
+                    NavigationParameters parametres = new NavigationParameters();
+                    parametres.Add("liste_parametres_recherches_sql", liste_parametres_recherches_sql);
+
+                    await service_navigation.GoBackAsync(parametres);
                 });
             }
         }

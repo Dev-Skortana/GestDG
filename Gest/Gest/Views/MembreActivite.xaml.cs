@@ -21,9 +21,15 @@ namespace Gest.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-
-
-            zone_saisi_text.IsVisible = !zone_saisi_text.IsVisible;
+            if (zone_saisi_text.IsVisible)
+            {
+                zone_saisi_text.IsVisible = false;
+                zone_saisi_date.IsVisible = true;
+            }else if (zone_saisi_date.IsVisible)
+            {
+                zone_saisi_date.IsVisible = false;
+                zone_saisi_text.IsVisible = true;
+            }
         }
 
         private void Picker_SelectedIndexChanged(object sender, EventArgs e)

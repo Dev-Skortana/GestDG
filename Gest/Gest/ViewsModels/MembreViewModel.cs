@@ -178,7 +178,7 @@ namespace Gest.ViewModels
 
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
-            await load(null);
+            await load(new List<Parametre_recherche_sql>());
         }
 
         public async Task navigation_Goback_Popup_searchbetweendates(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)

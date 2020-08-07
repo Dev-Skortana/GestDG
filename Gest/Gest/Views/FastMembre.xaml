@@ -25,6 +25,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout BackgroundColor="Blue"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Label Text="Pour acceder au suivi d'un membre ,defilez son image de bas en haut." TextDecorations="Underline" TextColor="Gold" HorizontalOptions="CenterAndExpand"/>
             <ScrollView Orientation="Both">
                 <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
@@ -57,30 +58,34 @@
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
-            <controls_carousel:CarouselViewControl  PositionSelected="CarouselViewControl_PositionSelected" Orientation="Horizontal" ItemsSource="{Binding Liste_membres}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <controls_carousel:CarouselViewControl BackgroundColor="Transparent" PositionSelected="CarouselViewControl_PositionSelected" Orientation="Horizontal" ItemsSource="{Binding Liste_membres}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <controls_carousel:CarouselViewControl.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.ContextActions>
-                                <MenuItem >
-                                </MenuItem>
-                            </ViewCell.ContextActions>
-                            <ViewCell.View>
-                                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                                    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                                        <controls_imagecircle:CircleImage WidthRequest="80" HeightRequest="80" Source="{Binding url_avatar}" Aspect="AspectFill"/>
-                                        <Label TextColor="Gold"  Text="{Binding pseudo}" HorizontalTextAlignment="Center"/>
-                                    </StackLayout>
-                                </StackLayout>
-                            </ViewCell.View>
-                        </ViewCell>
+                        <StackLayout BackgroundColor="Transparent"  Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Frame BackgroundColor="Transparent" CornerRadius="50"                                             
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand">
+                                <SwipeView BackgroundColor="Transparent">
+                                    <SwipeView.BottomItems>
+                                        <SwipeItems Mode="Execute" SwipeBehaviorOnInvoked="Auto">
+                                            <SwipeItem Text="Suivi" BackgroundColor="Goldenrod" Command="{Binding Source={x:Reference MainPage}, Path=BindingContext.getpage_membre}"/>
+                                        </SwipeItems>
+                                    </SwipeView.BottomItems>
+                                    <SwipeView.Content>
+                                        <StackLayout BackgroundColor="Transparent" Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                            <controls_imagecircle:CircleImage  WidthRequest="80" HeightRequest="80" Source="{Binding url_avatar}" Aspect="AspectFill"/>
+                                            <Label TextColor="Gold"  Text="{Binding pseudo}" HorizontalTextAlignment="Center"/>
+                                        </StackLayout>
+                                    </SwipeView.Content>
+                                </SwipeView>
+                            </Frame>
+                        </StackLayout>
                     </DataTemplate>
                 </controls_carousel:CarouselViewControl.ItemTemplate>
             </controls_carousel:CarouselViewControl>
             <ScrollView Orientation="Horizontal">
                 <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
                     <Button HorizontalOptions="FillAndExpand"  Text="Changer de zone de saisie" BackgroundColor="Green" TextColor="DarkGreen" Clicked="Button_Clicked"/>
-                    <Button HorizontalOptions="FillAndExpand"  Text="Aller au suivi de ce membre" BackgroundColor="Goldenrod" TextColor="Black" Command="{Binding getpage_membre}"/>
                 </StackLayout>
         </ScrollView>
         </StackLayout>

@@ -40,10 +40,9 @@ namespace Gest.Views
             if (controle_picker.SelectedItem.ToString() == "Text")
             {
                 zone_saisi_text.IsVisible = true;
-
                 zone_saisi_date.IsVisible = false;
                 zone_saisi_time.IsVisible = false;
-                button_search_datewithtime.IsVisible = false;
+              
 
             } else if (controle_picker.SelectedItem.ToString() == "Date")
             {
@@ -53,7 +52,7 @@ namespace Gest.Views
 
                 zone_saisi_text.IsVisible = false;
                 zone_saisi_time.IsVisible = false;
-                button_search_datewithtime.IsVisible = false;
+                
             }
             else if (controle_picker.SelectedItem.ToString() == "Heure")
             {
@@ -63,7 +62,7 @@ namespace Gest.Views
 
                 zone_saisi_text.IsVisible = false;
                 zone_saisi_date.IsVisible = false;
-                button_search_datewithtime.IsVisible = false;
+                
 
             }
             else if (controle_picker.SelectedItem.ToString() == "Date et heure")
@@ -74,7 +73,7 @@ namespace Gest.Views
                 zone_saisi_time.PropertyChanged -= (zone_saisi_time.Behaviors[0] as Behavior_Pikertime).Pickertime_SelectedIndexChanged;
                 zone_saisi_time.PropertyChanged += this.Pickertime_SelectedIndexChanged;
                 zone_saisi_time.IsVisible = true;
-                button_search_datewithtime.IsVisible = true;
+               
 
                 zone_saisi_text.IsVisible = false;
             }

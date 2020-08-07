@@ -52,20 +52,20 @@ namespace Gest.Services.Classes
         
 
         public async Task<bool> update(Membre membre,Boolean only_change_statut)
-       {
+        {
             var connection = await Database_configuration.Database_Initialize();
             var query = "";
-            var nombres_records =0;
+            var nombres_records = 0;
             if (only_change_statut)
             {
                 query = $"update Membres set Membres.Statut='{membre.statut}' where Membres.Pseudo='{membre.pseudo}'";
             }
             else
             {
-                query = $"update Membre set Membres.date_naissance='{DateTime.ParseExact(membre.date_naissance.ToString(), "yyyy-MM-dd",null).ToString("yyyy-MM-dd")}',Membres.Age={membre.age},Membres.Date_inscription={DateTime.ParseExact(membre.date_inscription.ToString(), "yyyy-MM-dd", null).ToString("yyyy-MM-dd")},Membres.Url_site={membre.url_site},Membres.Url_avatar={membre.url_avatar},Membres.Sexe={membre.sexe},Membres.Localisation={membre.localisation},Membres.Statut={membre.statut},Membres.Rang_nom={membre.rang_nom} where Membres.Pseudo={membre.pseudo}";
+                query = $"update Membre set Membres.date_naissance='{DateTime.ParseExact(membre.date_naissance.ToString(), "yyyy-MM-dd", null).ToString("yyyy-MM-dd")}',Membres.Age={membre.age},Membres.Date_inscription={DateTime.ParseExact(membre.date_inscription.ToString(), "yyyy-MM-dd", null).ToString("yyyy-MM-dd")},Membres.Url_site={membre.url_site},Membres.Url_avatar={membre.url_avatar},Membres.Sexe={membre.sexe},Membres.Localisation={membre.localisation},Membres.Statut={membre.statut},Membres.Rang_nom={membre.rang_nom} where Membres.Pseudo={membre.pseudo}";
             }
-            nombres_records= await connection.ExecuteAsync(query);
-            return (nombres_records>=1);
+            nombres_records = await connection.ExecuteAsync(query);
+            return (nombres_records >= 1);
         }
     }
 }

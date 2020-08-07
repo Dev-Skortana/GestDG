@@ -52,19 +52,27 @@
                                 <behavior:Behavior_EntryTextChanged Command="{Binding Command_search}"/>
                             </Entry.Behaviors>
                             <Entry.Triggers>
-                                <DataTrigger TargetType="Entry" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
-                                    <Setter Property="IsVisible" Value="True" />
-                                </DataTrigger>
+                                <MultiTrigger TargetType="Entry">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple"/>
+                                        <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference picker_controlessaisies},Converter={StaticResource return_string}}" Value="Text"/>
+                                    </MultiTrigger.Conditions>
+                                    <Setter  Property="IsVisible" Value="True"/>
+                                </MultiTrigger>
                             </Entry.Triggers>
                         </Entry>
-                        <DatePicker   x:Name="zone_saisi_date" IsVisible="False" Format="yyyy/MM/dd">
+                        <DatePicker x:Name="zone_saisi_date" IsVisible="False" Format="yyyy/MM/dd">
                             <DatePicker.Behaviors>
                                 <behavior:Behavior_Datepiker Command="{Binding Command_search}"/>
                             </DatePicker.Behaviors>
                             <DatePicker.Triggers>
-                                <DataTrigger TargetType="DatePicker" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
-                                    <Setter Property="IsVisible" Value="True" />
-                                </DataTrigger>
+                                <MultiTrigger TargetType="DatePicker">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple"/>
+                                        <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference picker_controlessaisies},Converter={StaticResource return_string}}" Value="Date"/>
+                                    </MultiTrigger.Conditions>
+                                    <Setter  Property="IsVisible" Value="True"/>
+                                </MultiTrigger>
                             </DatePicker.Triggers>
                         </DatePicker>
                         <TimePicker x:Name="zone_saisi_time" IsVisible="False" Format="HH:mm">
@@ -72,9 +80,13 @@
                                 <behavior:Behavior_Pikertime Command="{Binding Command_search}"/>
                             </TimePicker.Behaviors>
                             <TimePicker.Triggers>
-                                <DataTrigger TargetType="TimePicker" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
-                                    <Setter Property="IsVisible" Value="True" />
-                                </DataTrigger>
+                                <MultiTrigger TargetType="TimePicker">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple"/>
+                                        <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference picker_controlessaisies},Converter={StaticResource return_string}}" Value="Heure"/>
+                                    </MultiTrigger.Conditions>
+                                    <Setter  Property="IsVisible" Value="True"/>
+                                </MultiTrigger>
                             </TimePicker.Triggers>
                         </TimePicker>
                     </StackLayout>
@@ -87,7 +99,17 @@
                             </Picker.Triggers>
                         </Picker>
                         <Picker  x:Name="piker_typesrecherches" ItemsSource="{Binding Liste_typesrecherches}" SelectedItem="{Binding type_selected}" Title="Type de recherche" TextColor="LightGreen"/>
-                        <Button x:Name="button_search_datewithtime" IsVisible="False" Text="Rechercher" BackgroundColor="Green" TextColor="White" Command="{Binding Command_search}" CommandParameter="{Binding Dateandtime}"/>
+                        <Button x:Name="button_search_datewithtime" IsVisible="False" Text="Rechercher" BackgroundColor="Green" TextColor="White" Command="{Binding Command_search}" CommandParameter="{Binding Dateandtime}">
+                            <Button.Triggers>
+                                <MultiTrigger TargetType="Button">
+                                    <MultiTrigger.Conditions>
+                                        <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple"/>
+                                        <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference picker_controlessaisies},Converter={StaticResource return_string}}" Value="Date et heure"/>
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="IsVisible" Value="True" />
+                                </MultiTrigger>
+                            </Button.Triggers>
+                        </Button>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
@@ -120,9 +142,14 @@
                     </DataTemplate>
                 </controls_carousel:CarouselViewControl.ItemTemplate>
             </controls_carousel:CarouselViewControl>
-            <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            <StackLayout IsVisible="False" Orientation="Horizontal" VerticalOptions="End">
+                <StackLayout.Triggers>
+                    <DataTrigger TargetType="StackLayout" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
+                        <Setter Property="IsVisible" Value="True" />
+                    </DataTrigger>
+                </StackLayout.Triggers>
                 <Label Text="Choisissez votre controle de saisie :" VerticalOptions="Center"/>
-                <Picker IsVisible="False" x:Name="picker_controlessaisies" SelectedIndexChanged="Picker_switchcontrole_SelectedIndexChanged" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                <Picker  x:Name="picker_controlessaisies" SelectedIndexChanged="Picker_switchcontrole_SelectedIndexChanged" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Text</x:String>
@@ -131,11 +158,7 @@
                             <x:String>Date et heure</x:String>
                         </x:Array>
                     </Picker.ItemsSource>
-                    <Picker.Triggers>
-                        <DataTrigger TargetType="Picker" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
-                            <Setter Property="IsVisible" Value="True" />
-                        </DataTrigger>
-                    </Picker.Triggers>
+                   
                 </Picker>
             </StackLayout>
         </StackLayout>

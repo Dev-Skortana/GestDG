@@ -47,7 +47,11 @@ namespace Gest.ViewModels
                 return new Command(async () => {
                     this.delete_parametre_recherche_sql_with_value_null(this.Liste_parametres_recherche_sql);
                     await this.service_navigation_goback_popup.navigation_Goback_Popup_searchmultiple(this.Liste_parametres_recherche_sql);
-                    await this.service_navigation.GoBackAsync();
+
+                    NavigationParameters parametres = new NavigationParameters();
+                    parametres.Add("liste_parametres_recherches_sql",Liste_parametres_recherche_sql);
+
+                    await this.service_navigation.GoBackAsync(parametres);
                 });
             }
         }

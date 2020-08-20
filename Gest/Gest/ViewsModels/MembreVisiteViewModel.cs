@@ -19,7 +19,7 @@ using ImTools;
 
 namespace Gest.ViewModels
 {
-    class MembreVisiteViewModel : BindableBase, INavigationAware, INavigation_Goback_Popup_searchbetweendates, INavigation_Goback_Popup_searchmultiple
+    class MembreVisiteViewModel : BindableBase, INavigationAware
     {
 
         #region Interfaces_services
@@ -212,9 +212,7 @@ namespace Gest.ViewModels
                     NavigationParameters parametre = new NavigationParameters();
                     Dictionary<String, IEnumerable<String>> dictionnaire_champs = (Dictionary<String, IEnumerable<String>>)get_dictionnary_champs();
                     List<Parametre_recherche_sql> liste_all_parametres = (List<Parametre_recherche_sql>)get_list_parametre_recherche_sql(dictionnaire_champs);
-                    parametre.Add("navigation_goback", this);
                     parametre.Add("liste", liste_all_parametres);
-
                     service_navigation.NavigateAsync("Popup_search_multiple", parametre);
                 });
             }
@@ -226,7 +224,6 @@ namespace Gest.ViewModels
                 return new Command(() => {
                     NavigationParameters parametre = new NavigationParameters();
                     parametre.Add("champ", Champ_selected);
-                    parametre.Add("navigation_goback", this);
                     service_navigation.NavigateAsync("Popup_search_betweendates", parametre);
                 });
             }
@@ -347,7 +344,32 @@ namespace Gest.ViewModels
             await load(new List<Parametre_recherche_sql>());
         }
 
-        
+        private List<Parametre_recherche_sql> get_initialise_liste_parametres_recherche_sql(INavigationParameters parameters)
+        {
+            if (check_navigationparameter_has_key_liste_parametres_recherches_sql(parameters))
+                return (List<Parametre_recherche_sql>)parameters["liste_parametres_recherches_sql"];
+            else
+                return new List<Parametre_recherche_sql>();
+        }
+
+        private Boolean check_navigationparameter_has_key_liste_parametres_recherches_sql(INavigationParameters parameters)
+        {
+            return parameters.ContainsKey("liste_parametres_recherches_sql");
+        }
+
+        private Dictionary<String, IEnumerable<Parametre_recherche_sql>> get_initialise_dictionnary_parametres_recherche_sql(INavigationParameters parameters)
+        {
+            if (check_navigationparameter_has_key_dictionnary_parametres_recherches_sql(parameters))
+                return (Dictionary<String, IEnumerable<Parametre_recherche_sql>>)parameters["dictionnaire_parametres_sql"];
+            else
+                return new Dictionary<String, IEnumerable<Parametre_recherche_sql>>();
+        }
+
+        private Boolean check_navigationparameter_has_key_dictionnary_parametres_recherches_sql(INavigationParameters parameters)
+        {
+            return parameters.ContainsKey("dictionnaire_parametres_sql");
+        }
+
         #endregion
     }
 }

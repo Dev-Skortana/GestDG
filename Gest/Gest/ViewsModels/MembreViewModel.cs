@@ -16,7 +16,7 @@ using System.Linq.Expressions;
 
 namespace Gest.ViewModels
 {
-    class MembreViewModel : BindableBase, INavigationAware,INavigation_Goback_Popup_searchbetweendates,INavigation_Goback_Popup_searchmultiple
+    class MembreViewModel : BindableBase, INavigationAware
     {
 
         #region Interfaces_services
@@ -109,8 +109,6 @@ namespace Gest.ViewModels
                 return new Command(()=> {
                     NavigationParameters parametre = new NavigationParameters();
                     parametre.Add("champ", Champ_selected);
-                    parametre.Add("navigation_goback", this);
-
                     service_navigation.NavigateAsync("Popup_search_betweendates", parametre);
                 });
             }

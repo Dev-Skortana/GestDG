@@ -18,7 +18,7 @@ using Recherche_donnees_GESTDG;
 
 namespace Gest.ViewModels
 {
-    class PosteNBmessageViewModel : BindableBase,INavigationAware,INavigation_Goback_Popup_searchbetweendates
+    class PosteNBmessageViewModel : BindableBase,INavigationAware
     {
         #region Interfaces_services
         private INavigationService service_navigation;
@@ -111,7 +111,6 @@ namespace Gest.ViewModels
                 return new Command(() => {
                     NavigationParameters parametre = new NavigationParameters();
                     parametre.Add("champ", Champ_selected);
-                    parametre.Add("navigation_goback", this);
                     service_navigation.NavigateAsync("Popup_search_betweendates", parametre);
                 });
             }

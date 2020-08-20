@@ -20,7 +20,7 @@ using Xamarin.Forms.Internals;
 
 namespace Gest.ViewModels
 {
-    class SuiviMembreViewModel : BindableBase,INavigationAware,INavigation_Goback_Popup_searchbetweendates,INavigation_Goback_Popup_searchmultiple
+    class SuiviMembreViewModel : BindableBase,INavigationAware
     {
 
         #region Interfaces_services
@@ -140,7 +140,6 @@ namespace Gest.ViewModels
 
         #region Command_MVVM
 
-
         public ICommand Command_navigation_to_popup_searchmultiple
         {
             get
@@ -149,9 +148,7 @@ namespace Gest.ViewModels
                     NavigationParameters parametre = new NavigationParameters();
                     Dictionary<String, IEnumerable<String>> dictionnaire_champs = (Dictionary<String, IEnumerable<String>>)get_dictionnary_champs();
                     List<Parametre_recherche_sql> liste_all_parametres = (List<Parametre_recherche_sql>)get_list_parametre_recherche_sql(dictionnaire_champs);
-                    parametre.Add("navigation_goback", this);
                     parametre.Add("liste", liste_all_parametres);
-
                     service_navigation.NavigateAsync("Popup_search_multiple", parametre);
                 });
             }
@@ -164,7 +161,6 @@ namespace Gest.ViewModels
                 return new Command(() => {
                     NavigationParameters parametre = new NavigationParameters();
                     parametre.Add("champ", Champ_selected);
-                    parametre.Add("navigation_goback", this);
                     service_navigation.NavigateAsync("Popup_search_betweendates", parametre);
                 });
             }
@@ -339,6 +335,10 @@ namespace Gest.ViewModels
             return resultat;
         }
 
+
+
+
+
         public async Task navigation_Goback_Popup_searchbetweendates(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
             await load(parametres_recherches_sql);
@@ -351,6 +351,13 @@ namespace Gest.ViewModels
             await updates_donnees(type_selected, dictionnaire_parametres);
 
         }
+
+
+
+
+
+
+
 
         private async Task get_rang()
         {

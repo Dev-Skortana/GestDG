@@ -27,7 +27,7 @@ namespace Gest.Helpers
         }
 
 
-         static public void initialise_index()
+        static public void initialise_index()
         {
             _index = 0;
         }

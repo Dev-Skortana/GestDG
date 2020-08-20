@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DryIoc;
 using Gest.ViewModels;
 using Prism.Mvvm;
 using Recherche_donnees_GESTDG;
@@ -34,42 +35,10 @@ namespace Gest.Views
         protected override void OnBindingContextChanged()
         {
             base.OnBindingContextChanged();
-            this.Liste_methodesrecherches = (this.BindingContext as Popup_search_multipleViewModel).Liste_methodesrecherches;
-
-                                                                    /*[Début] Code pour la création des éléments graphiques en c# au lieu d'utiliser XAML */
-            //    //(this.BindingContext as Popup_search_multipleViewModel).Liste_parametres_recherche_sql = new List<Parametre_recherche_sql>() { new Parametre_recherche_sql("pseudo", "", null), new Parametre_recherche_sql("age", 0, null) };
-            //    //ListView listview = new ListView();
-            //    //listview.HasUnevenRows = true;
-            //    //listview.HorizontalOptions = LayoutOptions.CenterAndExpand;
-            //    //listview.VerticalOptions = LayoutOptions.EndAndExpand;
-            //    //listview.SetBinding(ListView.ItemsSourceProperty, "liste_parametres_recherche_sql");
-
-            //    //listview.ItemTemplate = new DataTemplate(() => {
-            //    //    Label label = new Label();
-            //    //    label.SetBinding(Label.TextProperty,"Champ");
-
-            //    //    /* Voir comment generer  un objet visuel selon le type de la valeur du champ */
-
-
-            //    //    Picker picker_methodes_recherches = new Picker();
-            //    //    picker_methodes_recherches.Title = "Méthodes de recherches";
-            //    //    picker_methodes_recherches.SetBinding(Picker.ItemsSourceProperty, );
-            //    //    picker_methodes_recherches.SetBinding(Picker.SelectedItemProperty, );
-
-            //    //    Picker picker_controles_saisies = new Picker();
-            //    //    picker_controles_saisies.Title = "Controles de saisies";
-            //    //    picker_controles_saisies.ItemsSource = new List<String>() { "Texte", "Date", "Heure", "Date et heure" };
-            //    //    picker_controles_saisies.SelectedIndexChanged += picker_controlessaisies_selectedindex_changed;
-            //    //    return new ViewCell() { View = new ScrollView() {Orientation=ScrollOrientation.Both, Content = new StackLayout() {Orientation=StackOrientation.Horizontal,HorizontalOptions=LayoutOptions.CenterAndExpand,VerticalOptions=LayoutOptions.CenterAndExpand, Children = { label, picker_methodes_recherches, picker_controles_saisies } } } };
-            //    //});
-            //    //var button = new Button() { Text="Soumettre",TextColor=Color.Green};
-            //    //button.Clicked += Button_Clicked;
-            //    //contenaire.Children.Add(listview);
-            //    //contenaire.Children.Add(button);
-            //    //Content = contenaire;
-                                                                                 /* [FIN] */
+            this.Liste_methodesrecherches = (this.BindingContext as Popup_search_multipleViewModel).Liste_methodesrecherches;    
         }
 
+        /* Découper cette méthode en sous méthodes */
         private List<View> generer_liste_controle_graphique(String choix_selectionner)
         {
             List<View> liste_controles = new List<View>();
@@ -109,20 +78,56 @@ namespace Gest.Views
             return liste_controles;
         }
 
-        private void supprime_ancien_controle_dans_zonesaisie_grid(Grid controle_grid)
+        private void picker_controlessaisies_selectedindex_changed(Object sender,EventArgs e)
         {
-            for (var i = 0; i < controle_grid.Children.Count; i++)
+            Picker controle_declencheur = (Picker)sender;
+            String nom_controlegraphique_saisie_selectionner = retourne_nom_controlegraphique_saisie_selectionner_from_picker(controle_declencheur);
+            List<View> liste_controles_graphique_saisie = generer_liste_controle_graphique(nom_controlegraphique_saisie_selectionner);
+            if (liste_controles_graphique_saisie.Count > 0)
             {
-                int numero_colonne = Grid.GetColumn(controle_grid.Children[i]);
-                if ((numero_colonne == 1) || (numero_colonne==2))
-                {
-                    controle_grid.Children.RemoveAt(i);
-                }
+                Grid controle_parent_grid = (Grid)controle_declencheur.Parent;
+                change_controle_saisie_sur_grid(controle_parent_grid,liste_controles_graphique_saisie);
             }
         }
 
-        private void ajout_nouveaux_controle_dans_zonesaisie_grid(Grid controle_grid,List<View> liste_nouveaux_controles_graphique)
+        private String retourne_nom_controlegraphique_saisie_selectionner_from_picker(Picker controle_picker)
         {
+            return controle_picker.SelectedItem.ToString();
+        }
+
+        private void change_controle_saisie_sur_grid(Grid controle_grid, List<View> controles_graphique_saisie)
+        {
+            supprime_ancien_controle_dans_zonesaisie_grid(controle_grid);
+            ajout_nouveaux_controle_dans_zonesaisie_grid(controle_grid, controles_graphique_saisie);
+        }
+        
+        private void supprime_ancien_controle_dans_zonesaisie_grid(Grid controle_grid)
+        {
+            int compteure = 0;
+            Boolean stop_parcoure = false;
+            while ((compteure<controle_grid.Children.Count) && (stop_parcoure==false))
+            {
+                int numero_colonne = Grid.GetColumn(controle_grid.Children[compteure]);
+                int copie_compteure =compteure;
+                if ((numero_colonne == 1) || (numero_colonne == 2))
+                {                  
+                    if (compteure == controle_grid.Children.Count - 1)
+                    {
+                        stop_parcoure = true;
+                    }
+                    else
+                    {
+                        stop_parcoure = false;
+                        copie_compteure -= 1;
+                    }  
+                    controle_grid.Children.RemoveAt(compteure);
+                }
+                compteure = copie_compteure;
+                compteure += 1;
+            }         
+        }
+
+        private void ajout_nouveaux_controle_dans_zonesaisie_grid(Grid controle_grid,List<View> liste_nouveaux_controles_graphique){
             int numero_colonne = 1;
             foreach (var controle_graphique_saisie in liste_nouveaux_controles_graphique)
             {
@@ -132,19 +137,27 @@ namespace Gest.Views
                 numero_colonne += 1;
             }
         }
-       
-        private void picker_controlessaisies_selectedindex_changed(Object sender,EventArgs e)
+           
+        private void date_selected(object sender, DateChangedEventArgs args)
         {
-            Picker controle_declencheur = (sender as Picker);
-            String element_selectionner = (String)controle_declencheur.SelectedItem;
-            List<View> liste_controles_graphique_saisie = generer_liste_controle_graphique(element_selectionner);
+            Parametre_recherche_sql parametre_recherche_sql = (sender as BindableObject).BindingContext as Parametre_recherche_sql;
+            DateTime newdate = args.NewDate;
+            launch_command_update_dateandtime(parametre_recherche_sql, newdate);         
+        }
 
-            if (liste_controles_graphique_saisie.Count > 0)
+       private void time_selected(object sender, PropertyChangedEventArgs args)
+        {
+            if (args.PropertyName == "Time")
             {
-                Grid controle_grid = controle_declencheur.Parent as Grid;
-                supprime_ancien_controle_dans_zonesaisie_grid(controle_grid);
-                ajout_nouveaux_controle_dans_zonesaisie_grid(controle_grid,liste_controles_graphique_saisie);
+                Parametre_recherche_sql parametre_recherche_sql = (sender as BindableObject).BindingContext as Parametre_recherche_sql;
+                TimeSpan time = (sender as TimePicker).Time;
+                launch_command_update_dateandtime(parametre_recherche_sql,time);
             }
+        }
+        private void launch_command_update_dateandtime(Parametre_recherche_sql parametre_recherche_sql,Object nouvelle_donnees)
+        {
+            Dictionary<String, Object> dictionnaire_valeursource_valeurcible = generer_dictionnaire_valeursource_valeurcible(parametre_recherche_sql, nouvelle_donnees);
+            (this.BindingContext as Popup_search_multipleViewModel).Command_update_dateandtime.Execute(dictionnaire_valeursource_valeurcible);
         }
 
         private Dictionary<String, Object> generer_dictionnaire_valeursource_valeurcible(Parametre_recherche_sql parametre_recherche_sql, Object nouvelle_donnees)
@@ -153,21 +166,6 @@ namespace Gest.Views
             dictionnaire_valeursource_valeurcible.Add("objet_source", parametre_recherche_sql);
             dictionnaire_valeursource_valeurcible.Add("nouvelle_donnees", nouvelle_donnees);
             return dictionnaire_valeursource_valeurcible;
-        }
-
-        private void date_selected(object sender, DateChangedEventArgs args)
-        {
-            Dictionary<String, Object> dictionnaire_valeursource_valeurcible = generer_dictionnaire_valeursource_valeurcible((sender as BindableObject).BindingContext as Parametre_recherche_sql, args.NewDate);
-            (this.BindingContext as Popup_search_multipleViewModel).Command_update_dateandtime.Execute(dictionnaire_valeursource_valeurcible);
-        }
-
-       private void time_selected(object sender, PropertyChangedEventArgs args)
-        {
-            if (args.PropertyName == "Time")
-            {
-                Dictionary<String, Object> dictionnaire_valeursource_valeurcible = generer_dictionnaire_valeursource_valeurcible((sender as BindableObject).BindingContext as Parametre_recherche_sql,(sender as TimePicker).Time);
-                (this.BindingContext as Popup_search_multipleViewModel).Command_update_dateandtime.Execute(dictionnaire_valeursource_valeurcible);
-            }
         }
 
     }

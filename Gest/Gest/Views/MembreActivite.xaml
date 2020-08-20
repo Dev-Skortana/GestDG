@@ -19,7 +19,6 @@
         <ResourceDictionary>
             <convertisseure:return_string x:Key="return_string" />
         </ResourceDictionary>
-   
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Faire une recherche entre deux date"
@@ -92,6 +91,7 @@
                             </Picker.Triggers>
                         </Picker>
                         <Picker  x:Name="piker_typesrecherches" ItemsSource="{Binding Liste_typesrecherches}" SelectedItem="{Binding Type_selected}" SelectedIndexChanged="piker_typesrecherches_SelectedIndexChanged" Title="Type de recherche" TextColor="Green"/>
+                        
                     </StackLayout>
                 </StackLayout>
             </ScrollView>

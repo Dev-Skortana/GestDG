@@ -6,6 +6,7 @@ using Recherche_donnees_GESTDG;
 using Recherche_donnees_GESTDG.enumeration;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,6 @@ namespace Gest.ViewModels
     {
         #region Interfaces_services
         INavigationService service_navigation;
-        INavigation_Goback_Popup_searchmultiple service_navigation_goback_popup;
         #endregion
 
         #region Constructeur
@@ -30,7 +30,6 @@ namespace Gest.ViewModels
         #endregion
 
         #region Variables
-        private Dictionary<String, IEnumerable<String>> dictionnary_namestables_with_nameschamps;
         private List<Parametre_recherche_sql> _liste_parametres_recherche_sql;
         public List<Parametre_recherche_sql> Liste_parametres_recherche_sql { get{ return _liste_parametres_recherche_sql; } set { SetProperty(ref _liste_parametres_recherche_sql,value); } }
         private List<String> _liste_methodesrecherches=Enumerations_recherches.get_liste_methodesrecherches();
@@ -45,10 +44,10 @@ namespace Gest.ViewModels
                 return new Command(async () => {
                     this.delete_parametre_recherche_sql_with_value_null(this.Liste_parametres_recherche_sql);
                     Dictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_sql = (Dictionary<String, IEnumerable<Parametre_recherche_sql>>)return_dictionnary_parametresrecherchessql_trier(this.Liste_parametres_recherche_sql);
-
-                    NavigationParameters parametres = new NavigationParameters();
-                    parametres.Add("liste_parametres_recherches_sql",Liste_parametres_recherche_sql);
-                    parametres.Add("dictionnaire_parametres_sql", dictionnaire_parametres_sql);
+                    NavigationParameters parametres = new NavigationParameters() {
+                        {"liste_parametres_recherches_sql",Liste_parametres_recherche_sql},
+                        { "dictionnaire_parametres_sql",dictionnaire_parametres_sql}
+                    }; 
                     await this.service_navigation.GoBackAsync(parametres);
                 });
             }
@@ -74,22 +73,33 @@ namespace Gest.ViewModels
             liste_parametres_recherches_sql.RemoveAll((parametre_recherche_sql)=>parametre_recherche_sql.Valeur==null);
         }
 
-        private IDictionary<String, IEnumerable<Parametre_recherche_sql>> return_dictionnary_parametresrecherchessql_trier(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
-        {
-            Dictionary<String, IEnumerable<String>> dictionnaire_nomtable_listechamps = dictionnary_namestables_with_nameschamps;
-            Dictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres = trie_dictionnary(parametres_recherches_sql, dictionnaire_nomtable_listechamps);
-            return dictionnaire_parametres;
+        private IDictionary<String, IEnumerable<Parametre_recherche_sql>> return_dictionnary_parametresrecherchessql_trier(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql){
+           return trie_dictionnary(parametres_recherches_sql);
         }
 
-        private Dictionary<String, IEnumerable<Parametre_recherche_sql>> trie_dictionnary(IEnumerable<Parametre_recherche_sql> liste_parametre_general, IDictionary<String, IEnumerable<String>> dictionnaire_nomtable_listeparametres)
+        private Dictionary<String, IEnumerable<Parametre_recherche_sql>> trie_dictionnary(IEnumerable<Parametre_recherche_sql> parametres_general)
         {
-            Dictionary<String, IEnumerable<Parametre_recherche_sql>> resultat = new Dictionary<string, IEnumerable<Parametre_recherche_sql>>();
-            dictionnaire_nomtable_listeparametres.ForEach((item) => {
-                resultat.Add(item.Key, (liste_parametre_general.Where((parametre) => item.Value.Contains(parametre.Champ) && parametre.Nom_table == item.Key)));
+            Dictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_trier = new Dictionary<string, IEnumerable<Parametre_recherche_sql>>();
+            get_dictionnary_with_namestables_and_nameschamps_from_liste_parametres_recherches_sql(parametres_general).ForEach((item) =>{
+                dictionnaire_trier.Add(item.Key, (parametres_general.Where((parametre) => item.Value.Contains(parametre.Champ) && parametre.Nom_table == item.Key)));
             });
-            return resultat;
+            return dictionnaire_trier;
         }
 
+                                                                /* Cette méthode ci-dessous est à étudier */
+        private Dictionary<String, IEnumerable<String>> get_dictionnary_with_namestables_and_nameschamps_from_liste_parametres_recherches_sql(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql){
+            List<Parametre_recherche_sql> liste_parametres_recherches_sql = (List<Parametre_recherche_sql>)parametres_recherches_sql;
+
+            IEnumerable<KeyValuePair<String, IEnumerable<String>>> liste_key_value_pair_namestables_with_namechamps = new List<KeyValuePair<string, IEnumerable<string>>>();
+            List<String> liste_nomstables_parcouru = new List<string>();
+            foreach (var parametre in liste_parametres_recherches_sql){
+                if (liste_nomstables_parcouru.Contains(parametre.Nom_table) == false){
+                    liste_key_value_pair_namestables_with_namechamps = liste_key_value_pair_namestables_with_namechamps.Concat(new List<KeyValuePair<String, IEnumerable<String>>> { new KeyValuePair<string, IEnumerable<string>>(parametre.Nom_table, parametres_recherches_sql.Where((item) => item.Nom_table == parametre.Nom_table).Select((items) => items.Champ)) });
+                    liste_nomstables_parcouru.Add(parametre.Nom_table);
+                }
+            }
+            return liste_key_value_pair_namestables_with_namechamps.ToDictionary((key) => key.Key, (value) => value.Value);
+        }
 
         private DateTime update_dateandtime(Object donnees, DateTime? _date_actuel)
         {
@@ -126,9 +136,7 @@ namespace Gest.ViewModels
 
         public void OnNavigatedTo(INavigationParameters parameters)
         {
-            this.service_navigation_goback_popup =(INavigation_Goback_Popup_searchmultiple)parameters["navigation_goback"];
-            this.dictionnary_namestables_with_nameschamps=(Dictionary<String, IEnumerable<String>>)parameters["dictionnary_namestables_with_nameschamps"];
-            this.Liste_parametres_recherche_sql =(List<Parametre_recherche_sql>)parameters["liste"];
+            this.Liste_parametres_recherche_sql =(List<Parametre_recherche_sql>)parameters["liste_parametre_recherche_sql"];
         }
         #endregion
 

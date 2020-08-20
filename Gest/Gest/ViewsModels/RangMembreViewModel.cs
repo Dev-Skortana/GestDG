@@ -18,7 +18,7 @@ using Recherche_donnees_GESTDG;
 
 namespace Gest.ViewModels
 {
-    class RangMembreViewModel : BindableBase,INavigationAware,INavigation_Goback_Popup_searchbetweendates
+    class RangMembreViewModel : BindableBase,INavigationAware
     {
         #region Interfaces_services
         private INavigationService service_navigation;
@@ -42,7 +42,6 @@ namespace Gest.ViewModels
         }
         #endregion
 
-
         #region Commande_MVVM
         public ICommand Command_navigation_to_popup_searchbetweendates
         {
@@ -51,7 +50,6 @@ namespace Gest.ViewModels
                 return new Command(() => {
                     NavigationParameters parametre = new NavigationParameters();
                     parametre.Add("champ", Champ_selected);
-                    parametre.Add("navigation_goback", this);
                     service_navigation.NavigateAsync("Popup_search_betweendates", parametre);
                 });
             }

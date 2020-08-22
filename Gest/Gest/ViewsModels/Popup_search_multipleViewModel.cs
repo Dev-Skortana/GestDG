@@ -42,11 +42,10 @@ namespace Gest.ViewModels
             get
             {
                 return new Command(async () => {
-                    this.delete_parametre_recherche_sql_with_value_null(this.Liste_parametres_recherche_sql);
+                    this.Liste_parametres_recherche_sql=this.get_parametres_recherches_sql_without_parametres_null(this.Liste_parametres_recherche_sql).ToList();
                     Dictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_sql = (Dictionary<String, IEnumerable<Parametre_recherche_sql>>)return_dictionnary_parametresrecherchessql_trier(this.Liste_parametres_recherche_sql);
-                    NavigationParameters parametres = new NavigationParameters() {
-                        {"liste_parametres_recherches_sql",Liste_parametres_recherche_sql},
-                        { "dictionnaire_parametres_sql",dictionnaire_parametres_sql}
+                    NavigationParameters parametres = new NavigationParameters() {            
+                        { "parametres_recherches_sql",dictionnaire_parametres_sql}
                     }; 
                     await this.service_navigation.GoBackAsync(parametres);
                 });
@@ -68,9 +67,10 @@ namespace Gest.ViewModels
         #endregion
 
         #region Methodes_priver
-        private void delete_parametre_recherche_sql_with_value_null(List<Parametre_recherche_sql> liste_parametres_recherches_sql)
+        private IEnumerable<Parametre_recherche_sql> get_parametres_recherches_sql_without_parametres_null(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
-            liste_parametres_recherches_sql.RemoveAll((parametre_recherche_sql)=>parametre_recherche_sql.Valeur==null);
+            (parametres_recherches_sql as List<Parametre_recherche_sql>).RemoveAll((parametre_recherche_sql)=>parametre_recherche_sql.Valeur==null);
+            return parametres_recherches_sql;
         }
 
         private IDictionary<String, IEnumerable<Parametre_recherche_sql>> return_dictionnary_parametresrecherchessql_trier(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql){

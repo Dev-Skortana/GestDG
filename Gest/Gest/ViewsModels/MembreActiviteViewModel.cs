@@ -15,6 +15,7 @@ using Prism.Navigation;
 using Gest.Models;
 using Gest.Services.Classes;
 using Gest.Services.Interfaces;
+using Gest.Helpers.Load_donnees;
 using System.Threading.Tasks;
 using System.Linq;
 using Recherche_donnees_GESTDG.enumeration;
@@ -25,6 +26,11 @@ using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
 using Xamarin.Forms.Internals;
 using System.Collections;
 using System.Collections.ObjectModel;
+using CarouselView.FormsPlugin.Abstractions;
+using Gest.Helpers.Initialise_parametres_recherches_for_navigation_with_prism;
+using System.ComponentModel.Design.Serialization;
+using System.Runtime.CompilerServices;
+using DryIoc;
 
 namespace Gest.ViewModels
 {
@@ -55,7 +61,7 @@ namespace Gest.ViewModels
 
         #region Variables
         public string title { get; set; } = "Page des activité des membres";
-        private List<Parametre_recherche_sql> liste_parametres_recherches_sql = new List<Parametre_recherche_sql>();
+        private Parametre_recherche_sql parametre_recherche_sql = new Parametre_recherche_sql();
         public List<String> Liste_noms_tables { get { return new List<string>() { "Membre", "Activite" }; } }
         public String nom_table_selected { get; set; }
 
@@ -86,8 +92,8 @@ namespace Gest.ViewModels
             set { SetProperty(ref _champ_selected, value); }
         }
 
-        private List<Membre> _membres;
-        public List<Membre> membres {
+        private IEnumerable<Membre> _membres;
+        public IEnumerable<Membre> membres {
             get
             {
                 return _membres;
@@ -160,20 +166,18 @@ namespace Gest.ViewModels
             }
         }
 
+        private void change_parametre_recherche_sql() {
+            parametre_recherche_sql.Nom_table = this.nom_table_selected;
+            parametre_recherche_sql.Champ = this.Champ_selected;
+            parametre_recherche_sql.Methode_recherche = this.methoderecherche_selected;          
+        }
         public ICommand Command_gestion_dictionnaire_champsmethodesrecherches
         {
             get
             {
                 return new Command(() =>
                 {
-                    if (Champ_selected != null)
-                    {
-                        if (liste_parametres_recherches_sql.Exists((parametre) => parametre.Nom_table == nom_table_selected && parametre.Champ == Champ_selected && parametre.Methode_recherche == methoderecherche_selected) == false)
-                        {
-                            liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() { Nom_table = nom_table_selected, Champ = Champ_selected, Methode_recherche = methoderecherche_selected });
-                        }
-
-                    }
+                    this.change_parametre_recherche_sql();
                 });
             }
         }
@@ -181,29 +185,9 @@ namespace Gest.ViewModels
         public ICommand Command_search
         {
             get { 
-                                     /* Retravailer sur cette méthode lambda */
                 return new Command<Object>(async (donnees) => {
-                    if (this.Type_selected == Enumerations_recherches.types_recherches.Simple.ToString())
-                    {
-                        liste_parametres_recherches_sql.ForEach((parametre) =>
-                        {
-                            if ((parametre.Nom_table == nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected))
-                            {
-                                parametre.Valeur = donnees;
-                            }
-                        });
-                        await Task.Run(() => {
-                            int index_parametre = liste_parametres_recherches_sql.FindIndex((parametre) => (parametre.Nom_table == nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected) && (parametre.Valeur == donnees));
-                            for (var i = 0; i < liste_parametres_recherches_sql.Count; i++)
-                            {
-                                if (i != index_parametre)
-                                {
-                                    liste_parametres_recherches_sql.RemoveAt(i);
-                                }
-                            }
-                        });
-                    }
-                    await  launch_load(liste_parametres_recherches_sql);
+                    parametre_recherche_sql.Valeur = donnees;
+                    await  launch_load(new List<Parametre_recherche_sql>() {parametre_recherche_sql});
                 });
             }
         }
@@ -211,113 +195,11 @@ namespace Gest.ViewModels
 
         #region Methodes priver
         private async Task launch_load(IEnumerable parametres_recherches_sql){
-            IDictionary<String, IEnumerable<Parametre_recherche_sql>>  dictionnaire_parametres_sql = get_initialise__dictionnary_parametres_recherches_sql(parametres_recherches_sql);
-            this.membres = (await update_listemembres(Type_selected, dictionnaire_parametres_sql)).ToList();
-        }
-
-        private IDictionary<String, IEnumerable<Parametre_recherche_sql>> get_initialise__dictionnary_parametres_recherches_sql(IEnumerable parametres_recherches_sql){
-            if (if_parametres_recherches_sql_is_object_oftype_dictionnary_and_has_value(parametres_recherches_sql) == true)
-                return (parametres_recherches_sql as IDictionary<String, IEnumerable<Parametre_recherche_sql>>);
-            else
-                return create_dictionnary_parametres_recherches_sql_for_one_table(parametres_recherches_sql as IList<Parametre_recherche_sql>);
-        }
-
-        private Boolean if_parametres_recherches_sql_is_object_oftype_dictionnary_and_has_value(IEnumerable parametres_sql){
-            if ((parametres_sql is IDictionary<String, IEnumerable<Parametre_recherche_sql>>)==true && (parametres_sql as IDictionary<String, IEnumerable<Parametre_recherche_sql>>).Count > 0)
-                return true;
-            else
-                return false;
-        }
-
-        private IDictionary<String, IEnumerable<Parametre_recherche_sql>> create_dictionnary_parametres_recherches_sql_for_one_table(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql){
-            return new Dictionary<String, IEnumerable<Parametre_recherche_sql>>() { { "Table_selected", parametres_recherches_sql } };
-        }
-
-        private async Task<IEnumerable<Membre>> update_listemembres(String type_recherche, IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_recherche){          
-            Dictionary<String, Func<IEnumerable<Parametre_recherche_sql>>> dictionnaire_get_conditions_parametres_recherches_sql=get_dictionnary_conditions_parametres_recherches_sql(type_recherche,dictionnaire_parametres_recherche);
-            List<Membre> liste_membres = (await build_full_infos_membres(dictionnaire_get_conditions_parametres_recherches_sql)).ToList();
-            return liste_membres;
-        }
-
-        private Dictionary<String, Func<IEnumerable<Parametre_recherche_sql>>> get_dictionnary_conditions_parametres_recherches_sql(String type_recherche, IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_recherche){
-            if (type_recherche == Enumerations_recherches.types_recherches.Simple.ToString())
-                return get_configuration_on_search_simple(dictionnaire_parametres_recherche);
-            else 
-                return get_configuration_on_search_multiple(dictionnaire_parametres_recherche);
-        }
-
-        private Dictionary<String, Func<IEnumerable<Parametre_recherche_sql>>> get_configuration_on_search_simple(IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres){
-            var liste_parametres = (dictionnaire_parametres as Dictionary<String, IEnumerable<Parametre_recherche_sql>>)["Table_selected"].ToList();
-            return get_dictionnary_conditions_parametres_recherches_sql_for_one_listeparametres(liste_parametres);
-        }
-
-        private Dictionary<String, Func<IEnumerable<Parametre_recherche_sql>>> get_dictionnary_conditions_parametres_recherches_sql_for_one_listeparametres(IEnumerable<Parametre_recherche_sql> parametres_recheches_sql){
-             return new Dictionary<string, Func<IEnumerable<Parametre_recherche_sql>>>(){ 
-                { "get_condition_parametres_recherches_sql_membre", ()=> nom_table_selected == "Membre" ? parametres_recheches_sql : null},
-                { "get_condition_parametres_recherches_sql_activite", ()=> nom_table_selected == "Activite" ? parametres_recheches_sql : null} 
-             };
-        }
-
-        private Dictionary<String, Func<IEnumerable<Parametre_recherche_sql>>> get_configuration_on_search_multiple(IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres){
-            var liste_parametres_membre = get_parametres_recherches_sql_from_nametable_if_exist(dictionnaire_parametres,"Membre").ToList();
-            var liste_parametres_activite = get_parametres_recherches_sql_from_nametable_if_exist(dictionnaire_parametres,"Activite").ToList();
-            return get_dictionnary_conditions_parametres_recherches_sql_for_two_listesparametres(liste_parametres_membre, liste_parametres_activite);
-        }
-
-        private IEnumerable<Parametre_recherche_sql> get_parametres_recherches_sql_from_nametable_if_exist(IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres,String key_name_table) {
-            return dictionnaire_parametres.ContainsKey(key_name_table) ? dictionnaire_parametres[key_name_table] :new List<Parametre_recherche_sql>();
-        }
-
-        private Dictionary<String, Func<IEnumerable<Parametre_recherche_sql>>> get_dictionnary_conditions_parametres_recherches_sql_for_two_listesparametres(IEnumerable<Parametre_recherche_sql> parametres_recheches_sql_membre,IEnumerable<Parametre_recherche_sql> parametres_recheches_sql_activite){
-            return new Dictionary<string, Func<IEnumerable<Parametre_recherche_sql>>>(){
-                { "get_condition_parametres_recherches_sql_membre", ()=> parametres_recheches_sql_membre.Count() > 0 ? parametres_recheches_sql_membre : null},
-                { "get_condition_parametres_recherches_sql_activite", ()=> parametres_recheches_sql_activite.Count() > 0 ? parametres_recheches_sql_activite : null}
-            };
-        }
-
-        private async Task<IEnumerable<Membre>> build_full_infos_membres(IDictionary<String, Func<IEnumerable<Parametre_recherche_sql>>> dictionnaire_get_conditions_parametres_recherches_sql){
-            List<Membre> liste_membres = new List<Membre>();
-            liste_membres = (await get_informations_membres(dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_membre"].Invoke())).ToList();
-            liste_membres = (await get_liste_membres_with_liste_activite_for_each_membre(liste_membres, dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_activite"].Invoke())).ToList();
-            liste_membres = (List<Membre>)remove_membre_have_not_activite_if_tableactive_is_only_activite_with_searche_simple(liste_membres);
-            return liste_membres;
-        }
-
-        private async Task<IEnumerable<Membre>> get_informations_membres(IEnumerable<Parametre_recherche_sql> parametres_recheches_sql_membre){
-            return (await service_membre.GetList(parametres_recheches_sql_membre)).ToList();
-        }
-
-        private async Task<IEnumerable<Membre>> get_liste_membres_with_liste_activite_for_each_membre (IEnumerable<Membre> membres, IEnumerable<Parametre_recherche_sql> parametres_recheches_sql_activite){
-            List<Membre> liste_membres=(List<Membre>)membres;
-            List<Activite> liste_activites = (await get_information_activite(parametres_recheches_sql_activite)).ToList();
-            liste_membres.ForEach((membre) => membre.liste_activites = (from iteration in liste_activites where iteration.membre_pseudo == membre.pseudo select iteration).ToList());
-            return liste_membres;
-        }
-
-
-        private async Task<IEnumerable<Activite>> get_information_activite(IEnumerable<Parametre_recherche_sql> parametres_recheches_sql_activite){
-            return (await service_activite.GetList(parametres_recheches_sql_activite)).ToList();
+            IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_sql = new Gest.Helpers.Generate_dictionnaire_parametresrecherche.Generate_parametresrecherche().generate(parametres_recherches_sql);
+            Load_donnees<IEnumerable<Membre>> load_donnees = new Load_donnees__of_viewmodel_membreactivite<IEnumerable<Membre>>(service_membre, service_activite);
+            this.membres = await load_donnees.get_donnees(dictionnaire_parametres_sql);
         }
         
-        private IEnumerable<Membre> remove_membre_have_not_activite_if_tableactive_is_only_activite_with_searche_simple(IEnumerable<Membre> listemembres_source){
-            List<Membre> liste_membres =(List<Membre>)listemembres_source;
-            if (check_if_tableactive_is_only_activite_with_searche_simple())
-               liste_membres= (List<Membre>)remove_membre_havenot_activite(liste_membres);
-            return liste_membres;
-        }
-
-        private Boolean check_if_tableactive_is_only_activite_with_searche_simple(){
-            if (Type_selected == Enumerations_recherches.types_recherches.Simple.ToString() && nom_table_selected == "Activite")
-                return true;
-            else
-                return false;
-        }
-
-        private IEnumerable<Membre> remove_membre_havenot_activite(IEnumerable<Membre> listemembres_source){
-            List<Membre> liste_membres = (List<Membre>)listemembres_source;
-            liste_membres.RemoveAll((membre) => membre.liste_activites.Count == 0);
-            return liste_membres;
-        }  
         #endregion
 
         #region Methode_navigation_PRISM_and_methodes
@@ -326,20 +208,9 @@ namespace Gest.ViewModels
         }
 
         public async void OnNavigatedTo(INavigationParameters parameters){
-            IEnumerable parametres_recherches_sql = get_initialise_parametres_recherches_sql(parameters);
+            IEnumerable<Parametre_recherche_sql> parametres_recherches_sql = new Initialise_parametres_recherches().get_initialise_parametres_recherches_sql(parameters, "parametres_recherches_sql");
             await launch_load(parametres_recherches_sql);
-        }
-
-        private IEnumerable get_initialise_parametres_recherches_sql(INavigationParameters parameters){
-            if (check_navigationparameter_has_key_parametres_recherches_sql(parameters))
-                return (IEnumerable)parameters["parametres_recherches_sql"];
-            else
-                return new List<Parametre_recherche_sql>();
-        }
-
-        private Boolean check_navigationparameter_has_key_parametres_recherches_sql(INavigationParameters parameters){
-            return parameters.ContainsKey("parametres_recherches_sql");
-        }
+        }    
         #endregion
     }
 }

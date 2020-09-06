@@ -13,7 +13,7 @@ using Recherche_donnees_GESTDG;
 
 namespace Gest.ViewModels
 {
-    class FastMembreViewModel: BindableBase,INavigationAware,INavigation_Goback_Popup_searchbetweendates
+    class FastMembreViewModel: BindableBase,INavigationAware
     {
         #region Interfaces_services
         private IService_Membre service_membre;

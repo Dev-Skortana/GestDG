@@ -16,6 +16,10 @@ using Recherche_donnees_GESTDG.enumeration;
 using Recherche_donnees_GESTDG;
 using Xamarin.Forms.Internals;
 using ImTools;
+using System.Collections;
+using Gest.Helpers.Load_donnees;
+using Gest.Helpers.Initialise_parametres_recherches_for_navigation_with_prism;
+using Xamarin.Forms.Markup;
 
 namespace Gest.ViewModels
 {
@@ -56,7 +60,7 @@ namespace Gest.ViewModels
 
 
         public string title { get; set; } = "Page des visites des membres";
-        private List<Parametre_recherche_sql> liste_parametres_recherches_sql = new List<Parametre_recherche_sql>();
+        private Parametre_recherche_sql parametre_recherche_sql = new Parametre_recherche_sql();
 
         public List<String> Liste_methodesrecherches { get { return Enumerations_recherches.get_liste_methodesrecherches(); } }
         public String methoderecherche_selected { get; set; }
@@ -81,8 +85,8 @@ namespace Gest.ViewModels
         }
 
 
-        private Dictionary<Membre, List<visite_custom>> _dictionnaire_membre_visite = new Dictionary<Membre, List<visite_custom>>();
-        public Dictionary<Membre, List<visite_custom>> Dictionnaire_membre_visite
+        private IDictionary<Membre, IEnumerable<visite_custom>> _dictionnaire_membre_visite = new Dictionary<Membre,IEnumerable<visite_custom>>();
+        public IDictionary<Membre, IEnumerable<visite_custom>> Dictionnaire_membre_visite
         {
             get
             {
@@ -98,108 +102,14 @@ namespace Gest.ViewModels
 
         #region Methode_priver
 
-        private IDictionary<String, IEnumerable<String>> get_dictionnary_champs()
+        private async Task launch_load(IEnumerable parametres_recherches_sql)
         {
-            return new Dictionary<String, IEnumerable<String>>() { { "Membre", Liste_champs_membres }, { "Visite", Liste_champs_visite } };
-        }
-        private IEnumerable<Parametre_recherche_sql> get_list_parametre_recherche_sql(Dictionary<String, IEnumerable<String>> dictionnaire_liste_champs)
-        {
-            IEnumerable<Parametre_recherche_sql> resultat = new List<Parametre_recherche_sql>();
-            for (var i = 0; i < dictionnaire_liste_champs.Count; i++)
-            {
-                resultat = resultat.Concat(dictionnaire_liste_champs.Values.ToList()[i].Select((champ) => new Parametre_recherche_sql(dictionnaire_liste_champs.Keys.ToList()[i], champ, null, null))).ToList();
-            }
-            return resultat;
-        }
-        private Dictionary<String, IEnumerable<Parametre_recherche_sql>> get_dictionnary_parametrerecherchesql_trier(IEnumerable<Parametre_recherche_sql> liste_parametre_general, IDictionary<String, IEnumerable<String>> dictionnaire_nomtable_listeparametres)
-        {
-            Dictionary<String, IEnumerable<Parametre_recherche_sql>> resultat = new Dictionary<string, IEnumerable<Parametre_recherche_sql>>();
-            dictionnaire_nomtable_listeparametres.ForEach((item) => {
-                resultat.Add(item.Key, (liste_parametre_general.Where((parametre) => item.Value.Contains(parametre.Champ) && parametre.Nom_table == item.Key)));
-            });
-            return resultat;
-        }
-
-
-        private async Task<IDictionary<Membre, List<visite_custom>>> update_dictionnaire_visites(String type_recherche, IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres)
-        {
-            Dictionary<Membre, List<visite_custom>> dictionnaire_intermediaire = new Dictionary<Membre, List<visite_custom>>();
-            var liste_membres = new List<Membre>();
-            var liste_visites = new List<Visite>();
-            Dictionary<String, Func<IEnumerable<Parametre_recherche_sql>>> dictionnaire_get_conditions_parametres_recherches_sql = new Dictionary<string, Func<IEnumerable<Parametre_recherche_sql>>>();
-            dictionnaire_get_conditions_parametres_recherches_sql.Add("get_condition_parametres_recherches_sql_membre", () => null);
-            dictionnaire_get_conditions_parametres_recherches_sql.Add("get_condition_parametres_recherches_sql_visite", () => null);
-            if (type_recherche == "Simple")
-            {
-                var liste_parametre = (dictionnaire_parametres as Dictionary<String, IEnumerable<Parametre_recherche_sql>>)["Table_selected"].ToList();
-                dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_membre"] = () => nom_table_selected == "Membre" ? liste_parametre : null;
-                dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_visite"] = () => nom_table_selected == "Visite" ? liste_parametre : null;
-            }
-            else if (type_recherche == "Multiples")
-            {
-                var liste_parametre_membre = (dictionnaire_parametres as Dictionary<String, IEnumerable<Parametre_recherche_sql>>)["Membre"].ToList();
-                var liste_parametre_visite = (dictionnaire_parametres as Dictionary<String, IEnumerable<Parametre_recherche_sql>>)["Visite"].ToList();
-                dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_membre"] = () => liste_parametre_membre.Count > 0 ? liste_parametre_membre : null;
-                dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_visite"] = () => liste_parametre_visite.Count > 0 ? liste_parametre_visite : null;     
-            }
-            liste_membres = (List<Membre>)await service_membre.GetList(dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_membre"].Invoke());
-            liste_visites = (List<Visite>)await service_visite.GetList(dictionnaire_get_conditions_parametres_recherches_sql["get_condition_parametres_recherches_sql_visite"].Invoke());
-            liste_membres.ForEach((membre) => { dictionnaire_intermediaire.Add(membre, liste_visites.Where((visite) => visite.membre_pseudo == membre.pseudo).Select<Visite, visite_custom>((visite) => new visite_custom() { connexion_date = visite.connexion_date, date_enregistrement = visite.date_enregistrement }).ToList()); });
-            return dictionnaire_intermediaire;
-        }
-
-        private IDictionary<Membre, List<visite_custom>> get_dictionnary_visite_withonly_membre_have_visite(Dictionary<Membre, List<visite_custom>> dictionnaire_origine)
-        {
-            Dictionary<Membre, List<visite_custom>> dictionnaire_trie = new Dictionary<Membre, List<visite_custom>>();
-            if (dictionnaire_origine.Values.ToList().TrueForAll((visites)=>visites.Count>0))
-            {
-                dictionnaire_trie = dictionnaire_origine;
-            }
-            else
-            {
-                foreach (var item in dictionnaire_origine)
-                {
-                    if (item.Value.Count != 0)
-                    {
-                        dictionnaire_trie.Add(item.Key, item.Value);
-                    }
-                }
-            }
-            return dictionnaire_trie;
-        }
-        private async Task load(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
-        {                                                        
-            Dictionary<Membre, List<visite_custom>> dictionnaire_intermediaire = new Dictionary<Membre, List<visite_custom>>();
+            IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_sql = new Gest.Helpers.Generate_dictionnaire_parametresrecherche.Generate_parametresrecherche().generate(parametres_recherches_sql);
             
-            dictionnaire_intermediaire = (Dictionary<Membre, List<visite_custom>>)(await update_dictionnaire_visites(type_selected, new Dictionary<String, IEnumerable<Parametre_recherche_sql>>() { { "Table_selected", parametres_recherches_sql } }));
-            
-            if (nom_table_selected == "Visite")
-            {
-                dictionnaire_intermediaire = (Dictionary<Membre, List<visite_custom>>)get_dictionnary_visite_withonly_membre_have_visite(dictionnaire_intermediaire);
-            }
-            this.Dictionnaire_membre_visite = dictionnaire_intermediaire;
+            Load_donnees<IDictionary<Membre, IEnumerable<visite_custom>>> load_donnees = new Load_donnees_of_viewmodel_membrevisite<IDictionary<Membre, IEnumerable<visite_custom>>>(service_membre, service_visite);
+            this.Dictionnaire_membre_visite = await load_donnees.get_donnees(dictionnaire_parametres_sql);
         }
-
-        public async Task navigation_Goback_Popup_searchbetweendates(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
-        {
-            await load(parametres_recherches_sql);
-        }
-
-        
-        public  async Task navigation_Goback_Popup_searchmultiple(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
-        {
-            Dictionary<String, IEnumerable<String>> dictionnaire_nomtable_listechamps = (Dictionary<String, IEnumerable<String>>)get_dictionnary_champs();
-            Dictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres = get_dictionnary_parametrerecherchesql_trier(parametres_recherches_sql, dictionnaire_nomtable_listechamps);
-            Dictionary<Membre, List<visite_custom>> dictionnaire_intermediaire = new Dictionary<Membre, List<visite_custom>>();
-            dictionnaire_intermediaire = (Dictionary<Membre, List<visite_custom>>)(await update_dictionnaire_visites(type_selected,dictionnaire_parametres));
-            if ((dictionnaire_parametres as Dictionary<String, IEnumerable<Parametre_recherche_sql>>)["Visite"].ToList().Count>0)
-            {
-                dictionnaire_intermediaire= (Dictionary<Membre, List<visite_custom>>)get_dictionnary_visite_withonly_membre_have_visite(dictionnaire_intermediaire);
-            }
-
-            this.Dictionnaire_membre_visite =dictionnaire_intermediaire;
-
-        } 
+          
         #endregion
 
         #region Commandes_MVVM
@@ -210,13 +120,29 @@ namespace Gest.ViewModels
             {
                 return new Command(() => {
                     NavigationParameters parametre = new NavigationParameters();
-                    Dictionary<String, IEnumerable<String>> dictionnaire_champs = (Dictionary<String, IEnumerable<String>>)get_dictionnary_champs();
-                    List<Parametre_recherche_sql> liste_all_parametres = (List<Parametre_recherche_sql>)get_list_parametre_recherche_sql(dictionnaire_champs);
+                    List<Parametre_recherche_sql> liste_all_parametres = (List<Parametre_recherche_sql>)get_list_parametre_recherche_sql();
                     parametre.Add("liste", liste_all_parametres);
                     service_navigation.NavigateAsync("Popup_search_multiple", parametre);
                 });
             }
         }
+        
+        private IEnumerable<Parametre_recherche_sql> get_list_parametre_recherche_sql()
+        {
+            IEnumerable<Parametre_recherche_sql> resultat = new List<Parametre_recherche_sql>();
+            Dictionary<String, IEnumerable<String>> dictionnaire_parametres_recherches_sql= (Dictionary<String, IEnumerable<String>>)get_dictionnary_champs();
+            for (var i = 0; i < dictionnaire_parametres_recherches_sql.Count; i++)
+            {
+                resultat = resultat.Concat(dictionnaire_parametres_recherches_sql.Values.ToList()[i].Select((champ) => new Parametre_recherche_sql(dictionnaire_parametres_recherches_sql.Keys.ToList()[i], champ, null, null))).ToList();
+            }
+            return resultat;
+        }
+
+        private IDictionary<String, IEnumerable<String>> get_dictionnary_champs()
+        {
+            return new Dictionary<String, IEnumerable<String>>() { { "Membre", Liste_champs_membres }, { "Visite", Liste_champs_visite } };
+        }
+
         public ICommand Command_navigation_to_popup_searchbetweendates
         {
             get
@@ -273,61 +199,24 @@ namespace Gest.ViewModels
             {
                 return new Command(() =>
                 {
-                    if (Champ_selected != null)
-                    {
-                        if (liste_parametres_recherches_sql.Exists((parametre) => parametre.Nom_table==nom_table_selected && parametre.Champ == Champ_selected && parametre.Methode_recherche == methoderecherche_selected) == false)
-                        {
-                            liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() {Nom_table=nom_table_selected, Champ = Champ_selected, Methode_recherche = methoderecherche_selected });
-                        }
-                    }
+                    this.refresh_parametre_recherche_sql();
                 });
             }
         }
 
+        private void refresh_parametre_recherche_sql()
+        {
+            parametre_recherche_sql.Nom_table = this.nom_table_selected;
+            parametre_recherche_sql.Champ = this.Champ_selected;
+            parametre_recherche_sql.Methode_recherche = this.methoderecherche_selected;
+        }
         public ICommand Command_search
         {
             get
             {
                 return new Command<Object>(async (donnees) => {
-                    if (type_selected == Enumerations_recherches.types_recherches.Simple.ToString())
-                    {
-                        liste_parametres_recherches_sql.ForEach((parametre) =>
-                        {
-                            if ((parametre.Nom_table==nom_table_selected) && (parametre.Champ == this.Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected))
-                            {
-                                parametre.Valeur = donnees;
-                            }
-                        });
-                        await Task.Run(() => {
-                            int index_parametre = liste_parametres_recherches_sql.FindIndex((parametre) =>(parametre.Nom_table==nom_table_selected) && (parametre.Champ == this.Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected) && (parametre.Valeur == donnees));
-                            int iteration = 0;
-                            Boolean is_finish = false;
-                            while (iteration<liste_parametres_recherches_sql.Count && !is_finish)
-                            {
-                                if (iteration != index_parametre)
-                                {
-                                    liste_parametres_recherches_sql.RemoveAt(iteration);
-                                    index_parametre = liste_parametres_recherches_sql.FindIndex((parametre) => (parametre.Nom_table == nom_table_selected) && (parametre.Champ == this.Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected) && (parametre.Valeur == donnees));
-                                }
-                                if (iteration==liste_parametres_recherches_sql.Count-1 && !is_finish)
-                                {
-                                    iteration = 0;
-                                }
-                                else
-                                {
-                                    iteration++;
-                                }
-                                if (liste_parametres_recherches_sql.Count==1)
-                                {
-                                    is_finish = true;
-                                }
-                                
-                            }
-                                                 
-                        });
-                    }
-                    await load(liste_parametres_recherches_sql);
-
+                    parametre_recherche_sql.Valeur = donnees;
+                    await launch_load(new List<Parametre_recherche_sql>() {parametre_recherche_sql});
                 });
             }
         }
@@ -341,35 +230,9 @@ namespace Gest.ViewModels
 
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
-            await load(new List<Parametre_recherche_sql>());
+            IEnumerable<Parametre_recherche_sql> parametres_recherches_sql = new Initialise_parametres_recherches().get_initialise_parametres_recherches_sql(parameters, "parametres_recherches_sql");
+            await launch_load(parametres_recherches_sql);
         }
-
-        private List<Parametre_recherche_sql> get_initialise_liste_parametres_recherche_sql(INavigationParameters parameters)
-        {
-            if (check_navigationparameter_has_key_liste_parametres_recherches_sql(parameters))
-                return (List<Parametre_recherche_sql>)parameters["liste_parametres_recherches_sql"];
-            else
-                return new List<Parametre_recherche_sql>();
-        }
-
-        private Boolean check_navigationparameter_has_key_liste_parametres_recherches_sql(INavigationParameters parameters)
-        {
-            return parameters.ContainsKey("liste_parametres_recherches_sql");
-        }
-
-        private Dictionary<String, IEnumerable<Parametre_recherche_sql>> get_initialise_dictionnary_parametres_recherche_sql(INavigationParameters parameters)
-        {
-            if (check_navigationparameter_has_key_dictionnary_parametres_recherches_sql(parameters))
-                return (Dictionary<String, IEnumerable<Parametre_recherche_sql>>)parameters["dictionnaire_parametres_sql"];
-            else
-                return new Dictionary<String, IEnumerable<Parametre_recherche_sql>>();
-        }
-
-        private Boolean check_navigationparameter_has_key_dictionnary_parametres_recherches_sql(INavigationParameters parameters)
-        {
-            return parameters.ContainsKey("dictionnaire_parametres_sql");
-        }
-
-        #endregion
+       #endregion
     }
 }

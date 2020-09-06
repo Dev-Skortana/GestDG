@@ -18,3 +18,31 @@ C:\Gest\Gest\Gest\obj\Release\netstandard2.0\Gest.AssemblyInfoInputs.cache
 C:\Gest\Gest\Gest\obj\Release\netstandard2.0\Gest.AssemblyInfo.cs
 C:\Gest\Gest\Gest\obj\Release\netstandard2.0\Gest.dll
 C:\Gest\Gest\Gest\obj\Release\netstandard2.0\Gest.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\bin\Release\netstandard2.0\Gest.deps.json
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\bin\Release\netstandard2.0\Gest.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\bin\Release\netstandard2.0\Gest.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\bin\Release\netstandard2.0\Recherche_donnees_GESTDG.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\bin\Release\netstandard2.0\Recherche_donnees_GESTDG.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Gest.csprojAssemblyReference.cache
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\BaseNavigationPage.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\FastMembre.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\LoginPage.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\MasterPage.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\Membre.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\MembreActivite.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\MembreVisite.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\Page_Menu.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\Popup_search_betweendates.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\Popup_search_multiple.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\PosteNBmessage.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\RangMembre.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\RegisterMembre.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Views\SuiviMembre.xaml.g.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Gest.csproj.CoreCompileInputs.cache
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Gest.AssemblyInfoInputs.cache
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Gest.AssemblyInfo.cs
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Gest.csproj.CopyComplete
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Gest.dll
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Release\netstandard2.0\Gest.pdb

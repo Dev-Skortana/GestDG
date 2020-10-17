@@ -31,6 +31,7 @@ using Gest.Helpers.Initialise_parametres_recherches_for_navigation_with_prism;
 using System.ComponentModel.Design.Serialization;
 using System.Runtime.CompilerServices;
 using DryIoc;
+using Gest.Helpers.Manager_parametre_recherche_sql;
 
 namespace Gest.ViewModels
 {
@@ -111,9 +112,8 @@ namespace Gest.ViewModels
         {
             get
             {
-                return new Command(() => {   
-                    Dictionary<String, IEnumerable<String>> dictionnary_namestables_with_nameschamps = (Dictionary<String, IEnumerable<String>>)get_dictionnary_namestables_with_nameschamps();
-                    List<Parametre_recherche_sql> liste_parametre_recherche_with_contains_of_all_namestables_and_nameschamps = get_list_all_parametres_recherches_sql(dictionnary_namestables_with_nameschamps).ToList();
+                return new Command(() => {            
+                    List<Parametre_recherche_sql> liste_parametre_recherche_with_contains_of_all_namestables_and_nameschamps = get_list_all_parametres_recherches_sql().ToList();
                     NavigationParameters parametre = new NavigationParameters(){
                         {"liste_parametre_recherche_sql",liste_parametre_recherche_with_contains_of_all_namestables_and_nameschamps }
                     };
@@ -121,19 +121,21 @@ namespace Gest.ViewModels
                 });
             }
         }
+        
+        private IEnumerable<Parametre_recherche_sql> get_list_all_parametres_recherches_sql()
+        {
+            IEnumerable<Parametre_recherche_sql> resultat = new List<Parametre_recherche_sql>();
+            Dictionary<String, IEnumerable<String>> dictionnary_parametres_recherches_sql = (Dictionary<String, IEnumerable<String>>)get_dictionnary_namestables_with_nameschamps();
+            for (var i = 0; i < dictionnary_parametres_recherches_sql.Count; i++)
+            {
+                resultat = resultat.Concat(dictionnary_parametres_recherches_sql.Values.ToList()[i].Select((champ) => new Parametre_recherche_sql(dictionnary_parametres_recherches_sql.Keys.ToList()[i], champ, null, null))).ToList();
+            }
+            return resultat;
+        }
+
         private IDictionary<String, IEnumerable<String>> get_dictionnary_namestables_with_nameschamps()
         {
             return new Dictionary<String, IEnumerable<String>>() { { "Membre", Liste_champs_membres }, { "Activite", Liste_champs_activites } };
-        }
-
-        private IEnumerable<Parametre_recherche_sql> get_list_all_parametres_recherches_sql(Dictionary<String, IEnumerable<String>> dictionnaire_liste_champs)
-        {
-            IEnumerable<Parametre_recherche_sql> resultat = new List<Parametre_recherche_sql>();
-            for (var i = 0; i < dictionnaire_liste_champs.Count; i++)
-            {
-                resultat = resultat.Concat(dictionnaire_liste_champs.Values.ToList()[i].Select((champ) => new Parametre_recherche_sql(dictionnaire_liste_champs.Keys.ToList()[i], champ, null, null))).ToList();
-            }
-            return resultat;
         }
 
         public ICommand Command_navigation_to_popup_searchbetweendates
@@ -165,19 +167,16 @@ namespace Gest.ViewModels
                 });
             }
         }
-
-        private void change_parametre_recherche_sql() {
-            parametre_recherche_sql.Nom_table = this.nom_table_selected;
-            parametre_recherche_sql.Champ = this.Champ_selected;
-            parametre_recherche_sql.Methode_recherche = this.methoderecherche_selected;          
-        }
+                
         public ICommand Command_gestion_dictionnaire_champsmethodesrecherches
         {
             get
             {
                 return new Command(() =>
                 {
-                    this.change_parametre_recherche_sql();
+                    parametre_recherche_sql = new Manager_parametre_recherche_sql().update_parametre_recherche_sql(
+                       parametre_recherche_sql, this.nom_table_selected, this.Champ_selected, this.methoderecherche_selected
+                       );
                 });
             }
         }
@@ -199,7 +198,7 @@ namespace Gest.ViewModels
             Load_donnees<IEnumerable<Membre>> load_donnees = new Load_donnees__of_viewmodel_membreactivite<IEnumerable<Membre>>(service_membre, service_activite);
             this.membres = await load_donnees.get_donnees(dictionnaire_parametres_sql);
         }
-        
+       
         #endregion
 
         #region Methode_navigation_PRISM_and_methodes
@@ -208,7 +207,7 @@ namespace Gest.ViewModels
         }
 
         public async void OnNavigatedTo(INavigationParameters parameters){
-            IEnumerable<Parametre_recherche_sql> parametres_recherches_sql = new Initialise_parametres_recherches().get_initialise_parametres_recherches_sql(parameters, "parametres_recherches_sql");
+            IEnumerable<Parametre_recherche_sql> parametres_recherches_sql = new Initialise_parametres_recherches_for_navigation_with_prism().get_initialise_parametres_recherches_sql_for_navigation_with_prism(parameters, "parametres_recherches_sql");
             await launch_load(parametres_recherches_sql);
         }    
         #endregion

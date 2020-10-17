@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using Recherche_donnees_GESTDG.enumeration;
 using System.Linq;
 using Recherche_donnees_GESTDG;
+using Gest.Helpers.Manager_parametre_recherche_sql;
+using Gest.Helpers.Load_donnees;
 
 namespace Gest.ViewModels
 {
@@ -44,7 +46,7 @@ namespace Gest.ViewModels
             set { SetProperty(ref _isloading, value); }
         }
         public Membre membre_selected=new Membre();
-        private List<Parametre_recherche_sql> liste_parametres_recherches_sql = new List<Parametre_recherche_sql>();
+        private Parametre_recherche_sql parametre_recherche_sql = new Parametre_recherche_sql();
 
         public List<String> Liste_noms_tables { get { return new List<string>() { "Membre" }; } }
         public String nom_table_selected { get; set; }
@@ -68,8 +70,8 @@ namespace Gest.ViewModels
         }
 
 
-        private List<Membre> _liste_membres=new List<Membre>();
-        public List<Membre> Liste_membres {
+        private IEnumerable<Membre> _liste_membres=new List<Membre>();
+        public IEnumerable<Membre> Liste_membres {
             get
             {
                 return _liste_membres;
@@ -116,14 +118,9 @@ namespace Gest.ViewModels
             {
                 return new Command(() =>
                 {
-                    if (Champ_selected != null)
-                    {
-                        if (liste_parametres_recherches_sql.Exists((parametre) => parametre.Nom_table==nom_table_selected && parametre.Champ == Champ_selected && parametre.Methode_recherche == methoderecherche_selected) == false)
-                        {
-                            liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() {Nom_table=nom_table_selected, Champ=Champ_selected,Methode_recherche=methoderecherche_selected});   
-                        }
-                        
-                    }
+                    parametre_recherche_sql = new Manager_parametre_recherche_sql().update_parametre_recherche_sql(
+                        parametre_recherche_sql, this.nom_table_selected, this.Champ_selected, this.methoderecherche_selected
+                        );
                 });
             }
         }
@@ -133,27 +130,9 @@ namespace Gest.ViewModels
             get
             {
                 return new Command<Object>(async (donnees) => {
-                    if (type_selected == Enumerations_recherches.types_recherches.Simple.ToString())
-                    {
-                        liste_parametres_recherches_sql.ForEach((parametre) =>
-                        {
-                            if ((parametre.Nom_table==nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected))
-                            {
-                                parametre.Valeur = donnees;
-                            }
-                        });
-                        await Task.Run(()=> {
-                            int index_parametre = liste_parametres_recherches_sql.FindIndex((parametre) =>(parametre.Nom_table==nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected) && (parametre.Valeur == donnees));
-                            for (var i=0;i<liste_parametres_recherches_sql.Count;i++)
-                            {
-                                if (i!=index_parametre)
-                                {
-                                    liste_parametres_recherches_sql.RemoveAt(i);
-                                }
-                            }
-                        });
-                    }
-                    await load(liste_parametres_recherches_sql);
+
+                    parametre_recherche_sql.Valeur = donnees;
+                    await load(new List<Parametre_recherche_sql>() { parametre_recherche_sql });
                 });
             }
         }
@@ -165,9 +144,9 @@ namespace Gest.ViewModels
             {
                 return new Command<int>((position) => {
 
-                    if (Liste_membres.Count>0)
+                    if (Liste_membres.ToList().Count>0)
                     {
-                        membre_selected = Liste_membres?[position];
+                        membre_selected = Liste_membres.ToList()?[position];
                     }                 
                 });
             }
@@ -191,7 +170,9 @@ namespace Gest.ViewModels
         private async Task load(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql) 
         { 
             this.Isloading = true;
-            Liste_membres = (from membre in (List<Membre>)await service_membre.GetList(parametres_recherches_sql) orderby membre.pseudo select membre).ToList();
+            IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_sql = new Gest.Helpers.Generate_dictionnaire_parametresrecherche.Generate_parametresrecherche().generate(parametres_recherches_sql);
+            Load_donnees<IEnumerable<Membre>> load_donnees = new Load_donnees_of_viewmodel_fastmembre<IEnumerable<Membre>>(service_membre);
+            this.Liste_membres = await load_donnees.get_donnees(dictionnaire_parametres_sql);
             this.Isloading = false;
         }
 

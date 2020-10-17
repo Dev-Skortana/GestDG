@@ -14,11 +14,10 @@ using System.Threading.Tasks;
 
 namespace Gest.Helpers.Load_donnees
 {
-    class Load_donnees__of_viewmodel_membreactivite<type_retour>:Load_donnees<type_retour>
+    class Load_donnees__of_viewmodel_membreactivite<type_retour>:Load_donnees_base,Load_donnees<type_retour>
     {
         IService_Membre service_membre;
         IService_Activite service_activite;
-        IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_recherche;
 
         public Load_donnees__of_viewmodel_membreactivite(IService_Membre service_membre,IService_Activite service_activite)
         {
@@ -31,11 +30,6 @@ namespace Gest.Helpers.Load_donnees
             fill_dictionnaire_parametres_recherche(dictionaire_parametres_recherche);
             type_retour membres = (await build_full_infos_membres());
             return membres;
-        }
-
-        public void fill_dictionnaire_parametres_recherche(IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_recherche)
-        {
-            this.dictionnaire_parametres_recherche = dictionnaire_parametres_recherche;
         }
 
         private async Task<type_retour> build_full_infos_membres()

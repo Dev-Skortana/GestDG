@@ -18,6 +18,7 @@ using Xamarin.Forms.Internals;
 using ImTools;
 using System.Collections;
 using Gest.Helpers.Load_donnees;
+using Gest.Helpers.Manager_parametre_recherche_sql;
 using Gest.Helpers.Initialise_parametres_recherches_for_navigation_with_prism;
 using Xamarin.Forms.Markup;
 
@@ -101,15 +102,13 @@ namespace Gest.ViewModels
         #endregion
 
         #region Methode_priver
-
         private async Task launch_load(IEnumerable parametres_recherches_sql)
         {
             IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_sql = new Gest.Helpers.Generate_dictionnaire_parametresrecherche.Generate_parametresrecherche().generate(parametres_recherches_sql);
             
             Load_donnees<IDictionary<Membre, IEnumerable<visite_custom>>> load_donnees = new Load_donnees_of_viewmodel_membrevisite<IDictionary<Membre, IEnumerable<visite_custom>>>(service_membre, service_visite);
             this.Dictionnaire_membre_visite = await load_donnees.get_donnees(dictionnaire_parametres_sql);
-        }
-          
+        }         
         #endregion
 
         #region Commandes_MVVM
@@ -173,7 +172,7 @@ namespace Gest.ViewModels
             }
         }
 
-        public ICommand Command_switch_source
+       public ICommand Command_switch_source
         {
             get
             {
@@ -199,17 +198,13 @@ namespace Gest.ViewModels
             {
                 return new Command(() =>
                 {
-                    this.refresh_parametre_recherche_sql();
+                    parametre_recherche_sql = new Manager_parametre_recherche_sql().update_parametre_recherche_sql(
+                        parametre_recherche_sql, this.nom_table_selected, this.Champ_selected, this.methoderecherche_selected
+                        );
                 });
             }
         }
 
-        private void refresh_parametre_recherche_sql()
-        {
-            parametre_recherche_sql.Nom_table = this.nom_table_selected;
-            parametre_recherche_sql.Champ = this.Champ_selected;
-            parametre_recherche_sql.Methode_recherche = this.methoderecherche_selected;
-        }
         public ICommand Command_search
         {
             get
@@ -230,7 +225,7 @@ namespace Gest.ViewModels
 
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
-            IEnumerable<Parametre_recherche_sql> parametres_recherches_sql = new Initialise_parametres_recherches().get_initialise_parametres_recherches_sql(parameters, "parametres_recherches_sql");
+            IEnumerable<Parametre_recherche_sql> parametres_recherches_sql = new Initialise_parametres_recherches_for_navigation_with_prism().get_initialise_parametres_recherches_sql_for_navigation_with_prism(parameters, "parametres_recherches_sql");
             await launch_load(parametres_recherches_sql);
         }
        #endregion

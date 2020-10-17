@@ -45,7 +45,7 @@ namespace Gest.ViewModels
         }
 
         public string title { get; set; } = "Page suivi du membre";
-        private List<Parametre_recherche_sql> liste_parametres_recherches_sql = new List<Parametre_recherche_sql>();
+        private Parametre_recherche_sql parametre_recherche_sql = new Parametre_recherche_sql();
 
         public List<String> Liste_methodesrecherches { get { return Enumerations_recherches.get_liste_methodesrecherches(); } }
         public String methoderecherche_selected { get; set; }
@@ -212,13 +212,7 @@ namespace Gest.ViewModels
             {
                 return new Command(() =>
                 {
-                    if (Champ_selected != null)
-                    {
-                        if (liste_parametres_recherches_sql.Exists((parametre) => parametre.Nom_table == nom_table_selected && parametre.Champ == Champ_selected && parametre.Methode_recherche == methoderecherche_selected) == false)
-                        {
-                            liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() {Nom_table=nom_table_selected, Champ = Champ_selected, Methode_recherche = methoderecherche_selected });
-                        }
-                    }
+                    
                 });
             }
         }
@@ -228,27 +222,7 @@ namespace Gest.ViewModels
             get
             {
                 return new Command<Object>(async (donnees) => {
-                    if (type_selected == Enumerations_recherches.types_recherches.Simple.ToString())
-                    {
-                        liste_parametres_recherches_sql.ForEach((parametre) =>
-                        {
-                            if ((parametre.Nom_table == nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected))
-                            {
-                                parametre.Valeur = donnees;
-                            }
-                        });
-                        await Task.Run(() => {
-                            int index_parametre = liste_parametres_recherches_sql.FindIndex((parametre) =>(parametre.Nom_table == nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected) && (parametre.Valeur == donnees));
-                            for (var i = 0; i < liste_parametres_recherches_sql.Count; i++)
-                            {
-                                if (i != index_parametre)
-                                {
-                                    liste_parametres_recherches_sql.RemoveAt(i);
-                                }
-                            }
-                        });
-                    }
-                    await load(liste_parametres_recherches_sql);
+                   
 
                 });
             }

@@ -15,6 +15,8 @@ using Recherche_donnees_GESTDG.enumeration;
 using System.Windows.Input;
 using Gest.Interface_SQLiteAccess;
 using Recherche_donnees_GESTDG;
+using Gest.Helpers.Load_donnees;
+using Gest.Helpers.Manager_parametre_recherche_sql;
 
 namespace Gest.ViewModels
 {
@@ -77,13 +79,9 @@ namespace Gest.ViewModels
             {
                 return new Command(() =>
                 {
-                    if (Champ_selected != null)
-                    {
-                        if (liste_parametres_recherches_sql.Exists((parametre) => parametre.Nom_table==nom_table_selected && parametre.Champ == Champ_selected && parametre.Methode_recherche == methoderecherche_selected) == false)
-                        {
-                            liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() {Nom_table=nom_table_selected, Champ = Champ_selected, Methode_recherche = methoderecherche_selected });
-                        }
-                    }
+                    parametre_recherche_sql = new Manager_parametre_recherche_sql().update_parametre_recherche_sql(
+                        parametre_recherche_sql, this.nom_table_selected, this.Champ_selected, this.methoderecherche_selected
+                        );
                 });
             }
         }
@@ -93,27 +91,8 @@ namespace Gest.ViewModels
             get
             {
                 return new Command<Object>(async (donnees) => {
-                    if (type_selected == Enumerations_recherches.types_recherches.Simple.ToString())
-                    {
-                        liste_parametres_recherches_sql.ForEach((parametre) =>
-                        {
-                            if ((parametre.Nom_table == nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected))
-                            {
-                                parametre.Valeur = donnees;
-                            }
-                        });
-                        await Task.Run(() => {
-                            int index_parametre = liste_parametres_recherches_sql.FindIndex((parametre) => (parametre.Nom_table == nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected) && (parametre.Valeur == donnees));
-                            for (var i = 0; i < liste_parametres_recherches_sql.Count; i++)
-                            {
-                                if (i != index_parametre)
-                                {
-                                    liste_parametres_recherches_sql.RemoveAt(i);
-                                }
-                            }
-                        });
-                    }
-                    await load(liste_parametres_recherches_sql);
+                    parametre_recherche_sql.Valeur = donnees;
+                    await load(new List<Parametre_recherche_sql>() { parametre_recherche_sql });
                 });
             }
         }
@@ -122,7 +101,7 @@ namespace Gest.ViewModels
         #region Variables
         public string title { get; set; } = "Page rangs des membres";
 
-        private List<Parametre_recherche_sql> liste_parametres_recherches_sql = new List<Parametre_recherche_sql>();
+        private Parametre_recherche_sql parametre_recherche_sql = new Parametre_recherche_sql();
 
         public List<String> Liste_methodesrecherches { get { return Enumerations_recherches.get_liste_methodesrecherches(); } }
         public String methoderecherche_selected { get; set; }
@@ -148,8 +127,8 @@ namespace Gest.ViewModels
 
 
 
-        private List<Rang> _liste_rangs;
-        public List<Rang> Liste_rangs
+        private IEnumerable<Rang> _liste_rangs;
+        public IEnumerable<Rang> Liste_rangs
         {
             get
             {
@@ -166,19 +145,12 @@ namespace Gest.ViewModels
         #region Methodes priver ou interne
         private async Task load(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
-            var membres = (List<Membre>)await new Services.Classes.Service_Membre().GetList(nom_table_selected == "Membre" ? parametres_recherches_sql :null);
-            var rangs= (List<Rang>)await new Services.Classes.Service_Rang().GetList(nom_table_selected=="Rang" ? parametres_recherches_sql :null);
-            rangs.ForEach((item) =>item.liste_membres= (from el in membres where el.rang_nom==item.nom_rang orderby el.pseudo select el).ToList());
-            if (nom_table_selected=="Membre") {
-                rangs.RemoveAll((item) =>item.liste_membres.Count == 0);
-            }
-            Liste_rangs = rangs;
+            IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_sql = new Gest.Helpers.Generate_dictionnaire_parametresrecherche.Generate_parametresrecherche().generate(parametres_recherches_sql);
+            Load_donnees<IEnumerable<Rang>> load_donnees = new Load_donnees_of_viewmodel_membrerang<IEnumerable<Rang>>(service_membre, service_rang);
+            this.Liste_rangs = await load_donnees.get_donnees(dictionnaire_parametres_sql);
         }
 
-        public async Task navigation_Goback_Popup_searchbetweendates(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
-        {
-            await load(parametres_recherches_sql);
-        }
+        
         #endregion
 
         #region Methode_navigation_PRISM

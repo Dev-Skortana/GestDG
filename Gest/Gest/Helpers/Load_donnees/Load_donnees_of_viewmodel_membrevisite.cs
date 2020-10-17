@@ -10,11 +10,10 @@ using System.Threading.Tasks;
 
 namespace Gest.Helpers.Load_donnees
 {
-    class Load_donnees_of_viewmodel_membrevisite<type_retour> : Load_donnees<type_retour>
+    class Load_donnees_of_viewmodel_membrevisite<type_retour> :Load_donnees_base, Load_donnees<type_retour>
     {
         IService_Membre service_membre;
         IService_Visite service_visite;
-        IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_recherche;
 
         public Load_donnees_of_viewmodel_membrevisite(IService_Membre service_membre, IService_Visite service_visite)
         {
@@ -28,11 +27,6 @@ namespace Gest.Helpers.Load_donnees
             type_retour visites_of_membres= (await build_full_infos_visites_of_membres());
             return visites_of_membres;
 
-        }
-
-        public void fill_dictionnaire_parametres_recherche(IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_recherche)
-        {
-            this.dictionnaire_parametres_recherche = dictionnaire_parametres_recherche;
         }
 
         private async Task<type_retour> build_full_infos_visites_of_membres()

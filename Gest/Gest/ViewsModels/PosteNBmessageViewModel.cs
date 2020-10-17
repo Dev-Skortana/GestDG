@@ -15,6 +15,8 @@ using Recherche_donnees_GESTDG.enumeration;
 using System.Windows.Input;
 using Gest.Interface_SQLiteAccess;
 using Recherche_donnees_GESTDG;
+using Gest.Helpers.Manager_parametre_recherche_sql;
+using Gest.Helpers.Load_donnees;
 
 namespace Gest.ViewModels
 {
@@ -53,7 +55,7 @@ namespace Gest.ViewModels
         }
 
         public string title { get; set; } = "Page messages des membres";
-        private List<Parametre_recherche_sql> liste_parametres_recherches_sql = new List<Parametre_recherche_sql>();
+        private Parametre_recherche_sql parametre_recherche_sql = new Parametre_recherche_sql();
 
         public List<String> Liste_methodesrecherches { get { return Enumerations_recherches.get_liste_methodesrecherches(); } }
         public String methoderecherche_selected { get; set; }
@@ -79,8 +81,8 @@ namespace Gest.ViewModels
         }
 
 
-        private Dictionary<Membre, List<Groupement_nombremessage>> _dictionnaire_membres_messages = new Dictionary<Membre, List<Groupement_nombremessage>>();
-        public Dictionary<Membre, List<Groupement_nombremessage>> Dictionnaire_membres_messages
+        private IDictionary<Membre, IEnumerable<Groupement_nombremessage>> _dictionnaire_membres_messages = new Dictionary<Membre, IEnumerable<Groupement_nombremessage>>();
+        public IDictionary<Membre, IEnumerable<Groupement_nombremessage>> Dictionnaire_membres_messages
         {
             get
             {  
@@ -159,13 +161,9 @@ namespace Gest.ViewModels
             {
                 return new Command(() =>
                 {
-                    if (Champ_selected != null)
-                    {
-                        if (liste_parametres_recherches_sql.Exists((parametre) => parametre.Nom_table==nom_table_selected && parametre.Champ == Champ_selected && parametre.Methode_recherche == methoderecherche_selected) == false)
-                        {
-                            liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() {Nom_table=nom_table_selected, Champ = Champ_selected, Methode_recherche = methoderecherche_selected });
-                        }
-                    }
+                    parametre_recherche_sql = new Manager_parametre_recherche_sql().update_parametre_recherche_sql(
+                        parametre_recherche_sql, this.nom_table_selected, this.Champ_selected, this.methoderecherche_selected
+                        );
                 });
             }
         }
@@ -175,27 +173,9 @@ namespace Gest.ViewModels
             get
             {
                 return new Command<Object>(async (donnees) => {
-                    if (type_selected == Enumerations_recherches.types_recherches.Simple.ToString())
-                    {
-                        liste_parametres_recherches_sql.ForEach((parametre) =>
-                        {
-                            if ((parametre.Nom_table == nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected))
-                            {
-                                parametre.Valeur = donnees;
-                            }
-                        });
-                        await Task.Run(() => {
-                            int index_parametre = liste_parametres_recherches_sql.FindIndex((parametre) =>(parametre.Nom_table == nom_table_selected) && (parametre.Champ == Champ_selected) && (parametre.Methode_recherche == methoderecherche_selected) && (parametre.Valeur == donnees));
-                            for (var i = 0; i < liste_parametres_recherches_sql.Count; i++)
-                            {
-                                if (i != index_parametre)
-                                {
-                                    liste_parametres_recherches_sql.RemoveAt(i);
-                                }
-                            }
-                        });
-                    }
-                    await load(liste_parametres_recherches_sql);
+                    parametre_recherche_sql.Valeur = donnees;
+                    await load(new List<Parametre_recherche_sql>() { parametre_recherche_sql });
+
                 });
             }
         }
@@ -207,7 +187,7 @@ namespace Gest.ViewModels
                 return new Command<Membre>((membre) => {
                     if (membre!=null) {
                         DateTime dernier_dateconnexion = Dictionnaire_membres_messages[membre].Max<Groupement_nombremessage, DateTime>((item) => item.Date_connexion);
-                        int nombre_messages_max = (from item in Dictionnaire_membres_messages where item.Key.pseudo == membre.pseudo && item.Value.Exists((groupe_message) => groupe_message.Date_connexion == dernier_dateconnexion) select item.Value.FindAll((el) => el.Date_connexion == dernier_dateconnexion).Max<Groupement_nombremessage, int>((els) => els.Nbmessage)).First();
+                        int nombre_messages_max = (from item in Dictionnaire_membres_messages where item.Key.pseudo == membre.pseudo && item.Value.ToList().Exists((groupe_message) => groupe_message.Date_connexion == dernier_dateconnexion) select item.Value.ToList().FindAll((el) => el.Date_connexion == dernier_dateconnexion).Max<Groupement_nombremessage, int>((els) => els.Nbmessage)).First();
                         Dernier_dateconnexion_message = new Groupement_nombremessage() { Date_connexion = dernier_dateconnexion, Nbmessage = nombre_messages_max };
                     }
                 });
@@ -219,22 +199,9 @@ namespace Gest.ViewModels
         #region Methode_priver
         private async Task load(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
-            Dictionary<Membre, List<Groupement_nombremessage>> dictionnaire_intermediaire = new Dictionary<Membre, List<Groupement_nombremessage>>();
-
-            var liste_membres = new List<Membre>();
-            liste_membres = (from item in (List<Membre>)await service_membre.GetList(nom_table_selected == "Membre" ? parametres_recherches_sql : null) orderby item.pseudo select item).ToList();
-
-            var liste_membre_connexion_messages = new List<Membre_Connexion_Message>();
-            liste_membre_connexion_messages = (from item in (List<Membre_Connexion_Message>)await service_membre_connexion_message.GetList(nom_table_selected == "Message" ? parametres_recherches_sql : null) select item).ToList();
-
-            if (nom_table_selected == "Message")
-            {
-                liste_membres.RemoveAll((membre) => liste_membre_connexion_messages.Exists((membre_connexion_message) => membre_connexion_message.membre_pseudo == membre.pseudo) == false);
-            }
-
-            liste_membres.ForEach((membre) => { dictionnaire_intermediaire.Add(membre, liste_membre_connexion_messages.Where((membre_connexion_message) => membre_connexion_message.membre_pseudo == membre.pseudo).Select<Membre_Connexion_Message, Groupement_nombremessage>((membre_connexion_message) => new Groupement_nombremessage() { Date_connexion = membre_connexion_message.connexion_date, Nbmessage = membre_connexion_message.message_nb }).ToList()); });
-
-            Dictionnaire_membres_messages = dictionnaire_intermediaire;
+            IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_sql = new Gest.Helpers.Generate_dictionnaire_parametresrecherche.Generate_parametresrecherche().generate(parametres_recherches_sql);
+            Load_donnees<IDictionary<Membre, IEnumerable<Groupement_nombremessage>>> load_donnees = new Load_donnees_of_viewmodel_membreconnectionmessage<IDictionary<Membre, IEnumerable<Groupement_nombremessage>>>(service_membre, service_membre_connexion_message);
+            this.Dictionnaire_membres_messages = await load_donnees.get_donnees(dictionnaire_parametres_sql);    
         }
 
         public async Task navigation_Goback_Popup_searchbetweendates(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
@@ -250,7 +217,7 @@ namespace Gest.ViewModels
         }
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
-            await load(new  List<Parametre_recherche_sql>());
+            await load(new List<Parametre_recherche_sql>());
         }
         #endregion
     }

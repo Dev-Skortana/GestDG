@@ -17,6 +17,7 @@ using Gest.Interface_SQLiteAccess;
 using Recherche_donnees_GESTDG;
 using Gest.Helpers.Load_donnees;
 using Gest.Helpers.Manager_parametre_recherche_sql;
+using Gest.Helpers.Initialise_parametres_recherches_for_navigation_with_prism;
 
 namespace Gest.ViewModels
 {
@@ -103,9 +104,9 @@ namespace Gest.ViewModels
 
         private Parametre_recherche_sql parametre_recherche_sql = new Parametre_recherche_sql();
 
-        public List<String> Liste_methodesrecherches { get { return Enumerations_recherches.get_liste_methodesrecherches(); } }
+        public List<String> Liste_methodesrecherches { get { return Enumerations_methodes_recherches.get_liste_methodesrecherches(); } }
         public String methoderecherche_selected { get; set; }
-        public List<string> Liste_typesrecherches { get { return Enumerations_recherches.get_liste_typesrecherches();} }
+        public List<string> Liste_typesrecherches { get { return Enumeration_type_recherche.get_liste_typesrecherches();} }
         public String type_selected { get; set; }
 
         public List<String> Liste_noms_tables { get { return new List<string>() { "Membre", "Rang" }; } }
@@ -161,7 +162,8 @@ namespace Gest.ViewModels
 
         public async void OnNavigatedTo(INavigationParameters parameters)
         {
-            await load(new List<Parametre_recherche_sql>());
+            IEnumerable<Parametre_recherche_sql> parametres_recherches_sql = new Initialise_parametres_recherches_for_navigation_with_prism().get_initialise_parametres_recherches_sql_for_navigation_with_prism(parameters, "parametres_recherches_sql");
+            await load(parametres_recherches_sql);
         }
         #endregion
     }

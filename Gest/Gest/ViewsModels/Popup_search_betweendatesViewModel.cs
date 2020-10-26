@@ -94,8 +94,8 @@ namespace Gest.ViewModels
             get
             {
                 return new Command(async ()=> {
-                    liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() { Champ = this.nom_champ_date, Valeur = this.Date_debut, Methode_recherche = Enumerations_recherches.methodes_recherches.Superieure.ToString() });
-                    liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() { Champ = this.nom_champ_date, Valeur = this.Date_fin, Methode_recherche = Enumerations_recherches.methodes_recherches.Inferieure.ToString() });
+                    liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() { Champ = this.nom_champ_date, Valeur = this.Date_debut, Methode_recherche = Enumerations_methodes_recherches.methodes_recherches.Superieure.ToString() });
+                    liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() { Champ = this.nom_champ_date, Valeur = this.Date_fin, Methode_recherche = Enumerations_methodes_recherches.methodes_recherches.Inferieure.ToString() });
                     NavigationParameters parametres = new NavigationParameters();
                     parametres.Add("parametres_recherches_sql", liste_parametres_recherches_sql);
                     await service_navigation.GoBackAsync(parametres);

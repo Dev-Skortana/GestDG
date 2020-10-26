@@ -8,12 +8,12 @@ namespace Recherche_donnees_GESTDG.Formats.Classes
 {
     class Create_with_format_int : ICreate_with_format
     {
-        public string Create_condition(string champ, Object valeur, Enumerations_recherches.methodes_recherches methode_recherche)
+        public string Create_condition(string champ, Object valeur, Enumerations_methodes_recherches.methodes_recherches methode_recherche)
         {
             String resultat="";
             int donnees_int = int.Parse(valeur.ToString());
             resultat += $"CAST({champ} as int)";
-            resultat += methode_recherche == Enumerations_recherches.methodes_recherches.Egale_a ? $"={donnees_int}" : (methode_recherche == Enumerations_recherches.methodes_recherches.Superieure ? $">={donnees_int}" : $"<={donnees_int}");
+            resultat += methode_recherche == Enumerations_methodes_recherches.methodes_recherches.Egale_a ? $"={donnees_int}" : (methode_recherche == Enumerations_methodes_recherches.methodes_recherches.Superieure ? $">={donnees_int}" : $"<={donnees_int}");
             return resultat;
         }
 

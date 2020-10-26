@@ -8,14 +8,14 @@ namespace Recherche_donnees_GESTDG.Formats.Classes
     class Create_with_format_datetime : ICreate_with_format
     {
                                                                 /* Problème avec ce format */
-        public string Create_condition(string champ, Object valeur, Enumerations_recherches.methodes_recherches methode_recherche)
+        public string Create_condition(string champ, Object valeur, Enumerations_methodes_recherches.methodes_recherches methode_recherche)
         {
             String resultat = "";
             DateTime donnees_datetime=DateTime.Parse(valeur.ToString());
             String representation_datetime_langage = get_representation_datetime_langage(donnees_datetime);
             String representation_datetime_database =get_representation_datetime_database(representation_datetime_langage);
             resultat += $"{(representation_datetime_database=="%Y-%m-%d" ? "date" :(representation_datetime_database=="%d-%m-%Y %H:%M" ? "datetime":""))}(strftime('{representation_datetime_database}' ,datetime({champ}/10000000 - 62135596800, 'unixepoch')))";
-            resultat += methode_recherche == Enumerations_recherches.methodes_recherches.Egale_a ? $"='{donnees_datetime.ToString(representation_datetime_langage)}'" : (methode_recherche == Enumerations_recherches.methodes_recherches.Superieure ? $">='{donnees_datetime.ToString(representation_datetime_langage)}'" : $"<='{donnees_datetime.ToString(representation_datetime_langage)}'");
+            resultat += methode_recherche == Enumerations_methodes_recherches.methodes_recherches.Egale_a ? $"='{donnees_datetime.ToString(representation_datetime_langage)}'" : (methode_recherche == Enumerations_methodes_recherches.methodes_recherches.Superieure ? $">='{donnees_datetime.ToString(representation_datetime_langage)}'" : $"<='{donnees_datetime.ToString(representation_datetime_langage)}'");
             return resultat;
         }
 

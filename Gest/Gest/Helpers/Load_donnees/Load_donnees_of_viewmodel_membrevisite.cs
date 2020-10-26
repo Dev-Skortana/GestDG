@@ -82,13 +82,15 @@ namespace Gest.Helpers.Load_donnees
 
         private type_retour remove_membres_have_not_visites(type_retour dictionnaire_origine)
         {
-            IDictionary<Membre, IEnumerable<visite_custom>> dictionnaire_trie = (IDictionary<Membre,IEnumerable<visite_custom>>)dictionnaire_origine;
-            foreach (var item in dictionnaire_trie)
+            IDictionary<Membre, IEnumerable<visite_custom>> dictionnaire_copie = (IDictionary<Membre,IEnumerable<visite_custom>>)dictionnaire_origine;
+            foreach (var item in dictionnaire_copie.Keys.ToList())
             {
-                if (item.Value.Count()!=0)
-                    dictionnaire_trie.Add(item.Key, item.Value);
-            }
-            return (type_retour)dictionnaire_trie;
+                if (dictionnaire_copie[item].Count()==0)
+                {
+                    dictionnaire_copie.Remove(item);
+                }
+            }          
+            return (type_retour)dictionnaire_copie;
         }
     }
 }

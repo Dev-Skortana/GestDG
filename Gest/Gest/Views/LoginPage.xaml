@@ -17,11 +17,11 @@
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
-                <Label Text="Connecter-vous pour pouvoir continuer" TextColor="Blue" TextDecorations="Underline"/>
+                <Label Text="Vous devez vous connecter à votre compte du site dynamix-gaming pour pouvoir continuer" HorizontalTextAlignment="Center" TextColor="Blue" TextDecorations="Underline"/>
             </StackLayout>
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-                <Entry Text="{Binding Username}" TextColor="Blue" Placeholder="Votre nom d'utilisateur" PlaceholderColor="Blue" />
-                <Entry Text="{Binding Password}" TextColor="Blue" Placeholder="Votre mot de passe" PlaceholderColor="Blue" IsPassword="True"/>
+                <Entry Text="{Binding Username}" TextColor="Blue" HorizontalTextAlignment="Center" Placeholder="Votre nom d'utilisateur" PlaceholderColor="Blue" />
+                <Entry Text="{Binding Password}" TextColor="Blue" HorizontalTextAlignment="Center" Placeholder="Votre mot de passe" PlaceholderColor="Blue" IsPassword="True"/>
             </StackLayout>
             <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
                 <Button IsEnabled="{Binding Is_connected_tointernet}" Text="Se connecter" TextColor="Green" Clicked="Button_Clicked"/>

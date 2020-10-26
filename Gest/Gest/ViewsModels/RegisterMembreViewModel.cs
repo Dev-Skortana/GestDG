@@ -192,6 +192,16 @@ namespace Gest.ViewModels
             }
         }
 
+        private int _pourcentage_avancement_progression;
+        public int pourcentage_avancement_progression {
+            get{
+                return _pourcentage_avancement_progression; 
+            }
+            set{
+                SetProperty(ref _pourcentage_avancement_progression,value);
+            } 
+        }
+
         private Boolean _isfinish_load;
         public Boolean isfinish_load
         {
@@ -299,19 +309,31 @@ namespace Gest.ViewModels
             {
                 liste_pages.Add($@"{url_racine}" + match.Groups["page"].Value);
             }
+            int pourcentage_avancement_progression=0;
+            int nb_total_members = 0;
+            int position_member_intotal =1;
+
             foreach (String lien in liste_pages)
             {
                 document_dynamixgaming_page_memberlist.Load(await rest.getresponse(@lien),Encoding.UTF8);
                 table_members = document_dynamixgaming_page_memberlist.GetElementbyId("memberlist").SelectSingleNode("tbody");
+                nb_total_members += table_members.SelectNodes("//tbody/tr").ToList().Count;
                 Datefull.liste_partie_dates = Datefull.construct_list(table_members);
-            }
+            } 
+            
             Datefull.initialise_index();
+ 
             foreach (String lien in liste_pages)
-            {
+            {   
                 document_dynamixgaming_page_memberlist.Load(await rest.getresponse(@lien), Encoding.UTF8);
                 table_members = document_dynamixgaming_page_memberlist.GetElementbyId("memberlist").SelectSingleNode("tbody");
                 foreach (var member_iteration in table_members.Descendants("tr"))
-                {           
+                {
+                    decimal souscalcule_pourcentage = Decimal.Divide(position_member_intotal,nb_total_members);
+                    pourcentage_avancement_progression= Convert.ToInt32(Math.Truncate(souscalcule_pourcentage * 100));
+                    this.pourcentage_avancement_progression = pourcentage_avancement_progression;
+                     
+
                     Boolean reponse_insert_dateconnexion = true;
                     Boolean reponse_insert_activite = true;
                     Boolean reponse_insert_rang = true;
@@ -416,6 +438,7 @@ namespace Gest.ViewModels
                         await service_membre_connexion_message.insert(this.Membreconnexionmessage);
                     }
                 }
+                    position_member_intotal += 1;
 
                     this.Membre = null;
                     this.Connexion = null;

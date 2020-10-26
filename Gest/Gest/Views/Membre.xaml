@@ -34,7 +34,7 @@
                 <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Start">
                         <Picker IsVisible="True" ItemsSource="{Binding Liste_noms_tables}" SelectedIndexChanged="Picker_switchsource_SelectedIndexChanged" SelectedItem="{Binding nom_table_selected}" Title="Source :" TextColor="LightGreen"/>
-                        <Picker x:Name="piker_champs" ItemsSource="{Binding Liste_champs}" SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding Champ_selected}" Title="champ (libelle)" TextColor="Green"/>
+                        <Picker x:Name="piker_champs" ItemsSource="{Binding Liste_champs}" SelectedIndexChanged="Picker_SelectedIndexChanged_champs" SelectedItem="{Binding Champ_selected}" Title="champ (libelle)" TextColor="Green"/>
                         <Entry IsVisible="False" x:Name="zone_saisi_text" Placeholder="Recherche ici" PlaceholderColor="Green" TextColor="Green" >
                             <Entry.Behaviors>
                                 <behavior:Behavior_EntryTextChanged Command="{Binding Command_search}" />
@@ -57,7 +57,7 @@
                         </DatePicker>
                     </StackLayout>
                     <StackLayout Orientation="Vertical" HorizontalOptions="End">
-                        <Picker x:Name="piker_methodesrecherches" ItemsSource="{Binding Liste_methodesrecherches}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding methoderecherche_selected}" Title="Méthode de recherche" TextColor="Green"/>
+                        <Picker x:Name="piker_methodesrecherches" ItemsSource="{Binding Liste_methodesrecherches}"  SelectedIndexChanged="Picker_SelectedIndexChanged_methodesrecherches" SelectedItem="{Binding Methoderecherche_selected}" Title="Méthode de recherche" TextColor="Green"/>
                         <Picker  x:Name="piker_typesrecherches" ItemsSource="{Binding Liste_typesrecherches}" SelectedItem="{Binding type_selected}" Title="Type de recherche" TextColor="Green"/>
                     </StackLayout>
                 </StackLayout>

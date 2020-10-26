@@ -49,7 +49,8 @@ namespace Gest.ViewModels
             this.nom_table_selected = "Membre";
 
             this.Champ_selected = Liste_champs[0];
-            this.methoderecherche_selected = Liste_methodesrecherches[0];
+            this.Liste_methodesrecherches = Manager_enumeration_methodes_recherches.getmethodes_recherches<Membre>(Database_Initialize.Database_configuration.Database_Initialize().Result.GetConnection(), Champ_selected);
+            this.Methoderecherche_selected = Liste_methodesrecherches[0];
             this.Type_selected = Liste_typesrecherches[0];
         }
         #endregion
@@ -66,10 +67,20 @@ namespace Gest.ViewModels
         public List<String> Liste_noms_tables { get { return new List<string>() { "Membre", "Activite" }; } }
         public String nom_table_selected { get; set; }
 
-        public List<String> Liste_methodesrecherches { get { return Enumerations_recherches.get_liste_methodesrecherches(); } }
-        public String methoderecherche_selected { get; set; }
+        private List<String> _liste_methodesrecherches;
+        public List<String> Liste_methodesrecherches { set { SetProperty(ref _liste_methodesrecherches, value); } get { return _liste_methodesrecherches; } }
 
-        public List<string> Liste_typesrecherches { get { return Enumerations_recherches.get_liste_typesrecherches(); } }
+        private String _methoderecherche_selected;
+
+        public String Methoderecherche_selected
+        {
+            get { return _methoderecherche_selected; }
+            set { SetProperty(ref _methoderecherche_selected, value); }
+        }
+
+
+
+        public List<string> Liste_typesrecherches { get { return Enumeration_type_recherche.get_liste_typesrecherches(); } }
 
         private String _type_selected;
 
@@ -167,7 +178,19 @@ namespace Gest.ViewModels
                 });
             }
         }
-                
+
+        public ICommand Command_methodes_recherches
+        {
+            get
+            {
+                return new Command(async () =>
+                {
+                    this.Liste_methodesrecherches = Manager_enumeration_methodes_recherches.getmethodes_recherches<Membre>((await Database_Initialize.Database_configuration.Database_Initialize()).GetConnection(), Champ_selected);
+                    this.Methoderecherche_selected = Liste_methodesrecherches[0];
+                });
+            }
+        }
+
         public ICommand Command_gestion_dictionnaire_champsmethodesrecherches
         {
             get
@@ -175,7 +198,7 @@ namespace Gest.ViewModels
                 return new Command(() =>
                 {
                     parametre_recherche_sql = new Manager_parametre_recherche_sql().update_parametre_recherche_sql(
-                       parametre_recherche_sql, this.nom_table_selected, this.Champ_selected, this.methoderecherche_selected
+                       parametre_recherche_sql, this.nom_table_selected, this.Champ_selected, this.Methoderecherche_selected
                        );
                 });
             }

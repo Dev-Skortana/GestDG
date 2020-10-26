@@ -63,9 +63,9 @@ namespace Gest.ViewModels
         public string title { get; set; } = "Page des visites des membres";
         private Parametre_recherche_sql parametre_recherche_sql = new Parametre_recherche_sql();
 
-        public List<String> Liste_methodesrecherches { get { return Enumerations_recherches.get_liste_methodesrecherches(); } }
+        public List<String> Liste_methodesrecherches { get { return Enumerations_methodes_recherches.get_liste_methodesrecherches(); } }
         public String methoderecherche_selected { get; set; }
-        public List<string> Liste_typesrecherches { get { return Enumerations_recherches.get_liste_typesrecherches(); } }
+        public List<string> Liste_typesrecherches { get { return Enumeration_type_recherche.get_liste_typesrecherches(); } }
         public String type_selected { get; set; }
 
         public List<String> Liste_noms_tables { get { return new List<string>() { "Membre", "Visite" }; } }

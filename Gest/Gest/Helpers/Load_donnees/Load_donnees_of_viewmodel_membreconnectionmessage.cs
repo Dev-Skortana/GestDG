@@ -83,13 +83,15 @@ namespace Gest.Helpers.Load_donnees
 
         private type_retour remove_membres_have_not_membreconnectionmessage(type_retour dictionnaire_origine)
         {
-            IDictionary<Membre, IEnumerable<Groupement_nombremessage>> dictionnaire_trie = (IDictionary<Membre, IEnumerable<Groupement_nombremessage>>)dictionnaire_origine;
-            foreach (var item in dictionnaire_trie)
+            IDictionary<Membre, IEnumerable<Groupement_nombremessage>> dictionnaire_copie = (IDictionary<Membre, IEnumerable<Groupement_nombremessage>>)dictionnaire_origine;
+            foreach (var item in dictionnaire_copie.Keys.ToList())
             {
-                if (item.Value.Count() != 0)
-                    dictionnaire_trie.Add(item.Key, item.Value);
+                if (dictionnaire_copie[item].Count() == 0)
+                {
+                    dictionnaire_copie.Remove(item);
+                }
             }
-            return (type_retour)dictionnaire_trie;
+            return (type_retour)dictionnaire_copie;
         }
     }
 }

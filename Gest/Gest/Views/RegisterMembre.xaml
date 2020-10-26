@@ -18,7 +18,8 @@
                 <Label IsVisible="{Binding isbusy}" Text="{Binding Pseudo}" TextColor="Green"/>
             </StackLayout>
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                <ActivityIndicator IsRunning="{Binding isbusy}" Color="Green" />
+                <ProgressBar HorizontalOptions="FillAndExpand" IsVisible="{Binding isbusy}" x:Name="progress_load_members" Progress="0" ProgressColor="Green"/>
+                <Label  PropertyChanged="Label_PropertyChanged" Text="{Binding pourcentage_avancement_progression,StringFormat='Chargement des membres à {0}%'}" IsVisible="{Binding isbusy}" TextColor="DarkGreen" FontSize="Large"/>
                 <Label IsVisible="{Binding isfinish_load}" Text="{Binding message_redirect}" TextColor="DarkGreen" FontSize="Large"/>
             </StackLayout>
             <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">

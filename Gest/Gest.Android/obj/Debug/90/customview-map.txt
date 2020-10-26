@@ -1,27 +1,27 @@
-@string/appbar_scrolling_view_behavior;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\flyoutcontent.xml
-@string/appbar_scrolling_view_behavior;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\rootlayout.xml
+@string/appbar_scrolling_view_behavior;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\flyoutcontent.xml
+@string/appbar_scrolling_view_behavior;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\rootlayout.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-alpha;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\anim\enterfromleft.xml
-alpha;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\anim\exittoleft.xml
-android.support.design.widget.AppBarLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.AppBarLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\rootlayout.xml
-android.support.design.widget.AppBarLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\shellcontent.xml
-android.support.design.widget.BottomNavigationView;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\bottomtablayout.xml
-android.support.design.widget.CoordinatorLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.CoordinatorLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\rootlayout.xml
-android.support.design.widget.CoordinatorLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\shellcontent.xml
-android.support.design.widget.TabLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\rootlayout.xml
+alpha;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\anim\enterfromleft.xml
+alpha;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\anim\exittoleft.xml
+android.support.design.widget.AppBarLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.AppBarLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\rootlayout.xml
+android.support.design.widget.AppBarLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\shellcontent.xml
+android.support.design.widget.BottomNavigationView;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\bottomtablayout.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\rootlayout.xml
+android.support.design.widget.CoordinatorLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\shellcontent.xml
+android.support.design.widget.TabLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\rootlayout.xml
 android.support.design.widget.TabLayout;obj\Debug\90\res\layout\tabbar.xml
-android.support.v7.widget.RecyclerView;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\flyoutcontent.xml
-android.support.v7.widget.Toolbar;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\rootlayout.xml
-android.support.v7.widget.Toolbar;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\shellcontent.xml
+android.support.v7.widget.RecyclerView;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\flyoutcontent.xml
+android.support.v7.widget.Toolbar;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\rootlayout.xml
+android.support.v7.widget.Toolbar;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\shellcontent.xml
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\toolbar.xml
 attr;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\2\jl\res\values\vpi__attrs.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
 bool;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\2\jl\res\values\vpi__defaults.xml
-cache-path;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+cache-path;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\48\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 CarouselView.FormsPlugin.Android.HorizontalViewPager;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\0\jl\res\layout\horizontal_viewpager.xml
 CarouselView.FormsPlugin.Android.VerticalViewPager;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\0\jl\res\layout\vertical_viewpager.xml
 color;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\2\jl\res\values\vpi__colors.xml
@@ -32,21 +32,21 @@ Com.ViewPagerIndicator.CirclePageIndicator;C:\Users\spart\OneDrive\Documents\Vis
 declare-styleable;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\2\jl\res\values\vpi__attrs.xml
 dimen;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\2\jl\res\values\vpi__defaults.xml
 enum;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\2\jl\res\values\vpi__attrs.xml
-external-cache-path;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-external-path;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-cache-path;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\48\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\48\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-FrameLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\bottomtablayout.xml
+FrameLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\bottomtablayout.xml
 ImageView;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\0\jl\res\layout\horizontal_viewpager.xml
 ImageView;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\0\jl\res\layout\vertical_viewpager.xml
 integer;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\2\jl\res\values\vpi__defaults.xml
 item;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\2\jl\res\values\vpi__styles.xml
-item;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\values\styles.xml
+item;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\values\styles.xml
 item;obj\Debug\90\res\values\styles.xml
 LinearLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\0\jl\res\layout\horizontal_viewpager.xml
 LinearLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\0\jl\res\layout\vertical_viewpager.xml
-LinearLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\bottomtablayout.xml
-paths;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\52\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+LinearLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\bottomtablayout.xml
+paths;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\48\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 RelativeLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\0\jl\res\layout\horizontal_viewpager.xml
 RelativeLayout;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\0\jl\res\layout\vertical_viewpager.xml
 resources;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\1\jl\res\values\strings.xml
@@ -55,20 +55,20 @@ resources;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Ges
 resources;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\2\jl\res\values\vpi__colors.xml
 resources;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\2\jl\res\values\vpi__defaults.xml
 resources;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\2\jl\res\values\vpi__styles.xml
-resources;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\values\styles.xml
+resources;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\values\styles.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\styles.xml
-set;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\anim\enterfromleft.xml
-set;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\anim\enterfromright.xml
-set;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\anim\exittoleft.xml
-set;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\anim\exittoright.xml
+set;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\anim\enterfromleft.xml
+set;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\anim\enterfromright.xml
+set;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\anim\exittoleft.xml
+set;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\anim\exittoright.xml
 string;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\1\jl\res\values\strings.xml
 string;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\2\jl\res\values\strings.xml
 style;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\2\jl\res\values\vpi__styles.xml
-style;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\values\styles.xml
+style;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\values\styles.xml
 style;obj\Debug\90\res\values\styles.xml
-translate;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\anim\enterfromleft.xml
-translate;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\anim\enterfromright.xml
-translate;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\anim\exittoleft.xml
-translate;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\anim\exittoright.xml
-xamarin.forms.platform.android.appcompat.FormsViewPager;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\53\jl\res\layout\rootlayout.xml
+translate;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\anim\enterfromleft.xml
+translate;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\anim\enterfromright.xml
+translate;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\anim\exittoleft.xml
+translate;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\anim\exittoright.xml
+xamarin.forms.platform.android.appcompat.FormsViewPager;C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest.Android\obj\Debug\90\lp\49\jl\res\layout\rootlayout.xml

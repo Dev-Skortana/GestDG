@@ -31,9 +31,15 @@ namespace Gest.Views
             }
         }
 
-        private void Picker_SelectedIndexChanged(object sender, EventArgs e)
+        private void Picker_SelectedIndexChanged_methodesrecherches(object sender, EventArgs e)
         {
             ((sender as BindableObject).BindingContext as MembreViewModel).Command_gestion_dictionnaire_champsmethodesrecherches.Execute(null);
+        }
+        private void Picker_SelectedIndexChanged_champs(object sender, EventArgs e)
+        {
+            ((sender as BindableObject).BindingContext as MembreViewModel).Command_methodes_recherches.Execute(null);
+            ((sender as BindableObject).BindingContext as MembreViewModel).Command_gestion_dictionnaire_champsmethodesrecherches.Execute(null);
+            
         }
     }
 }

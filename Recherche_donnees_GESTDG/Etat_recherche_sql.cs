@@ -6,11 +6,12 @@ using System.Text;
 
 namespace Recherche_donnees_GESTDG
 {
+                                                               /* En traveaux  */
     public class Etat_recherche_sql
     {
-        public List<String> Liste_methodesrecherches { get { return Enumerations_recherches.get_liste_methodesrecherches(); } }
+        public List<String> Liste_methodesrecherches { get { return Enumerations_methodes_recherches.get_liste_methodesrecherches(); } }
         public String methoderecherche_selected { get; set; }
-        public List<string> Liste_typesrecherches { get { return Enumerations_recherches.get_liste_typesrecherches(); } }
+        public List<string> Liste_typesrecherches { get { return Enumeration_type_recherche.get_liste_typesrecherches(); } }
         public String type_selected { get; set; }
         private List<String> _liste_champs;
         public List<String> Liste_champs { get { return _liste_champs; } private set { _liste_champs = value; } }

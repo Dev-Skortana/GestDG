@@ -32,7 +32,7 @@ namespace Gest.ViewModels
         #region Variables
         private List<Parametre_recherche_sql> _liste_parametres_recherche_sql;
         public List<Parametre_recherche_sql> Liste_parametres_recherche_sql { get{ return _liste_parametres_recherche_sql; } set { SetProperty(ref _liste_parametres_recherche_sql,value); } }
-        private List<String> _liste_methodesrecherches=Enumerations_recherches.get_liste_methodesrecherches();
+        private List<String> _liste_methodesrecherches= Enumerations_methodes_recherches.get_liste_methodesrecherches();
         public List<String> Liste_methodesrecherches { get { return _liste_methodesrecherches; } }
         #endregion
 

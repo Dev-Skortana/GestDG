@@ -50,11 +50,5 @@ namespace Gest.Views
                 ((sender as BindableObject).BindingContext as MembreActiviteViewModel).Command_switch_source.Execute(null);
             }
         }
-
-        private void piker_typesrecherches_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-            
-        }
     }
 }

@@ -8,7 +8,7 @@
              xmlns:behaviors="clr-namespace:Gest.Behaviors_Controls" prism:ViewModelLocator.AutowireViewModel="True">
     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-            <Grid >
+            <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -17,39 +17,41 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
+                    <RowDefinition/>
                     <RowDefinition />
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Label Text="Début :" Grid.Row="0" Grid.Column="0"/>
-                <DatePicker Format="yyyy/MM/dd" Grid.Row="0" Grid.Column="1"  HorizontalOptions="FillAndExpand" >
+                <Picker Grid.Row="0" Grid.ColumnSpan="5" Title="Champ de recherche :" SelectedItem="{Binding Name_of_champ_date}" ItemsSource="{Binding Names_of_champs_dates}" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Début :" Grid.Row="1" Grid.Column="0"/>
+                <DatePicker Format="yyyy/MM/dd" Grid.Row="1" Grid.Column="1" >
                     <DatePicker.Behaviors>
                         <behaviors:Behavior_Datepiker Command="{Binding Command_update_dateandtime_debut}"/>
                     </DatePicker.Behaviors>
                 </DatePicker>
-                <TimePicker x:Name="saisie_heuredebut"  IsVisible="False" Grid.Row="0" Grid.Column="2" Format="HH:mm">
+                <TimePicker x:Name="saisie_heuredebut"  IsVisible="False" Grid.Row="1" Grid.Column="2" Format="HH:mm">
                     <TimePicker.Behaviors>
                         <behaviors:Behavior_Pikertime Command="{Binding Command_update_dateandtime_debut}"/>
                     </TimePicker.Behaviors>
                 </TimePicker>
-                <CheckBox CheckedChanged="CheckBox_heuredebut_CheckedChanged" Grid.Row="0" Grid.Column="3"/>
-                <Label Text="Inclure l'heure" Grid.Row="0" Grid.Column="4"/>
+                <CheckBox CheckedChanged="CheckBox_heuredebut_CheckedChanged" Grid.Row="1" Grid.Column="3"/>
+                <Label Text="Inclure l'heure" Grid.Row="1" Grid.Column="4"/>
                 
-                <Label Text="Fin :" Grid.Row="1" Grid.Column="0"/>
-                <DatePicker Format="yyyy/MM/dd" Grid.Row="1" Grid.Column="1">
+                <Label Text="Fin :" Grid.Row="2" Grid.Column="0"/>
+                <DatePicker Format="yyyy/MM/dd" Grid.Row="2" Grid.Column="1">
                     <DatePicker.Behaviors>
                         <behaviors:Behavior_Datepiker Command="{Binding Command_update_dateandtime_fin}"/>
                     </DatePicker.Behaviors>
                 </DatePicker>
-                <TimePicker x:Name="saisie_heurefin" IsVisible="False" Grid.Row="1" Grid.Column="2" Format="HH:mm">
+                <TimePicker x:Name="saisie_heurefin" IsVisible="False" Grid.Row="2" Grid.Column="2" Format="HH:mm">
                     <TimePicker.Behaviors>
                         <behaviors:Behavior_Pikertime Command="{Binding Command_update_dateandtime_fin}"/>
                     </TimePicker.Behaviors>
                 </TimePicker>
-                <CheckBox CheckedChanged="CheckBox_heurefin_CheckedChanged" Grid.Row="1" Grid.Column="3" />
-                <Label Text="Inclure l'heure" Grid.Row="1" Grid.Column="4"/>
+                <CheckBox CheckedChanged="CheckBox_heurefin_CheckedChanged" Grid.Row="2" Grid.Column="3" />
+                <Label Text="Inclure l'heure" Grid.Row="2" Grid.Column="4"/>
 
-                <Button Grid.Row="2" Grid.ColumnSpan="5"  Text="Lancer la recherche" BackgroundColor="Green" TextColor="GreenYellow" Command="{Binding Navigation_Goback}"/>
+                <Button Grid.Row="3" Grid.ColumnSpan="5"  Text="Lancer la recherche" BackgroundColor="Green" TextColor="GreenYellow" Command="{Binding Navigation_Goback}"/>
             </Grid>
         </StackLayout>
     </StackLayout>

@@ -5,6 +5,8 @@ using Prism.Navigation;
 using Prism.Commands;
 using Gest.Views;
 using Gest.Services.Classes;
+using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace Gest.ViewModels
 {
@@ -90,6 +92,24 @@ namespace Gest.ViewModels
                 return new DelegateCommand(async () => { await service_navigation.NavigateAsync("FastMembre"); });
             }
         }
+
+        public DelegateCommand command_clear_all_members_and_them_infos
+        {
+            get
+            {
+                return new DelegateCommand(async ()=> {
+                    if (await Application.Current.MainPage.DisplayAlert("Confirmation","en appuyant sur \"OK\" tous les membres et leurs informations seront supprimer.\n\t Cette action est ireverssible", "OK", "Annuler")){
+                        this.clear_all_members_and_them_infos();
+                    }
+                });
+            }
+        }
+
+        private void clear_all_members_and_them_infos()
+        {
+            Service_database service_database = new Service_database();
+            service_database.clear_all_members_and_them_infos();
+        }
         #endregion
 
         #region Methodes_naviguation_PRISM
@@ -99,8 +119,8 @@ namespace Gest.ViewModels
         }
 
         public async void OnNavigatedTo(INavigationParameters parameters)
-        {
-         
+        {       
+                
         }
         #endregion
     }

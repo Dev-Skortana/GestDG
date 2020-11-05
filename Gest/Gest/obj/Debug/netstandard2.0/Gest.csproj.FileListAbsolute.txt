@@ -53,3 +53,4 @@ C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj
 C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Debug\netstandard2.0\Gest.csproj.CopyComplete
 C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Debug\netstandard2.0\Gest.dll
 C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Debug\netstandard2.0\Gest.pdb
+C:\Users\spart\OneDrive\Documents\Visual Studio 2019\Projects\Gest\Gest\Gest\obj\Debug\netstandard2.0\Views\Usercontroles\Activityindicateure.xaml.g.cs

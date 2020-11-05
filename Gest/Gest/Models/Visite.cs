@@ -17,6 +17,8 @@ namespace Gest.Models
         [SQLite.PrimaryKey,SQLite.AutoIncrement]
         public int visite_id { get; set; }
 
+        public DateTime date_enregistrement { get; set; }
+
         [ManyToOne]
         public Membre membre { get; set; }
         [SQLite.NotNull,ForeignKey(typeof(Membre))]
@@ -24,7 +26,6 @@ namespace Gest.Models
         [ManyToOne]
         public Connexion connexion { get; set; }
         [SQLite.NotNull, ForeignKey(typeof(Connexion))]
-        public DateTime connexion_date { get; set; }
-        public DateTime date_enregistrement { get;}
+        public DateTime connexion_date { get; set; }    
     }
 }

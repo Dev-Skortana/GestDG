@@ -134,7 +134,7 @@ namespace Gest.ViewModels
             {
                 return new Command(()=> {
                     NavigationParameters parametre = new NavigationParameters();
-                    parametre.Add("champ", Champ_selected);
+                    parametre.Add("name_table", nom_table_selected);
                     service_navigation.NavigateAsync("Popup_search_betweendates", parametre);
                 });
             }
@@ -169,7 +169,7 @@ namespace Gest.ViewModels
             this.Isloading = true;
             IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_sql = new Gest.Helpers.Generate_dictionnaire_parametresrecherche.Generate_parametresrecherche().generate(parametres_recherches_sql);
             Load_donnees<IEnumerable<Membre>> load_donnees = new Load_donnees_of_viewmodel_membre<IEnumerable<Membre>>(service_membre);
-            this.Liste_membres = await load_donnees.get_donnees(dictionnaire_parametres_sql);  
+            this.Liste_membres = await load_donnees.get_donnees(dictionnaire_parametres_sql);
             this.Isloading = false;
         }
         #endregion

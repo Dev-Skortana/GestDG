@@ -61,6 +61,14 @@ namespace Gest.ViewModels
 
 
         public string title { get; set; } = "Page des visites des membres";
+
+        private Boolean _isloading = false;
+        public Boolean Isloading
+        {
+            get { return _isloading; }
+            set { SetProperty(ref _isloading, value); }
+        }
+
         private Parametre_recherche_sql parametre_recherche_sql = new Parametre_recherche_sql();
 
         public List<String> Liste_methodesrecherches { get { return Enumerations_methodes_recherches.get_liste_methodesrecherches(); } }
@@ -104,10 +112,11 @@ namespace Gest.ViewModels
         #region Methode_priver
         private async Task launch_load(IEnumerable parametres_recherches_sql)
         {
-            IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_sql = new Gest.Helpers.Generate_dictionnaire_parametresrecherche.Generate_parametresrecherche().generate(parametres_recherches_sql);
-            
+            this.Isloading = true;
+            IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_sql = new Gest.Helpers.Generate_dictionnaire_parametresrecherche.Generate_parametresrecherche().generate(parametres_recherches_sql);   
             Load_donnees<IDictionary<Membre, IEnumerable<visite_custom>>> load_donnees = new Load_donnees_of_viewmodel_membrevisite<IDictionary<Membre, IEnumerable<visite_custom>>>(service_membre, service_visite);
             this.Dictionnaire_membre_visite = await load_donnees.get_donnees(dictionnaire_parametres_sql);
+            this.Isloading = false;
         }         
         #endregion
 
@@ -148,7 +157,7 @@ namespace Gest.ViewModels
             {
                 return new Command(() => {
                     NavigationParameters parametre = new NavigationParameters();
-                    parametre.Add("champ", Champ_selected);
+                    parametre.Add("name_table", nom_table_selected);
                     service_navigation.NavigateAsync("Popup_search_betweendates", parametre);
                 });
             }

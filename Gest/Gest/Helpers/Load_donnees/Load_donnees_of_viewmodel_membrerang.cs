@@ -72,15 +72,15 @@ namespace Gest.Helpers.Load_donnees
 
         private Boolean check_if_tableactive_is_only_membre()
         {
-            if ((this.dictionnaire_parametres_recherche.Count == 1 && dictionnaire_parametres_recherche.ContainsKey("Rang")))
+            if ((this.dictionnaire_parametres_recherche.Count == 1 && dictionnaire_parametres_recherche.ContainsKey("Membre")))
                 return true;
             else
                 return false;
         }
 
         private type_retour remove_rang_havenot_membre(IEnumerable<Rang> rangs_source)
-        {
-            return (type_retour)rangs_source.Where((item) => item.liste_membres.Count > 0);
+        {         
+            return (type_retour)rangs_source.Where((rang)=>rang.liste_membres.Count>0);            
         }
     }
 }

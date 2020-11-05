@@ -1,13 +1,18 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using Gest.Services.Interfaces;
 using Prism.Mvvm;
 using Prism.Navigation;
+using Gest.Services.Classes;
 using Recherche_donnees_GESTDG;
 using Recherche_donnees_GESTDG.enumeration;
 using Xamarin.Forms;
+using System.Runtime.CompilerServices;
+using Gest.Models;
+using System.Linq;
+
 namespace Gest.ViewModels
 {
     class Popup_search_betweendatesViewModel:BindableBase,INavigationAware
@@ -19,8 +24,22 @@ namespace Gest.ViewModels
         #region Variables
         private List<Parametre_recherche_sql> liste_parametres_recherches_sql = new List<Parametre_recherche_sql>();
 
-        private String nom_champ_date;
 
+        private List<String> _names_of_champs_dates;
+
+        public List<String> Names_of_champs_dates
+        {
+            get { return _names_of_champs_dates; }
+            set { SetProperty(ref _names_of_champs_dates,value); }
+        }
+
+         public String Name_of_champ_date { get; set; }
+        
+
+        private String table_name_instring;
+        
+       
+        
         private DateTime _date_debut;
 
         public DateTime Date_debut
@@ -94,11 +113,13 @@ namespace Gest.ViewModels
             get
             {
                 return new Command(async ()=> {
-                    liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() { Champ = this.nom_champ_date, Valeur = this.Date_debut, Methode_recherche = Enumerations_methodes_recherches.methodes_recherches.Superieure.ToString() });
-                    liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() { Champ = this.nom_champ_date, Valeur = this.Date_fin, Methode_recherche = Enumerations_methodes_recherches.methodes_recherches.Inferieure.ToString() });
-                    NavigationParameters parametres = new NavigationParameters();
-                    parametres.Add("parametres_recherches_sql", liste_parametres_recherches_sql);
-                    await service_navigation.GoBackAsync(parametres);
+                    if (String.IsNullOrWhiteSpace(this.Name_of_champ_date)==false) {
+                        liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() { Nom_table = this.table_name_instring, Champ = this.Name_of_champ_date, Valeur = this.Date_debut, Methode_recherche = Enumerations_methodes_recherches.methodes_recherches.Superieure.ToString() });
+                        liste_parametres_recherches_sql.Add(new Parametre_recherche_sql() { Nom_table = this.table_name_instring, Champ = this.Name_of_champ_date, Valeur = this.Date_fin, Methode_recherche = Enumerations_methodes_recherches.methodes_recherches.Inferieure.ToString() });
+                        NavigationParameters parametres = new NavigationParameters();
+                        parametres.Add("parametres_recherches_sql", liste_parametres_recherches_sql);
+                        await service_navigation.GoBackAsync(parametres);
+                    }
                 });
             }
         }
@@ -110,9 +131,10 @@ namespace Gest.ViewModels
             
         }
 
-        public void OnNavigatedTo(INavigationParameters parameters)
-        {
-            this.nom_champ_date = (String)parameters["champ"];
+        public async void OnNavigatedTo(INavigationParameters parameters)
+        {  
+            this.table_name_instring = (String)parameters["name_table"];
+            this.Names_of_champs_dates = (await new Service_database().get_name_champ_of_type_datetime_intable(this.table_name_instring)).ToList();
         }
         #endregion
 

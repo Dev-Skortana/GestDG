@@ -17,6 +17,8 @@
                     <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Voir les rangs des membres." Command="{Binding getpage_showmembrerang}"/>
                     <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Nombres messages des membres aux dates de connexions." Command="{Binding getpage_postenbmessage}"/>
                     <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Vu rapide des membres." Command="{Binding getpage_showviewfastmembre}"/>
+
+                    <Button BackgroundColor="GhostWhite" TextColor="Green" Text="Supprimer tous les membres et leurs informations." Command="{Binding command_clear_all_members_and_them_infos}" VerticalOptions="End"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

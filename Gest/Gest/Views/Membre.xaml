@@ -13,6 +13,7 @@
              xmlns:controls_imagecircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:models="clr-namespace:Gest.Models"
              xmlns:viewmodels="clr-namespace:Gest.ViewModels"
+             xmlns:usercontroles="clr-namespace:Gest.Views.Usercontroles"
              x:DataType="viewmodels:MembreViewModel" >
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -62,13 +63,7 @@
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
-            <ActivityIndicator Color="Green" IsRunning="False">
-                <ActivityIndicator.Triggers>
-                    <DataTrigger TargetType="ActivityIndicator" Binding="{Binding Path=Isloading}" Value="True">
-                        <Setter Property="IsRunning" Value="True"/>
-                    </DataTrigger>
-                </ActivityIndicator.Triggers>
-            </ActivityIndicator>
+            <usercontroles:Activityindicateure Isloading="{Binding Isloading}"/>
             <controls_carousel:CarouselViewControl Orientation="Horizontal" ItemsSource="{Binding Liste_membres}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <controls_carousel:CarouselViewControl.ItemTemplate>
                     <DataTemplate x:DataType="models:Membre">

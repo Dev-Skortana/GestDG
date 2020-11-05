@@ -56,6 +56,14 @@ namespace Gest.ViewModels
         }
 
         public string title { get; set; } = "Page messages des membres";
+
+        private Boolean _isloading = false;
+        public Boolean Isloading
+        {
+            get { return _isloading; }
+            set { SetProperty(ref _isloading, value); }
+        }
+
         private Parametre_recherche_sql parametre_recherche_sql = new Parametre_recherche_sql();
 
         public List<String> Liste_methodesrecherches { get { return Enumerations_methodes_recherches.get_liste_methodesrecherches(); } }
@@ -113,7 +121,7 @@ namespace Gest.ViewModels
             {
                 return new Command(() => {
                     NavigationParameters parametre = new NavigationParameters();
-                    parametre.Add("champ", Champ_selected);
+                    parametre.Add("name_table", nom_table_selected);
                     service_navigation.NavigateAsync("Popup_search_betweendates", parametre);
                 });
             }
@@ -200,9 +208,11 @@ namespace Gest.ViewModels
         #region Methode_priver
         private async Task load(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
+            this.Isloading = true;
             IDictionary<String, IEnumerable<Parametre_recherche_sql>> dictionnaire_parametres_sql = new Gest.Helpers.Generate_dictionnaire_parametresrecherche.Generate_parametresrecherche().generate(parametres_recherches_sql);
             Load_donnees<IDictionary<Membre, IEnumerable<Groupement_nombremessage>>> load_donnees = new Load_donnees_of_viewmodel_membreconnectionmessage<IDictionary<Membre, IEnumerable<Groupement_nombremessage>>>(service_membre, service_membre_connexion_message);
-            this.Dictionnaire_membres_messages = await load_donnees.get_donnees(dictionnaire_parametres_sql);    
+            this.Dictionnaire_membres_messages = await load_donnees.get_donnees(dictionnaire_parametres_sql);
+            this.Isloading = false;
         }
 
         public async Task navigation_Goback_Popup_searchbetweendates(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)

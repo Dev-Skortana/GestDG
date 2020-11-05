@@ -10,7 +10,8 @@
               xmlns:controls_imagecircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
               xmlns:models="clr-namespace:Gest.Models"
               xmlns:viewmodels="clr-namespace:Gest.ViewModels"
-              x:DataType="viewmodels:RangMembreViewModel" 
+              xmlns:usercontroles="clr-namespace:Gest.Views.Usercontroles"
+              x:DataType="viewmodels:RangMembreViewModel"        
               >
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -60,6 +61,7 @@
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
+            <usercontroles:Activityindicateure Isloading="{Binding Isloading}"/>
             <controls_carousel:CarouselViewControl ItemsSource="{Binding Liste_rangs}" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                     <controls_carousel:CarouselViewControl.ItemTemplate>
                         <DataTemplate x:DataType="models:Rang">

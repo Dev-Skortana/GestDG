@@ -13,6 +13,7 @@
              xmlns:convertisseure="clr-namespace:Gest.Convertisseurs"
              prism:ViewModelLocator.AutowireViewModel="True"
              xmlns:models="clr-namespace:Gest.Models"
+             xmlns:usercontroles="clr-namespace:Gest.Views.Usercontroles"
              x:DataType="viewmodels:MembreActiviteViewModel" 
              >
     <ContentPage.Resources>
@@ -90,10 +91,11 @@
                                 </DataTrigger>
                             </Picker.Triggers>
                         </Picker>
-                        <Picker  x:Name="piker_typesrecherches" ItemsSource="{Binding Liste_typesrecherches}" SelectedItem="{Binding Type_selected}" SelectedIndexChanged="piker_typesrecherches_SelectedIndexChanged" Title="Type de recherche" TextColor="Green"/>
+                        <Picker  x:Name="piker_typesrecherches" ItemsSource="{Binding Liste_typesrecherches}" SelectedItem="{Binding Type_selected}" Title="Type de recherche" TextColor="Green"/>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
+            <usercontroles:Activityindicateure Isloading="{Binding Isloading}"/>
             <controls_carousel:CarouselViewControl ItemsSource="{Binding membres}" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                 <controls_carousel:CarouselViewControl.ItemTemplate>
                     <DataTemplate x:DataType="models:Membre">

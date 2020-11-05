@@ -12,6 +12,7 @@
              xmlns:convertisseure="clr-namespace:Gest.Convertisseurs"
              xmlns:prism="http://prismlibrary.com"  
              prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:usercontroles="clr-namespace:Gest.Views.Usercontroles"
              >
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Faire une recherche entre deux date"
@@ -49,6 +50,7 @@
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
+            <usercontroles:Activityindicateure Isloading="{Binding Isloading}"/>
             <controls_carousel:CarouselViewControl PositionSelected="CarouselViewControl_PositionSelected"  ItemsSource="{Binding Dictionnaire_membres_messages}" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ArrowsBackgroundColor="Green">
                     <controls_carousel:CarouselViewControl.ItemTemplate>
                         <DataTemplate>

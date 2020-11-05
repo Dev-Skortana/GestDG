@@ -9,6 +9,7 @@
              xmlns:behavior="clr-namespace:Gest.Behaviors_Controls"
              xmlns:prism="http://prismlibrary.com" xmlns:convertisseure="clr-namespace:Gest.Convertisseurs"
              prism:ViewModelLocator.AutowireViewModel="True"    
+             xmlns:usercontroles="clr-namespace:Gest.Views.Usercontroles"
              >
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -113,6 +114,7 @@
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
+            <usercontroles:Activityindicateure Isloading="{Binding Isloading}"/>
             <controls_carousel:CarouselViewControl ItemsSource="{Binding Dictionnaire_membre_visite}" Orientation="Horizontal" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ArrowsBackgroundColor="Red">
                 <controls_carousel:CarouselViewControl.ItemTemplate>
                     <DataTemplate>

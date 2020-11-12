@@ -22,7 +22,10 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-                <Picker Grid.Row="0" Grid.ColumnSpan="5" Title="Champ de recherche :" SelectedItem="{Binding Name_of_champ_date}" ItemsSource="{Binding Names_of_champs_dates}" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Source :" Grid.Row="0" Grid.Column="0" />
+                <Picker Grid.Row="0" Grid.Column="1" Title="Source :" SelectedItem="{Binding Name_of_table}" ItemsSource="{Binding Names_of_tables}" SelectedIndexChanged="Picker_Names_of_tables_SelectedIndexChanged" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="Champ :" Grid.Row="0" Grid.Column="2"/>
+                <Picker Grid.Row="0" Grid.Column="3" Title="Champ de recherche :" SelectedItem="{Binding Name_of_champ_date}" ItemsSource="{Binding Names_of_champs_dates}" HorizontalOptions="CenterAndExpand"/>
                 <Label Text="Début :" Grid.Row="1" Grid.Column="0"/>
                 <DatePicker Format="yyyy/MM/dd" Grid.Row="1" Grid.Column="1" >
                     <DatePicker.Behaviors>

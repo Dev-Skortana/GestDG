@@ -36,7 +36,7 @@ namespace Gest.Services.Classes
         public async Task<bool> insert(Activite activite)
         {
             var connection = await Database_configuration.Database_Initialize();
-            var resultat = await connection.InsertAsync(activite); //connection.ExecuteAsync($"insert into Activites(membre_pseudo,libelle_activite) values('{activite.membre_pseudo}','{activite.libelle_activite}')");
+            var resultat = await connection.InsertAsync(activite);
             return (resultat >= 1);
         }
 

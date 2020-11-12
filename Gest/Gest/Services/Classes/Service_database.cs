@@ -25,7 +25,7 @@ namespace Gest.Services.Classes
             await connection.DeleteAllAsync<Message>();
         }
 
-        public async Task<IEnumerable<String>>get_name_champ_of_type_datetime_intable(String name_table)
+        public async Task<IEnumerable<String>>get_names_champs_of_type_datetime_intable(String name_table)
         {
             var file_database = await DependencyService.Get<ISQLiteAccess>().GetAsyncConnection();
             var connection = new SQLite.SQLiteAsyncConnection(file_database);

@@ -23,7 +23,8 @@
                 <Label IsVisible="{Binding isfinish_load}" Text="{Binding message_redirect}" TextColor="DarkGreen" FontSize="Large"/>
             </StackLayout>
             <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
-                <Button IsVisible="{Binding isbusy, Converter={StaticResource convert}}" IsEnabled="{Binding isfinish_load,Converter={StaticResource convert}}" Text="Lancer le chargement" TextColor="Green" BackgroundColor="WhiteSmoke" Command="{Binding chargement}"/>
+                <Button x:Name="button_start_load" IsVisible="{Binding isbusy, Converter={StaticResource convert}}" Text="Lancer le chargement" TextColor="Green" BackgroundColor="WhiteSmoke" Command="{Binding chargement}"/>
+                <Button IsVisible="{Binding isbusy}" Text="Annuler" TextColor="Red" BackgroundColor="WhiteSmoke" Command="{Binding canceled_load}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

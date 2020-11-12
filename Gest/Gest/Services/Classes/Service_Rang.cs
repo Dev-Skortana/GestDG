@@ -37,7 +37,7 @@ namespace Gest.Services.Classes
         public async Task<bool> insert(Rang rang)
         {
             var connection = await Database_configuration.Database_Initialize();
-            var nombres_records = await connection.InsertAsync(rang);//connection.ExecuteAsync($"insert into Rangs(nom_rang,url_rang) values('{rang.nom_rang}','{rang.url_rang}')"); /*connection.InsertAsync(rang);*/
+            var nombres_records = await connection.InsertAsync(rang);
             return (nombres_records >= 1);
         }
 

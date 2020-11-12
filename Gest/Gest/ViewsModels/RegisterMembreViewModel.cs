@@ -21,6 +21,7 @@ using Gest.Views;
 using Gest.Interface_File_Image_Access;
 using Recherche_donnees_GESTDG.enumeration;
 using Recherche_donnees_GESTDG;
+using DryIoc;
 
 namespace Gest.ViewModels
 {
@@ -229,8 +230,7 @@ namespace Gest.ViewModels
         }
         #endregion
 
-        #region Methode_priver
-        /* Méthode temporaire elle remplace les triggers d'interdiction de doublon*/
+        #region Methode_priver   
         private async Task<Boolean> check_doublon_insert<service_table>(service_table service, Object donnees)
         {
             Boolean reponse = false;
@@ -293,7 +293,7 @@ namespace Gest.ViewModels
             return await Task.FromResult(reponse);
         }
 
-        private async Task register()
+        private async Task register(CancellationToken token)
         {
             /* Risque d'obtention d'informations non Syncroniser */
             HtmlDocument document_dynamixgaming_page_memberlist = new HtmlDocument();
@@ -401,7 +401,6 @@ namespace Gest.ViewModels
                         }
                     }
 
-
                     if (reponse_insert_rang && await check_doublon_insert<IService_Rang>(new Service_Rang(), this.Rang) == false)
                     {
                         service_rang = new Service_Rang();
@@ -448,6 +447,12 @@ namespace Gest.ViewModels
                     this.Message = null;
                     this.Membreconnexionmessage = null;       
                     await Task.Delay(1000);
+                    if (token.IsCancellationRequested)
+                    {
+                        this.Pseudo = default(String);
+                        this.Image = default(String);
+                        token.ThrowIfCancellationRequested();
+                    }
                 }
             }
           }
@@ -463,23 +468,51 @@ namespace Gest.ViewModels
         #endregion
 
         #region Commande_MVVM
+        CancellationTokenSource token_source = null;
         public Command chargement
         {
             get
             {
                 return new Command(async () =>
                 {
-
-                    this.isbusy = true;
-                    await register();
-                    this.isbusy = false;
-                    this.isfinish_load = true;
-                    await Application.Current.MainPage.DisplayAlert("Fin de chargement !","En appuyant sur OK vous allez étre rediriger dans quelques secondes","OK");
-                    await this.redirection_compte_rebour(3);
-                    await this.service_navigation.NavigateAsync("/BaseNavigationPage/MasterPage");
+                    token_source = new CancellationTokenSource();
+                    var token=token_source.Token;
+                    try
+                    {
+                        this.isbusy = true;
+                        await register(token);
+                        this.isbusy = false;
+                        this.isfinish_load = true;
+                        await Application.Current.MainPage.DisplayAlert("Fin de chargement !", "En appuyant sur OK vous allez étre rediriger dans quelques secondes", "OK");
+                        await this.redirection_compte_rebour(3);
+                        await this.service_navigation.NavigateAsync("/BaseNavigationPage/MasterPage");
+                    }
+                    catch (OperationCanceledException operation_canceled)
+                    {
+                        this.isbusy = false;
+                        if ((await Application.Current.MainPage.DisplayAlert("Question","Le chargement à été annuler.\nvoulez-vous que les membres enregistrer soit conserver ?","Conserver","Ne pas conserver"))==false)
+                        {
+                            Service_database service_database = new Service_database();
+                            service_database.clear_all_members_and_them_infos();
+                            await Application.Current.MainPage.DisplayAlert("Confirmation","Les membres ont été supprimer","Ok");
+                        }
+                    }
+                    finally
+                    {
+                        token_source.Dispose();
+                    }
                 });
             }
         }
+
+        public Command canceled_load
+        {
+            get
+            {
+                return new Command(() => token_source.Cancel()); ;
+            }
+        }
+
         #endregion
 
         #region Methode_navigation_PRISM

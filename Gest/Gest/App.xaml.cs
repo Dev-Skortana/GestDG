@@ -13,9 +13,6 @@ using Rg.Plugins.Popup.Contracts;
 using Rg.Plugins.Popup.Services;
 using Prism.Navigation;
 using Xamarin.Forms;
-
-using Gest.Helpers;
-
 namespace Gest
 {
    [AutoRegisterForNavigation]
@@ -52,6 +49,8 @@ namespace Gest
             containerRegistry.Register<IService_Rang, Service_Rang>();
             containerRegistry.Register<IService_Visite, Service_Visite>();
         }
+
+        
     }
        
 }

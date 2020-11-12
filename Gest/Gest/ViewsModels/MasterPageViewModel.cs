@@ -7,6 +7,7 @@ using Gest.Views;
 using Gest.Services.Classes;
 using Xamarin.Forms;
 using Xamarin.Essentials;
+using System.Threading.Tasks;
 
 namespace Gest.ViewModels
 {
@@ -113,15 +114,35 @@ namespace Gest.ViewModels
         #endregion
 
         #region Methodes_naviguation_PRISM
+
+        
         public void OnNavigatedFrom(INavigationParameters parameters)
         {
             
         }
 
         public async void OnNavigatedTo(INavigationParameters parameters)
-        {       
-                
+        {
+            var permission_storageread = await CheckAndRequestPermissionAsync(new Permissions.StorageRead());
+            if (permission_storageread != PermissionStatus.Granted)
+                await Application.Current.MainPage.DisplayAlert("Explication", "Pour pouvoir acceder à la base de données des membres, vous devez autoriser l'accées en lecture au stockage", "Compris !");
+            var permission_storagewrite = await CheckAndRequestPermissionAsync(new Permissions.StorageWrite());
+            if (permission_storagewrite != PermissionStatus.Granted)
+                await Application.Current.MainPage.DisplayAlert("Explication", "Pour pouvoir acceder à la base de données des membres, vous devez autoriser l'accées en écriture au stockage", "Compris !");
+
         }
         #endregion
+
+        private async Task<PermissionStatus> CheckAndRequestPermissionAsync<T>(T permission)
+            where T : Permissions.BasePermission
+        {
+            var status = await permission.CheckStatusAsync();
+            if (status != PermissionStatus.Granted)
+            {
+                status = await permission.RequestAsync();
+            }
+
+            return status;
+        }
     }
 }

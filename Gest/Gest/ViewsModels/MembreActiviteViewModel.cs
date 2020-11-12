@@ -163,7 +163,7 @@ namespace Gest.ViewModels
             {
                 return new Command(() => {
                     NavigationParameters parametre = new NavigationParameters();
-                    parametre.Add("name_table", nom_table_selected);
+                    parametre.Add("names_tables", this.Liste_noms_tables);
                     service_navigation.NavigateAsync("Popup_search_betweendates", parametre);
                 });
             }

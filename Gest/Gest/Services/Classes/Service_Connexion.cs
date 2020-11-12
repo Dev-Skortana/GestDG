@@ -34,7 +34,7 @@ namespace Gest.Services.Classes
         public async Task<bool> insert(Connexion connexion)
         {
             var connexion_database = await Database_configuration.Database_Initialize();
-            var resultat = await connexion_database.InsertAsync(connexion); //connexion_database.ExecuteAsync($"insert into Connexions(date_connexion) values('{connexion.date_connexion.ToString("yyyy-MM-dd HH:mm")}')");
+            var resultat = await connexion_database.InsertAsync(connexion);
             return (resultat >= 1);
         }
 

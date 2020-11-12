@@ -104,10 +104,11 @@ namespace Gest.ViewModels
         {
             get
             {
-                return new Command(() => { 
+                return new Command(() => {
                     NavigationParameters parametre = new NavigationParameters();
-                    parametre.Add("name_table", nom_table_selected);                               
+                    parametre.Add("names_tables", this.Liste_noms_tables);
                     service_naviguation.NavigateAsync("Popup_search_betweendates", parametre);
+
                 });
             }
         }

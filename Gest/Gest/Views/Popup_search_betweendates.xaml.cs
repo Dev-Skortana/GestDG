@@ -29,5 +29,9 @@ namespace Gest.Views
             saisie_heurefin.IsVisible = (sender as CheckBox).IsChecked ? true : false;
         }
 
+        private void Picker_Names_of_tables_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ((sender as BindableObject).BindingContext as Popup_search_betweendatesViewModel).Command_get_names_of_champs_on_tables_selected.Execute(null);
+        }
     }
 }

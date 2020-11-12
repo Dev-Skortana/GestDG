@@ -35,7 +35,7 @@ namespace Gest.Services.Classes
         public async Task<bool> insert(Message message)
         {
             var connection = await Database_configuration.Database_Initialize();
-            var nombres_records = await connection.InsertAsync(message);//connection.ExecuteAsync($"insert into Messages(nb_message) values({message.nb_message})"); /*connection.InsertAsync(message);*/
+            var nombres_records = await connection.InsertAsync(message);
             return (nombres_records >= 1);
         }
 

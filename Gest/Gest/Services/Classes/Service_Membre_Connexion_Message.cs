@@ -7,6 +7,7 @@ using Gest.Services.Interfaces;
 using Gest.Database_Initialize;
 using Recherche_donnees_GESTDG;
 using Recherche_donnees_GESTDG.enumeration;
+using SQLite;
 
 namespace Gest.Services.Classes
 {
@@ -36,8 +37,19 @@ namespace Gest.Services.Classes
         public async Task<bool> insert(Membre_Connexion_Message membre_Connexion_Message)
         {
             var connexion = await Database_configuration.Database_Initialize();
-            var resultat = await connexion.InsertAsync(membre_Connexion_Message);
-            return (resultat >= 1);
+            var nombre_record = 0;
+            try
+            {
+                nombre_record = await connexion.InsertAsync(membre_Connexion_Message);
+            }
+            catch (SQLiteException exception)
+            {
+                if (exception.Result != SQLite3.Result.Constraint)
+                {
+                    throw SQLiteException.New(exception.Result, exception.InnerException.ToString());
+                }
+            }
+            return (nombre_record >= 1);
         }
 
         public async Task<bool> update(Membre_Connexion_Message membre_Connexion_Message)

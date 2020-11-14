@@ -19,8 +19,8 @@ namespace Gest.Services.Classes
             await connection.DeleteAllAsync<Visite>();
             await connection.DeleteAllAsync<Membre_Connexion_Message>();
             await connection.DeleteAllAsync<Activite>();
-            await connection.DeleteAllAsync<Rang>();
             await connection.DeleteAllAsync<Membre>();
+            await connection.DeleteAllAsync<Rang>();   
             await connection.DeleteAllAsync<Connexion>();
             await connection.DeleteAllAsync<Message>();
         }

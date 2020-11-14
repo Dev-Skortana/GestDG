@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Gest.Models;
 using Gest.Services.Interfaces;
 using Gest.Database_Initialize;
+using SQLite;
 
 namespace Gest.Services.Classes
 {
@@ -34,8 +35,19 @@ namespace Gest.Services.Classes
         public async Task<bool> insert(Connexion connexion)
         {
             var connexion_database = await Database_configuration.Database_Initialize();
-            var resultat = await connexion_database.InsertAsync(connexion);
-            return (resultat >= 1);
+            var nombre_record = 0;
+            try
+            {
+                nombre_record = await connexion_database.InsertAsync(connexion);
+            }
+            catch (SQLiteException exception)
+            {
+                if (exception.Result != SQLite3.Result.Constraint)
+                {
+                    throw SQLiteException.New(exception.Result, exception.InnerException.ToString());
+                }
+            }         
+            return (nombre_record >= 1);
         }
 
                                                                              /* Méthode à revoir */

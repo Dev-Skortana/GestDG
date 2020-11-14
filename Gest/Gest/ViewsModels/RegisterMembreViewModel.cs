@@ -401,41 +401,35 @@ namespace Gest.ViewModels
                         }
                     }
 
-                    if (reponse_insert_rang && await check_doublon_insert<IService_Rang>(new Service_Rang(), this.Rang) == false)
+                    if (reponse_insert_rang)
                     {
                         service_rang = new Service_Rang();
                         await service_rang.insert(this.Rang);
                     }
-
-                    if (await check_doublon_insert<IService_Membre>(service_membre, this.Membre) == false)
-                    {
-                        service_membre = new Service_Membre();
-                        await service_membre.insert(this.Membre);
-                    }
-
-                    if (reponse_insert_activite && await check_doublon_insert<IService_Activite>(new Service_Activite(), this.Activite) == false)
+                     service_membre = new Service_Membre();
+                     await service_membre.insert(this.Membre);
+                    if (reponse_insert_activite)
                     {
                         service_activite = new Service_Activite();
                         await service_activite.insert(this.Activite);
                     }
                     if (reponse_insert_dateconnexion)
-                    {
-                        if (await check_doublon_insert<IService_Connexion>(new Service_Connexion(), this.Connexion) == false) {
+                    { 
                             service_connexion = new Service_Connexion();
                             await service_connexion.insert(this.Connexion);
-                        }
-                        if (await check_doublon_insert<IService_Visite>(new Service_Visite(), this.Visite) == false){
+                        
+                       
                             service_visite = new Service_Visite();
                             await service_visite.insert(this.Visite);
-                        }
-                        if (await check_doublon_insert<IService_Message>(new Service_Message(),this.Message)==false) {
+                        
+                        
                             service_message = new Service_Message();
                             await service_message.insert(this.Message);
-                        }
-                    if (await check_doublon_insert<IService_Membre_Connexion_Message>(new Service_Membre_Connexion_Message(),this.Membreconnexionmessage)==false) {
+                        
+                   
                         service_membre_connexion_message = new Service_Membre_Connexion_Message();
                         await service_membre_connexion_message.insert(this.Membreconnexionmessage);
-                    }
+                    
                 }
                     position_member_intotal += 1;
 

@@ -37,7 +37,18 @@ namespace Gest.Services.Classes
         public async Task<bool> insert(Rang rang)
         {
             var connection = await Database_configuration.Database_Initialize();
-            var nombres_records = await connection.InsertAsync(rang);
+            var nombres_records = 0;
+            try
+            {
+                nombres_records=await connection.InsertAsync(rang);
+            }
+            catch (SQLiteException exception)
+            {
+                if (exception.Result != SQLite3.Result.Constraint)
+                {
+                    throw SQLiteException.New(exception.Result, exception.InnerException.ToString());
+                }
+            }
             return (nombres_records >= 1);
         }
 

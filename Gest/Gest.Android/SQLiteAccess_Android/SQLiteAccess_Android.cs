@@ -22,14 +22,14 @@ namespace Gest.Droid.SQLiteAccess_Android
     {
         public async Task<String> GetAsyncConnection()
         {
-            
-            string path =Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
-            string dbPath = Path.Combine(path, "Gest.db");
-            if (!File.Exists(dbPath))
+            Manager_path_database manager_path_database = new Manager_path_database(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal));
+            manager_path_database.create_folder_database_ifnotexist();
+            String Path_file_database = manager_path_database.get_path_file_database();
+            if (!File.Exists(Path_file_database))
             {
-                using (var br = new BinaryReader(Android.App.Application.Context.Assets.Open("Gest.db")))
+                using (var br = new BinaryReader(Android.App.Application.Context.Assets.Open(manager_path_database.get_name_file_database_full())))
                 {
-                    using (var bw = new BinaryWriter(new FileStream(dbPath, FileMode.OpenOrCreate)))
+                    using (var bw = new BinaryWriter(new FileStream(Path_file_database, FileMode.OpenOrCreate)))
                     {
                         byte[] buffer = new byte[2048];
                         int length = 0;
@@ -40,7 +40,7 @@ namespace Gest.Droid.SQLiteAccess_Android
                     }
                 }
             }        
-            return dbPath;
+            return Path_file_database;
         }
     }
 }

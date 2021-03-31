@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gest.Views.ChatBox"
+             xmlns:prism="http://prismlibrary.com"  
+             prism:ViewModelLocator.AutowireViewModel="True"
+             >
+  <ContentView.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                <ScrollView Orientation="Both">
+                    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="StartAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Text="En ligne (sur le tchat)"/>
+                        <ListView Grid.Row="1" Grid.Column="0" ItemsSource="{Binding }">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Label HorizontalTextAlignment="Start"  Text="{Binding }" TextColor="{Binding }"/>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Grid>
+                </ScrollView>
+                <ScrollView Orientation="Both">
+                    <ListView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ItemsSource="{Binding }">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Label >
+                                        <Label.FormattedText>
+                                            <FormattedString >
+                                                <FormattedString.Spans>
+                                                    <Span Text="" />
+                                                    <Span Text="" />
+                                                </FormattedString.Spans>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollView>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                <Button Text=""/>
+                <Button Text=""/>
+                <Button Text="" />
+                <Button Text=""/>
+                <Button />
+                <Entry HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Start" Placeholder="Message" />
+                <Button Text="Envoyer"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

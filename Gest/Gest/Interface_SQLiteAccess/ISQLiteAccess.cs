@@ -8,6 +8,6 @@ namespace Gest.Interface_SQLiteAccess
 {
     public interface ISQLiteAccess
     {
-         Task<String> GetAsyncConnection();
+        Task<String> GetAsyncConnection();
     }
 }

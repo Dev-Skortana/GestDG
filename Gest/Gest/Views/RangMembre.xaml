@@ -79,8 +79,7 @@
                                                 <DataTemplate x:DataType="models:Membre">
                                                     <ViewCell>
                                                         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Vertical">
-                                                            <controls_imagecircle:CircleImage Source="{Binding url_avatar}" Aspect="AspectFill" HeightRequest="20" WidthRequest="20"/>
-                                                            <Label Text="{Binding pseudo}" HorizontalTextAlignment="Center"/>
+                                                            <usercontroles:Smallprofile_membre Pseudo="{Binding pseudo}" Url_avatar="{Binding url_avatar}" Height_prop="20" Width_prop="20"/>
                                                         </StackLayout>
                                                     </ViewCell>
                                                 </DataTemplate>

@@ -102,8 +102,7 @@
                         <ScrollView Orientation="Both">
                             <StackLayout>
                                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                                    <controls_imagecircle:CircleImage Source="{Binding  url_avatar}" Aspect="AspectFill" WidthRequest="80" HeightRequest="80"/>
-                                    <Label Text="{Binding  pseudo}" />
+                                    <usercontroles:Smallprofile_membre Pseudo="{Binding pseudo}" Url_avatar="{Binding url_avatar}"/>
                                 </StackLayout>
                                 <StackLayout Spacing="25" VerticalOptions="Center" HorizontalOptions="Center" Margin="50">
                                     <Label Text="Liste des activités de ce membres :" HorizontalTextAlignment="Center"/>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+                                                                                    <!-- A construire -->
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gest.Views.Usercontroles.Section_options_recherches">
+  <ContentView.Content>
+                            <!--Partie de code du de la vue VISITE à rendre generique pour les autres vues (cela concerne les vues de consultation) -->
+                                                                                       
+        <!--<StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
+           
+                 
+          
+
+            <Button IsVisible="False" Text="Acceder au formulaire de la recherche avancer" TextColor="White" BackgroundColor="ForestGreen" Command="{Binding Command_navigation_to_popup_search_multiple}">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Multiples">
+                        <Setter Property="IsVisible" Value="True" />
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+            <Picker IsVisible="False" ItemsSource="{Binding Liste_noms_tables}" SelectedIndexChanged="Picker_switchsource_SelectedIndexChanged" SelectedItem="{Binding nom_table_selected}" Title="Source :" TextColor="LightGreen">
+                <Picker.Triggers>
+                    <DataTrigger TargetType="Picker" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
+                        <Setter Property="IsVisible" Value="True" />
+                    </DataTrigger>
+                </Picker.Triggers>
+            </Picker>
+            <Picker IsVisible="False" x:Name="piker_champs" ItemsSource="{Binding Liste_champs}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding Champ_selected}" Title="champ (libelle)" TextColor="LightGreen">
+                <Picker.Triggers>
+                    <DataTrigger TargetType="Picker" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
+                        <Setter Property="IsVisible" Value="True" />
+                    </DataTrigger>
+                </Picker.Triggers>
+            </Picker>
+            <Entry x:Name="zone_saisi_text" Placeholder="Recherche ici" PlaceholderColor="Green" TextColor="Green" IsVisible="False">
+                <Entry.Behaviors>
+                    <behavior:Behavior_EntryTextChanged Command="{Binding Command_search}"/>
+                </Entry.Behaviors>
+                <Entry.Triggers>
+                    <MultiTrigger TargetType="Entry">
+                        <MultiTrigger.Conditions>
+                            <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple"/>
+                            <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference picker_controlessaisies},Converter={StaticResource return_string}}" Value="Text"/>
+                        </MultiTrigger.Conditions>
+                        <Setter  Property="IsVisible" Value="True"/>
+                    </MultiTrigger>
+                </Entry.Triggers>
+            </Entry>
+            <DatePicker x:Name="zone_saisi_date" IsVisible="False" Format="yyyy/MM/dd">
+                <DatePicker.Behaviors>
+                    <behavior:Behavior_Datepiker Command="{Binding Command_search}"/>
+                </DatePicker.Behaviors>
+                <DatePicker.Triggers>
+                    <MultiTrigger TargetType="DatePicker">
+                        <MultiTrigger.Conditions>
+                            <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple"/>
+                            <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference picker_controlessaisies},Converter={StaticResource return_string}}" Value="Date"/>
+                        </MultiTrigger.Conditions>
+                        <Setter  Property="IsVisible" Value="True"/>
+                    </MultiTrigger>
+                </DatePicker.Triggers>
+            </DatePicker>
+            <TimePicker x:Name="zone_saisi_time" IsVisible="False" Format="HH:mm">
+                <TimePicker.Behaviors>
+                    <behavior:Behavior_Pikertime Command="{Binding Command_search}"/>
+                </TimePicker.Behaviors>
+                <TimePicker.Triggers>
+                    <MultiTrigger TargetType="TimePicker">
+                        <MultiTrigger.Conditions>
+                            <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple"/>
+                            <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference picker_controlessaisies},Converter={StaticResource return_string}}" Value="Heure"/>
+                        </MultiTrigger.Conditions>
+                        <Setter  Property="IsVisible" Value="True"/>
+                    </MultiTrigger>
+                </TimePicker.Triggers>
+            </TimePicker>
+        
+        <StackLayout Orientation="Vertical" HorizontalOptions="End">
+            <Picker IsVisible="False" x:Name="piker_methodesrecherches" ItemsSource="{Binding Liste_methodesrecherches}"  SelectedIndexChanged="Picker_SelectedIndexChanged" SelectedItem="{Binding methoderecherche_selected}" Title="Méthode de recherche" TextColor="LightGreen">
+                <Picker.Triggers>
+                    <DataTrigger TargetType="Picker" Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple">
+                        <Setter Property="IsVisible" Value="True" />
+                    </DataTrigger>
+                </Picker.Triggers>
+            </Picker>
+            <Picker  x:Name="piker_typesrecherches" ItemsSource="{Binding Liste_typesrecherches}" SelectedItem="{Binding type_selected}" Title="Type de recherche" TextColor="LightGreen"/>
+            <Button x:Name="button_search_datewithtime" IsVisible="False" Text="Rechercher" BackgroundColor="Green" TextColor="White" Command="{Binding Command_search}" CommandParameter="{Binding Dateandtime}">
+                <Button.Triggers>
+                    <MultiTrigger TargetType="Button">
+                        <MultiTrigger.Conditions>
+                            <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference piker_typesrecherches},Converter={StaticResource return_string}}" Value="Simple"/>
+                            <BindingCondition Binding="{Binding Path=SelectedItem,Source={Reference picker_controlessaisies},Converter={StaticResource return_string}}" Value="Date et heure"/>
+                        </MultiTrigger.Conditions>
+                        <Setter Property="IsVisible" Value="True" />
+                    </MultiTrigger>
+                </Button.Triggers>
+            </Button>
+        </StackLayout>
+    </StackLayout>-->
+    </ContentView.Content>
+</ContentView>

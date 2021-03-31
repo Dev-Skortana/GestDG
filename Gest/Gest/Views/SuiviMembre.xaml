@@ -11,7 +11,8 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              xmlns:structure="clr-namespace:Gest.Helpers"
              xmlns:models="clr-namespace:Gest.Models"
-             xmlns:viewmodels="clr-namespace:Gest.ViewModels"
+             xmlns:viewmodels="clr-namespace:Gest.ViewModels" 
+             xmlns:userscontroles="clr-namespace:Gest.Views.Usercontroles"
              x:DataType="viewmodels:SuiviMembreViewModel" >
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Faire une recherche entre deux date"
@@ -50,71 +51,81 @@
                 </StackLayout>
             </ScrollView>
             <ScrollView Orientation="Both">
-                <StackLayout  Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand">
+                <StackLayout  Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                     <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand">
-                        <controls_imagecircle:CircleImage HeightRequest="80" WidthRequest="80" Source="{Binding Membre.url_avatar}" Aspect="AspectFill"/>
-                        <Label Text="{Binding Membre.pseudo}"/>
+                        <userscontroles:Smallprofile_membre Pseudo="{Binding Membre.pseudo}" Url_avatar="{Binding Membre.url_avatar}"/>
                     </StackLayout>
 
-                    <StackLayout Orientation="Vertical">
+                    <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
                         <Image Source="{Binding Rang.url_rang}" WidthRequest="80" HeightRequest="80" Aspect="AspectFit"/>
                         <Label Text="{Binding Rang.nom_rang}" HorizontalTextAlignment="Center"/>
                     </StackLayout>
+                    
+                    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                        <ScrollView Orientation="Both">
+                            <Frame HeightRequest="150" BorderColor="DarkSlateGray" Padding="0" HorizontalOptions="CenterAndExpand">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Column="0" Grid.Row="0" Text="Informations concernant les date de connexion." TextColor="Black" HorizontalTextAlignment="Center"/>
+                                    <StackLayout Grid.Column="0" Grid.Row="1">
+                                        <ListView HasUnevenRows="True" ItemsSource="{Binding Groupement_nombremessage}">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate x:DataType="structure:Groupement_nombremessage">
+                                                    <ViewCell>
+                                                        <StackLayout Orientation="Vertical">
+                                                            <Label HorizontalTextAlignment="Center">
+                                                                <Label.FormattedText>
+                                                                    <FormattedString>
+                                                                        <Span Text="{Binding Date_connexion,StringFormat=' {0:dd/MM/yyyy HH:mm} à cette date'}" TextColor="Red"/>
+                                                                        <Span Text="{Binding Nbmessage ,StringFormat=' {0} message(s) poster'}" TextColor="Red"/>
+                                                                    </FormattedString>
+                                                                </Label.FormattedText>
+                                                            </Label>
+                                                        </StackLayout>
+                                                    </ViewCell>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </ScrollView>
 
-                    <StackLayout Orientation="Vertical"  HorizontalOptions="CenterAndExpand">
-                        <Label Text="Information de suivi de ce membre :" TextColor="Gold" HorizontalTextAlignment="Center"/>
-                    </StackLayout>
-
-                    <StackLayout Orientation="Horizontal"  HorizontalOptions="CenterAndExpand">
-                        <StackLayout  Orientation="Vertical">
-                            <Label Text="Liste des activités de ce membres :" HorizontalTextAlignment="Center"/>
-                            <ListView ItemsSource="{Binding Activites}">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate x:DataType="models:Activite">
-                                        <ViewCell>
-                                            <StackLayout Orientation="Vertical">
-                                                <Label Text="{Binding libelle_activite}" />
-                                            </StackLayout>
-                                        </ViewCell>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                        </StackLayout>
-                        <StackLayout Orientation="Vertical">
-                            <Label Text="S'est connecté au site à ces dates :" TextColor="WhiteSmoke" HorizontalTextAlignment="Center"/>
-                            <ListView HasUnevenRows="True" ItemsSource="{Binding Visites}">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate x:DataType="models:Visite">
-                                        <ViewCell>
-                                            <StackLayout Orientation="Vertical">
-                                                <Label Text="{Binding connexion_date,StringFormat='à été ou est connecté le {0:dd/MM/yyyy HH:mm}'}" TextColor="Red" HorizontalTextAlignment="Center"/>
-                                            </StackLayout>
-                                        </ViewCell>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                        </StackLayout>
-                        <StackLayout Orientation="Vertical">
-                            <Label Text="Nombres de messages posté par date de connexion." TextColor="PapayaWhip" HorizontalTextAlignment="Center"/>
-                            <ListView HasUnevenRows="True" ItemsSource="{Binding Groupement_nombremessage}">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate x:DataType="structure:Groupement_nombremessage">
-                                        <ViewCell>
-                                            <StackLayout Orientation="Vertical">
-                                                <Label>
-                                                    <Label.FormattedText>
-                                                        <FormattedString>
-                                                            <Span Text="{Binding Date_connexion,StringFormat=' {0:dd/MM/yyyy HH:mm} à cette date'}" TextColor="Red"/>
-                                                            <Span Text="{Binding Nbmessage ,StringFormat=' {0} message(s) poster'}" TextColor="Red"/>
-                                                        </FormattedString>
-                                                    </Label.FormattedText>
-                                                </Label>
-                                            </StackLayout>
-                                        </ViewCell>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
-                        </StackLayout>
+                        <ScrollView Orientation="Both">
+                            <Frame HeightRequest="150" BorderColor="DarkSlateGray" Padding="0" HorizontalOptions="CenterAndExpand">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Label Grid.Column="0" Grid.Row="0" Text="Liste des activités de ce membres :" HorizontalTextAlignment="Center"/>
+                                    <StackLayout Grid.Column="0" Grid.Row="1">
+                                        <ListView ItemsSource="{Binding Activites}">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate x:DataType="models:Activite">
+                                                    <ViewCell>
+                                                        <StackLayout Orientation="Vertical">
+                                                            <Label Text="{Binding libelle_activite}"  HorizontalTextAlignment="Center"/>
+                                                        </StackLayout>
+                                                    </ViewCell>
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </ScrollView>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>

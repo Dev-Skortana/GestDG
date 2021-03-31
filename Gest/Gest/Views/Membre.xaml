@@ -70,8 +70,7 @@
                         <ScrollView Orientation="Both">
                             <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                                 <StackLayout  Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                                    <controls_imagecircle:CircleImage HeightRequest="80" WidthRequest="80" Source="{Binding url_avatar}" Aspect="AspectFill"/>
-                                    <Label Text="{Binding pseudo}" TextColor="Gold"/>
+                                    <usercontroles:Smallprofile_membre Pseudo="{Binding pseudo}" Url_avatar="{Binding url_avatar}"/>
                                 </StackLayout>
                                 <StackLayout  HorizontalOptions="CenterAndExpand" Spacing="2" Orientation="Vertical" VerticalOptions="CenterAndExpand">
                                     <Label Text="{Binding  date_naissance ,StringFormat='Née le : {0:dd/MM/yyyy}'}" />

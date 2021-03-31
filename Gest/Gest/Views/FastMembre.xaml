@@ -7,6 +7,7 @@
              xmlns:controls_imagecircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:behavior="clr-namespace:Gest.Behaviors_Controls"
              xmlns:convertisseure="clr-namespace:Gest.Convertisseurs"
+             xmlns:userscontroles="clr-namespace:Gest.Views.Usercontroles"
              xmlns:prism="http://prismlibrary.com"  
              prism:ViewModelLocator.AutowireViewModel="True">
     <ContentPage.Resources>
@@ -73,8 +74,7 @@
                                     </SwipeView.BottomItems>
                                     <SwipeView.Content>
                                         <StackLayout BackgroundColor="Transparent" Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                                            <controls_imagecircle:CircleImage  WidthRequest="80" HeightRequest="80" Source="{Binding url_avatar}" Aspect="AspectFill"/>
-                                            <Label TextColor="Gold"  Text="{Binding pseudo}" HorizontalTextAlignment="Center"/>
+                                            <userscontroles:Smallprofile_membre Pseudo="{Binding pseudo}" Url_avatar="{Binding url_avatar}"/>
                                         </StackLayout>
                                     </SwipeView.Content>
                                 </SwipeView>

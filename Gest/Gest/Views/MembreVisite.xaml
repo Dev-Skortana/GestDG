@@ -121,8 +121,7 @@
                         <ScrollView Orientation="Both">
                             <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Padding="5">
                                 <StackLayout>
-                                    <controls_imagecircle:CircleImage HeightRequest="80" WidthRequest="80" Source="{Binding Key.url_avatar}"/>
-                                    <Label Text="{Binding Key.pseudo}" TextColor="WhiteSmoke" HorizontalTextAlignment="Center"/>
+                                    <usercontroles:Smallprofile_membre Pseudo="{Binding Key.pseudo}" Url_avatar="{Binding Key.url_avatar}"/>
                                 </StackLayout>
                                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="10">
                                     <Label Text="S'est connecté au site à ces dates :" TextColor="WhiteSmoke" HorizontalTextAlignment="Center"/>

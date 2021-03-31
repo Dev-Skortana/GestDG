@@ -309,10 +309,6 @@ namespace Gest.ViewModels
             return resultat;
         }
 
-
-
-
-
         public async Task navigation_Goback_Popup_searchbetweendates(IEnumerable<Parametre_recherche_sql> parametres_recherches_sql)
         {
             await load(parametres_recherches_sql);
@@ -325,13 +321,6 @@ namespace Gest.ViewModels
             await updates_donnees(type_selected, dictionnaire_parametres);
 
         }
-
-
-
-
-
-
-
 
         private async Task get_rang()
         {

@@ -50,48 +50,30 @@ namespace Gest.ViewModels
 
         public DelegateCommand getpage_showmembre
         {
-            get
-            {
-                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("Membre"); });
-            }
+            get=> new DelegateCommand(async() => { await service_navigation.NavigateAsync("Membre"));
         }
 
         
         public DelegateCommand getpage_showmembrevisite
         {
-            get
-            {
-                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("MembreVisite"); });
-            }
+            get=>  new DelegateCommand(async() => { await service_navigation.NavigateAsync("MembreVisite"));
         }
 
         public DelegateCommand getpage_showmembreactivite
         {
-            get
-            {
-                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("MembreActivite"); });
-            }
+            get=> new DelegateCommand(async() => { await service_navigation.NavigateAsync("MembreActivite"));
         }
         public DelegateCommand getpage_showmembrerang
         {
-            get
-            {
-                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("RangMembre"); });
-            }
+            get=> new DelegateCommand(async() => { await service_navigation.NavigateAsync("RangMembre"));
         }
         public DelegateCommand getpage_postenbmessage
         {
-            get
-            {
-                return new DelegateCommand(async() => { await service_navigation.NavigateAsync("PosteNBmessage"); });
-            }
+            get=> new DelegateCommand(async() => await service_navigation.NavigateAsync("PosteNBmessage"));
         }
         public DelegateCommand getpage_showviewfastmembre
         {
-            get
-            {
-                return new DelegateCommand(async () => { await service_navigation.NavigateAsync("FastMembre"); });
-            }
+            get=> new DelegateCommand(async () => await service_navigation.NavigateAsync("FastMembre"));
         }
 
         public DelegateCommand command_clear_all_members_and_them_infos
@@ -110,6 +92,11 @@ namespace Gest.ViewModels
         {
             Service_database service_database = new Service_database();
             service_database.clear_all_members_and_them_infos();
+        }
+
+        public DelegateCommand getpage_ChatBox
+        {
+            get=> new DelegateCommand(async()=> await service_navigation.NavigateAsync("ChatBox"));
         }
         #endregion
 

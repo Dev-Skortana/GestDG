@@ -25,10 +25,10 @@ using DryIoc;
 
 namespace Gest.ViewModels
 {
-    class RegisterMembreViewModel : BindableBase,INavigationAware
+    class RegisterMembreViewModel : BindableBase, INavigationAware
     {
         #region Constante
-        private const String url_racine= @"https://dynamixgaming.forumgaming.fr/";
+        private const String url_racine = @"https://dynamixgaming.forumgaming.fr/";
         #endregion
 
         #region Services
@@ -45,7 +45,7 @@ namespace Gest.ViewModels
         #endregion
 
         #region Constructeure
-        public RegisterMembreViewModel(INavigationService _service_navigation,IService_Membre _service_membre, IService_Connexion _service_connexion, IService_Visite _service_visite, IService_Rang _service_rang, IService_Activite _service_activite, IService_Message _service_message, IService_Membre_Connexion_Message _service_membre_connexion_message,RestService rest)
+        public RegisterMembreViewModel(INavigationService _service_navigation, IService_Membre _service_membre, IService_Connexion _service_connexion, IService_Visite _service_visite, IService_Rang _service_rang, IService_Activite _service_activite, IService_Message _service_message, IService_Membre_Connexion_Message _service_membre_connexion_message, RestService rest)
         {
             this.service_navigation = _service_navigation;
             this.service_access_picture = DependencyService.Get<IFilePicture_Access>();
@@ -75,7 +75,7 @@ namespace Gest.ViewModels
             }
             set
             {
-                SetProperty(ref _pseudo,value);
+                SetProperty(ref _pseudo, value);
             }
         }
 
@@ -89,7 +89,7 @@ namespace Gest.ViewModels
             }
             set
             {
-                SetProperty(ref _image,value);
+                SetProperty(ref _image, value);
             }
         }
 
@@ -97,7 +97,7 @@ namespace Gest.ViewModels
         public String message_redirect
         {
             get { return _message_redirect; }
-            set { SetProperty(ref _message_redirect,value); }
+            set { SetProperty(ref _message_redirect, value); }
         }
 
 
@@ -110,7 +110,7 @@ namespace Gest.ViewModels
             }
             set
             {
-                SetProperty(ref _membre,value);
+                SetProperty(ref _membre, value);
             }
         }
 
@@ -123,7 +123,7 @@ namespace Gest.ViewModels
             }
             set
             {
-                SetProperty(ref _connexion,value);
+                SetProperty(ref _connexion, value);
             }
 
         }
@@ -137,7 +137,7 @@ namespace Gest.ViewModels
             }
             set
             {
-                SetProperty(ref _message,value);
+                SetProperty(ref _message, value);
             }
         }
 
@@ -150,7 +150,7 @@ namespace Gest.ViewModels
             }
             set
             {
-                SetProperty(ref _activite,value);
+                SetProperty(ref _activite, value);
             }
         }
 
@@ -163,7 +163,7 @@ namespace Gest.ViewModels
             }
             set
             {
-                SetProperty(ref _rang,value);
+                SetProperty(ref _rang, value);
             }
         }
 
@@ -176,7 +176,7 @@ namespace Gest.ViewModels
             }
             set
             {
-                SetProperty(ref _visite,value);
+                SetProperty(ref _visite, value);
             }
         }
 
@@ -189,18 +189,18 @@ namespace Gest.ViewModels
             }
             set
             {
-                SetProperty(ref _membreconnexionmessage,value);
+                SetProperty(ref _membreconnexionmessage, value);
             }
         }
 
         private int _pourcentage_avancement_progression;
         public int pourcentage_avancement_progression {
-            get{
-                return _pourcentage_avancement_progression; 
+            get {
+                return _pourcentage_avancement_progression;
             }
-            set{
-                SetProperty(ref _pourcentage_avancement_progression,value);
-            } 
+            set {
+                SetProperty(ref _pourcentage_avancement_progression, value);
+            }
         }
 
         private Boolean _isfinish_load;
@@ -212,7 +212,7 @@ namespace Gest.ViewModels
             }
             set
             {
-                SetProperty(ref _isfinish_load,value);
+                SetProperty(ref _isfinish_load, value);
             }
         }
 
@@ -220,82 +220,155 @@ namespace Gest.ViewModels
         public Boolean isbusy
         {
             get
-            {  
+            {
                 return _isbusy;
             }
             set
             {
-                SetProperty(ref _isbusy,value);
+                SetProperty(ref _isbusy, value);
             }
         }
         #endregion
 
-        #region Methode_priver   
-        private async Task<Boolean> check_doublon_insert<service_table>(service_table service, Object donnees)
+        #region Methode_priver
+
+        private void reinitialisations_of_models() {
+            this.Membre = null;
+            this.Connexion = null;
+            this.Rang = null;
+            this.Visite = null;
+            this.Activite = null;
+            this.Message = null;
+            this.Membreconnexionmessage = null;
+        }
+
+        private void reinitialisations_donnees_that_are_show_in_screen() {
+            this.Pseudo = default(String);
+            this.Image = default(String);
+        }
+
+        private IEnumerable<String> get_collection_liens_of_pages_contains_members(HtmlDocument documenthtml) {
+            String pattern_regex_getnumberspages = "<.+class=\"page-sep\">.+</span>\n*(<a href=\"(?<page>[^\"]+)\">[0-9]+</a>)+";
+            Regex regex_getnumberspages = new Regex(pattern_regex_getnumberspages);
+            MatchCollection collection_page = regex_getnumberspages.Matches(documenthtml.ParsedText);
+            List<String> numbers_pages = new List<string>();
+            String premier_page = collection_page[0].Groups["page"].Value;
+            numbers_pages.Add(collection_page.Count != 0 ? $@"{url_racine}" + Regex.Replace(premier_page, "start=[0-9]+", "start=0") : $@"{url_racine}memberlist?mode=lastvisit&order=DESC&start=0&username");
+            return (from Match match_numberpage in collection_page select $@"{url_racine}" + match_numberpage.Value);
+        }
+
+        private int get_pourcent_load_members(int position_of_member_intotal, int numbers_total_members) {
+            decimal souscalcule_pourcentage = Decimal.Divide(position_of_member_intotal, numbers_total_members);
+            return Convert.ToInt32(Math.Truncate(souscalcule_pourcentage * 100));
+        }
+
+        private async Task<int> get_numbers_total_members_from_html(HtmlDocument documenthtml, RestService service_for_access, IEnumerable<String> collection_liens_numbers_of_pages) {
+            int numbers_total_members = 0;
+            foreach (String lien in collection_liens_numbers_of_pages) {
+                documenthtml.Load(await service_for_access.getresponse(@lien), Encoding.UTF8);
+                HtmlNode table_members = documenthtml.GetElementbyId("memberlist").SelectSingleNode("tbody");
+                numbers_total_members += table_members.SelectNodes("//tbody/tr").ToList().Count;
+            }
+            return numbers_total_members;
+        }
+
+        private async Task<List<Date_Part>> get_collection_date_partie_of_members_from_html(HtmlDocument documenthtml, RestService service_for_access, IEnumerable<String> collection_liens_numbers_of_pages) {
+            List<Date_Part> parties_dates = new List<Date_Part>();
+            foreach (String lien in collection_liens_numbers_of_pages) {
+                documenthtml.Load(await service_for_access.getresponse(@lien), Encoding.UTF8);
+                HtmlNode table_members = documenthtml.GetElementbyId("memberlist").SelectSingleNode("tbody");
+                parties_dates = Datefull.construct_list(table_members);
+            }
+            return parties_dates;
+        }
+
+        private Boolean check_member_have_connection_from_html(HtmlDocument documenthtml_of_page_profilemember) {
+            if (documenthtml_of_page_profilemember.GetElementbyId("main-content").SelectSingleNode("div[@class='panel bg2']/div[@class='column2']/dl[@class='left-box details']/dd").InnerText.Equals("Jamais"))
+            {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        private Boolean check_member_have_activite_from_html(HtmlDocument documenthtml_of_page_profilemember)
         {
-            Boolean reponse = false;
-            if (service is IService_Membre)
+            if (documenthtml_of_page_profilemember.GetElementbyId("field_id-9") == null)
             {
-                Models.Membre membre = await (service as IService_Membre).Get(new List<Parametre_recherche_sql>() { new Parametre_recherche_sql() { Champ= "pseudo", Valeur= (donnees as Models.Membre).pseudo, Methode_recherche= "Egale_a" } });
-                if (membre != null)
-                {
-                    reponse = true;
-                }
+                return false;
             }
-            else if (service is IService_Activite)
+            else
             {
-                Activite activite = await (service as IService_Activite).Get(new List<Parametre_recherche_sql>() { new Parametre_recherche_sql() { Champ = "membre_pseudo", Valeur = (donnees as Models.Activite).membre_pseudo, Methode_recherche = "Egale_a" }, new Parametre_recherche_sql() { Champ = "libelle_activite", Valeur = (donnees as Activite).libelle_activite, Methode_recherche = "Egale_a" } }); ;
-                if (activite != null)
-                {
-                    reponse = true;
-                }
+                return true;
             }
-            else if (service is IService_Connexion)
+        }
+
+        private Boolean check_member_have_rang_from_html(HtmlDocument documenthtml_of_page_profilemember)
+        {
+            if (documenthtml_of_page_profilemember.GetElementbyId("main-content").SelectSingleNode("//div[@class='column1']")?.SelectNodes("dl[@class='left-box details']")[1].SelectSingleNode("dd/strong").InnerText.StartsWith("Aucun rang", true, System.Globalization.CultureInfo.CurrentCulture) == true)
             {
-                Connexion connexion = await (service as IService_Connexion).Get(  (donnees as Connexion).date_connexion);
-                if (connexion != null)
-                {
-                    reponse = true;
-                }
+                return false;
             }
-            else if (service is IService_Message)
+            else
             {
-                Message message = await (service as IService_Message).Get((donnees as Message).nb_message);
-                if (message != null)
-                {
-                    reponse = true;
-                }
+                return true;
             }
-            else if (service is IService_Membre_Connexion_Message)
-            {
-                Membre_Connexion_Message membre_connexion_message = await (service as IService_Membre_Connexion_Message).Get(new List<Parametre_recherche_sql>() { new Parametre_recherche_sql() { Champ = "membre_pseudo", Valeur = (donnees as Models.Membre_Connexion_Message).membre_pseudo, Methode_recherche = "Egale_a" },new Parametre_recherche_sql() { Champ= "connexion_date", Valeur= (donnees as Membre_Connexion_Message).connexion_date, Methode_recherche="Egale_a" },new Parametre_recherche_sql() {Champ= "message_nb", Valeur= (donnees as Membre_Connexion_Message).message_nb, Methode_recherche= "Egale_a" } });
-                if (membre_connexion_message != null)
-                {
-                    reponse = true;
-                }
-            }
-            else if (service is IService_Visite)
-            {
-                Visite visite = await (service as IService_Visite).Get(new List<Parametre_recherche_sql>() { new Parametre_recherche_sql() { Champ= "membre_pseudo" ,Valeur= (donnees as Models.Visite).membre_pseudo ,Methode_recherche= "Egale_a" },new Parametre_recherche_sql() { Champ= "connexion_date", Valeur= (donnees as Models.Visite).connexion_date, Methode_recherche= "Egale_a" } });
-                if (visite != null)
-                {
-                    reponse = true;
-                }
-            }
-            else if (service is IService_Rang)
-            {
-                Rang rang = await (service as IService_Rang).Get(new List<Parametre_recherche_sql>() { new Parametre_recherche_sql() { Champ="nom_rang",Valeur= (donnees as Models.Rang).nom_rang,Methode_recherche= "Egale_a" } });
-                if (rang != null)
-                {
-                    reponse = true;
-                }
-            }
-            return await Task.FromResult(reponse);
+        }
+
+        private async Task insert_membre_in_database(Models.Membre membre)
+        {
+            IService_Membre service_membre = new Service_Membre();
+            await service_membre.insert(membre);
+        }
+
+        private async Task insert_rang_in_database(IService_Rang service_rang, Rang rang)
+        {
+            service_rang = new Service_Rang();
+            await service_rang.insert(rang);
+        }
+
+        private async Task insert_activite_in_database(IService_Activite service_activite, Activite activite)
+        {
+            service_activite = new Service_Activite();
+            await service_activite.insert(activite);
+        }
+
+        private async Task insert_connection_in_database(IService_Connexion service_connexion,Connexion connexion) {
+
+            service_connexion = new Service_Connexion();
+            await service_connexion.insert(connexion);
+        }
+
+        private async Task insert_visite_in_database(IService_Visite service_visite,Visite visite)
+        {
+            service_visite = new Service_Visite();
+            await service_visite.insert(visite);
+        }
+        private async Task insert_message_in_database(IService_Message service_message,Message message)
+        {
+            service_message = new Service_Message();
+            await service_message.insert(message);
+        }
+        private async Task insert_membreconnectionmessage_in_database(IService_Membre_Connexion_Message service_membreconnexionmessage,Membre_Connexion_Message membreconnexionmessage)
+        {
+            service_membreconnexionmessage  = new Service_Membre_Connexion_Message();
+            await service_membreconnexionmessage.insert(membreconnexionmessage);
+        }
+
+        private async Task await_few_secondes(int seconde){
+            await Task.Delay(seconde*1000);
+        }
+
+        private void cancel_load_members(CancellationToken token)
+        {
+            this.Pseudo = default(String);
+            this.Image = default(String);
+            token.ThrowIfCancellationRequested();
         }
 
         private async Task register(CancellationToken token)
         {
-            /* Risque d'obtention d'informations non Syncroniser */
             HtmlDocument document_dynamixgaming_page_memberlist = new HtmlDocument();
             document_dynamixgaming_page_memberlist.Load(await rest.getresponse($"{url_racine}memberlist"),Encoding.UTF8);
 
@@ -333,7 +406,6 @@ namespace Gest.ViewModels
                     pourcentage_avancement_progression= Convert.ToInt32(Math.Truncate(souscalcule_pourcentage * 100));
                     this.pourcentage_avancement_progression = pourcentage_avancement_progression;
                      
-
                     Boolean reponse_insert_dateconnexion = true;
                     Boolean reponse_insert_activite = true;
                     Boolean reponse_insert_rang = true;
@@ -380,7 +452,7 @@ namespace Gest.ViewModels
                     if (document_dynamixgaming_page_member_profile.GetElementbyId("main-content").SelectSingleNode("//div[@class='column1']")?.SelectNodes("dl[@class='left-box details']")[1].SelectSingleNode("dd/strong").InnerText.StartsWith("Aucun rang", true, System.Globalization.CultureInfo.CurrentCulture) == true)
                     {
                         reponse_insert_rang = false;
-                        }
+                    }
                     else
                     {   
                         Rang = new Rang() { nom_rang = document_dynamixgaming_page_member_profile.GetElementbyId("main-content").SelectSingleNode("//div[@class='column1']")?.SelectNodes("dl[@class='left-box details']")[1].SelectSingleNode("dd/strong").InnerText, url_rang = document_dynamixgaming_page_member_profile.GetElementbyId("main-content").SelectSingleNode("//div[@class='column1']")?.SelectNodes("dl[@class='left-box details']")[1].SelectSingleNode("dd/strong/img").Attributes["src"].Value };
@@ -497,6 +569,13 @@ namespace Gest.ViewModels
                     }
                 });
             }
+        }
+
+        private async void remove_members_with_them_infos()
+        {
+            Service_database service_database = new Service_database();
+            service_database.clear_all_members_and_them_infos();
+            await Application.Current.MainPage.DisplayAlert("Confirmation", "Les membres ont été supprimer", "Ok");
         }
 
         public Command canceled_load

@@ -57,8 +57,7 @@
                             <ScrollView Orientation="Both">
                                 <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                                     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                                        <controls_imagecircle:CircleImage HeightRequest="80" WidthRequest="80" Source="{Binding Key.url_avatar }" Aspect="AspectFill"/>
-                                        <Label Text="{Binding Key.pseudo }"  HorizontalTextAlignment="Center"/>
+                                        <usercontroles:Smallprofile_membre Pseudo="{Binding Key.pseudo}" Url_avatar="{Binding Key.url_avatar}"/>
                                     </StackLayout>
                                     <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                                     <Label BindingContext="{Binding Path=BindingContext,Source={x:Reference test}}" HorizontalTextAlignment="Center">
